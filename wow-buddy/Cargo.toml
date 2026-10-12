@@ -1,0 +1,17 @@
+[package]
+name = "wow-buddy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.7", features = ["router"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lib]
+name = "wow_buddy"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wow-buddy"
+path = "src/main.rs"
