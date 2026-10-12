@@ -6,10 +6,12 @@ This document captures the verification results and manual testing walkthrough f
 
 ## 1. Automated Verification on `main`
 
-- **Full Suite Result:** 20 tests passed, 0 failed, 0 warnings.
+- **Full Suite Result:** 22 tests passed, 0 failed, 0 warnings.
 - **Git Branch:** `main` (merged cleanly from `scaffold-mvp`).
 
 ### Test Coverage Highlights
+- `test_css_embedded`: Precompiled Tailwind dark fantasy stylesheet embedded in binary for 100% offline styling.
+- `test_complete_ui_labels_translation`: Full multilingual translation of all headers, badges, buttons, and subtext.
 - `test_app_constants`: Base app name and version constants.
 - `test_default_language_is_english`: English default fallback.
 - `test_flexible_language_catalog_for_dropdown`: Dynamic language catalog resolution.
