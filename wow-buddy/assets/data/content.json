@@ -1,0 +1,405 @@
+{
+  "races": [
+    {
+      "id": "human",
+      "name": "Human",
+      "faction": "alliance",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Люди Штормграда — стойкие защитники Азерота, славящиеся дипломатией, непоколебимым духом и верностью идеалам Света.",
+      "lore_en": "Humans of Stormwind are noble defenders of Azeroth, renowned for diplomacy, indomitable spirit, and devotion to the Light.",
+      "lore_fi": "Myrskytuulen ihmiset ovat Azerothin jaloja puolustajia, tunnettuja diplomatiasta, periksiantamattomuudesta ja Valon palvonnasta.",
+      "racial_ability_name": "Every Man for Himself",
+      "racial_ability_desc": "Removes all movement impairing effects and loss of control.",
+      "available_classes": ["warrior", "paladin", "rogue", "priest", "mage", "warlock"],
+      "starter_zone_id": "northshire",
+      "model_id": "human_male"
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "faction": "alliance",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Дворфы Стальгорна — отважные исследователи горных недр Каз Модана, непревзойденные кузнецы и верные союзники.",
+      "lore_en": "Dwarves of Ironforge are courageous miners and blacksmiths of Khaz Modan with an insatiable thirst for ancient titan lore.",
+      "lore_fi": "Rautatakomon kääpiöt ovat Khaz Modanin rohkeita kaivajia ja seppiä, jotka tutkivat titaanien muinaisia salaisuuksia.",
+      "racial_ability_name": "Stoneform",
+      "racial_ability_desc": "Increases armor and grants immunity to bleed, poison, and disease.",
+      "available_classes": ["warrior", "paladin", "hunter", "rogue", "priest"],
+      "starter_zone_id": "coldridge",
+      "model_id": "dwarf_male"
+    },
+    {
+      "id": "night_elf",
+      "name": "Night Elf",
+      "faction": "alliance",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Ночные эльфы — древний народ Калимдора, хранители мирового древа Тельдрассил и служители богини луны Элуны.",
+      "lore_en": "Night Elves are ancient reclusive guardians of nature, guided by the moon goddess Elune and the spirits of Teldrassil.",
+      "lore_fi": "Yöhaltiat ovat luonnon ikivanhoja vartijoita, joita ohjaavat kuunjumalatar Elune ja Teldrassilin henget.",
+      "racial_ability_name": "Shadowmeld",
+      "racial_ability_desc": "Slip into the shadows, reducing the chance enemies will detect your presence.",
+      "available_classes": ["warrior", "hunter", "rogue", "priest", "druid"],
+      "starter_zone_id": "shadowglen",
+      "model_id": "nightelf_female"
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "faction": "alliance",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Гномы — эксцентричные гении технологии и инженерной мысли, не знающие преград в решении сложнейших загадок механизма.",
+      "lore_en": "Gnomes are diminutive, brilliantly eccentric inventors who combine boundless curiosity with radical technological genius.",
+      "lore_fi": "Gnoomit ovat pienikokoisia ja nerokkaita keksijöitä, joiden kekseliäisyys ylittää kaikki esteet.",
+      "racial_ability_name": "Escape Artist",
+      "racial_ability_desc": "Escape any immobilization or movement speed reduction effect.",
+      "available_classes": ["warrior", "rogue", "mage", "warlock"],
+      "starter_zone_id": "coldridge",
+      "model_id": "gnome_male"
+    },
+    {
+      "id": "skyborne",
+      "name": "Skyborne",
+      "faction": null,
+      "is_dual_faction": true,
+      "alliance_variant_name": "High Order Skyborne",
+      "horde_variant_name": "Windshaper Skyborne",
+      "lore_ru": "Скайборны — крылатые хранители парящих вершин Zephras Isle. В Альянсе они почитают дисциплину High Order, в Орде — свободу ветра Windshaper.",
+      "lore_en": "Skyborne are winged wanderers from Zephras Isle. In the Alliance they align with High Order discipline; in the Horde they embrace Windshaper freedom.",
+      "lore_fi": "Skybornet ovat siivekkäitä vaeltajia Zephras-saarelta. Liittoumassa he seuraavat Korkeaa Järjestystä, Laumassa Tuulimuovaajien vapautta.",
+      "racial_ability_name": "Zephyr Drift",
+      "racial_ability_desc": "Harness wind currents to glide forward safely and gain brief movement speed.",
+      "available_classes": ["warrior", "hunter", "rogue", "mage", "priest", "shaman", "druid"],
+      "starter_zone_id": "zephras_isle",
+      "model_id": "skyborne_neutral"
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "faction": "horde",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Орки Дуротара — закаленные воины чести и выживания, возглавляющие Новую Орду Тралла в согласии со стихиями.",
+      "lore_en": "Orcs of Durotar are fierce yet honorable survivors who built a new home under the banner of Thrall's shamanic Horde.",
+      "lore_fi": "Durotarin örkit ovat sotureita, jotka löysivät uuden kodin ja kunnian Thrallin uuden Lauman alaisuudessa.",
+      "racial_ability_name": "Blood Fury",
+      "racial_ability_desc": "Increases attack and spell power for a short duration.",
+      "available_classes": ["warrior", "hunter", "rogue", "shaman", "warlock"],
+      "starter_zone_id": "valley_of_trials",
+      "model_id": "orc_male"
+    },
+    {
+      "id": "undead",
+      "name": "Undead",
+      "faction": "horde",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Отрекшиеся — освободившиеся от власти Плети мертвецы Подгорода, сражающиеся за свое право на существование под знаменем Сильваны.",
+      "lore_en": "The Forsaken are free-willed undead of the Undercity who fight relentlessly to carve their sovereign place in a hostile world.",
+      "lore_fi": "Hyljätyt ovat vapautuneita epäkuolleita, jotka taistelevat olemassaolostaan vihamielisessä maailmassa.",
+      "racial_ability_name": "Will of the Forsaken",
+      "racial_ability_desc": "Removes any Charm, Fear, and Sleep effects.",
+      "available_classes": ["warrior", "rogue", "priest", "mage", "warlock"],
+      "starter_zone_id": "deathknell",
+      "model_id": "undead_male"
+    },
+    {
+      "id": "tauren",
+      "name": "Tauren",
+      "faction": "horde",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Таурены — миролюбивые великаны Мулгора, преданные почитатели Матери-Земли и хранители священных традиций природы.",
+      "lore_en": "Tauren are noble giant nomads of Mulgore, revering the Earth Mother and walking in harmony with nature's spiritual rhythm.",
+      "lore_fi": "Taureenit ovat Mulgoren jaloja jättiläisiä, jotka kunnioittavat Maa-äitiä ja elävät luonnon tasapainossa.",
+      "racial_ability_name": "War Stomp",
+      "racial_ability_desc": "Stuns up to 5 nearby enemies for 2 seconds.",
+      "available_classes": ["warrior", "hunter", "shaman", "druid"],
+      "starter_zone_id": "camp_narache",
+      "model_id": "tauren_male"
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "faction": "horde",
+      "is_dual_faction": false,
+      "alliance_variant_name": null,
+      "horde_variant_name": null,
+      "lore_ru": "Тролли Черного Копья — мудрые охотники и почитатели Лоа, принесшие нерушимую клятву верности Орде под предводительством Вол'джина.",
+      "lore_en": "Darkspear Trolls are cunning jungle hunters and Loa worshippers, loyal blood brothers of the Horde led by Vol'jin.",
+      "lore_fi": "Darkspear-peikot ovat viidakon ovelia metsästäjiä, jotka palvovat Loa-henkiä ja seisovat Lauman rinnalla.",
+      "racial_ability_name": "Berserking",
+      "racial_ability_desc": "Increases attack and casting speed by 10% to 30% depending on health.",
+      "available_classes": ["warrior", "hunter", "rogue", "priest", "shaman", "mage"],
+      "starter_zone_id": "valley_of_trials",
+      "model_id": "troll_male"
+    }
+  ],
+  "starter_zones": [
+    {
+      "id": "northshire",
+      "name_ru": "Североземье",
+      "name_en": "Northshire Valley",
+      "name_fi": "Pohjoislaakso",
+      "level_range": "1-6",
+      "starting_npc": "Marshal McBride",
+      "trainer_reminder": "Visit class trainer at Northshire Abbey at levels 2 and 4.",
+      "bag_reminder": "Purchase your first 6-slot bag as soon as you have 5 silver.",
+      "next_zone_direction": "Head south through the gates towards Goldshire in Elwynn Forest."
+    },
+    {
+      "id": "coldridge",
+      "name_ru": "Холодная Долина",
+      "name_en": "Coldridge Valley",
+      "name_fi": "Kylmäharjan Laakso",
+      "level_range": "1-6",
+      "starting_npc": "Sten Stoutarm",
+      "trainer_reminder": "Train your rank 1 skills at Anvilmar trainers at level 2.",
+      "bag_reminder": "Buy an additional pouch from Anvilmar general goods vendor.",
+      "next_zone_direction": "Exit east through the pass to Kharanos in Dun Morogh."
+    },
+    {
+      "id": "shadowglen",
+      "name_ru": "Тельдрассил (Поляна Теней)",
+      "name_en": "Shadowglen (Teldrassil)",
+      "name_fi": "Varjonotko (Teldrassil)",
+      "level_range": "1-6",
+      "starting_npc": "Ilthalaine",
+      "trainer_reminder": "Visit Aldrassil sanctuary trainers at levels 2 and 4.",
+      "bag_reminder": "Clear spiders and buy bags at Aldrassil before leaving.",
+      "next_zone_direction": "Descend south towards Dolanaar."
+    },
+    {
+      "id": "valley_of_trials",
+      "name_ru": "Долина Испытаний",
+      "name_en": "Valley of Trials",
+      "name_fi": "Koetusten Laakso",
+      "level_range": "1-6",
+      "starting_npc": "Karrun",
+      "trainer_reminder": "Train skills in the Den at levels 2 and 4.",
+      "bag_reminder": "Save copper from boars for first bag vendor outside the Den.",
+      "next_zone_direction": "Head north-east to Sen'jin Village and Razor Hill."
+    },
+    {
+      "id": "deathknell",
+      "name_ru": "Поляна Смерти",
+      "name_en": "Deathknell",
+      "name_fi": "Kuolonkellot",
+      "level_range": "1-6",
+      "starting_npc": "Shadow Priest Sarvis",
+      "trainer_reminder": "Return to the crypt chapel for skill upgrades at level 2 and 4.",
+      "bag_reminder": "Sell scavenger junk to buy initial 6-slot bag.",
+      "next_zone_direction": "Follow the western road to Brill in Tirisfal Glades."
+    },
+    {
+      "id": "camp_narache",
+      "name_ru": "Лагерь Нараче (Мулгор)",
+      "name_en": "Camp Narache (Mulgore)",
+      "name_fi": "Narachen Leiri (Mulgore)",
+      "level_range": "1-6",
+      "starting_npc": "Chief Hawkwind",
+      "trainer_reminder": "Visit the central tent trainers at levels 2 and 4.",
+      "bag_reminder": "Check the trade goods vendor for starter satchels.",
+      "next_zone_direction": "Head north past the totem gate to Bloodhoof Village."
+    },
+    {
+      "id": "zephras_isle",
+      "name_ru": "Остров Зефрас",
+      "name_en": "Zephras Isle",
+      "name_fi": "Zephrasin Saari",
+      "level_range": "1-6",
+      "starting_npc": "Sky Warden Aelora",
+      "trainer_reminder": "Ascend the Aerie Spire to unlock wind-infused spells.",
+      "bag_reminder": "Gather cloud feathers to barter for a breezy feather-pack.",
+      "next_zone_direction": "Take the wind-skiff to either Stormwind Harbor or Bladefist Bay."
+    }
+  ],
+  "classes": [
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "role": "Tank / Melee DPS",
+      "difficulty": "Easy to Start, High Skill Ceiling",
+      "core_spells": [
+        { "name": "Charge", "description": "Rush toward enemy and generate rage", "icon": "⚔️" },
+        { "name": "Heroic Strike", "description": "Powerful swing increasing weapon damage", "icon": "💥" },
+        { "name": "Taunt", "description": "Forces enemy to attack you in dungeons", "icon": "🛡️" }
+      ],
+      "icon": "⚔️"
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "role": "Tank / Healer / Melee DPS",
+      "difficulty": "Very Beginner Friendly",
+      "core_spells": [
+        { "name": "Holy Light", "description": "Direct healing spell channeling the Light", "icon": "✨" },
+        { "name": "Seal of Righteousness", "description": "Infuses attacks with additional Holy damage", "icon": "🔨" },
+        { "name": "Blessing of Might", "description": "Increases attack power for party members", "icon": "📜" }
+      ],
+      "icon": "🔨"
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "role": "Ranged Physical DPS",
+      "difficulty": "Great for Solo Leveling",
+      "core_spells": [
+        { "name": "Auto Shot", "description": "Shoots arrows/bullets at ranged target", "icon": "🏹" },
+        { "name": "Serpent Sting", "description": "Poisons enemy for damage over time", "icon": "🐍" },
+        { "name": "Tame Beast", "description": "Bond with a wild creature as loyal pet", "icon": "🐾" }
+      ],
+      "icon": "🏹"
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "role": "Melee Physical DPS",
+      "difficulty": "Moderate",
+      "core_spells": [
+        { "name": "Stealth", "description": "Sneak unseen past monsters", "icon": "🗡️" },
+        { "name": "Sinister Strike", "description": "Vicious strike building combo points", "icon": "⚡" },
+        { "name": "Eviscerate", "description": "Finishing move dealing damage per combo point", "icon": "🩸" }
+      ],
+      "icon": "🗡️"
+    },
+    {
+      "id": "priest",
+      "name": "Priest",
+      "role": "Healer / Ranged Magic DPS",
+      "difficulty": "Beginner Healer Friendly",
+      "core_spells": [
+        { "name": "Flash Heal", "description": "Fast emergency heal", "icon": "✨" },
+        { "name": "Power Word: Shield", "description": "Absorbs incoming damage", "icon": "🛡️" },
+        { "name": "Shadow Word: Pain", "description": "Curse dealing shadow damage over time", "icon": "🌑" }
+      ],
+      "icon": "✝️"
+    },
+    {
+      "id": "shaman",
+      "name": "Shaman",
+      "role": "Healer / Melee or Caster DPS",
+      "difficulty": "Moderate",
+      "core_spells": [
+        { "name": "Lightning Bolt", "description": "Casts blast of nature electricity", "icon": "⚡" },
+        { "name": "Earthbind Totem", "description": "Totem slowing nearby enemies", "icon": "🗿" },
+        { "name": "Healing Wave", "description": "Substantial primary heal", "icon": "🌊" }
+      ],
+      "icon": "⚡"
+    },
+    {
+      "id": "mage",
+      "name": "Mage",
+      "role": "Ranged Magic DPS",
+      "difficulty": "Easy to Start",
+      "core_spells": [
+        { "name": "Fireball", "description": "Hurls fiery projectile burning enemy", "icon": "🔥" },
+        { "name": "Frost Nova", "description": "Freezes all nearby foes in place", "icon": "❄️" },
+        { "name": "Conjure Food & Water", "description": "Free recovery provisions anytime", "icon": "🍞" }
+      ],
+      "icon": "🔮"
+    },
+    {
+      "id": "warlock",
+      "name": "Warlock",
+      "role": "Ranged Shadow DPS / Pet Master",
+      "difficulty": "Easy Solo Leveler",
+      "core_spells": [
+        { "name": "Corruption", "description": "Afflicts enemy with shadow agony", "icon": "💀" },
+        { "name": "Summon Imp", "description": "Calls forth a demon ally", "icon": "🔥" },
+        { "name": "Life Tap", "description": "Trades health for mana", "icon": "🩸" }
+      ],
+      "icon": "💀"
+    },
+    {
+      "id": "druid",
+      "name": "Druid",
+      "role": "Hybrid (Tank, Healer, Melee/Caster DPS)",
+      "difficulty": "Versatile / Moderate",
+      "core_spells": [
+        { "name": "Moonfire", "description": "Instant blast of lunar radiation", "icon": "🌙" },
+        { "name": "Rejuvenation", "description": "Gentle healing over time leaf", "icon": "🌿" },
+        { "name": "Bear Form", "description": "Shapeshift into sturdy tank beast", "icon": "🐻" }
+      ],
+      "icon": "🐾"
+    }
+  ],
+  "dungeons": [
+    {
+      "id": "deadmines",
+      "name": "The Deadmines",
+      "level_range": "17-21",
+      "estimated_time_minutes": 45,
+      "bag_slots_required": 10,
+      "rules": [
+        {
+          "id": "only_tank_pulls",
+          "title": "Only Tank Pulls",
+          "description": "Let tank hit first to build threat before DPS attacks.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "healer_mana",
+          "title": "Respect Healer Mana",
+          "description": "Never pull when healer has < 30% mana.",
+          "icon": "💧"
+        },
+        {
+          "id": "loot_need_vs_greed",
+          "title": "Loot Etiquette: Need vs Greed",
+          "description": "Greed default; Need strictly if upgrade for active spec.",
+          "icon": "🎲"
+        },
+        {
+          "id": "clear_bags",
+          "title": "Bags: Clear 10 Slots",
+          "description": "Vendor unwanted grey items before instance portal.",
+          "icon": "🎒"
+        }
+      ]
+    },
+    {
+      "id": "ragefire_chasm",
+      "name": "Ragefire Chasm",
+      "level_range": "13-18",
+      "estimated_time_minutes": 35,
+      "bag_slots_required": 10,
+      "rules": [
+        {
+          "id": "only_tank_pulls",
+          "title": "Only Tank Pulls",
+          "description": "Let tank hit first to build threat before DPS attacks.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "healer_mana",
+          "title": "Respect Healer Mana",
+          "description": "Never pull when healer has < 30% mana.",
+          "icon": "💧"
+        },
+        {
+          "id": "loot_need_vs_greed",
+          "title": "Loot Etiquette: Need vs Greed",
+          "description": "Greed default; Need strictly if upgrade for active spec.",
+          "icon": "🎲"
+        },
+        {
+          "id": "clear_bags",
+          "title": "Bags: Clear 10 Slots",
+          "description": "Vendor unwanted grey items before instance portal.",
+          "icon": "🎒"
+        }
+      ]
+    }
+  ]
+}
