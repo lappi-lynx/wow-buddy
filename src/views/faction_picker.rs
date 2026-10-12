@@ -30,7 +30,7 @@ pub fn FactionPickerView(
                 div { class: "flex items-center space-x-3",
                     span { class: "text-2xl", "⚔️" }
                     h1 { class: "text-lg sm:text-xl font-bold tracking-wider text-amber-400 uppercase",
-                        "WoW Buddy"
+                        "{i18n_svc.t(\"app_name\", lang)}"
                     }
                 }
                 div { class: "flex items-center space-x-2",
@@ -40,10 +40,10 @@ pub fn FactionPickerView(
 
             main { class: "w-full max-w-4xl flex flex-col items-center flex-grow justify-center my-4",
                 h2 { class: "text-2xl sm:text-4xl font-extrabold text-center text-amber-200 tracking-wide uppercase drop-shadow-md mb-2",
-                    "Choose Your Allegiance"
+                    "{i18n_svc.t(\"ui_choose_allegiance\", lang)}"
                 }
                 p { class: "text-sm sm:text-base text-slate-400 text-center max-w-lg mb-8",
-                    "Your faction determines your allies, starting realms, and cultural destiny in WoW Forever 1.60.1"
+                    "{i18n_svc.t(\"ui_faction_subtitle\", lang)}"
                 }
 
                 div { class: "grid grid-cols-1 md:grid-cols-2 gap-8 w-full justify-items-center mb-8",
@@ -51,12 +51,14 @@ pub fn FactionPickerView(
                         meta: alliance_meta,
                         title: alliance_name,
                         motto: alliance_motto,
+                        btn_text: i18n_svc.t("select", lang),
                         on_select: move |f| on_faction_selected.call(f),
                     }
                     FactionShield {
                         meta: horde_meta,
                         title: horde_name,
                         motto: horde_motto,
+                        btn_text: i18n_svc.t("select", lang),
                         on_select: move |f| on_faction_selected.call(f),
                     }
                 }
@@ -69,7 +71,7 @@ pub fn FactionPickerView(
             }
 
             footer { class: "w-full max-w-5xl text-center py-4 text-xs text-slate-600 border-t border-slate-900 mt-6",
-                "World of Warcraft Forever 1.60.1 Guide • 100% Offline"
+                "{i18n_svc.t(\"footer_offline\", lang)}"
             }
         }
     }

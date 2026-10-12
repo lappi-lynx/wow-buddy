@@ -17,6 +17,7 @@ pub fn DungeonCodexView(
     let mut simulated_loot_choice = use_signal(|| "greed".to_string());
 
     let lang = *current_lang.read();
+    let i18n_svc = i18n.read();
     let current_id = selected_dungeon_id.read().clone();
     let codex = get_dungeon_codex(&current_id);
 
@@ -27,7 +28,7 @@ pub fn DungeonCodexView(
                     class: "flex items-center space-x-2 text-sm text-slate-400 hover:text-amber-300 transition-colors px-3 py-1.5 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60",
                     onclick: move |_| on_back.call(()),
                     span { "←" }
-                    span { "{i18n.read().t(\"btn_back\", lang)}" }
+                    span { "{i18n_svc.t(\"btn_back\", lang)}" }
                 }
                 div { class: "flex items-center space-x-2",
                     LanguagePicker { current_lang: current_lang }
@@ -37,10 +38,10 @@ pub fn DungeonCodexView(
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow space-y-6",
                 div { class: "text-center",
                     h2 { class: "text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-wide",
-                        "🏰 Dungeon Survival Codex"
+                        "🏰 {i18n_svc.t(\"ui_dungeon_survival_codex\", lang)}"
                     }
                     p { class: "text-xs sm:text-sm text-slate-400 mt-1",
-                        "The unspoken 5-player rules so you never get kicked from your first group"
+                        "{i18n_svc.t(\"ui_dungeon_subtitle\", lang)}"
                     }
                 }
 
@@ -71,22 +72,22 @@ pub fn DungeonCodexView(
                     div { class: "p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3",
                         span { class: "text-2xl", "⏱️" }
                         div {
-                            span { class: "text-xs text-slate-400 block", "Estimated Duration" }
-                            span { class: "text-sm sm:text-base font-bold text-amber-300", "~{codex.estimated_time_minutes} minutes" }
+                            span { class: "text-xs text-slate-400 block", "{i18n_svc.t(\"ui_estimated_duration\", lang)}" }
+                            span { class: "text-sm sm:text-base font-bold text-amber-300", "~{codex.estimated_time_minutes} min" }
                         }
                     }
                     div { class: "p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3",
                         span { class: "text-2xl", "🎒" }
                         div {
-                            span { class: "text-xs text-slate-400 block", "Bags Preparation" }
-                            span { class: "text-sm sm:text-base font-bold text-emerald-400", "Clear {codex.bag_slots_required}+ free slots" }
+                            span { class: "text-xs text-slate-400 block", "{i18n_svc.t(\"ui_bags_preparation\", lang)}" }
+                            span { class: "text-sm sm:text-base font-bold text-emerald-400", "{codex.bag_slots_required}+ slots" }
                         }
                     }
                     div { class: "p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3",
                         span { class: "text-2xl", "💬" }
                         div {
-                            span { class: "text-xs text-slate-400 block", "Communication" }
-                            span { class: "text-sm sm:text-base font-bold text-blue-300", "/p party chat only" }
+                            span { class: "text-xs text-slate-400 block", "{i18n_svc.t(\"ui_communication\", lang)}" }
+                            span { class: "text-sm sm:text-base font-bold text-blue-300", "{i18n_svc.t(\"ui_party_chat_only\", lang)}" }
                         }
                     }
                 }
@@ -105,10 +106,10 @@ pub fn DungeonCodexView(
                 div { class: "w-full bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col space-y-3",
                     div { class: "flex justify-between items-center",
                         h4 { class: "text-sm sm:text-base font-bold text-amber-300",
-                            "Interactive Simulator: Loot Etiquette Test"
+                            "{i18n_svc.t(\"ui_loot_etiquette_test\", lang)}"
                         }
                         span { class: "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold",
-                            "Golden Rule"
+                            "{i18n_svc.t(\"ui_golden_rule\", lang)}"
                         }
                     }
                     p { class: "text-xs sm:text-sm text-slate-300 leading-relaxed",
@@ -122,7 +123,7 @@ pub fn DungeonCodexView(
                                 "flex-1 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 cursor-pointer"
                             },
                             onclick: move |_| simulated_loot_choice.set("greed".to_string()),
-                            "🎲 Greed (Не откажусь) — Correct!"
+                            "{i18n_svc.t(\"ui_greed_btn\", lang)}"
                         }
                         button {
                             class: if *simulated_loot_choice.read() == "need" {
@@ -131,23 +132,23 @@ pub fn DungeonCodexView(
                                 "flex-1 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 cursor-pointer"
                             },
                             onclick: move |_| simulated_loot_choice.set("need".to_string()),
-                            "⚔️ Need (Нужно) — Ninja Looting!"
+                            "{i18n_svc.t(\"ui_need_btn\", lang)}"
                         }
                     }
                     if *simulated_loot_choice.read() == "greed" {
                         div { class: "p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-xs text-emerald-300",
-                            "✓ Perfect! Never roll Need unless it is a direct upgrade you will equip immediately."
+                            "{i18n_svc.t(\"ui_greed_success\", lang)}"
                         }
                     } else {
                         div { class: "p-3 rounded-xl bg-rose-950/60 border border-rose-500/40 text-xs text-rose-300",
-                            "⚠️ Warning: Rolling Need for vendor gold will get you kicked and blacklisted on your realm!"
+                            "{i18n_svc.t(\"ui_need_warning\", lang)}"
                         }
                     }
                 }
             }
 
             footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6",
-                "World of Warcraft Forever 1.60.1 Guide • 100% Offline"
+                "{i18n_svc.t(\"footer_offline\", lang)}"
             }
         }
     }

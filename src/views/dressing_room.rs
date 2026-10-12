@@ -95,6 +95,8 @@ pub fn DressingRoomView(
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow space-y-6",
                 // 3D Dressing Room Canvas
                 ModelViewer {
+                    current_lang: current_lang,
+                    i18n: i18n,
                     race: race.clone(),
                     class: class.clone(),
                     tier: current_tier,
@@ -130,7 +132,7 @@ pub fn DressingRoomView(
                 div { class: "w-full max-w-lg bg-slate-900/80 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl flex flex-col space-y-3",
                     div { class: "flex justify-between items-center",
                         span { class: "text-xs uppercase tracking-wider font-semibold text-slate-400",
-                            "Gear Evolution (Level {selected_level.read()})"
+                            "{i18n.read().t_with(\"ui_gear_evolution\", lang, &[(\"level\", selected_level.read().to_string())])}"
                         }
                         span { class: "text-xs font-bold text-amber-400",
                             "{tier_text}"
@@ -179,8 +181,8 @@ pub fn DressingRoomView(
                 div { class: "w-full max-w-lg bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col space-y-4",
                     div { class: "flex justify-between items-center border-b border-slate-800 pb-3",
                         div {
-                            h3 { class: "text-base sm:text-lg font-bold text-amber-300", "{class.name} Starter Guide" }
-                            p { class: "text-xs text-slate-400", "Role: {class.role}" }
+                            h3 { class: "text-base sm:text-lg font-bold text-amber-300", "{i18n.read().t_with(\"ui_novice_guide\", lang, &[(\"class\", class.name.clone())])}" }
+                            p { class: "text-xs text-slate-400", "{i18n.read().t_with(\"ui_role_label\", lang, &[(\"role\", class.role.clone())])}" }
                         }
                         span { class: "text-xs px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 font-semibold",
                             "🟢 {class.difficulty}"
@@ -188,7 +190,7 @@ pub fn DressingRoomView(
                     }
 
                     div { class: "space-y-2.5",
-                        span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block", "3 Core Beginner Spells" }
+                        span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block", "{i18n.read().t(\"ui_core_spells\", lang)}" }
                         for spell in class.core_spells.iter() {
                             div {
                                 key: "{spell.name}",
@@ -205,13 +207,13 @@ pub fn DressingRoomView(
                     button {
                         class: "w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer mt-2",
                         onclick: move |_| on_continue_to_guide.call(()),
-                        "Proceed to Progression Guide →"
+                        "{i18n.read().t(\"ui_proceed_to_guide\", lang)}"
                     }
                 }
             }
 
             footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6",
-                "World of Warcraft Forever 1.60.1 Guide • 100% Offline"
+                "{i18n.read().t(\"footer_offline\", lang)}"
             }
         }
     }

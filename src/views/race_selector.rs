@@ -51,6 +51,12 @@ pub fn RaceSelectorView(
         "text-red-400 border-red-500/40"
     };
 
+    let faction_title = if faction == Faction::Alliance {
+        format!("{} Races", i18n.read().t("alliance_name", lang))
+    } else {
+        format!("{} Races", i18n.read().t("horde_name", lang))
+    };
+
     let (active_name, active_lore, active_ability_name, active_ability_desc, available_classes) =
         if let Some(ref r) = active_race {
             let name = format_race_display_name(r, faction);
@@ -93,10 +99,10 @@ pub fn RaceSelectorView(
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow",
                 div { class: "text-center mb-6",
                     h2 { class: "text-2xl sm:text-3xl font-extrabold tracking-wide uppercase {faction_theme}",
-                        if faction == Faction::Alliance { "Alliance Races" } else { "Horde Races" }
+                        "{faction_title}"
                     }
                     p { class: "text-xs sm:text-sm text-slate-400 mt-1",
-                        "Choose the race that matches your identity and combat style"
+                        "{i18n.read().t(\"ui_race_selector_subtitle\", lang)}"
                     }
                 }
 
@@ -129,7 +135,7 @@ pub fn RaceSelectorView(
                         div { class: "flex justify-between items-start border-b border-slate-800 pb-3",
                             div {
                                 h3 { class: "text-xl sm:text-2xl font-bold text-amber-300", "{active_name}" }
-                                p { class: "text-xs text-slate-400 mt-0.5", "Racial Culture & Heritage" }
+                                p { class: "text-xs text-slate-400 mt-0.5", "{i18n.read().t(\"ui_racial_culture_heritage\", lang)}" }
                             }
                             div { class: "flex flex-col items-end",
                                 span { class: "text-xs uppercase tracking-wider text-amber-500/80 font-semibold", "Racial Ability" }
@@ -142,12 +148,12 @@ pub fn RaceSelectorView(
                         }
 
                         div { class: "bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 text-xs sm:text-sm text-slate-300",
-                            span { class: "font-semibold text-amber-400 mr-2", "Effect:" }
+                            span { class: "font-semibold text-amber-400 mr-2", "{i18n.read().t(\"ui_effect\", lang)}" }
                             "{active_ability_desc}"
                         }
 
                         div { class: "pt-2",
-                            span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2", "Available Classes" }
+                            span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2", "{i18n.read().t(\"ui_available_classes\", lang)}" }
                             div { class: "flex flex-wrap gap-2",
                                 for cls in available_classes.iter() {
                                     span {
@@ -171,7 +177,7 @@ pub fn RaceSelectorView(
             }
 
             footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6",
-                "World of Warcraft Forever 1.60.1 Guide • 100% Offline"
+                "{i18n.read().t(\"footer_offline\", lang)}"
             }
         }
     }

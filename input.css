@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@source "../src/**/*.rs";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-slate-950 {
+    background-color: #020617;
+  }
+  .text-slate-100 {
+    color: #f1f5f9;
+  }
+  .font-sans {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

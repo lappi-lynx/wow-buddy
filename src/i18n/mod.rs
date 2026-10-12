@@ -53,6 +53,21 @@ impl I18nService {
         self.t_by_code(key, lang.code())
     }
 
+    /// Translate a key with named parameters (e.g., "{level}", "{zone}").
+    pub fn t_with(
+        &self,
+        key: &str,
+        lang: Language,
+        params: &[(&str, String)],
+    ) -> String {
+        let template = self.t(key, lang);
+        let mut result = template;
+        for (name, val) in params {
+            result = result.replace(&format!("{{{}}}", name), val);
+        }
+        result
+    }
+
     /// Translate a key by language code with fallback to "en" and raw key.
     pub fn t_by_code(&self, key: &str, lang_code: &str) -> String {
         if let Some(dict) = self.dictionaries.get(lang_code) {

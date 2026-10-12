@@ -9,13 +9,11 @@ This guide describes how to run and manually test **WoW Buddy** across desktop, 
 WoW Buddy is written in Rust using **Dioxus 0.7**. You can build and run it directly with standard Cargo:
 
 ```bash
-cd wow-buddy
 cargo run
 ```
 
 ### Running All Automated Tests
 ```bash
-cd wow-buddy
 cargo test
 ```
 All 20 unit and integration tests will run and pass, verifying data integrity, 16-point Legacy calculations, dungeon survival rules, and multilingual i18n resolution.
@@ -44,8 +42,6 @@ dx --version
 Desktop is the primary target with native WebGL WebView support.
 
 ```bash
-cd wow-buddy
-
 # Run with hot reloading enabled
 dx serve --platform desktop
 
@@ -64,8 +60,6 @@ cargo build --release
 You can quickly test the entire UI in your web browser:
 
 ```bash
-cd wow-buddy
-
 # Serves at http://localhost:8080 with auto-reload
 dx serve --platform web
 ```
@@ -87,7 +81,6 @@ The production bundle will be generated in `dist/`.
 rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
 
 # Serve to active iOS Simulator
-cd wow-buddy
 dx serve --platform ios
 ```
 
@@ -102,7 +95,6 @@ dx serve --platform ios
 rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android
 
 # Serve to running Android Emulator or connected device via ADB
-cd wow-buddy
 dx serve --platform android
 ```
 

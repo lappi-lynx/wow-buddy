@@ -1,10 +1,12 @@
 use crate::components::{BottomNav, NavTab};
 use crate::i18n::{I18nService, LanguageStorage};
 use crate::models::{Faction, GameData, RaceInfo};
+use crate::styles::APP_CSS;
 use crate::views::{
     DressingRoomView, DungeonCodexView, FactionPickerView, ProgressionGuideView, RaceSelectorView,
 };
 use dioxus::prelude::*;
+use dioxus::document as document;
 
 #[derive(Routable, Clone, Debug, PartialEq)]
 pub enum Route {
@@ -68,6 +70,9 @@ pub fn App() -> Element {
         .unwrap_or_else(|| game_data.read().classes[0].clone());
 
     rsx! {
+        document::Style {
+            "{APP_CSS}"
+        }
         div { class: "min-h-screen bg-slate-950 text-slate-100 pb-16 sm:pb-0 font-sans antialiased",
             match *current_route.read() {
                 Route::FactionPicker {} => rsx! {

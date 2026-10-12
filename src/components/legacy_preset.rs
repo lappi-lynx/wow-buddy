@@ -1,10 +1,15 @@
+use crate::i18n::{I18nService, Language};
 use crate::models::legacy::{get_starter_legacy_preset, LegacyPreset};
 use dioxus::prelude::*;
 
 #[component]
 pub fn LegacyPresetWidget(
+    current_lang: Signal<Language>,
+    i18n: Signal<I18nService>,
     on_applied: Option<EventHandler<LegacyPreset>>,
 ) -> Element {
+    let lang = *current_lang.read();
+    let i18n_svc = i18n.read();
     let preset = get_starter_legacy_preset();
     let mut is_applied = use_signal(|| false);
 
@@ -21,14 +26,14 @@ pub fn LegacyPresetWidget(
             div { class: "flex justify-between items-center border-b border-slate-800 pb-3",
                 div {
                     h3 { class: "text-base sm:text-lg font-bold text-amber-300",
-                        "⚡ 1-Click Starter Legacy Preset"
+                        "{i18n_svc.t(\"ui_legacy_preset_title\", lang)}"
                     }
                     p { class: "text-xs text-slate-400 mt-0.5",
-                        "Optimal 16-point allocation for smooth 1–20 leveling"
+                        "{i18n_svc.t(\"ui_legacy_preset_desc\", lang)}"
                     }
                 }
                 span { class: "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold",
-                    "16 / 16 Points"
+                    "{i18n_svc.t(\"ui_legacy_points\", lang)}"
                 }
             }
 
@@ -56,14 +61,14 @@ pub fn LegacyPresetWidget(
                     class: "w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer text-center",
                     onclick: apply_handler,
                     if *is_applied.read() {
-                        "✓ 16 Legacy Points Applied!"
+                        "{i18n_svc.t(\"ui_apply_legacy_applied\", lang)}"
                     } else {
-                        "★ Apply 16-Point Preset Now"
+                        "{i18n_svc.t(\"ui_apply_legacy\", lang)}"
                     }
                 }
                 button {
                     class: "w-full sm:w-auto py-2.5 px-4 rounded-xl font-semibold text-xs text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700 bg-slate-950/40 transition-colors cursor-pointer",
-                    "Manual Tweak (Advanced)"
+                    "{i18n_svc.t(\"ui_manual_tweak\", lang)}"
                 }
             }
         }

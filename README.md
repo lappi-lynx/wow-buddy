@@ -19,12 +19,10 @@ For detailed setup across macOS, Windows, Linux, Web, iOS, and Android, see **[D
 
 ### Quick Start
 ```bash
-cd wow-buddy
 cargo run
 ```
 
 ### Running Tests
 ```bash
-cd wow-buddy
 cargo test
 ```

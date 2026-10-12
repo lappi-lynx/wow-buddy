@@ -6,9 +6,11 @@ pub fn FactionShield(
     meta: FactionMeta,
     title: String,
     motto: String,
+    btn_text: Option<String>,
     on_select: EventHandler<Faction>,
 ) -> Element {
     let is_alliance = meta.faction == Faction::Alliance;
+    let button_label = btn_text.unwrap_or_else(|| "Select".to_string());
 
     let border_color = if is_alliance {
         "border-blue-500/60 hover:border-yellow-400 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.6)]"
@@ -40,7 +42,7 @@ pub fn FactionShield(
                 }
             }
             div { class: "mt-6 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500 group-hover:text-black transition-all duration-200 shadow-md",
-                "Select"
+                "{button_label}"
             }
         }
     }

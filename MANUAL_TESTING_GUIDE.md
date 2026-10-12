@@ -37,7 +37,6 @@ This document captures the verification results and manual testing walkthrough f
 
 ### Quickest Way to Run (Desktop):
 ```bash
-cd wow-buddy
 cargo run
 ```
 
@@ -49,7 +48,7 @@ cargo install dioxus-cli --locked
 
 Then run for your desired environment:
 
-| Target Platform | Command (inside `wow-buddy/`) | Details |
+| Target Platform | Command | Details |
 |---|---|---|
 | **Desktop (macOS / Windows / Linux)** | `dx serve --platform desktop` | Native WebView with WebGL acceleration |
 | **Web Browser Preview** | `dx serve --platform web` | Serves at `http://localhost:8080` with auto-reload |
