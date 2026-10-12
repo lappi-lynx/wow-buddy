@@ -6,4 +6,5 @@ pub const VERSION: &str = "0.1.0";
 pub mod components;
 pub mod i18n;
 pub mod models;
+pub mod router;
 pub mod views;
