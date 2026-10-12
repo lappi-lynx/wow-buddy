@@ -10,7 +10,7 @@ const RU_JSON: &str = include_str!("../../assets/i18n/ru.json");
 const FI_JSON: &str = include_str!("../../assets/i18n/fi.json");
 
 /// Internationalization service holding dictionary mappings per language code.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct I18nService {
     dictionaries: HashMap<String, HashMap<String, String>>,
 }

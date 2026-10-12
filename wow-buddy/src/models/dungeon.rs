@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct DungeonRule {
     pub id: String,
     pub title: String,
@@ -8,7 +8,7 @@ pub struct DungeonRule {
     pub icon: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct DungeonCodexInfo {
     pub id: String,
     pub name: String,

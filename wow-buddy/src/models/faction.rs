@@ -16,7 +16,7 @@ impl Faction {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct FactionMeta {
     pub faction: Faction,
     pub name_key: String,
