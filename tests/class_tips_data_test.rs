@@ -125,3 +125,8 @@ fn test_hunter_specs_are_authored() {
 fn test_rogue_specs_are_authored() {
     assert_class_authored(&ClassTipsData::load_embedded(), "rogue");
 }
+
+#[test]
+fn test_priest_specs_are_authored() {
+    assert_class_authored(&ClassTipsData::load_embedded(), "priest");
+}

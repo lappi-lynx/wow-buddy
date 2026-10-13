@@ -355,6 +355,76 @@
           ]
         }
       ]
+    },
+    "priest": {
+      "specs": [
+        {
+          "id": "discipline",
+          "name_en": "Discipline",
+          "provenance": "kb:priest-discipline@2026-10-13 (beta notes, downranking article, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Downranking is heavily nerfed in Forever, so always cast full ranks of Penance, Smite and Heal; Penance is a 2-second channel tuned for better mana efficiency than the Heal family, and you can recover mana by finishing mobs with your Wand while Spirit ticks (5-second rule).",
+              "text_ru": "В Forever низкоранговые заклинания сильно понерфлены, поэтому всегда кастуйте полные ранги Penance, Smite и Heal; Penance — 2-секундный ченнел с лучшей мана-эффективностью, чем у семейства Heal, а ману помогает восстанавливать добивание мобов автоатакой Wand, пока тикает дух (правило пяти секунд).",
+              "text_fi": "Foreverissä matalan rankin loitsut on nerfattu rajusti, joten käytä aina Penancen, Smiten ja Healin täysiä rankkeja; Penance on 2 sekunnin kanava, jonka manatehokkuus on parempi kuin Heal-perheen, ja manaa palautuu, kun viimeistelet mobit Wandilla Spiritin tickatessa (viiden sekunnin sääntö)."
+            },
+            {
+              "text_en": "Discipline comfortably holds 1–2 mobs: Power Word: Shield removes spell pushback so you can burst the first target with Penance and Mind Blast, and Psychic Scream gives you room when an extra mob joins.",
+              "text_ru": "Discipline уверенно держит 1–2 моба: Power Word: Shield убирает пушбэк, позволяя забурстить первую цель через Penance и Mind Blast, а Psychic Scream даёт передышку, если подтянулся лишний моб.",
+              "text_fi": "Discipline hoitaa mukavasti 1–2 mobia: Power Word: Shield poistaa spell pushbackin, joten voit burstata ensimmäisen kohteen Penancella ja Mind Blastilla, ja Psychic Scream antaa tilaa, jos ylimääräinen mob liittyy seuraan."
+            },
+            {
+              "text_en": "Take Tailoring + Enchanting to craft bags, cloth robes and Magic Wands, or Herbalism + Alchemy for mana potions; equip staves or one-hand + off-hand with Spell Power, Intellect and Spirit (Oakthrush Staff ~12, Golemheart Stave ~14, Staff of Westfall ~20, Odo's Ley Staff ~30).",
+              "text_ru": "Возьмите Портняжное дело + Наложение чар ради сумок, тканевых роб и Magic Wand либо Травничество + Алхимию ради зелий маны; носите посохи или одноручное + предмет в левой руке с силой заклинаний, интеллектом и духом (Oakthrush Staff ~12, Golemheart Stave ~14, Staff of Westfall ~20, Odo's Ley Staff ~30).",
+              "text_fi": "Ota Ompelutyö + Lumous laukkuja, kangasrobeja ja Magic Wandeja varten tai Yrttitaito + Alkimia manapulloja varten; käytä sauvoja tai yksikätisen aseen ja off-hand-esineen yhdistelmää ja tavoittele loitsutehoa, Älykkyyttä ja Sielua (Oakthrush Staff ~12, Golemheart Stave ~14, Staff of Westfall ~20, Odo's Ley Staff ~30)."
+            }
+          ]
+        },
+        {
+          "id": "holy",
+          "name_en": "Holy",
+          "provenance": "kb:priest-holy@2026-10-13 (beta notes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Holy carries higher mana costs per cast, but Forever rebalanced Smite, Lesser Heal and Heal so every new rank is a strict upgrade; solo, open with Holy Fire or Smite, apply Renew, then switch to Wand early to let Spirit regenerate.",
+              "text_ru": "У Holy выше цена каждого каста, но в Forever Smite, Lesser Heal и Heal пересбалансированы так, что каждый новый ранг строго лучше прежнего; в одиночку начинайте с Holy Fire или Smite, повесьте Renew и рано переходите на Wand, чтобы дух успевал восстанавливать ману.",
+              "text_fi": "Holyn loitsut maksavat enemmän manaa, mutta Foreverissä Smite, Lesser Heal ja Heal on säädetty niin, että jokainen uusi rankki on tiukka parannus; soolona aloita Holy Firella tai Smitellä, laita Renew ja vaihda varhain Wandiin, jotta Spirit ehtii palauttaa manaa."
+            },
+            {
+              "text_en": "Stick strictly to one mob at a time when solo: Holy has no real physical mitigation or attack AoE, so multi-mob pulls just bleed mana — this spec shines healing dungeon groups instead.",
+              "text_ru": "В одиночной игре держитесь строго одного моба: у Holy нет ни физической защиты, ни атакующего AoE, так что паки мобов лишь сливают ману — этот спек раскрывается в подземельях как хилер.",
+              "text_fi": "Pysy soolona tiukasti yhdessä mobissa: Holylta puuttuvat fyysinen mitigointi ja hyökkäys-AoE, joten usean mobil vedot vain valuttavat manaa — tämä spekki loistaa luolastoissa parantajana."
+            },
+            {
+              "text_en": "Choose Tailoring + Enchanting to craft gear and disenchant spare greens, or Herbalism + Alchemy for Intellect and mana-regen elixirs; prioritise Spell Healing, Intellect and Spirit on gear and carry the highest-damage Wand you can get.",
+              "text_ru": "Выберите Портняжное дело + Наложение чар ради крафта и распыления лишних зелёных предметов либо Травничество + Алхимию ради эликсиров на интеллект и восстановление маны; в приоритете лечение заклинаний, интеллект и дух, а в руке — Wand с максимальным уроном.",
+              "text_fi": "Valitse Ompelutyö + Lumous varusteiden tekemiseen ja ylimääräisten vihreiden esineiden purkamiseen tai Yrttitaito + Alkimia Älykkyys- ja manapalautuseliksiirejä varten; suosi parannusvoimaa, Älykkyyttä ja Sielua sekä kanna korkeimman damagen Wandia."
+            }
+          ]
+        },
+        {
+          "id": "shadow",
+          "name_en": "Shadow",
+          "provenance": "kb:priest-shadow@2026-10-13 (leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Mind Blast, Mind Flay and DoTs drain mana fast if you never stop casting: open with Shadow Word: Pain and Mind Blast, then finish with Auto-Wand while Spirit Tap procs refill your mana on the kill.",
+              "text_ru": "Mind Blast, Mind Flay и DoT быстро сливают ману, если кастовать без остановки: начинайте с Shadow Word: Pain и Mind Blast, а добивайте автоатакой Wand, пока проки Spirit Tap восполняют ману за убийство.",
+              "text_fi": "Mind Blast, Mind Flay ja DoT:t valuttavat manan nopeasti, jos loitsit taukoamatta: aloita Shadow Word: Painilla ja Mind Blastilla ja viimeistele auto-Wandilla, kun Spirit Tap -procit täyttävät manaa taposta."
+            },
+            {
+              "text_en": "Shadow safely handles 1–2 mobs: keep Power Word: Shield up against spell pushback and Mind Flay approaching melee, and Psychic Scream the second mob away while you execute the first.",
+              "text_ru": "Shadow уверенно держит 1–2 моба: держите Power Word: Shield против пушбэка, замедляйте подходящих ближников Mind Flay, а второго моба отгоняйте Psychic Scream, пока добиваете первого.",
+              "text_fi": "Shadow hoitaa turvallisesti 1–2 mobia: pidä Power Word: Shield pushbackia vastaan ja hidasta lähestyviä lähitaistelijoita Mind Flaylla; karkota toinen mob Psychic Screamilla, kun viimeistelet ensimmäistä."
+            },
+            {
+              "text_en": "Pair Tailoring + Enchanting for cloth gear and high-DPS Wands; stack Shadow Spell Power, Intellect and Spirit, and upgrade your Wand every few levels — wanding the last 30–50% of a mob's health is the backbone of smooth Shadow leveling.",
+              "text_ru": "Сочетайте Портняжное дело + Наложение чар ради тканевых вещей и Wand с высоким DPS; собирайте силу заклинаний школы тьмы, интеллект и дух и обновляйте Wand каждые несколько уровней — добивание последних 30–50% здоровья моба палочкой — основа комфортной прокачки Shadow.",
+              "text_fi": "Yhdistä Ompelutyö + Lumous kangaspanssareihin ja korkean DPS:n Wandeihin; kerää Shadow-loitsutehoa, Älykkyyttä ja Sielua sekä päivitä Wand muutaman tason välein — mobiln viimeisen 30–50%:n hoitaminen Wandilla on sujuvan Shadow-tasoituksen selkäranka."
+            }
+          ]
+        }
+      ]
     }
   }
 }
