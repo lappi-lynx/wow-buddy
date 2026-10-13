@@ -407,6 +407,9 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
+  .h-full {
+    height: 100%;
+  }
   .min-h-\[380px\] {
     min-height: 380px;
   }
@@ -1106,6 +1109,9 @@
   .to-slate-950 {
     --tw-gradient-to: var(--color-slate-950);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
