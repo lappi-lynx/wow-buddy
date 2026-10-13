@@ -1,4 +1,5 @@
 pub mod class;
+pub mod class_tips;
 pub mod dungeon;
 pub mod faction;
 pub mod gear;
@@ -8,6 +9,7 @@ pub mod race;
 pub mod zone;
 
 pub use class::{ClassInfo, CoreSpell};
+pub use class_tips::{ClassTips, ClassTipsData, LocalizedText, SpecTips};
 pub use dungeon::{get_dungeon_codex, DungeonCodexInfo, DungeonRule};
 pub use faction::{get_faction_meta, Faction, FactionMeta};
 pub use gear::{get_tier_for_level, GearTier};

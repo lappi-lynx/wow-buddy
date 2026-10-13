@@ -1,0 +1,80 @@
+{
+  "spec_info": {
+    "text_en": "Talents and specializations start at level 10. You have one active specialization at a time. Dual Specialization unlocks at level 40 (developers have discussed lowering it to 30 at launch) and lets you keep two builds and swap outside combat. Respec at your class trainer; the cost decays over time.",
+    "text_ru": "Таланты и специализация начинаются с 10 уровня. Одновременно активна одна специализация. Dual Specialization открывается на 40 уровне (обсуждается снижение до 30 к запуску): позволяет держать два билда и переключаться вне боя. Ресет — у классового тренера, цена со временем затухает.",
+    "text_fi": "Talentit ja erikoistuminen alkavat tasolta 10. Aktiivinen erikoistuminen on yksi kerrallaan. Dual Specialization avautuu tasolla 40 (keskusteltu laskemisesta tasolle 30 julkaisussa): säilytä kaksi buildia ja vaihda taistelun ulkopuolella. Resetoi class trainerin luona; hinta laskee ajan myötä.",
+    "provenance": "kb:specs@2026-10-13 (Dual Spec lvl 40, possibly 30 at launch)"
+  },
+  "classes": {
+    "druid": {
+      "specs": [
+        {
+          "id": "balance",
+          "name_en": "Balance",
+          "provenance": "kb:druid-balance@2026-10-13 (ForeverDB downranking, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Mana is your real limit while leveling: cast only your highest rank of Wrath or Moonfire — lower ranks scale poorly after the October beta changes.",
+              "text_ru": "Мана — ваш реальный лимит в прокачке: используйте только максимальный ранг Wrath или Moonfire — низкие ранги плохо масштабируются после октябрьских правок беты.",
+              "text_fi": "Mana on todellinen raja tasoittaessa: käytä vain korkeinta Wrath- tai Moonfire-rankkia — matalat rankit skaalautuvat heikosti lokakuun beettamuutosten jälkeen."
+            },
+            {
+              "text_en": "Open with a DoT and two or three casts, then finish the mob in melee or Bear Form so your mana regenerates; pull only 1–2 mobs, since spell pushback drains you fast.",
+              "text_ru": "Начните с DoT и двух-трёх кастов, затем добейте моба в ближнем бою или в форме медведя, чтобы мана восстанавливалась; пулите 1–2 моба — от пушбэка мана уходит быстро.",
+              "text_fi": "Aloita DoT:lla ja parilla loitsulla, viimeistele sitten lähitaistelussa tai karhun muodossa, jotta mana palautuu; vedä vain 1–2 mobia — pushback tyhjentää manan nopeasti."
+            },
+            {
+              "text_en": "Take Herbalism + Alchemy for mana potions (or Fishing for the campfire buff), and upgrade to a high spell-power staff around levels 12, 20 and 30.",
+              "text_ru": "Возьмите Травничество + Алхимию ради зелий маны (или Рыбалку ради бафа от костра) и обновляйте посох с силой заклинаний примерно на 12, 20 и 30 уровнях.",
+              "text_fi": "Ota Yrttitaito + Alkimia manapulloja varten (tai Kalastus leirinuotion buffia varten) ja päivitä loitsutehoinen sauva noin tasoilla 12, 20 ja 30."
+            }
+          ]
+        },
+        {
+          "id": "feral",
+          "name_en": "Feral",
+          "provenance": "kb:druid-feral@2026-10-13 (ForeverDB form changes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "In Forever you can drink mana potions inside Cat and Bear Form, and Shifting Power (Cat) grants instant Energy — stop powershifting your whole mana pool away.",
+              "text_ru": "В Forever зелья маны можно пить прямо в формах кота и медведя, а Shifting Power (кот) даёт мгновенную энергию — перестаньте сливать всю ману на пауэршифт.",
+              "text_fi": "Foreverissä manapulloja voi juoda kissan ja karhun muodossa, ja Shifting Power (kissa) antaa heti energiaa — lopeta koko manapoolin tuhlaaminen powershiftiin."
+            },
+            {
+              "text_en": "Use Cat Form for 1–2 mobs (stealth opener) and switch to Bear Form for 3+, where armor, threat and Rage from incoming damage carry the fight.",
+              "text_ru": "Котом бейте 1–2 моба (открытие из стелса), а на 3+ переходите в медведя: броня, агро и ярость от входящего урона вытягивают бой.",
+              "text_fi": "Käytä kissaa 1–2 mobiin (stealth-avaus) ja vaihda karhuun kun mobeja on 3+: panssari, threat ja vihollisen aiheuttama Rage kantavat taistelun."
+            },
+            {
+              "text_en": "Equipped weapon DPS and stats now scale your Cat/Bear damage — always take the highest-DPS weapon (e.g. Living Root around level 18) and pair Skinning + Leatherworking.",
+              "text_ru": "DPS и статы оружия теперь масштабируют урон кота/медведя — всегда берите оружие с максимальным DPS (например, Living Root около 18 уровня) и сочетайте Снятие шкур + Кожевничество.",
+              "text_fi": "Aseen DPS ja statsit skaalaavat nyt kissa/karhu-damagea — valitse aina korkeimman DPS:n ase (esim. Living Root noin tasolla 18) ja yhdistä Nahkominen + Nahkatyö."
+            }
+          ]
+        },
+        {
+          "id": "restoration",
+          "name_en": "Restoration",
+          "provenance": "kb:druid-restoration@2026-10-13 (ForeverDB beta notes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Apply HoTs before damage lands (Rejuvenation, Regrowth), then step back or shift to Bear Form so Spirit can regenerate; avoid low-rank heal spam after the beta scaling changes.",
+              "text_ru": "Вешайте HoT заранее (Rejuvenation, Regrowth), затем отходите или уходите в медведя, чтобы дух восстанавливал ману; не спамьте низкоранговые хилы после правок масштабирования.",
+              "text_fi": "Aseta HoT:it ennen kuin damage osuu (Rejuvenation, Regrowth), astu sitten taakse tai vaihda karhuun, jotta Spirit palauttaa manaa; vältä matalan rankin heal-spammia beettamuutosten jälkeen."
+            },
+            {
+              "text_en": "Solo: pull one mob, HoT yourself, add DoTs and finish in Bear or Cat Form. In dungeons, let the tank gather mobs before single-target HoTs so you don't pull heal threat.",
+              "text_ru": "В одиночку: пуллите одного моба, вешайте HoT, добавляйте DoT и добивайте в медведе или коте. В данже дайте танку собрать мобов, прежде чем вешать одиночные HoT, чтобы не сорвать агро хилом.",
+              "text_fi": "Yksin: vedä yksi mob, HoT itsellesi, lisää DoT:it ja viimeistele karhussa tai kissassa. Luolastossa anna tankin kerätä mobit ennen yksittäisiä HoT:eja, jotta et nosta heal-threatia."
+            },
+            {
+              "text_en": "Take Herbalism + Alchemy for mana potions, and look for a one-hand mace or staff with spell healing, Intellect and Spirit.",
+              "text_ru": "Возьмите Травничество + Алхимию ради зелий маны и ищите одноручное дробящее или посох с лечением заклинаний, интеллектом и духом.",
+              "text_fi": "Ota Yrttitaito + Alkimia manapulloja varten ja etsi yksikätinen nuija tai sauva, jossa on parannusvoimaa, Älykkyyttä ja Sielua."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
