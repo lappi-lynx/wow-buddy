@@ -19,22 +19,13 @@ pub fn race_emoji(race_id: &str) -> &'static str {
     }
 }
 
-/// Race render art as a `data:` URI, or the race emoji when no art exists.
-/// Skyborne honours the faction variant id (High Order / Windshaper); the Fan
-/// Site Kit has no Skyborne art, so it falls back to the emoji today.
-pub fn race_render_source(registry: &AssetRegistry, race_id: &str, faction: Faction) -> String {
-    let id = if race_id == "skyborne" {
-        match faction {
-            Faction::Alliance => "race_skyborne_alliance_render".to_string(),
-            Faction::Horde => "race_skyborne_horde_render".to_string(),
-        }
-    } else {
-        format!("race_{race_id}_render")
-    };
-    registry
-        .art_uri(&id)
-        .map(str::to_string)
-        .unwrap_or_else(|| race_emoji(race_id).to_string())
+/// Male/female race portraits as embedded `data:` URIs, or `None` when the
+/// race has no art (e.g. the custom Skyborne) — callers fall back to the
+/// race emoji.
+pub fn race_portraits(registry: &AssetRegistry, race_id: &str) -> Option<(String, String)> {
+    let male = registry.art_uri(&format!("race_{race_id}_male_render"))?;
+    let female = registry.art_uri(&format!("race_{race_id}_female_render"))?;
+    Some((male.to_string(), female.to_string()))
 }
 
 /// Class render art as a `data:` URI, or an empty string when absent (callers
@@ -63,19 +54,25 @@ pub fn RaceTile(
         theme.tile_idle
     };
 
-    let art = race_render_source(&AssetRegistry::load_embedded(), &race.id, faction);
-    let has_art = art.starts_with("data:");
+    let portraits = race_portraits(&AssetRegistry::load_embedded(), &race.id);
     let emoji = race_emoji(&race.id);
 
     rsx! {
         button {
             class: "flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer min-w-[120px] max-w-[160px] text-center {border_style}",
             onclick: move |_| on_select.call(race_clone.clone()),
-            if has_art {
-                img {
-                    class: "w-12 h-12 object-contain mb-2",
-                    src: "{art}",
-                    alt: "race render",
+            if let Some((male, female)) = portraits {
+                div { class: "flex items-center justify-center -space-x-2 mb-2",
+                    img {
+                        class: "w-10 h-10 rounded-full border-2 border-slate-700 bg-slate-900 object-cover",
+                        src: "{male}",
+                        alt: "male portrait",
+                    }
+                    img {
+                        class: "w-10 h-10 rounded-full border-2 border-slate-700 bg-slate-900 object-cover",
+                        src: "{female}",
+                        alt: "female portrait",
+                    }
                 }
             } else {
                 span { class: "text-3xl sm:text-4xl mb-2", "{emoji}" }

@@ -58,7 +58,7 @@ fn test_art_missing_never_breaks_screens() {
     let reg = AssetRegistry::load_embedded();
     // отсутствие арта — штатное состояние: хелперы возвращают фоллбек, не паникуют
     assert!(reg.art_uri("nope").is_none());
-    let _ = wow_buddy::components::race_tile::race_render_source(&reg, "skyborne", Faction::Horde);
+    let _ = wow_buddy::components::race_tile::race_portraits(&reg, "skyborne");
 }
 
 #[test]

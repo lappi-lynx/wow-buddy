@@ -18,11 +18,101 @@
       "source": "community re-host of the Horde crest (pngegg.com, imported 2026-10-13) — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
     },
-    "race_human_render": {
-      "path": "assets/art/race/race_human_render.png",
+    "race_human_male_render": {
+      "path": "assets/art/race/race_human_male_render.webp",
       "kind": "race_render",
-      "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
-      "license": "blizzard-fansite-kit"
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_human_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_human_female_render": {
+      "path": "assets/art/race/race_human_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_human_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_dwarf_male_render": {
+      "path": "assets/art/race/race_dwarf_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_dwarf_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_dwarf_female_render": {
+      "path": "assets/art/race/race_dwarf_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_dwarf_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_night_elf_male_render": {
+      "path": "assets/art/race/race_night_elf_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_nightelf_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_night_elf_female_render": {
+      "path": "assets/art/race/race_night_elf_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_nightelf_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_gnome_male_render": {
+      "path": "assets/art/race/race_gnome_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_gnome_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_gnome_female_render": {
+      "path": "assets/art/race/race_gnome_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_gnome_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_orc_male_render": {
+      "path": "assets/art/race/race_orc_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_orc_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_orc_female_render": {
+      "path": "assets/art/race/race_orc_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_orc_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_undead_male_render": {
+      "path": "assets/art/race/race_undead_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_scourge_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_undead_female_render": {
+      "path": "assets/art/race/race_undead_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_scourge_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_tauren_male_render": {
+      "path": "assets/art/race/race_tauren_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_tauren_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_tauren_female_render": {
+      "path": "assets/art/race/race_tauren_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_tauren_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_troll_male_render": {
+      "path": "assets/art/race/race_troll_male_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_troll_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_troll_female_render": {
+      "path": "assets/art/race/race_troll_female_render.webp",
+      "kind": "race_render",
+      "source": "Blizzard race portrait via wow.zamimg.com CDN (race_troll_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     },
     "zone_shadowglen_art": {
       "path": "assets/art/zone/zone_shadowglen_art.png",
