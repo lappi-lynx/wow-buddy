@@ -565,6 +565,76 @@
           ]
         }
       ]
+    },
+    "warlock": {
+      "specs": [
+        {
+          "id": "affliction",
+          "name_en": "Affliction",
+          "provenance": "kb:warlock-affliction@2026-10-13 (Warcraft Tavern guide, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Run a health-to-mana loop: Life Tap trades health for mana while Corruption, Siphon Life and Drain Life keep your health bar topped up, so you rarely need to drink; finish dying mobs with Drain Soul to farm Soul Shards for Healthstones and summons.",
+              "text_ru": "Держите цикл «здоровье в ману»: Life Tap меняет здоровье на ману, а Corruption, Siphon Life и Drain Life постоянно возвращают здоровье, так что пить почти не придётся; добивайте умирающих мобов Drain Soul, чтобы фармить Soul Shards на Healthstone и призывы.",
+              "text_fi": "Pidä health-to-mana-kiertoa: Life Tap vaihtaa terveyttä manaksi, kun Corruption, Siphon Life ja Drain Life pitävät healthin katossa, joten juoda ei juuri tarvitse; viimeistele kuolevat mobit Drain Soulilla Soul Shardien keräämiseksi Healthstoneihin ja kutsuihin."
+            },
+            {
+              "text_en": "Affliction comfortably pulls 2–3 mobs: send the Imp or Voidwalker to take one, spread Corruption, Curse of Agony and Siphon Life across the pack, then Fear or Howl of Terror the extras while the DoTs wear them down.",
+              "text_ru": "Affliction спокойно тянет 2–3 моба: отправьте Imp или Voidwalker на одного, развесьте Corruption, Curse of Agony и Siphon Life по всем целям, а лишних отпугивайте Fear или Howl of Terror, пока DoT их доедают.",
+              "text_fi": "Affliction vetää mukavasti 2–3 mobia: lähetä Imp tai Voidwalker yhdelle, levitä Corruption, Curse of Agony ja Siphon Life kaikkiin, ja karkota loput Fearilla tai Howl of Terrorilla DoT:ien syödessä ne."
+            },
+            {
+              "text_en": "Take Tailoring + Enchanting for cloth robes, bags and Magic Wands, or Herbalism + Alchemy for Mana Potions and Shadow Power elixirs; gear for Shadow Spell Power, Intellect and Spirit/Stamina (Oakthrush Staff ~12, Emberstone Staff ~20, Staff of Soran'ruk ~30).",
+              "text_ru": "Возьмите Портняжное дело + Наложение чар ради тканевых роб, сумок и Magic Wand либо Травничество + Алхимию ради зелий маны и эликсиров на силу тёмных заклинаний; собирайте силу заклинаний школы тьмы, интеллект и дух/выносливость (Oakthrush Staff ~12, Emberstone Staff ~20, Staff of Soran'ruk ~30).",
+              "text_fi": "Ota Ompelutyö + Lumous kangasrobes, laukkuja ja Magic Wandeja varten tai Yrttitaito + Alkimia manapulloihin ja Shadow Power -eliksiireihin; kerää Shadow-loitsutehoa, Älykkyyttä ja Sielua/Kestävyyttä (Oakthrush Staff ~12, Emberstone Staff ~20, Staff of Soran'ruk ~30)."
+            }
+          ]
+        },
+        {
+          "id": "demonology",
+          "name_en": "Demonology",
+          "provenance": "kb:warlock-demonology@2026-10-13 (beta notes, Warcraft Tavern guide)",
+          "tips": [
+            {
+              "text_en": "Your demon is your tank: remember that summoning a new pet stuns your current one in Forever, and Demonic Brand threat spikes on Shadow damage; keep the Voidwalker alive with Health Funnel and use Soul Link or Fel Domination for elites.",
+              "text_ru": "Демон — ваш танк: помните, что в Forever призыв нового пета станит текущего, а угроза Demonic Brand резко растёт от урона тьмы; поддерживайте Voidwalker через Health Funnel и держите Soul Link или Fel Domination для элиток.",
+              "text_fi": "Demonisi on tankkisi: muista, että Foreverissä uuden petin kutsuminen stunnaa nykyisen, ja Demonic Brandin threat piikkaa Shadow-damagesta; pidä Voidwalker hengissä Health Funnelin avulla ja käytä Soul Linkia tai Fel Dominationia eliteihin."
+            },
+            {
+              "text_en": "Demonology safely handles 2–3+ mobs: let the Voidwalker gather threat on the pack while you DoT them or channel Rain of Fire / Hellfire, and keep Fel Domination ready for an instant re-summon if the pet falls.",
+              "text_ru": "Demonology уверенно держит 2–3+ моба: пусть Voidwalker собирает угрозу на пак, пока вы вешаете DoT или кастуете Rain of Fire / Hellfire, и держите Fel Domination наготове для мгновенного перепризыва, если пет падает.",
+              "text_fi": "Demonology hoitaa turvallisesti 2–3+ mobia: anna Voidwalkerin kerätä threat pakkiin sinun DoT:ittaessa tai kanavoidessa Rain of Fire / Hellfireä, ja pidä Fel Domination valmiina petin nopeaan uudelleenkutsuun."
+            },
+            {
+              "text_en": "Pair Tailoring + Enchanting for self-crafted armor and high-DPS wands, or Engineering for Target Dummies and iron grenades; stack Stamina, Intellect and Spell Power to grow your health pool (better Soul Link mitigation) and your demon's scaling.",
+              "text_ru": "Сочетайте Портняжное дело + Наложение чар ради своей брони и Wand с высоким DPS либо Инженерное дело ради Target Dummy и железных гранат; собирайте выносливость, интеллект и силу заклинаний, чтобы увеличить запас здоровья (лучше митигация Soul Link) и скейл демона.",
+              "text_fi": "Yhdistä Ompelutyö + Lumous itse tehtyihin varusteisiin ja korkean DPS:n Wandeihin tai Insinöörityö Target Dummyihin ja rautakranaatteihin; kerää Kestävyyttä, Älykkyyttä ja loitsutehoa kasvattaaksesi health poolia (parempi Soul Link -mitigointi) ja demonisi skaalausta."
+            }
+          ]
+        },
+        {
+          "id": "destruction",
+          "name_en": "Destruction",
+          "provenance": "kb:warlock-destruction@2026-10-13 (beta notes, downranking article, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Immolate, Searing Pain, Shadow Bolt and Conflagrate burn mana fast, and downranking is heavily penalized in Forever — cast your highest ranks, weave Auto-Wand as targets drop low, and be careful with Life Tap so you don't sit at low health.",
+              "text_ru": "Immolate, Searing Pain, Shadow Bolt и Conflagrate быстро жгут ману, а низкие ранги в Forever серьёзно наказаны — кастуйте высшие ранги, вплетайте автоатаку Wand на низком здоровье цели и осторожно используйте Life Tap, чтобы не сидеть на низком здоровье.",
+              "text_fi": "Immolate, Searing Pain, Shadow Bolt ja Conflagrate polttavat manaa nopeasti, ja matalat rankit on Foreverissä raskaasti rangaistu — käytä korkeimpia rankkeja, lomita auto-Wandia kohteen hiipuessa ja varo Life Tapia, ettet jää matalalle healthille."
+            },
+            {
+              "text_en": "Stick to 1–2 mobs and open from maximum range with Immolate into Shadow Bolt or Searing Pain: Destruction's burst rips aggro off the Voidwalker easily, so keep Seduction (Succubus) or Fear ready for the second mob and avoid melee in Cloth.",
+              "text_ru": "Держитесь 1–2 мобов и открывайтесь с максимальной дистанции: Immolate, затем Shadow Bolt или Searing Pain. Бурст Destruction легко срывает агро с Voidwalker, поэтому держите Seduction (суккуба) или Fear для второго моба и не подпускайте ближний бой к тряпью.",
+              "text_fi": "Pysy 1–2 mobissa ja avaa maksimietäisyydeltä Immolatella ja sitten Shadow Boltilla tai Searing Painilla: Destructionin burst repii threatin helposti Voidwalkerilta, joten pidä Seduction (Succubus) tai Fear valmiina toiselle mobille ja vältä lähitaistelua kankaassa."
+            },
+            {
+              "text_en": "Choose Mining + Engineering for dynamite and iron grenades, or Tailoring + Enchanting; stack Fire/Shadow Spell Power, Intellect and spell crit and upgrade weapons (Apprentice's Spellstaff ~10, Emberstone Staff ~20, Staff of Soran'ruk ~30, Soul Harvester ~50).",
+              "text_ru": "Выберите Горное дело + Инженерное дело ради динамита и железных гранат либо Портняжное дело + Наложение чар; собирайте силу заклинаний огня/тьмы, интеллект и крит заклинаний и обновляйте оружие (Apprentice's Spellstaff ~10, Emberstone Staff ~20, Staff of Soran'ruk ~30, Soul Harvester ~50).",
+              "text_fi": "Valitse Kaivostoiminta + Insinöörityö dynamiittiin ja rautakranaatteihin tai Ompelutyö + Lumous; kerää Fire/Shadow-loitsutehoa, Älykkyyttä ja loitsukriittiä sekä päivitä aseita (Apprentice's Spellstaff ~10, Emberstone Staff ~20, Staff of Soran'ruk ~30, Soul Harvester ~50)."
+            }
+          ]
+        }
+      ]
     }
   }
 }

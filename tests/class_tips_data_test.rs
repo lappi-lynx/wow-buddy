@@ -140,3 +140,8 @@ fn test_shaman_specs_are_authored() {
 fn test_mage_specs_are_authored() {
     assert_class_authored(&ClassTipsData::load_embedded(), "mage");
 }
+
+#[test]
+fn test_warlock_specs_are_authored() {
+    assert_class_authored(&ClassTipsData::load_embedded(), "warlock");
+}
