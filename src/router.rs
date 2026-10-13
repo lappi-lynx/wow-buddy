@@ -1,7 +1,7 @@
 use crate::components::{BottomNav, NavTab};
 use crate::i18n::{I18nService, LanguageStorage};
 use crate::models::{Faction, GameData, RaceInfo};
-use crate::selection::SelectionState;
+use crate::selection::{effective_class_id, SelectionState};
 use crate::styles::APP_CSS;
 use crate::views::{
     DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView, ProgressionGuideView,
@@ -116,15 +116,17 @@ pub fn App() -> Element {
                         game_data: game_data,
                         faction: *selected_faction.read(),
                         selected_race_id: use_signal(|| Some(race_obj.id.clone())),
+                        selected_class: selected_class,
                         on_back: move |_| current_route.set(Route::FactionPicker {}),
                         on_race_selected: move |r: RaceInfo| {
-                            selected_race.set(Some(r.clone()));
                             let faction = *selected_faction.read();
-                            if let Some(first_cls) = r.classes_for_faction(faction).first() {
-                                if let Some(cls) = game_data.read().get_class_by_id(first_cls) {
+                            let current_id = selected_class.read().as_ref().map(|c| c.id.clone());
+                            if let Some(id) = effective_class_id(faction, &r, current_id.as_deref()) {
+                                if let Some(cls) = game_data.read().get_class_by_id(&id) {
                                     selected_class.set(Some(cls.clone()));
                                 }
                             }
+                            selected_race.set(Some(r.clone()));
                             current_route.set(Route::DressingRoom {});
                         },
                     }

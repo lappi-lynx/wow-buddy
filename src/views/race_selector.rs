@@ -1,6 +1,7 @@
 use crate::components::{FactionTheme, LanguagePicker, RaceTile};
 use crate::i18n::{I18nService, Language};
-use crate::models::{Faction, GameData, RaceInfo};
+use crate::models::{ClassInfo, Faction, GameData, RaceInfo};
+use crate::selection::effective_class_id;
 use dioxus::prelude::*;
 
 pub fn format_race_display_name(race: &RaceInfo, faction: Faction) -> String {
@@ -27,6 +28,7 @@ pub fn RaceSelectorView(
     game_data: Signal<GameData>,
     faction: Faction,
     selected_race_id: Signal<Option<String>>,
+    selected_class: Signal<Option<ClassInfo>>,
     on_back: EventHandler<()>,
     on_race_selected: EventHandler<RaceInfo>,
 ) -> Element {
@@ -78,6 +80,11 @@ pub fn RaceSelectorView(
                 vec![],
             )
         };
+
+    let selected_class_id = selected_class.read().as_ref().map(|c| c.id.clone());
+    let effective_class = active_race
+        .as_ref()
+        .and_then(|r| effective_class_id(faction, r, selected_class_id.as_deref()));
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
@@ -153,10 +160,26 @@ pub fn RaceSelectorView(
                             span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2", "{i18n.read().t(\"ui_available_classes\", lang)}" }
                             div { class: "flex flex-wrap gap-2",
                                 for cls in available_classes.iter() {
-                                    span {
-                                        key: "{cls}",
-                                        class: "text-xs px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-300 capitalize font-medium",
-                                        "{cls}"
+                                    {
+                                        let cls_id = cls.clone();
+                                        let is_active = effective_class.as_deref() == Some(cls_id.as_str());
+                                        let badge_class = if is_active {
+                                            "text-xs px-2.5 py-1 rounded-md bg-amber-500 border border-amber-400 text-black capitalize font-bold cursor-pointer"
+                                        } else {
+                                            "text-xs px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-300 capitalize font-medium cursor-pointer hover:border-slate-500"
+                                        };
+                                        rsx! {
+                                            button {
+                                                key: "{cls_id}",
+                                                class: "{badge_class}",
+                                                onclick: move |_| {
+                                                    if let Some(cls_obj) = game_data.read().get_class_by_id(&cls_id) {
+                                                        selected_class.set(Some(cls_obj.clone()));
+                                                    }
+                                                },
+                                                "{cls_id}"
+                                            }
+                                        }
                                     }
                                 }
                             }

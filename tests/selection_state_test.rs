@@ -1,5 +1,34 @@
 use wow_buddy::models::{GameData, Faction};
-use wow_buddy::selection::SelectionState;
+use wow_buddy::selection::{effective_class_id, SelectionState};
+
+#[test]
+fn test_effective_class_prefers_valid_choice_and_falls_back_to_first() {
+    let data = GameData::load_embedded();
+    let skyborne = data.get_race_by_id("skyborne").unwrap();
+
+    // explicit valid choice is kept (Shaman is Windshaper-only)
+    assert_eq!(
+        effective_class_id(Faction::Horde, skyborne, Some("shaman")).as_deref(),
+        Some("shaman")
+    );
+    // a class invalid for the faction falls back to the first playable one
+    assert_eq!(
+        effective_class_id(Faction::Horde, skyborne, Some("mage")).as_deref(),
+        Some("warrior")
+    );
+    // no explicit choice → first playable class
+    assert_eq!(
+        effective_class_id(Faction::Alliance, skyborne, None).as_deref(),
+        Some("warrior")
+    );
+
+    // non-first valid picks survive too (Human paladin)
+    let human = data.get_race_by_id("human").unwrap();
+    assert_eq!(
+        effective_class_id(Faction::Alliance, human, Some("paladin")).as_deref(),
+        Some("paladin")
+    );
+}
 
 #[test]
 fn test_incompatible_race_resets_on_faction_switch() {

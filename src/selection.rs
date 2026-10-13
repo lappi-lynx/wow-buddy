@@ -1,4 +1,21 @@
-use crate::models::{Faction, GameData};
+use crate::models::{Faction, GameData, RaceInfo};
+
+/// The class to use for `race` in `faction` given the user's `current`
+/// choice: the current class when it is playable there, otherwise the first
+/// playable class (race lists are ordered by design — warrior-first).
+pub fn effective_class_id(
+    faction: Faction,
+    race: &RaceInfo,
+    current: Option<&str>,
+) -> Option<String> {
+    let classes = race.classes_for_faction(faction);
+    if let Some(id) = current {
+        if classes.iter().any(|c| c == id) {
+            return Some(id.to_string());
+        }
+    }
+    classes.first().cloned()
+}
 
 /// The character selection the user has committed to so far,
 /// kept as ids so it survives `GameData` reloads.
