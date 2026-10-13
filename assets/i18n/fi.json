@@ -25,7 +25,7 @@
   "select_language": "Kieli",
   "select": "Valitse",
   "app_name": "WoW Buddy",
-  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline",
+  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline • © Blizzard. Ei sidoksissa Blizzardiin eikä sen hyväksymä.",
   "ui_choose_allegiance": "Valitse allegianssisi",
   "ui_faction_subtitle": "Ryhmittymäsi määrittää liittolaisesi, aloitusrealmit ja kulttuurisen kohtalosi WoW Forever 1.60.1:ssä",
   "ui_racial_culture_heritage": "Rodun kulttuuri ja perintö",
@@ -79,6 +79,5 @@
   "ui_open_gear_planner": "Avaa varustesuunnitelma →",
   "ui_gear_current": "Paras nyt",
   "ui_gear_next_upgrade": "Seuraava parannus",
-  "ui_gear_no_data": "Tämän luokan ja ryhmittymän tiedot valmistellaan vielä.",
-  "ui_attribution_disclaimer": "World of Warcraft ja Blizzard Entertainment ovat Blizzard Entertainmentin tavaramerkkejä. Kuvat © Blizzard. Ei sidoksissa Blizzardiin eikä sen hyväksymä."
+  "ui_gear_no_data": "Tämän luokan ja ryhmittymän tiedot valmistellaan vielä."
 }

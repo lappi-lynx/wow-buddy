@@ -44,6 +44,11 @@ impl AssetRegistry {
         self.entries.contains_key(icon_id)
     }
 
+    /// The declared manifest entry for `id`, if any.
+    pub fn entry(&self, id: &str) -> Option<&AssetEntry> {
+        self.entries.get(id)
+    }
+
     pub fn iter(&self) -> impl Iterator<Item = (&String, &AssetEntry)> {
         self.entries.iter()
     }

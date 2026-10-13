@@ -25,7 +25,7 @@
   "select_language": "Язык",
   "select": "Выбрать",
   "app_name": "WoW Buddy",
-  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline",
+  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline • © Blizzard. Не связано с Blizzard и не одобрено ей.",
   "ui_choose_allegiance": "Выберите свою сторону",
   "ui_faction_subtitle": "Ваша фракция определяет союзников, стартовые миры и культурную судьбу в WoW Forever 1.60.1",
   "ui_racial_culture_heritage": "Культура и наследие расы",
@@ -79,6 +79,5 @@
   "ui_open_gear_planner": "Открыть план экипировки →",
   "ui_gear_current": "Лучшее сейчас",
   "ui_gear_next_upgrade": "Следующее улучшение",
-  "ui_gear_no_data": "Данные для этого класса и фракции ещё готовятся.",
-  "ui_attribution_disclaimer": "World of Warcraft и Blizzard Entertainment — товарные знаки Blizzard Entertainment. Изображения © Blizzard. Приложение не связано с Blizzard и не одобрено ей."
+  "ui_gear_no_data": "Данные для этого класса и фракции ещё готовятся."
 }

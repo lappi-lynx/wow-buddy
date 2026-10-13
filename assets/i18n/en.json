@@ -25,7 +25,7 @@
   "select_language": "Language",
   "select": "Select",
   "app_name": "WoW Buddy",
-  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline",
+  "footer_offline": "World of Warcraft Forever 1.60.1 Guide • 100% Offline • © Blizzard. Not affiliated with or endorsed by Blizzard.",
   "ui_choose_allegiance": "Choose Your Allegiance",
   "ui_faction_subtitle": "Your faction determines your allies, starting realms, and cultural destiny in WoW Forever 1.60.1",
   "ui_racial_culture_heritage": "Racial Culture & Heritage",
@@ -79,6 +79,5 @@
   "ui_open_gear_planner": "Open Gear Planner →",
   "ui_gear_current": "Best now",
   "ui_gear_next_upgrade": "Next upgrade",
-  "ui_gear_no_data": "Data for this class and faction is still being prepared.",
-  "ui_attribution_disclaimer": "World of Warcraft and Blizzard Entertainment are trademarks of Blizzard Entertainment. Images © Blizzard. Not affiliated with or endorsed by Blizzard."
+  "ui_gear_no_data": "Data for this class and faction is still being prepared."
 }

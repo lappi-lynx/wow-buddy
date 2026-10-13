@@ -18,13 +18,12 @@ fn test_every_asset_has_a_source_and_license() {
 }
 
 #[test]
-fn test_disclaimer_key_present_in_all_locales() {
+fn test_attribution_shown_in_every_locale_footer() {
+    // единственный футер (на каждом экране) обязан нести атрибуцию Blizzard
     let i18n = I18nService::load_embedded();
     for lang in [Language::Ru, Language::En, Language::Fi] {
-        assert_ne!(
-            i18n.t("ui_attribution_disclaimer", lang),
-            "ui_attribution_disclaimer"
-        );
+        let footer = i18n.t("footer_offline", lang);
+        assert!(footer.contains("Blizzard"), "footer missing attribution for {lang:?}");
     }
 }
 
