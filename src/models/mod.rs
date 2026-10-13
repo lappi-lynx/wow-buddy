@@ -52,6 +52,61 @@ impl GameData {
             .unwrap_or(&[])
     }
 
+    /// Whether `class_id` is playable by the race `race_id` in the given
+    /// faction (faction-aware for dual-faction races such as Skyborne).
+    pub fn is_class_available_for_race(
+        &self,
+        faction: Faction,
+        race_id: &str,
+        class_id: &str,
+    ) -> bool {
+        self.races
+            .iter()
+            .find(|r| r.id == race_id)
+            .map(|r| r.classes_for_faction(faction).iter().any(|c| c == class_id))
+            .unwrap_or(false)
+    }
+
+    /// Full selection validation: the race must be available in the faction
+    /// and the class must be playable by that race in that faction.
+    pub fn validate_selection(&self, faction: Faction, race_id: &str, class_id: &str) -> bool {
+        self.races
+            .iter()
+            .find(|r| r.id == race_id)
+            .map(|r| {
+                r.is_available_for(faction)
+                    && r.classes_for_faction(faction).iter().any(|c| c == class_id)
+            })
+            .unwrap_or(false)
+    }
+
+    /// First race native to the given faction (fallback: first race in the
+    /// dataset). Dual-faction races such as Skyborne are never the default —
+    /// the canonical faction starter (Human / Orc) is.
+    pub fn default_race_for_faction(&self, faction: Faction) -> RaceInfo {
+        self.races
+            .iter()
+            .find(|r| r.faction == Some(faction))
+            .cloned()
+            .unwrap_or_else(|| self.races[0].clone())
+    }
+
+    /// First playable class of the race `race_id` in the given faction,
+    /// resolved to `ClassInfo`.
+    pub fn default_class_for_race(
+        &self,
+        faction: Faction,
+        race_id: &str,
+    ) -> Option<ClassInfo> {
+        let class_id = self
+            .races
+            .iter()
+            .find(|r| r.id == race_id)?
+            .classes_for_faction(faction)
+            .first()?;
+        self.get_class_by_id(class_id).cloned()
+    }
+
     pub fn get_starter_zone(&self, id: &str) -> Option<&StarterZoneInfo> {
         self.starter_zones.iter().find(|z| z.id == id)
     }
