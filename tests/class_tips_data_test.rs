@@ -50,14 +50,28 @@ fn test_every_seeded_tip_has_all_three_languages() {
 }
 
 #[test]
-fn test_coverage_reporter_lists_unauthored_specs() {
+fn test_coverage_reporter_is_self_consistent() {
     let t = ClassTipsData::load_embedded();
+    let total: usize = wow_buddy::models::class_tips::EXPECTED_SPECS
+        .iter()
+        .map(|(_, specs)| specs.len())
+        .sum();
+    let authored: usize = t.classes.values().map(|c| c.specs.len()).sum();
     let missing = t.missing_coverage();
-    assert!(!missing.is_empty());
-    // сидированный спек не считается пропущенным
-    assert!(!missing.iter().any(|m| m.starts_with("druid/balance")));
-    // ненаполненный класс перечислен
-    assert!(missing.iter().any(|m| m.starts_with("warrior/")));
+    assert_eq!(
+        missing.len(),
+        total - authored,
+        "reporter must equal expected minus authored"
+    );
+    // каждый пропущенный id валиден по EXPECTED_SPECS
+    for m in &missing {
+        let (class_id, spec_id) = m.split_once('/').unwrap();
+        assert!(wow_buddy::models::class_tips::EXPECTED_SPECS
+            .iter()
+            .any(|(c, specs)| *c == class_id && specs.contains(&spec_id)));
+    }
+    // druid — гарантированный срез
+    assert!(!missing.iter().any(|m| m.starts_with("druid/")));
 }
 
 #[test]

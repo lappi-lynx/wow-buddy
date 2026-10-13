@@ -5,7 +5,7 @@ use wow_buddy::models::class_tips::ClassTipsData;
 fn test_spec_cards_returns_all_specs_or_empty() {
     let data = ClassTipsData::load_embedded();
     assert_eq!(spec_cards(&data, "druid").len(), 3);
-    assert!(spec_cards(&data, "warrior").is_empty());
+    assert!(spec_cards(&data, "not_a_class").is_empty());
 }
 
 #[test]

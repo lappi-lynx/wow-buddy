@@ -62,12 +62,17 @@ fn test_art_missing_never_breaks_screens() {
 }
 
 #[test]
-fn test_tips_present_for_a_valid_class_and_absent_for_an_unauthored_one() {
+fn test_tips_present_for_a_valid_class_and_absent_for_an_unknown_one() {
     let tips = ClassTipsData::load_embedded();
-    // наполненный класс отдаёт спеки
+    // гарантированный срез наполнен
     assert!(!tips.specs_for("druid").is_empty());
-    // ненаполненный честно пуст (экран покажет empty state, не панику)
-    assert!(tips.specs_for("warrior").is_empty());
-    // отчёт покрытия виден и непуст, пока контент не дозаполнен
-    assert!(!tips.missing_coverage().is_empty());
+    // неизвестный класс честно пуст (экран покажет empty state, не панику)
+    assert!(tips.specs_for("not_a_class").is_empty());
+    // отчёт покрытия содержит только валидные пары из EXPECTED_SPECS
+    for m in tips.missing_coverage() {
+        let (class_id, spec_id) = m.split_once('/').unwrap();
+        assert!(wow_buddy::models::class_tips::EXPECTED_SPECS
+            .iter()
+            .any(|(c, specs)| *c == class_id && specs.contains(&spec_id)));
+    }
 }
