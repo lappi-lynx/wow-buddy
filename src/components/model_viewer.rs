@@ -1,3 +1,5 @@
+use crate::assets::AssetRegistry;
+use crate::components::race_tile::class_render_source;
 use crate::i18n::{I18nService, Language};
 use crate::models::{gear::GearTier, ClassInfo, Faction, RaceInfo};
 use crate::views::race_selector::format_race_display_name;
@@ -30,6 +32,8 @@ pub fn ModelViewer(
         "druid" => "🐾",
         _ => "🛡️",
     };
+    let class_art = class_render_source(&AssetRegistry::load_embedded(), &class.id);
+    let has_class_art = class_art.starts_with("data:");
 
     let tier_aura = match tier {
         GearTier::Starter => "from-slate-800 to-slate-950 border-slate-700",
@@ -73,8 +77,16 @@ pub fn ModelViewer(
             // Central 3D / 2D Model Representation
             div { class: "relative my-auto flex flex-col items-center justify-center group cursor-grab",
                 div { class: "w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-black/40 border border-amber-500/20 flex items-center justify-center relative shadow-inner",
-                    div { class: "text-7xl sm:text-8xl drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)] transform group-hover:scale-110 transition-transform duration-300",
-                        "{avatar_glyph}"
+                    if has_class_art {
+                        img {
+                            class: "w-20 h-20 sm:w-24 sm:h-24 rounded-lg drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)] transform group-hover:scale-110 transition-transform duration-300",
+                            src: "{class_art}",
+                            alt: "{class.name} class icon",
+                        }
+                    } else {
+                        div { class: "text-7xl sm:text-8xl drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)] transform group-hover:scale-110 transition-transform duration-300",
+                            "{avatar_glyph}"
+                        }
                     }
                     div { class: "absolute -bottom-2 text-2xl",
                         match race.id.as_str() {

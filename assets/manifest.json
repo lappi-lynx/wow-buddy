@@ -114,6 +114,72 @@
       "source": "Blizzard race portrait via wow.zamimg.com CDN (race_troll_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
     },
+    "race_skyborne_male_render": {
+      "path": "assets/art/race/race_skyborne_male_render.webp",
+      "kind": "race_render",
+      "source": "Skyborne race portrait via wow.zamimg.com CDN (race_skyborne_male.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "race_skyborne_female_render": {
+      "path": "assets/art/race/race_skyborne_female_render.webp",
+      "kind": "race_render",
+      "source": "Skyborne race portrait via wow.zamimg.com CDN (race_skyborne_female.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_warrior_render": {
+      "path": "assets/art/class/class_warrior_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_warrior.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_paladin_render": {
+      "path": "assets/art/class/class_paladin_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_paladin.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_hunter_render": {
+      "path": "assets/art/class/class_hunter_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_hunter.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_rogue_render": {
+      "path": "assets/art/class/class_rogue_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_rogue.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_priest_render": {
+      "path": "assets/art/class/class_priest_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_priest.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_shaman_render": {
+      "path": "assets/art/class/class_shaman_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_shaman.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_mage_render": {
+      "path": "assets/art/class/class_mage_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_mage.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_warlock_render": {
+      "path": "assets/art/class/class_warlock_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_warlock.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "class_druid_render": {
+      "path": "assets/art/class/class_druid_render.webp",
+      "kind": "class_render",
+      "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_druid.jpg), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
     "zone_shadowglen_art": {
       "path": "assets/art/zone/zone_shadowglen_art.png",
       "kind": "zone_art",
