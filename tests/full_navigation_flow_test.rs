@@ -1,3 +1,4 @@
+use wow_buddy::assets::registry::AssetRegistry;
 use wow_buddy::models::gear_planner::GearPlannerData;
 use wow_buddy::models::{GameData, Faction};
 use wow_buddy::router::Route;
@@ -49,4 +50,12 @@ fn test_gear_planner_data_covers_seeded_class_and_reports_gaps() {
     assert!(!gear.bands_for("warrior", Faction::Horde).is_empty());
     // несидированный класс честно пуст (экран покажет "no data", не панику)
     assert!(gear.bands_for("priest", Faction::Alliance).is_empty());
+}
+
+#[test]
+fn test_art_missing_never_breaks_screens() {
+    let reg = AssetRegistry::load_embedded();
+    // отсутствие арта — штатное состояние: хелперы возвращают фоллбек, не паникуют
+    assert!(reg.art_uri("nope").is_none());
+    let _ = wow_buddy::components::race_tile::race_render_source(&reg, "skyborne", Faction::Horde);
 }
