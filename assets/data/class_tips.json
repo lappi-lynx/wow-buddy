@@ -285,6 +285,76 @@
           ]
         }
       ]
+    },
+    "rogue": {
+      "specs": [
+        {
+          "id": "assassination",
+          "name_en": "Assassination",
+          "provenance": "kb:rogue-assassination@2026-10-13 (racial overview, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Energy is your bottleneck: build 3–5 Combo Points and spend them on Slice and Dice (attack speed, more poison procs) or Eviscerate for burst; Gnomes get 5 extra Energy from Expansive Mind.",
+              "text_ru": "Энергия — ваше узкое место: наберите 3–5 Combo Points и тратьте их на Slice and Dice (скорость атаки, чаще проки ядов) или на Eviscerate ради бурста; гномы получают +5 энергии от Expansive Mind.",
+              "text_fi": "Energia on pullonkaulasi: kerää 3–5 Combo Pointsia ja kuluta ne Slice and Diceen (hyökkäysnopeus, useammat myrkkyprocit) tai Eviscerateen burstia varten; Gnomit saavat Expansive Mindistä 5 ylimääräistä energiaa."
+            },
+            {
+              "text_en": "Stick to one mob at a time: Assassination is a single-target executioner with no sweeping AoE, and Leather armor drains fast when several enemies focus you.",
+              "text_ru": "Держитесь одного моба: Assassination — одиночный «исполнитель» без массового AoE, а в кожаной броне здоровье быстро утекает под фокусом нескольких врагов.",
+              "text_fi": "Pysy yhdessä mobissa: Assassination on yhden kohteen suorittaja ilman laajaa AoE:ta, ja nahkapanssari sulaa nopeasti usean vihollisen fokuksessa."
+            },
+            {
+              "text_en": "Take Skinning + Leatherworking for Agility/Stamina leather and armor kits, or Herbalism + Alchemy for Swiftthistle, Thistle Tea, Agility elixirs and health potions; upgrade daggers on the way (Blade of Cunning ~10, Poniard ~14, Tail Spike ~20, Meteor Shard ~24) for opener damage and fast poison application.",
+              "text_ru": "Возьмите Снятие шкур + Кожевничество ради кожаной брони на ловкость/выносливость и накладок, либо Травничество + Алхимию ради Swiftthistle, Thistle Tea, эликсиров на ловкость и зелий здоровья; обновляйте кинжалы по ходу (Blade of Cunning ~10, Poniard ~14, Tail Spike ~20, Meteor Shard ~24) ради урона опенеров и быстрого наложения ядов.",
+              "text_fi": "Ota Nahkominen + Nahkatyö Ketteryys/Kestävyys-nahkoihin ja panssaripaketteihin tai Yrttitaito + Alkimia Swiftthistlea, Thistle Teaa, Ketteryyseliksiirejä ja terveyspulloja varten; päivitä tikareita matkan varrella (Blade of Cunning ~10, Poniard ~14, Tail Spike ~20, Meteor Shard ~24) avausdamagea ja nopeaa myrkytystä varten."
+            }
+          ]
+        },
+        {
+          "id": "combat",
+          "name_en": "Combat",
+          "provenance": "kb:rogue-combat@2026-10-13 (leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Combat leans on auto-attack damage: keep Slice and Dice up for attack speed, spend Energy on Sinister Strike, and pool Energy before bursting with Adrenaline Rush or Blade Flurry.",
+              "text_ru": "Combat живёт автоатакой: держите Slice and Dice ради скорости атаки, тратьте энергию на Sinister Strike и копите её перед бурстом через Adrenaline Rush или Blade Flurry.",
+              "text_fi": "Combat nojaa auto-hyökkäysdamageen: pidä Slice and Dice yllä hyökkäysnopeuden vuoksi, käytä energiaa Sinister Strikeen ja kerää sitä ennen Adrenaline Rush- tai Blade Flurry -burstia."
+            },
+            {
+              "text_en": "Combat safely handles 1–2 mobs — and 3 when cooldowns are up: Blade Flurry cleaves two targets while Gouge or Blind takes an extra enemy out of the fight.",
+              "text_ru": "Combat уверенно держит 1–2 моба, а с готовыми кулдаунами и 3: Blade Flurry рассекает две цели, а Gouge или Blind выводит лишнего врага из боя.",
+              "text_fi": "Combat hoitaa turvallisesti 1–2 mobia — ja 3, kun cooldownit ovat valmiina: Blade Flurry halkaisee kaksi kohdetta, kun taas Gouge tai Blind poistaa ylimääräisen vihollisen pelistä."
+            },
+            {
+              "text_en": "Take Mining + Engineering for dynamite, iron grenades and Target Dummies; in Forever rogues can also train one-handed axes, so pair a slow high-damage main hand (axe, sword or mace) with a fast off-hand for frequent poison procs.",
+              "text_ru": "Возьмите Горное дело + Инженерное дело ради динамита, железных гранат и Target Dummy; в Forever разбойники также могут учить одноручные топоры, так что сочетайте медленную правую руку с высоким уроном (топор, меч или дробящее) с быстрой левой рукой ради частых проков ядов.",
+              "text_fi": "Ota Kaivostoiminta + Insinöörityö dynamiittia, rautakranaatteja ja Target Dummyja varten; Foreverissä roistot voivat kouluttaa myös yksikätisiä kirveitä, joten yhdistä hidas, korkean damagen main hand (kirves, miekka tai nuija) nopeaan off-handiin tiheitä myrkkyproceja varten."
+            }
+          ]
+        },
+        {
+          "id": "subtlety",
+          "name_en": "Subtlety",
+          "provenance": "kb:rogue-subtlety@2026-10-13 (leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Subtlety openers (Ambush, Cheap Shot) eat Energy up front — pool Energy while stealthed so you can chain combo builders right after the opener without stalling.",
+              "text_ru": "Опенеры Subtlety (Ambush, Cheap Shot) съедают много энергии сразу — копите энергию в стелсе, чтобы после опенера сразу продолжать билдерами без простоя.",
+              "text_fi": "Subtletyn avaukset (Ambush, Cheap Shot) kuluttavat energiaa heti alkuun — kerää energiaa stealthissa, jotta voit ketjuttaa combo buildereita heti avauksen jälkeen pysähtymättä."
+            },
+            {
+              "text_en": "Pull one mob at a time from stealth: Cheap Shot and Kidney Shot stun-lock the target while Sap and Gouge handle extras, so you can finish a mob taking virtually zero damage.",
+              "text_ru": "Тяните по одному мобу из стелса: Cheap Shot и Kidney Shot держат цель в стане, а Sap и Gouge нейтрализуют лишних — врага можно добить почти без полученного урона.",
+              "text_fi": "Vedä yksi mob kerrallaan stealthista: Cheap Shot ja Kidney Shot pitävät kohteen stunlockissa, kun taas Sap ja Gouge hoitavat ylimääräiset — voit viimeistellä mobiln lähes ilman damagea."
+            },
+            {
+              "text_en": "Skinning + Leatherworking gives easy armor upgrades, or Engineering utility tools and bombs; always use a high-damage dagger main hand for Ambush and Backstab, and stack Agility, Stamina and crit.",
+              "text_ru": "Снятие шкур + Кожевничество дают простые апгрейды брони, а Инженерное дело — утилитарные инструменты и бомбы; всегда держите в правой руке кинжал с высоким уроном ради Ambush и Backstab и собирайте ловкость, выносливость и крит.",
+              "text_fi": "Nahkominen + Nahkatyö antaa helpot panssaripäivitykset tai Insinöörityö hyötytyökalut ja pommit; käytä aina korkean damagen tikaria main handissa Ambushia ja Backstapia varten ja kerää Ketteryyttä, Kestävyyttä ja kriittiä."
+            }
+          ]
+        }
+      ]
     }
   }
 }
