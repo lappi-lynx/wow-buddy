@@ -13,7 +13,8 @@ under. Every entry in `assets/manifest.json` carries a `source` and a
 
 | Source | Used for | Terms |
 | --- | --- | --- |
-| World of Warcraft Fan Site Kit (2004–2007), archived at `johnwhitegm.github.io/wowfansitekit` | faction, race, class and zone artwork | Blizzard Fan Site Kit License — personal, non-commercial, display; notices retained; modification only as needed for a fan site |
+| World of Warcraft Fan Site Kit (2004–2007), archived at `johnwhitegm.github.io/wowfansitekit` | race, class and zone artwork | Blizzard Fan Site Kit License — personal, non-commercial, display; notices retained; modification only as needed for a fan site |
+| Community re-hosts of the Blizzard faction crests (`abrakadabra.fun`, `pngegg.com`) | faction shield art (Alliance / Horde) | © Blizzard Entertainment — used for a free, non-commercial fan guide |
 | Game client assets extracted with `wow.export` | item icons (`inv_*`), race renders | © Blizzard Entertainment — used for a free, non-commercial fan guide |
 
 ## Rules

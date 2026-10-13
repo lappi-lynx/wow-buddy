@@ -21,8 +21,11 @@ Only the items actually referenced by `assets/data/gear.json` (their
 3. **Declare** — add an entry to `assets/manifest.json`:
    `"<icon_id>": { "path": "assets/icons/items/<icon_id>.webp",
    "kind": "item_icon", "source": "<where it came from>", "license": "blizzard-fan-use" }`.
-4. **Generate** — regenerate `src/assets/generated.rs` so each declared id
-   maps to a `data:image/webp;base64,…` URI.
+4. **Generate** — run `node tools/assets/generate.mjs`; each declared id whose
+   source file is placed maps to a `data:` URI. Entries with no file yet keep
+   their previous embedded bytes (reported as warnings), so assets can land
+   incrementally; the run fails only for an id that has neither a file nor
+   previous bytes.
 5. **Verify** — `cargo test --test asset_registry_test` (manifest integrity +
    fallback) and `cargo test` (full suite). Commit the manifest, the
    generated file, and the source images under `assets/icons/items/`.

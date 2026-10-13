@@ -6,7 +6,7 @@ use std::collections::HashSet;
 fn test_art_uri_is_none_for_unknown_and_some_for_seeded_placeholder() {
     let reg = AssetRegistry::load_embedded();
     assert!(reg.art_uri("zone_art_does_not_exist").is_none());
-    // в манифест кладём один placeholder-арт, чтобы обе ветки были проверены
+    // хотя бы один арт объявлен и сгенерирован, чтобы обе ветки были проверены
     assert!(reg.art_uri("faction_alliance_shield").unwrap().starts_with("data:"));
 }
 

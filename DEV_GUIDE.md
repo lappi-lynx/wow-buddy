@@ -110,7 +110,7 @@ When testing manually, verify the following core features:
 - Check that preference is persisted to `~/.cache/wow-buddy/language_preference.json` (or browser `localStorage`).
 
 ### 2. Screen 1: Two Shields (Alliance vs Horde)
-- Click the **Alliance** shield (🦁) with royal blue aura or **Horde** shield (⚡) with crimson aura.
+- Click the **Alliance** shield (lion crest art) with royal blue aura or **Horde** shield (red emblem art) with crimson aura.
 - Notice the special banner explaining that the new **Skyborne** race is playable in both factions.
 
 ### 3. Screen 2: Race Selector & Lore

@@ -9,8 +9,14 @@
     "faction_alliance_shield": {
       "path": "assets/art/faction/faction_alliance_shield.png",
       "kind": "faction_art",
-      "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
-      "license": "blizzard-fansite-kit"
+      "source": "community re-host of the Alliance crest (abrakadabra.fun, image 1648849268_3, imported 2026-10-13) — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "faction_horde_shield": {
+      "path": "assets/art/faction/faction_horde_shield.png",
+      "kind": "faction_art",
+      "source": "community re-host of the Horde crest (pngegg.com, imported 2026-10-13) — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     },
     "race_human_render": {
       "path": "assets/art/race/race_human_render.png",
