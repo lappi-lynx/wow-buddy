@@ -73,5 +73,11 @@
   "ui_export_title": "Kohtalosi suunnitelma",
   "ui_export_btn": "Vie peliin",
   "ui_export_copied": "Suunnitelma kopioitu leikepöydälle!",
-  "ui_export_hint": "Leikepöytää ei voitu käyttää — valitse teksti yltä ja kopioi se manuaalisesti."
+  "ui_export_hint": "Leikepöytää ei voitu käyttää — valitse teksti yltä ja kopioi se manuaalisesti.",
+  "ui_gear_planner_title": "Varustesuunnitelma",
+  "ui_gear_planner_subtitle": "Mitä pukea ja mistä se hankitaan — luokan ja ryhmittymän mukaan",
+  "ui_open_gear_planner": "Avaa varustesuunnitelma →",
+  "ui_gear_current": "Paras nyt",
+  "ui_gear_next_upgrade": "Seuraava parannus",
+  "ui_gear_no_data": "Tämän luokan ja ryhmittymän tiedot valmistellaan vielä."
 }

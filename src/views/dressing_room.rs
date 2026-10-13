@@ -70,6 +70,7 @@ pub fn DressingRoomView(
     faction: Faction,
     on_back: EventHandler<()>,
     on_continue_to_guide: EventHandler<()>,
+    on_open_gear_planner: EventHandler<()>,
 ) -> Element {
     let mut selected_level = use_signal(|| 1u8);
     let mut current_animation = use_signal(|| CharacterAnimation::Stand);
@@ -100,6 +101,7 @@ pub fn DressingRoomView(
                     i18n: i18n,
                     race: race.clone(),
                     class: class.clone(),
+                    faction: faction,
                     tier: current_tier,
                     animation: current_animation.read().as_str().to_string(),
                 }
@@ -219,6 +221,13 @@ pub fn DressingRoomView(
                     class: class.clone(),
                     current_lang: current_lang,
                     i18n: i18n,
+                }
+
+                // Entry point into the Gear Planner
+                button {
+                    class: "w-full max-w-lg py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
+                    onclick: move |_| on_open_gear_planner.call(()),
+                    "{i18n.read().t(\"ui_open_gear_planner\", lang)}"
                 }
             }
 

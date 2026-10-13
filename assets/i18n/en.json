@@ -73,5 +73,11 @@
   "ui_export_title": "Your Destiny Blueprint",
   "ui_export_btn": "Export to Game",
   "ui_export_copied": "Blueprint copied to clipboard!",
-  "ui_export_hint": "Could not access the clipboard — select the text above and copy it manually."
+  "ui_export_hint": "Could not access the clipboard — select the text above and copy it manually.",
+  "ui_gear_planner_title": "Gear Planner",
+  "ui_gear_planner_subtitle": "What to wear and where to get it — by class and faction",
+  "ui_open_gear_planner": "Open Gear Planner →",
+  "ui_gear_current": "Best now",
+  "ui_gear_next_upgrade": "Next upgrade",
+  "ui_gear_no_data": "Data for this class and faction is still being prepared."
 }

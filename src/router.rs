@@ -4,7 +4,8 @@ use crate::models::{Faction, GameData, RaceInfo};
 use crate::selection::SelectionState;
 use crate::styles::APP_CSS;
 use crate::views::{
-    DressingRoomView, DungeonCodexView, FactionPickerView, ProgressionGuideView, RaceSelectorView,
+    DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView, ProgressionGuideView,
+    RaceSelectorView,
 };
 use dioxus::prelude::*;
 use dioxus::document as document;
@@ -21,6 +22,8 @@ pub enum Route {
     ProgressionGuide {},
     #[route("/dungeons")]
     DungeonCodex {},
+    #[route("/gear")]
+    GearPlanner {},
 }
 
 /// Root application shell maintaining character state across views.
@@ -116,7 +119,8 @@ pub fn App() -> Element {
                         on_back: move |_| current_route.set(Route::FactionPicker {}),
                         on_race_selected: move |r: RaceInfo| {
                             selected_race.set(Some(r.clone()));
-                            if let Some(first_cls) = r.available_classes.first() {
+                            let faction = *selected_faction.read();
+                            if let Some(first_cls) = r.classes_for_faction(faction).first() {
                                 if let Some(cls) = game_data.read().get_class_by_id(first_cls) {
                                     selected_class.set(Some(cls.clone()));
                                 }
@@ -134,6 +138,7 @@ pub fn App() -> Element {
                         faction: *selected_faction.read(),
                         on_back: move |_| current_route.set(Route::RaceSelector {}),
                         on_continue_to_guide: move |_| current_route.set(Route::ProgressionGuide {}),
+                        on_open_gear_planner: move |_| current_route.set(Route::GearPlanner {}),
                     }
                 },
                 Route::ProgressionGuide {} => rsx! {
@@ -142,6 +147,7 @@ pub fn App() -> Element {
                         i18n: i18n,
                         game_data: game_data,
                         race: race_obj.clone(),
+                        faction: *selected_faction.read(),
                         on_back: move |_| current_route.set(Route::DressingRoom {}),
                         on_continue_to_dungeons: move |_| current_route.set(Route::DungeonCodex {}),
                     }
@@ -151,6 +157,15 @@ pub fn App() -> Element {
                         current_lang: current_lang,
                         i18n: i18n,
                         on_back: move |_| current_route.set(Route::ProgressionGuide {}),
+                    }
+                },
+                Route::GearPlanner {} => rsx! {
+                    GearPlannerView {
+                        current_lang: current_lang,
+                        i18n: i18n,
+                        faction: *selected_faction.read(),
+                        class_id: class_obj.id.clone(),
+                        on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
             }
@@ -190,5 +205,10 @@ fn ProgressionGuide() -> Element {
 
 #[component]
 fn DungeonCodex() -> Element {
+    rsx! { div {} }
+}
+
+#[component]
+fn GearPlanner() -> Element {
     rsx! { div {} }
 }
