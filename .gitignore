@@ -1,2 +1,5 @@
 .superpowers
 target/
+
+# dx bundle output
+/dist/
