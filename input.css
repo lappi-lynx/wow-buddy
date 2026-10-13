@@ -2,6 +2,10 @@
 
 @source "./src/**/*.rs";
 
+@theme {
+  --font-sans: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 @layer base {
   body {
     @apply bg-slate-950 text-slate-100 font-sans antialiased;
@@ -16,7 +20,7 @@
     color: #f1f5f9;
   }
   .font-sans {
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
