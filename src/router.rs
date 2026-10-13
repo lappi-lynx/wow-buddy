@@ -73,6 +73,10 @@ pub fn App() -> Element {
         .clone()
         .unwrap_or_else(|| game_data.read().classes[0].clone());
 
+    let disclaimer = i18n
+        .read()
+        .t("ui_attribution_disclaimer", *current_lang.read());
+
     rsx! {
         document::Style {
             "{APP_CSS}"
@@ -168,6 +172,10 @@ pub fn App() -> Element {
                         on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
+            }
+
+            footer { class: "w-full max-w-5xl mx-auto text-center p-3 text-[10px] leading-snug text-slate-600 border-t border-slate-900",
+                "{disclaimer}"
             }
 
             if let Some(tab) = active_tab {

@@ -79,5 +79,6 @@
   "ui_open_gear_planner": "Открыть план экипировки →",
   "ui_gear_current": "Лучшее сейчас",
   "ui_gear_next_upgrade": "Следующее улучшение",
-  "ui_gear_no_data": "Данные для этого класса и фракции ещё готовятся."
+  "ui_gear_no_data": "Данные для этого класса и фракции ещё готовятся.",
+  "ui_attribution_disclaimer": "World of Warcraft и Blizzard Entertainment — товарные знаки Blizzard Entertainment. Изображения © Blizzard. Приложение не связано с Blizzard и не одобрено ей."
 }

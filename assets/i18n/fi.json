@@ -79,5 +79,6 @@
   "ui_open_gear_planner": "Avaa varustesuunnitelma →",
   "ui_gear_current": "Paras nyt",
   "ui_gear_next_upgrade": "Seuraava parannus",
-  "ui_gear_no_data": "Tämän luokan ja ryhmittymän tiedot valmistellaan vielä."
+  "ui_gear_no_data": "Tämän luokan ja ryhmittymän tiedot valmistellaan vielä.",
+  "ui_attribution_disclaimer": "World of Warcraft ja Blizzard Entertainment ovat Blizzard Entertainmentin tavaramerkkejä. Kuvat © Blizzard. Ei sidoksissa Blizzardiin eikä sen hyväksymä."
 }
