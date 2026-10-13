@@ -1,3 +1,4 @@
+use wow_buddy::models::gear_planner::GearPlannerData;
 use wow_buddy::models::{GameData, Faction};
 use wow_buddy::router::Route;
 use wow_buddy::selection::SelectionState;
@@ -37,4 +38,15 @@ fn test_onboarding_lifecycle_end_to_end() {
     assert_eq!(state.race_id, "skyborne");
     assert_eq!(state.class_id, "warrior");
     assert!(data.validate_selection(state.faction, &state.race_id, &state.class_id));
+}
+
+#[test]
+fn test_gear_planner_data_covers_seeded_class_and_reports_gaps() {
+    let _ = Route::GearPlanner {};
+    let gear = GearPlannerData::load_embedded();
+    // сидированный класс имеет данные по обеим фракциям
+    assert!(!gear.bands_for("warrior", Faction::Alliance).is_empty());
+    assert!(!gear.bands_for("warrior", Faction::Horde).is_empty());
+    // несидированный класс честно пуст (экран покажет "no data", не панику)
+    assert!(gear.bands_for("priest", Faction::Alliance).is_empty());
 }
