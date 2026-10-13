@@ -17,6 +17,12 @@
       "kind": "race_render",
       "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
       "license": "blizzard-fansite-kit"
+    },
+    "zone_shadowglen_art": {
+      "path": "assets/art/zone/zone_shadowglen_art.png",
+      "kind": "zone_art",
+      "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
+      "license": "blizzard-fansite-kit"
     }
   }
 }

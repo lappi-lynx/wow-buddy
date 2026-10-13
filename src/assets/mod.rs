@@ -6,5 +6,6 @@
 
 pub mod generated;
 pub mod registry;
+pub mod zone;
 
 pub use registry::{AssetEntry, AssetRegistry, ICON_FALLBACK};
