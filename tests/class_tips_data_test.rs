@@ -145,3 +145,42 @@ fn test_mage_specs_are_authored() {
 fn test_warlock_specs_are_authored() {
     assert_class_authored(&ClassTipsData::load_embedded(), "warlock");
 }
+
+#[test]
+fn test_all_expected_specs_are_authored() {
+    let t = ClassTipsData::load_embedded();
+    assert!(
+        t.missing_coverage().is_empty(),
+        "unfilled: {:?}",
+        t.missing_coverage()
+    );
+    let mut count = 0;
+    for (class_id, class) in t.classes.iter() {
+        for spec in class.specs.iter() {
+            count += 1;
+            assert!(spec.tips.len() >= 3, "{class_id}/{} has <3 tips", spec.id);
+            assert!(
+                spec.provenance.is_some(),
+                "{class_id}/{} missing provenance",
+                spec.id
+            );
+        }
+    }
+    assert_eq!(count, 27);
+}
+
+#[test]
+fn test_every_class_has_a_kb_source_artifact() {
+    for (class_id, _) in wow_buddy::models::class_tips::EXPECTED_SPECS {
+        let path = format!(
+            "{}/docs/kb-sources/{class_id}.md",
+            env!("CARGO_MANIFEST_DIR")
+        );
+        let content = std::fs::read_to_string(&path)
+            .unwrap_or_else(|_| panic!("missing KB source artifact for {class_id}"));
+        assert!(
+            content.to_lowercase().contains(class_id),
+            "source artifact for {class_id} looks wrong"
+        );
+    }
+}
