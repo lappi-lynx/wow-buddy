@@ -42,6 +42,16 @@ impl GameData {
         self.races.iter().find(|r| r.id == id)
     }
 
+    /// Playable classes of the race `race_id` for the given faction
+    /// (delegates to `RaceInfo::classes_for_faction`).
+    pub fn classes_for_faction(&self, faction: Faction, race_id: &str) -> &[String] {
+        self.races
+            .iter()
+            .find(|r| r.id == race_id)
+            .map(|r| r.classes_for_faction(faction))
+            .unwrap_or(&[])
+    }
+
     pub fn get_starter_zone(&self, id: &str) -> Option<&StarterZoneInfo> {
         self.starter_zones.iter().find(|z| z.id == id)
     }

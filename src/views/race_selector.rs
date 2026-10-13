@@ -70,7 +70,7 @@ pub fn RaceSelectorView(
                 lore.clone(),
                 r.racial_ability_name.clone(),
                 r.racial_ability_desc.clone(),
-                r.available_classes.clone(),
+                r.classes_for_faction(faction).to_vec(),
             )
         } else {
             (

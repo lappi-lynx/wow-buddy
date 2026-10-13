@@ -12,7 +12,7 @@
       "lore_fi": "Myrskytuulen ihmiset ovat Azerothin jaloja puolustajia, tunnettuja diplomatiasta, periksiantamattomuudesta ja Valon palvonnasta.",
       "racial_ability_name": "Every Man for Himself",
       "racial_ability_desc": "Removes all movement impairing effects and loss of control.",
-      "available_classes": ["warrior", "paladin", "rogue", "priest", "mage", "warlock"],
+      "available_classes": ["warrior", "paladin", "hunter", "rogue", "priest", "mage", "warlock"],
       "starter_zone_id": "northshire",
       "model_id": "human_male"
     },
@@ -28,7 +28,7 @@
       "lore_fi": "Rautatakomon kääpiöt ovat Khaz Modanin rohkeita kaivajia ja seppiä, jotka tutkivat titaanien muinaisia salaisuuksia.",
       "racial_ability_name": "Stoneform",
       "racial_ability_desc": "Increases armor and grants immunity to bleed, poison, and disease.",
-      "available_classes": ["warrior", "paladin", "hunter", "rogue", "priest"],
+      "available_classes": ["warrior", "paladin", "hunter", "rogue", "priest", "shaman"],
       "starter_zone_id": "coldridge",
       "model_id": "dwarf_male"
     },
@@ -58,9 +58,9 @@
       "lore_ru": "Гномы — эксцентричные гении технологии и инженерной мысли, не знающие преград в решении сложнейших загадок механизма.",
       "lore_en": "Gnomes are diminutive, brilliantly eccentric inventors who combine boundless curiosity with radical technological genius.",
       "lore_fi": "Gnoomit ovat pienikokoisia ja nerokkaita keksijöitä, joiden kekseliäisyys ylittää kaikki esteet.",
-      "racial_ability_name": "Escape Artist",
-      "racial_ability_desc": "Escape any immobilization or movement speed reduction effect.",
-      "available_classes": ["warrior", "rogue", "mage", "warlock"],
+      "racial_ability_name": "Expansive Mind",
+      "racial_ability_desc": "+5% to primary class resource (mana, energy, or rage).",
+      "available_classes": ["warrior", "rogue", "priest", "mage", "warlock"],
       "starter_zone_id": "coldridge",
       "model_id": "gnome_male"
     },
@@ -74,9 +74,11 @@
       "lore_ru": "Скайборны — крылатые хранители парящих вершин Zephras Isle. В Альянсе они почитают дисциплину High Order, в Орде — свободу ветра Windshaper.",
       "lore_en": "Skyborne are winged wanderers from Zephras Isle. In the Alliance they align with High Order discipline; in the Horde they embrace Windshaper freedom.",
       "lore_fi": "Skybornet ovat siivekkäitä vaeltajia Zephras-saarelta. Liittoumassa he seuraavat Korkeaa Järjestystä, Laumassa Tuulimuovaajien vapautta.",
-      "racial_ability_name": "Zephyr Drift",
-      "racial_ability_desc": "Harness wind currents to glide forward safely and gain brief movement speed.",
-      "available_classes": ["warrior", "hunter", "rogue", "mage", "priest", "shaman", "druid"],
+      "racial_ability_name": "Walk on Air",
+      "racial_ability_desc": "Actively glide for 10 seconds with full directional control. 2-minute cooldown.",
+      "available_classes": ["warrior", "hunter", "rogue", "druid"],
+      "alliance_available_classes": ["warrior", "hunter", "rogue", "mage", "druid"],
+      "horde_available_classes": ["warrior", "hunter", "rogue", "shaman", "druid"],
       "starter_zone_id": "zephras_isle",
       "model_id": "skyborne_neutral"
     },
@@ -90,9 +92,9 @@
       "lore_ru": "Орки Дуротара — закаленные воины чести и выживания, возглавляющие Новую Орду Тралла в согласии со стихиями.",
       "lore_en": "Orcs of Durotar are fierce yet honorable survivors who built a new home under the banner of Thrall's shamanic Horde.",
       "lore_fi": "Durotarin örkit ovat sotureita, jotka löysivät uuden kodin ja kunnian Thrallin uuden Lauman alaisuudessa.",
-      "racial_ability_name": "Blood Fury",
-      "racial_ability_desc": "Increases attack and spell power for a short duration.",
-      "available_classes": ["warrior", "hunter", "rogue", "shaman", "warlock"],
+      "racial_ability_name": "Axe Specialization",
+      "racial_ability_desc": "+1% critical strike chance to all attacks and spells while wielding an axe.",
+      "available_classes": ["warrior", "hunter", "rogue", "shaman", "mage", "warlock"],
       "starter_zone_id": "valley_of_trials",
       "model_id": "orc_male"
     },
@@ -108,7 +110,7 @@
       "lore_fi": "Hyljätyt ovat vapautuneita epäkuolleita, jotka taistelevat olemassaolostaan vihamielisessä maailmassa.",
       "racial_ability_name": "Will of the Forsaken",
       "racial_ability_desc": "Removes any Charm, Fear, and Sleep effects.",
-      "available_classes": ["warrior", "rogue", "priest", "mage", "warlock"],
+      "available_classes": ["warrior", "rogue", "priest", "mage", "warlock", "paladin"],
       "starter_zone_id": "deathknell",
       "model_id": "undead_male"
     },
@@ -140,7 +142,7 @@
       "lore_fi": "Darkspear-peikot ovat viidakon ovelia metsästäjiä, jotka palvovat Loa-henkiä ja seisovat Lauman rinnalla.",
       "racial_ability_name": "Berserking",
       "racial_ability_desc": "Increases attack and casting speed by 10% to 30% depending on health.",
-      "available_classes": ["warrior", "hunter", "rogue", "priest", "shaman", "mage"],
+      "available_classes": ["warrior", "hunter", "rogue", "priest", "shaman", "mage", "warlock"],
       "starter_zone_id": "valley_of_trials",
       "model_id": "troll_male"
     }

@@ -15,6 +15,10 @@ pub struct RaceInfo {
     pub racial_ability_name: String,
     pub racial_ability_desc: String,
     pub available_classes: Vec<String>,
+    #[serde(default)]
+    pub alliance_available_classes: Option<Vec<String>>,
+    #[serde(default)]
+    pub horde_available_classes: Option<Vec<String>>,
     pub starter_zone_id: String,
     pub model_id: String,
 }
@@ -26,5 +30,16 @@ impl RaceInfo {
         } else {
             self.faction == Some(faction)
         }
+    }
+
+    /// Playable classes for the given faction. Dual-faction races (e.g. Skyborne)
+    /// carry faction-specific lists — High Order (Alliance) and Windshaper (Horde) —
+    /// because some classes are exclusive to one variant; all other races use the base list.
+    pub fn classes_for_faction(&self, faction: Faction) -> &[String] {
+        match faction {
+            Faction::Alliance => self.alliance_available_classes.as_deref(),
+            Faction::Horde => self.horde_available_classes.as_deref(),
+        }
+        .unwrap_or(&self.available_classes)
     }
 }
