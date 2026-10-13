@@ -21,6 +21,16 @@ pub fn format_race_display_name(race: &RaceInfo, faction: Faction) -> String {
     }
 }
 
+/// The race id to show as active: the current selection when it exists in
+/// this faction's list, otherwise the first race. Guards against a stale
+/// selection carried over from the other faction list.
+pub fn effective_race_id(races: &[RaceInfo], current: Option<&str>) -> Option<String> {
+    current
+        .filter(|id| races.iter().any(|r| r.id == *id))
+        .map(str::to_string)
+        .or_else(|| races.first().map(|r| r.id.clone()))
+}
+
 #[component]
 pub fn RaceSelectorView(
     current_lang: Signal<Language>,
@@ -40,10 +50,11 @@ pub fn RaceSelectorView(
         .cloned()
         .collect();
 
-    // Default select first race if none selected
-    let current_id = selected_race_id.read().clone().unwrap_or_else(|| {
-        races.first().map(|r| r.id.clone()).unwrap_or_default()
-    });
+    // The active race: the current selection when it belongs to this
+    // faction's list, otherwise the first race (a stale id from the other
+    // faction's list must not blank out the philosophy card).
+    let current_id =
+        effective_race_id(&races, selected_race_id.read().as_deref()).unwrap_or_default();
 
     let active_race = races.iter().find(|r| r.id == current_id).cloned();
 
