@@ -76,7 +76,7 @@ Follow these steps to manually test all features of the application:
 ### 3. Screen 2: Race Selector & Lore
 - Verify exactly 5 races are displayed for each faction.
 - Check dynamic naming: **High Order Skyborne** (Alliance) vs **Windshaper Skyborne** (Horde).
-- Review the Lore Philosophy card, racial ability (`Every Man for Himself`, `Shadowmeld`, `Stoneform`, `Zephyr Drift`, etc.), and class badges.
+- Review the Lore Philosophy card, racial ability (`Every Man for Himself`, `Shadowmeld`, `Stoneform`, `Walk on Air`, etc.), and class badges.
 
 ### 4. Screen 3: 3D Dressing Room & Gear Evolution
 - Try the 4 animation buttons (`[🛡️ Stand]`, `[⚔️ Attack]`, `[✨ Cast]`, `[🕺 Dance]`).

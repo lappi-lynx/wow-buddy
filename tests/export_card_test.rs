@@ -14,6 +14,14 @@ fn test_export_string_horde_orc() {
 }
 
 #[test]
+fn test_faction_display_names_are_explicit_labels() {
+    // The export contract must not depend on `{:?}` Debug output; these are
+    // the explicit, stable labels used by `build_export_string`.
+    assert_eq!(Faction::Alliance.display_name(), "Alliance");
+    assert_eq!(Faction::Horde.display_name(), "Horde");
+}
+
+#[test]
 fn test_export_keys_exist_in_all_locales() {
     let ru: serde_json::Value = serde_json::from_str(include_str!("../assets/i18n/ru.json")).unwrap();
     let en: serde_json::Value = serde_json::from_str(include_str!("../assets/i18n/en.json")).unwrap();

@@ -3,28 +3,36 @@ use crate::models::{ClassInfo, Faction, RaceInfo};
 use crate::views::race_selector::format_race_display_name;
 use dioxus::prelude::*;
 
-/// Serializes the chosen build into the shared hand-off string
-/// (knowledge-base §5, Phase 2 addon exchange format).
+/// Serializes the chosen build into the shared hand-off string.
+///
+/// The human-readable `FACTION | RACE | CLASS` layout is provisional: KB §5
+/// (Phase 2 addon exchange) suggests a Base64/JSON wire format, which is
+/// deferred until the addon parser is built. Faction uses an explicit
+/// display-name method rather than `Debug` formatting.
 pub fn build_export_string(faction: Faction, race_display_name: &str, class_name: &str) -> String {
-    format!("FACTION: {faction:?} | RACE: {race_display_name} | CLASS: {class_name}")
+    format!(
+        "FACTION: {} | RACE: {race_display_name} | CLASS: {class_name}",
+        faction.display_name()
+    )
 }
 
-/// Copy `text` to the system clipboard. Returns whether the copy succeeded.
-/// On web the Clipboard API is asynchronous, so success is assumed
-/// optimistically there.
-fn copy_to_clipboard(text: &str) -> bool {
+/// Copy `text` to the system clipboard, resolving to whether the copy
+/// succeeded. On web the Clipboard API is asynchronous, so the returned
+/// promise is awaited: a rejection (denied permission, insecure context, etc.)
+/// is surfaced as a failure instead of an optimistic "copied!" toast.
+async fn copy_to_clipboard(text: String) -> bool {
     #[cfg(target_arch = "wasm32")]
     {
         if let Some(window) = web_sys::window() {
-            let _ = window.navigator().clipboard().write_text(text);
-            return true;
+            let promise = window.navigator().clipboard().write_text(&text);
+            return wasm_bindgen_futures::JsFuture::from(promise).await.is_ok();
         }
         false
     }
     #[cfg(not(target_arch = "wasm32"))]
     {
         match arboard::Clipboard::new() {
-            Ok(mut clipboard) => clipboard.set_text(text.to_string()).is_ok(),
+            Ok(mut clipboard) => clipboard.set_text(text).is_ok(),
             Err(_) => false,
         }
     }
@@ -75,11 +83,14 @@ pub fn BlueprintExport(
                     onclick: move |_| {
                         copied.set(false);
                         copy_failed.set(false);
-                        if copy_to_clipboard(&export_string_for_click) {
-                            copied.set(true);
-                        } else {
-                            copy_failed.set(true);
-                        }
+                        let text = export_string_for_click.clone();
+                        spawn(async move {
+                            if copy_to_clipboard(text).await {
+                                copied.set(true);
+                            } else {
+                                copy_failed.set(true);
+                            }
+                        });
                     },
                     "📋 {i18n_svc.t(\"ui_export_btn\", lang)}"
                 }

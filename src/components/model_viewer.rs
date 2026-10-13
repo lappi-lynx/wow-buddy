@@ -1,5 +1,6 @@
 use crate::i18n::{I18nService, Language};
-use crate::models::{gear::GearTier, ClassInfo, RaceInfo};
+use crate::models::{gear::GearTier, ClassInfo, Faction, RaceInfo};
+use crate::views::race_selector::format_race_display_name;
 use dioxus::prelude::*;
 
 #[component]
@@ -8,12 +9,14 @@ pub fn ModelViewer(
     i18n: Signal<I18nService>,
     race: RaceInfo,
     class: ClassInfo,
+    faction: Faction,
     tier: GearTier,
     animation: String,
 ) -> Element {
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
     let is_skyborne = race.id == "skyborne";
+    let display_race = format_race_display_name(&race, faction);
 
     let avatar_glyph = match class.id.as_str() {
         "warrior" => "⚔️",
@@ -90,7 +93,7 @@ pub fn ModelViewer(
                 }
                 div { class: "mt-4 text-center",
                     h4 { class: "text-lg sm:text-xl font-extrabold text-amber-200 tracking-wide",
-                        "{race.name} {class.name}"
+                        "{display_race} {class.name}"
                     }
                     p { class: "text-xs font-medium text-slate-400 mt-0.5",
                         "{tier_title}"

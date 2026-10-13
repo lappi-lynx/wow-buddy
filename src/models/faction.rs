@@ -14,6 +14,15 @@ impl Faction {
             Faction::Horde => "horde",
         }
     }
+
+    /// Stable human-readable label used by hand-off strings and UI. Kept
+    /// explicit so the export contract never depends on `Debug` output.
+    pub fn display_name(&self) -> &'static str {
+        match self {
+            Faction::Alliance => "Alliance",
+            Faction::Horde => "Horde",
+        }
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

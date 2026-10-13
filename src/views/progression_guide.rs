@@ -1,6 +1,7 @@
 use crate::components::{LanguagePicker, LegacyPresetWidget};
 use crate::i18n::{I18nService, Language};
-use crate::models::{GameData, RaceInfo, StarterZoneInfo};
+use crate::models::{Faction, GameData, RaceInfo, StarterZoneInfo};
+use crate::views::race_selector::format_race_display_name;
 use dioxus::prelude::*;
 
 pub fn get_starter_zone_checklist(zone: &StarterZoneInfo) -> Vec<String> {
@@ -17,6 +18,7 @@ pub fn ProgressionGuideView(
     i18n: Signal<I18nService>,
     game_data: Signal<GameData>,
     race: RaceInfo,
+    faction: Faction,
     on_back: EventHandler<()>,
     on_continue_to_dungeons: EventHandler<()>,
 ) -> Element {
@@ -47,7 +49,8 @@ pub fn ProgressionGuideView(
 
     let checklist_items = get_starter_zone_checklist(&zone);
 
-    let guide_title = i18n_svc.t_with("ui_progression_guide_for", lang, &[("race", race.name.clone())]);
+    let display_race = format_race_display_name(&race, faction);
+    let guide_title = i18n_svc.t_with("ui_progression_guide_for", lang, &[("race", display_race)]);
     let zone_header = i18n_svc.t_with(
         "ui_zone_prefix",
         lang,
