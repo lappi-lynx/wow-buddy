@@ -113,7 +113,7 @@
             {
               "text_en": "Pull one mob at a time: Fury has excellent single-target damage, but hits from several mobs without a shield quickly force you to stop and eat.",
               "text_ru": "Пулите по одному мобу: у Fury отличный одиночный урон, но удары нескольких мобов без щита быстро заставляют садиться есть.",
-              "text_fi": "Vedä yksi mob kerrallaan: Furyn yhden kohteen damage on erinomainen, mutta usean mobilta tulevat osumat ilman kilpeä pakottavat syömään."
+              "text_fi": "Vedä yksi mob kerrallaan: Furyn yhden kohteen damage on erinomainen, mutta usean mobin osumat ilman kilpeä pakottavat syömään."
             },
             {
               "text_en": "Take Engineering + Mining for dynamite and utility grenades, and equip two high-DPS one-handers — racial weapon bonuses are now flat +% crit (Orcs/axes, Humans/swords, Dwarves/maces).",
@@ -345,7 +345,7 @@
             {
               "text_en": "Pull one mob at a time from stealth: Cheap Shot and Kidney Shot stun-lock the target while Sap and Gouge handle extras, so you can finish a mob taking virtually zero damage.",
               "text_ru": "Тяните по одному мобу из стелса: Cheap Shot и Kidney Shot держат цель в стане, а Sap и Gouge нейтрализуют лишних — врага можно добить почти без полученного урона.",
-              "text_fi": "Vedä yksi mob kerrallaan stealthista: Cheap Shot ja Kidney Shot pitävät kohteen stunlockissa, kun taas Sap ja Gouge hoitavat ylimääräiset — voit viimeistellä mobiln lähes ilman damagea."
+              "text_fi": "Vedä yksi mob kerrallaan stealthista: Cheap Shot ja Kidney Shot pitävät kohteen stunlockissa, kun taas Sap ja Gouge hoitavat ylimääräiset — voit viimeistellä mobin lähes ilman damagea."
             },
             {
               "text_en": "Skinning + Leatherworking gives easy armor upgrades, or Engineering utility tools and bombs; always use a high-damage dagger main hand for Ambush and Backstab, and stack Agility, Stamina and crit.",
@@ -393,7 +393,7 @@
             {
               "text_en": "Stick strictly to one mob at a time when solo: Holy has no real physical mitigation or attack AoE, so multi-mob pulls just bleed mana — this spec shines healing dungeon groups instead.",
               "text_ru": "В одиночной игре держитесь строго одного моба: у Holy нет ни физической защиты, ни атакующего AoE, так что паки мобов лишь сливают ману — этот спек раскрывается в подземельях как хилер.",
-              "text_fi": "Pysy soolona tiukasti yhdessä mobissa: Holylta puuttuvat fyysinen mitigointi ja hyökkäys-AoE, joten usean mobil vedot vain valuttavat manaa — tämä spekki loistaa luolastoissa parantajana."
+              "text_fi": "Pysy soolona tiukasti yhdessä mobissa: Holylta puuttuvat fyysinen mitigointi ja hyökkäys-AoE, joten usean mobin vedot vain valuttavat manaa — tämä spekki loistaa luolastoissa parantajana."
             },
             {
               "text_en": "Choose Tailoring + Enchanting to craft gear and disenchant spare greens, or Herbalism + Alchemy for Intellect and mana-regen elixirs; prioritise Spell Healing, Intellect and Spirit on gear and carry the highest-damage Wand you can get.",
@@ -420,7 +420,7 @@
             {
               "text_en": "Pair Tailoring + Enchanting for cloth gear and high-DPS Wands; stack Shadow Spell Power, Intellect and Spirit, and upgrade your Wand every few levels — wanding the last 30–50% of a mob's health is the backbone of smooth Shadow leveling.",
               "text_ru": "Сочетайте Портняжное дело + Наложение чар ради тканевых вещей и Wand с высоким DPS; собирайте силу заклинаний школы тьмы, интеллект и дух и обновляйте Wand каждые несколько уровней — добивание последних 30–50% здоровья моба палочкой — основа комфортной прокачки Shadow.",
-              "text_fi": "Yhdistä Ompelutyö + Lumous kangaspanssareihin ja korkean DPS:n Wandeihin; kerää Shadow-loitsutehoa, Älykkyyttä ja Sielua sekä päivitä Wand muutaman tason välein — mobiln viimeisen 30–50%:n hoitaminen Wandilla on sujuvan Shadow-tasoituksen selkäranka."
+              "text_fi": "Yhdistä Ompelutyö + Lumous kangaspanssareihin ja korkean DPS:n Wandeihin; kerää Shadow-loitsutehoa, Älykkyyttä ja Sielua sekä päivitä Wand muutaman tason välein — mobin viimeisen 30–50%:n hoitaminen Wandilla on sujuvan Shadow-tasoituksen selkäranka."
             }
           ]
         }
@@ -506,7 +506,7 @@
             {
               "text_en": "Arcane Missiles and Arcane Blast drain mana fast — downranking is heavily nerfed in Forever (less spell-power scaling, fewer Clearcasting procs), so keep your spell ranks updated; conjure food and water, and wand the last 20–30% of a mob's health while Spirit regens through the 5-second rule.",
               "text_ru": "Arcane Missiles и Arcane Blast быстро сливают ману — в Forever даунранкинг сильно понерфлен (меньше скейла от силы заклинаний, реже проки Clearcasting), поэтому держите ранги заклинаний актуальными; создавайте еду и воду, а последние 20–30% здоровья моба добивайте Wand, пока дух восстанавливает ману по правилу пяти секунд.",
-              "text_fi": "Arcane Missiles ja Arcane Blast valuttavat manan nopeasti — Foreverissä downranking on nerfattu rajusti (vähemmän loitsutehon skaalausta, harvemmat Clearcasting-procit), joten pidä loitsujen rankit ajan tasalla; luo ruokaa ja vettä ja viimeistele mobiln viimeiset 20–30% Wandilla Spiritin palauttaessa manaa (viiden sekunnin sääntö)."
+              "text_fi": "Arcane Missiles ja Arcane Blast valuttavat manan nopeasti — Foreverissä downranking on nerfattu rajusti (vähemmän loitsutehon skaalausta, harvemmat Clearcasting-procit), joten pidä loitsujen rankit ajan tasalla; luo ruokaa ja vettä ja viimeistele mobin viimeiset 20–30% Wandilla Spiritin palauttaessa manaa (viiden sekunnin sääntö)."
             },
             {
               "text_en": "Pull 1–2 mobs: lock the secondary target with Polymorph while you burst the primary, and avoid eating melee hits in Cloth — physical damage causes severe spell pushback.",

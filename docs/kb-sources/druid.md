@@ -3,7 +3,7 @@
 - **Date:** 2026-10-13
 - **Notebook:** WoW Forever KB — <https://notebooklm.google.com/notebook/cff6d28f-cdcc-4679-9e98-74cf2430bf2b>
 - **Question:** For WoW Forever leveling, give 3 short concrete beginner tips for EACH Druid specialization (Balance, Feral, Restoration): cover resource limits, mob pull size, professions, and weapon/gear upgrades.
-- **Note:** re-query captured during the 2026-10-13 source-artifact debt cleanup (druid was authored in Plan 3 before the convention, so its original answer was not preserved). The shipped tips trace to this re-query; minor original details (e.g. the Moonfire rank note) are not repeated here and come from the Plan 3 query.
+- **Note:** re-query captured during the 2026-10-13 source-artifact debt cleanup (druid was authored in Plan 3 before the convention, so its original answer was not preserved). Original-only details not repeated in this re-query: the Moonfire rank note (Balance tip 1); the named HoTs `Rejuvenation`/`Regrowth` and the low-rank heal-spam warning (Restoration tip 1); and the dungeon advice to let the tank gather mobs before single-target HoTs (Restoration tip 2).
 
 ## Answer (verbatim)
 

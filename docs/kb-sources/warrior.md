@@ -3,7 +3,7 @@
 - **Date:** 2026-10-13
 - **Notebook:** WoW Forever KB — <https://notebooklm.google.com/notebook/cff6d28f-cdcc-4679-9e98-74cf2430bf2b>
 - **Question:** For WoW Forever leveling, give 3 short concrete beginner tips for EACH Warrior specialization (Arms, Fury, Protection): cover resource limits, mob pull size, professions, and weapon/gear upgrades.
-- **Note:** captured 2026-10-13 during the source-artifact debt cleanup (the class was authored before the artifact convention); returned without a citation block.
+- **Note:** re-query captured during the 2026-10-13 source-artifact debt cleanup (the class was authored before the artifact convention; the original answer was not preserved; this re-query returned without a citation block). Original-only details not repeated in this re-query: Fury tip 3's named racial crit mapping (`Orcs/axes, Humans/swords, Dwarves/maces`; corroborated by the `paladin.md`/`shaman.md` artifacts) and Protection tip 1's damage-taken Rage scaling fix (corroborated by the beta notes quoted in `druid.md`/`hunter.md`/`mage.md`).
 
 ## Answer (verbatim)
 

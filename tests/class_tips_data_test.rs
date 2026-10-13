@@ -32,11 +32,7 @@ fn test_every_seeded_tip_has_all_three_languages() {
                     );
                 }
             }
-            assert!(
-                spec.provenance.is_some(),
-                "{class_id}/{} missing KB provenance",
-                spec.id
-            );
+            assert_provenance(class_id, &spec.id, &spec.provenance);
         }
     }
     assert!(specs_seen >= 3, "expected the seeded druid slice (3 specs)");
@@ -82,8 +78,19 @@ fn test_spec_info_records_the_dual_spec_uncertainty() {
     assert!(info.provenance.is_some());
 }
 
+/// Every spec's provenance must follow the repo convention:
+/// `kb:<class>-<spec>@YYYY-MM-DD (<sources>)`.
+fn assert_provenance(class_id: &str, spec_id: &str, provenance: &Option<String>) {
+    let value = provenance.as_deref().unwrap_or_default();
+    let prefix = format!("kb:{class_id}-{spec_id}@");
+    assert!(
+        value.starts_with(&prefix),
+        "{class_id}/{spec_id} provenance must start with {prefix:?}, got {value:?}"
+    );
+}
+
 /// Shared assertion for every class batch: exactly 3 specs, ≥3 tips each,
-/// provenance present, and the class gone from the coverage report.
+/// well-formed provenance, and the class gone from the coverage report.
 fn assert_class_authored(data: &ClassTipsData, class_id: &str) {
     let specs = data.specs_for(class_id);
     assert_eq!(specs.len(), 3, "{class_id} must have exactly 3 specs");
@@ -93,11 +100,7 @@ fn assert_class_authored(data: &ClassTipsData, class_id: &str) {
             "{class_id}/{} has fewer than 3 tips",
             spec.id
         );
-        assert!(
-            spec.provenance.is_some(),
-            "{class_id}/{} missing provenance",
-            spec.id
-        );
+        assert_provenance(class_id, &spec.id, &spec.provenance);
     }
     let prefix = format!("{class_id}/");
     assert!(!data
@@ -159,11 +162,7 @@ fn test_all_expected_specs_are_authored() {
         for spec in class.specs.iter() {
             count += 1;
             assert!(spec.tips.len() >= 3, "{class_id}/{} has <3 tips", spec.id);
-            assert!(
-                spec.provenance.is_some(),
-                "{class_id}/{} missing provenance",
-                spec.id
-            );
+            assert_provenance(class_id, &spec.id, &spec.provenance);
         }
     }
     assert_eq!(count, 27);
