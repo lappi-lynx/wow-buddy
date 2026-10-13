@@ -64,11 +64,16 @@ You can quickly test the entire UI in your web browser:
 dx serve --platform web
 ```
 
-To build a standalone static web bundle:
+To build the site (artifacts under `target/dx/wow-buddy/release/web/public`):
 ```bash
 dx build --platform web --release
 ```
-The production bundle will be generated in `dist/`.
+
+To produce a shippable web bundle:
+```bash
+dx bundle --platform web --release
+```
+The bundle will be generated in `dist/` (`dist/public` for the web platform).
 
 ---
 
