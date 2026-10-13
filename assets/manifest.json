@@ -1,0 +1,10 @@
+{
+  "assets": {
+    "inv_hammer_01": {
+      "path": "assets/icons/items/inv_hammer_01.webp",
+      "kind": "item_icon",
+      "source": "extracted via wow.export (Blizzard (c)) — placeholder pending curator extraction",
+      "license": "blizzard-fan-use"
+    }
+  }
+}
