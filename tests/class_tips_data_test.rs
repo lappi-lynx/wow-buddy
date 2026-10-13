@@ -16,20 +16,37 @@ fn test_unknown_class_has_no_specs() {
 }
 
 #[test]
-fn test_localized_tip_has_all_three_languages() {
+fn test_every_seeded_tip_has_all_three_languages() {
     let t = ClassTipsData::load_embedded();
-    let spec = t
-        .specs_for("druid")
-        .iter()
-        .find(|s| s.id == "balance")
-        .unwrap();
-    assert!(!spec.tips.is_empty());
-    for tip in &spec.tips {
-        assert!(!tip.get(Language::En).is_empty());
-        assert!(!tip.get(Language::Ru).is_empty());
-        assert!(!tip.get(Language::Fi).is_empty());
+    let mut specs_seen = 0;
+    for (class_id, class) in t.classes.iter() {
+        for spec in class.specs.iter() {
+            specs_seen += 1;
+            assert!(!spec.tips.is_empty(), "{class_id}/{} has no tips", spec.id);
+            for tip in &spec.tips {
+                for lang in [Language::En, Language::Ru, Language::Fi] {
+                    assert!(
+                        !tip.get(lang).trim().is_empty(),
+                        "{class_id}/{}: blank {lang:?} text",
+                        spec.id
+                    );
+                }
+            }
+            assert!(
+                spec.provenance.is_some(),
+                "{class_id}/{} missing KB provenance",
+                spec.id
+            );
+        }
     }
-    assert!(spec.provenance.is_some(), "spec card must record its KB provenance");
+    assert!(specs_seen >= 3, "expected the seeded druid slice (3 specs)");
+    let info = t.spec_info.as_ref().expect("spec_info must be seeded");
+    for lang in [Language::En, Language::Ru, Language::Fi] {
+        assert!(
+            !info.get(lang).trim().is_empty(),
+            "spec_info blank for {lang:?}"
+        );
+    }
 }
 
 #[test]

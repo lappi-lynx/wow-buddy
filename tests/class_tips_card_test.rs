@@ -1,5 +1,4 @@
 use wow_buddy::components::class_tips_card::spec_cards;
-use wow_buddy::i18n::{I18nService, Language};
 use wow_buddy::models::class_tips::ClassTipsData;
 
 #[test]
@@ -10,13 +9,23 @@ fn test_spec_cards_returns_all_specs_or_empty() {
 }
 
 #[test]
-fn test_tips_keys_exist_in_all_locales() {
-    let i18n = I18nService::load_embedded();
-    for lang in [Language::Ru, Language::En, Language::Fi] {
+fn test_tips_keys_exist_in_each_locale_file() {
+    // Raw dictionaries, not I18nService::t — `t` falls back to English,
+    // which would hide a missing ru/fi key.
+    for (name, raw) in [
+        ("ru", include_str!("../assets/i18n/ru.json")),
+        ("en", include_str!("../assets/i18n/en.json")),
+        ("fi", include_str!("../assets/i18n/fi.json")),
+    ] {
+        let dict: serde_json::Value = serde_json::from_str(raw).unwrap();
         for key in [
-            "ui_tips_title", "ui_tips_empty", "ui_specs_info_title", "ui_specs_info_label",
+            "ui_tips_title",
+            "ui_tips_empty",
+            "ui_specs_info_title",
+            "ui_specs_info_label",
         ] {
-            assert_ne!(i18n.t(key, lang), key, "missing {key} for {lang:?}");
+            let value = dict.get(key).and_then(|v| v.as_str()).unwrap_or("");
+            assert!(!value.is_empty(), "missing {key} in {name}.json");
         }
     }
 }
