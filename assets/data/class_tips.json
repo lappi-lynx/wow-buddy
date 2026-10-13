@@ -425,6 +425,76 @@
           ]
         }
       ]
+    },
+    "shaman": {
+      "specs": [
+        {
+          "id": "elemental",
+          "name_en": "Elemental",
+          "provenance": "kb:shaman-elemental@2026-10-13 (leveling-weapons, downranking)",
+          "tips": [
+            {
+              "text_en": "Mana drains fast on Lightning Bolt, Chain Lightning and Shocks — downranking is nerfed in Forever, so cast your highest ranks, drop Searing Totem / Mana Spring Totem, and weave melee hits or shocks so Spirit can regen through the 5-second rule.",
+              "text_ru": "Мана быстро утекает на Lightning Bolt, Chain Lightning и Shocks — в Forever низкие ранги понерфлены, так что кастуйте высшие ранги, ставьте Searing Totem / Mana Spring Totem и вплетайте удары в ближнем бою или шоки, чтобы дух восстанавливал ману по правилу пяти секунд.",
+              "text_fi": "Mana valuu nopeasti Lightning Boltiin, Chain Lightningiin ja Shockeihin — Foreverissä matalat rankit on nerfattu, joten käytä korkeimpia rankkeja, laske Searing Totem / Mana Spring Totem ja lomita lähiosumia tai shockeja, jotta Spirit palauttaa manaa viiden sekunnin säännöllä."
+            },
+            {
+              "text_en": "Stick to 1–2 mobs: melee hits cause heavy spell pushback on your casts, so use Earthbind Totem or Stoneclaw Totem to slow or distract extra enemies while you burst the first one down.",
+              "text_ru": "Держитесь 1–2 мобов: удары в ближнем бою дают сильный пушбэк кастам, поэтому Earthbind Totem или Stoneclaw Totem замедляют и отвлекают лишних врагов, пока вы добиваете первого.",
+              "text_fi": "Pysy 1–2 mobissa: lähiosumat aiheuttavat raskaan spell pushbackin loitsuillesi, joten käytä Earthbind Totemia tai Stoneclaw Totemia hidastamaan tai harhauttamaan ylimääräisiä vihollisia ensimmäisen burstin aikana."
+            },
+            {
+              "text_en": "Pair Skinning + Leatherworking for caster Leather/Mail, or Herbalism + Alchemy for mana potions and spell-power elixirs; use a 1H mace/dagger + shield or a staff with Spell Power, Intellect and Spirit (Walking Stick ~10, Staff of Westfall ~20, Odo's Ley Staff ~30).",
+              "text_ru": "Сочетайте Снятие шкур + Кожевничество ради Leather/Mail с кастерскими статами либо Травничество + Алхимию ради зелий маны и эликсиров на силу заклинаний; носите одноручное дробящее/кинжал со щитом или посох с силой заклинаний, интеллектом и духом (Walking Stick ~10, Staff of Westfall ~20, Odo's Ley Staff ~30).",
+              "text_fi": "Yhdistä Nahkominen + Nahkatyö kasteri-Leather/Mailiin tai Yrttitaito + Alkimia manapulloihin ja loitsutehoeliksiireihin; käytä yhtä kättä (nuija/tikari) + kilpeä tai sauvaa, jossa on loitsutehoa, Älykkyyttä ja Sielua (Walking Stick ~10, Staff of Westfall ~20, Odo's Ley Staff ~30)."
+            }
+          ]
+        },
+        {
+          "id": "enhancement",
+          "name_en": "Enhancement",
+          "provenance": "kb:shaman-enhancement@2026-10-13 (racial overview, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Mana pays for your imbues (Rockbiter, Flametongue, Windfury Weapon), totems and shocks; don't shock on every cooldown — let auto-attacks and imbue procs carry the damage. The old hybrid tax is gone: Forever hybrid melee lands within ~5% of pure damage specs.",
+              "text_ru": "Мана уходит на имбайны (Rockbiter, Flametongue, Windfury Weapon), тотемы и шоки; не спамьте шоки по кд — урон несут автоатаки и проки имбайнов. Старый «гибридный налог» убран: в Forever гибридный ближний урон в пределах ~5% от чистых DPS-спеков.",
+              "text_fi": "Mana maksaa imbuesi (Rockbiter, Flametongue, Windfury Weapon), totemit ja shockit; älä shockaa joka cooldownilla — anna auto-hyökkäysten ja imbue-procien kantaa damage. Vanha hybridivero on poistettu: Foreverissä hybridi-lähitaistelu osuu noin 5% sisään puhtaista damage-spekeistä."
+            },
+            {
+              "text_en": "Enhancement comfortably handles 1–2 mobs and can cleave two with Fire Nova Totem or Magma Totem, but pulling 3+ forces emergency Healing Waves that drain your mana instantly.",
+              "text_ru": "Enhancement уверенно держит 1–2 моба и может рассекать двоих через Fire Nova Totem или Magma Totem, но 3+ заставляют кастовать аварийные Healing Wave и мгновенно сливают ману.",
+              "text_fi": "Enhancement hoitaa mukavasti 1–2 mobia ja voi halkaista kaksi Fire Nova Totemilla tai Magma Totemilla, mutta 3+ pakottaa hätäisiin Healing Waveihin, jotka valuttavat manan heti."
+            },
+            {
+              "text_en": "Take Mining + Engineering for grenades and dynamite, or Skinning + Leatherworking; use a slow high-damage two-hander (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) or dual-wield 1H axes/maces — Orcs (+1% crit with axes) and Dwarves (+1% crit with maces) get extra value.",
+              "text_ru": "Возьмите Горное дело + Инженерное дело ради гранат и динамита либо Снятие шкур + Кожевничество; носите медленное двуручное с высоким уроном (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) или два одноручных топора/дробящих — орки (+1% крита с топорами) и дворфы (+1% с дробящим) получают больше пользы.",
+              "text_fi": "Ota Kaivostoiminta + Insinöörityö kranaatteja ja dynamiittia varten tai Nahkominen + Nahkatyö; käytä hidasta, korkean damagen 2H-asetta (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) tai kahta yksikätistä kirvestä/nuijaa — Örkit (+1% crit kirveillä) ja Kääpiöt (+1% crit nuijilla) hyötyvät eniten."
+            }
+          ]
+        },
+        {
+          "id": "restoration",
+          "name_en": "Restoration",
+          "provenance": "kb:shaman-restoration@2026-10-13 (beta notes, downranking)",
+          "tips": [
+            {
+              "text_en": "Keep Water Shield and Mana Spring Totem up at all times for constant mana return, and avoid low-rank heal spam: downranking penalties mean full ranks of Healing Wave, Lesser Healing Wave and Chain Heal give far more per mana.",
+              "text_ru": "Держите Water Shield и Mana Spring Totem включёнными постоянно ради постоянного возврата маны и не спамьте низкоранговые хилы: из-за штрафов к даунранкингу полные ранги Healing Wave, Lesser Healing Wave и Chain Heal дают куда больше отдачи на единицу маны.",
+              "text_fi": "Pidä Water Shield ja Mana Spring Totem aina yllä jatkuvan manapalautuksen vuoksi, äläkä spämmi matalan rankin healeja: downranking-rangaistusten takia Healing Waven, Lesser Healing Waven ja Chain Healin täydet rankit antavat paljon enemmän manaa kohti."
+            },
+            {
+              "text_en": "Solo, pull one mob at a time: open with a ranged spell, drop offensive totems, then finish in melee so Water Shield and Spirit regen refill your bar; in dungeons, let the tank gather mobs before you drop AoE healing totems.",
+              "text_ru": "В одиночку тяните по одному мобу: откройте дальним заклинанием, поставьте атакующие тотемы и добивайте в ближнем бою, чтобы Water Shield и дух наполняли ману; в подземельях дайте танку собрать мобов, прежде чем ставить лечащие тотемы.",
+              "text_fi": "Soolona vedä yksi mob kerrallaan: avaa kaukoloisulla, laske hyökkäystotemit ja viimeistele lähitaistelussa, jotta Water Shield ja Spirit palauttavat manaa; luolastossa anna tankin kerätä mobit ennen AoE-parannustotemeja."
+            },
+            {
+              "text_en": "Choose Herbalism + Alchemy for Mana Potions and restorative elixirs; wear a 1H mace or dagger with a shield and stack Spell Healing, Intellect and Spirit — the shield's armor matters when soloing or after unexpected dungeon aggro.",
+              "text_ru": "Выберите Травничество + Алхимию ради зелий маны и восстанавливающих эликсиров; носите одноручное дробящее или кинжал со щитом и собирайте лечение заклинаний, интеллект и дух — броня щита важна в соло и при неожиданном агро в подземельях.",
+              "text_fi": "Valitse Yrttitaito + Alkimia manapulloja ja palauttavia eliksiirejä varten; käytä yksikätistä nuijaa tai tikaria kilven kanssa ja kerää parannusvoimaa, Älykkyyttä ja Sielua — kilven panssari ratkaisee soolotessa ja yllättävässä luolasto-aggrossa."
+            }
+          ]
+        }
+      ]
     }
   }
 }

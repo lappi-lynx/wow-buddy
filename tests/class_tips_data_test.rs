@@ -130,3 +130,8 @@ fn test_rogue_specs_are_authored() {
 fn test_priest_specs_are_authored() {
     assert_class_authored(&ClassTipsData::load_embedded(), "priest");
 }
+
+#[test]
+fn test_shaman_specs_are_authored() {
+    assert_class_authored(&ClassTipsData::load_embedded(), "shaman");
+}
