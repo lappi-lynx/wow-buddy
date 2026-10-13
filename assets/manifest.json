@@ -3,7 +3,7 @@
     "inv_hammer_01": {
       "path": "assets/icons/items/inv_hammer_01.webp",
       "kind": "item_icon",
-      "source": "extracted via wow.export (Blizzard (c)) — placeholder pending curator extraction",
+      "source": "Blizzard item icon (inv_hammer_01) via wow.zamimg.com CDN, imported 2026-10-13 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
     },
     "faction_alliance_shield": {

@@ -1,7 +1,6 @@
 //! GENERATED FILE — produced by `tools/assets/generate.mjs`. Do not edit by hand.
 
-//! 3 entries still carry placeholder/previous bytes (source file not placed yet):
-//!   - inv_hammer_01 (assets/icons/items/inv_hammer_01.webp)
+//! 2 entries still carry placeholder/previous bytes (source file not placed yet):
 //!   - race_human_render (assets/art/race/race_human_render.png)
 //!   - zone_shadowglen_art (assets/art/zone/zone_shadowglen_art.png)
 //!
@@ -9,7 +8,7 @@
 
 /// Item icons (`kind: "item_icon"`).
 pub const ICONS: &[(&str, &str)] = &[
-    ("inv_hammer_01", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="),
+    ("inv_hammer_01", "data:image/webp;base64,UklGRnQFAABXRUJQVlA4IGgFAADQFgCdASpAAEAAPlEgjUSjoiEWCV8wOAUEoAqSbCT3mNCHvz4Hip0d6n3XwL8PPuiPD2jagXyH75fvvMrvp+IGoF7B/ze97wQ+wuvOUBPGB0Xag363/8U++FGDGlEuKC2c8R892+JkXc2WbI65lE0NqFnm69o3fQhJ/gp2vNPb8VDogQ45Ihs4KDOqjMdsuWpcBfgU+5+5cwKBXIrsUAh+Rcbj3u0tkkzuWLi6EjZvqyCocRZ4lxKJUEWZmr4bAAD+/r3Tn8duXJMI2W1Mf+vSRKF+Vaupm8YlCJLmZRqPSgbXxh0sBuXfiyejDuIaZ6+NJEWR+K/QDLMJzn9HAuwecyAlYRsZlVPFHGu5Rrk/T9eKxkIhfucjcL5PxeY37rr7ptlK6loiF4XKuM51v5Ob0u9D6bpGeV4WjWfRLanIhS5m2amXMgyJjyYIWtp1wNcShN+JJEiXISlik6ZcWc0SPtU2cYsblA7uWyp1+/iA9/vcYlVSA7Ls/CB2ala2p0g1DC/t+lfNbHqQhtDJTv9nJ4LBVh+T4nueL2MUbA9hXFP+lvZqAsiyEX7KluI3PJwtpvbw+nrDT5FdGmwhEAViRoxFUoc+rl76sIJSqGtuHQCLYEjPK7NJH3BgOcnEn0rSBQAJszGRbjusCtRLx2ri8Rvvlw9+03v5/qrt8nBDTguyox2rSuDvzotkIJTPkf9bjXMoKxuqjPrsx/+GUlnQ8T9IyqhUHW6XFbq7HNlXyI7/2VOELJcSLtbUTJvpPLIGWA8YGG3N2nyxtGEETkdufkRzdEr/8VQ6/3MSej/4mJzxTxzp2sOe2tbRModbiD8SxPWAkgtAduNxLos5EKNtS7mTgET7rskW/mlUHRjdJvB+O8o9C5JxFBlhX44MHKQGVbdBvo4mxqvY1/vPBUi3vOjP+jhj/OcK3ZaTaBxm9fhYZaiQc5UWBlhEDqMRCItcExnuB7UUHHGEgvqDc6Sp236n2kUQCouNz5LE3ZFMH0iOe9KqIaaaw/7z7PPd7F/53sO0qPwjFdtQoXrb3yKgJEXHezBzN9fh9T2tWK87VoTltn9a9aOYGU9qe3BiIAXAVRP6fyBDShWZuPn26KGhOMBzDYl3keZEV2vZS3cpETGTPGINkoeLP1uih4d5nzwV0SsmzZeETXt8bNHF/9hoiqfb/1ZgbvHkJ5vrvbscVUJnkveJrHPDmroVSFdaHzxd9lIXZSlLstSeF0+gqMuXFJlFUCLSvCl3K66pfXmqcVuVx7MkjQ4UYMebJfVKAcY8vZ7yI1Ka4hVlm1RB5jBikPyK/HmlY81/7TuxrorB/jfV5up3vnn8Ods71a1YAD/0Cykgx114rSHs7tYBLb4RvHi5AZwK63j7z9pUcipXaGffV8HICCucJ/ylVi43Qs4iVXAUB1jrVD0xGs7waRAttsQU0ehFwYLLYLxTtMElQ/FPjh6TIioanfTicSE3Lv/8o1UbnXCxETjKlbFPe6Aq/crWtBHtnl9NbXOyTNKUIWPIp/OkQE6AFX+/5PPpaXcC/c3IddVK6CnBYbojk8mR0nBi7Z37whEW+8DKsdrwHyYY3ujl0dkGklWymjNsJjC4mgkmWIvoiUUddbeRbzdhCdG98qxePbBaIsgO5W1BxAkUuquPg7P6y59NBS76qpK6Kyxp9cFT+8LX0lXe8nckdWhGQTJyVnpWojLYwZRBWHW/nt8kUaBumAqtqZN51rTQ6NH7qBd7vDIZNz1HocqiTutu1Epn64yFDfe6o0wJtEpgnNm5frPE9NdkKNlt3T7PYDpsP5S1DIHl20FHZAzmQ0bjxsY740j4J3/q1P+Gzo0Da55z9wAA"),
 ];
 
 /// Art assets (every other `kind`).

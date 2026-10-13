@@ -130,7 +130,14 @@ pub fn GearPlannerView(
                                                 div {
                                                     key: "{weapon.name}",
                                                     class: "flex items-center space-x-2 text-xs sm:text-sm text-slate-200",
-                                                    span { class: "text-base", "{registry.item_icon(weapon.icon_id.as_deref().unwrap_or(\"\"))}" }
+                                                    {
+                                                        let icon = registry.item_icon(weapon.icon_id.as_deref().unwrap_or(""));
+                                                        if icon.starts_with("data:") {
+                                                            rsx! { img { class: "w-4 h-4 object-contain", src: "{icon}", alt: "" } }
+                                                        } else {
+                                                            rsx! { span { class: "text-base", "{icon}" } }
+                                                        }
+                                                    }
                                                     span { class: "text-amber-500 font-semibold", "Lvl {weapon.level}" }
                                                     span { class: "font-medium", "{weapon.name}" }
                                                     span { class: "text-slate-500", "— {weapon.source}" }
