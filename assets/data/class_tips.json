@@ -495,6 +495,76 @@
           ]
         }
       ]
+    },
+    "mage": {
+      "specs": [
+        {
+          "id": "arcane",
+          "name_en": "Arcane",
+          "provenance": "kb:mage-arcane@2026-10-13 (downranking article, beta notes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Arcane Missiles and Arcane Blast drain mana fast — downranking is heavily nerfed in Forever (less spell-power scaling, fewer Clearcasting procs), so keep your spell ranks updated; conjure food and water, and wand the last 20–30% of a mob's health while Spirit regens through the 5-second rule.",
+              "text_ru": "Arcane Missiles и Arcane Blast быстро сливают ману — в Forever даунранкинг сильно понерфлен (меньше скейла от силы заклинаний, реже проки Clearcasting), поэтому держите ранги заклинаний актуальными; создавайте еду и воду, а последние 20–30% здоровья моба добивайте Wand, пока дух восстанавливает ману по правилу пяти секунд.",
+              "text_fi": "Arcane Missiles ja Arcane Blast valuttavat manan nopeasti — Foreverissä downranking on nerfattu rajusti (vähemmän loitsutehon skaalausta, harvemmat Clearcasting-procit), joten pidä loitsujen rankit ajan tasalla; luo ruokaa ja vettä ja viimeistele mobiln viimeiset 20–30% Wandilla Spiritin palauttaessa manaa (viiden sekunnin sääntö)."
+            },
+            {
+              "text_en": "Pull 1–2 mobs: lock the secondary target with Polymorph while you burst the primary, and avoid eating melee hits in Cloth — physical damage causes severe spell pushback.",
+              "text_ru": "Тяните 1–2 моба: фиксируйте вторую цель Polymorph, пока бурстите первую, и не подставляйтесь под удары в тряпье — физический урон даёт сильный пушбэк кастам.",
+              "text_fi": "Vedä 1–2 mobia: lukitse toissijainen kohde Polymorphiin ja burstaa ensisijainen; vältä lähiosumia kankaassa — fyysinen damage aiheuttaa raskaan spell pushbackin."
+            },
+            {
+              "text_en": "Take Tailoring + Enchanting for Cloth armor, bags and Magic Wands, or Herbalism + Alchemy for mana potions and Intellect/spell-power elixirs; use staves or 1H sword/dagger + off-hand with Spell Power, Intellect and Spirit (Apprentice's Spellstaff ~10, Oakthrush Staff ~12, Emberstone Staff ~20, Rod of the Sleepwalker ~30).",
+              "text_ru": "Возьмите Портняжное дело + Наложение чар ради тканевой брони, сумок и Magic Wand либо Травничество + Алхимию ради зелий маны и эликсиров на интеллект/силу заклинаний; носите посохи или одноручный меч/кинжал + предмет в левой руке с силой заклинаний, интеллектом и духом (Apprentice's Spellstaff ~10, Oakthrush Staff ~12, Emberstone Staff ~20, Rod of the Sleepwalker ~30).",
+              "text_fi": "Ota Ompelutyö + Lumous kangaspanssariin, laukkuihin ja Magic Wandeihin tai Yrttitaito + Alkimia manapulloihin ja Älykkyys/loitsuteho-eliksiireihin; käytä sauvoja tai yksikätistä miekkaa/tikaria + off-handia, joissa on loitsutehoa, Älykkyyttä ja Sielua (Apprentice's Spellstaff ~10, Oakthrush Staff ~12, Emberstone Staff ~20, Rod of the Sleepwalker ~30)."
+            }
+          ]
+        },
+        {
+          "id": "fire",
+          "name_en": "Fire",
+          "provenance": "kb:mage-fire@2026-10-13 (beta notes, racial overview)",
+          "tips": [
+            {
+              "text_en": "Fireball, Pyroblast and Scorch drain mana fast; Fireball rank growth was adjusted so every new rank is a strict upgrade, and Impact no longer procs from Flamestrike's periodic ticks — open with Fireball, finish with Fire Blast or wand, and drink conjured water between pulls.",
+              "text_ru": "Fireball, Pyroblast и Scorch быстро сливают ману; рост урона Fireball по рангам настроен так, что каждый новый ранг строго сильнее, а Impact больше не срабатывает от периодических тиков Flamestrike — открывайтесь Fireball, добивайте Fire Blast или Wand и пейте созданную воду между пулами.",
+              "text_fi": "Fireball, Pyroblast ja Scorch valuttavat manan nopeasti; Fireballin rankkien kasvu on säädetty niin, että jokainen uusi rankki on tiukka parannus, eikä Impact enää proc Flamestriken jaksottaisista tikeistä — avaa Fireballilla, viimeistele Fire Blastilla tai Wandilla ja juo luotua vettä vetojen välissä."
+            },
+            {
+              "text_en": "Stick to 1–2 mobs: Fire draws heavy threat and lacks Frost's passive slows, so Polymorph isolates your target; pulling 3+ without group crowd control forces you to escape with Blink and Frost Nova.",
+              "text_ru": "Держитесь 1–2 мобов: Fire сильно генерирует угрозу и лишён замедлений Frost, поэтому изолируйте цель через Polymorph; 3+ без контроля группы заставляют убегать через Blink и Frost Nova.",
+              "text_fi": "Pysy 1–2 mobissa: Fire kerää paljon threatia eikä sillä ole Frostin passiivisia hidastuksia, joten eristä kohteesi Polymorphilla; 3+ ilman ryhmän joukkokontrollia pakottaa pakenemaan Blinkillä ja Frost Novalla."
+            },
+            {
+              "text_en": "Choose Tailoring + Enchanting for spell-damage gear like Robes of Arcana, or Mining + Engineering for dynamite and grenades; prioritise Fire Spell Power, Intellect and crit — Human Mages (+2% crit with swords) and Orc Mages (+1% with axes) get extra value from their weapon racials.",
+              "text_ru": "Выберите Портняжное дело + Наложение чар ради вещей на урон заклинаний вроде Robes of Arcana либо Горное дело + Инженерное дело ради динамита и гранат; в приоритете сила заклинаний огня, интеллект и крит — маги-люди (+2% крита с мечами) и маги-орки (+1% с топорами) получают больше от расовых бонусов к оружию.",
+              "text_fi": "Valitse Ompelutyö + Lumous loitsudamage-varusteisiin kuten Robes of Arcana tai Kaivostoiminta + Insinöörityö dynamiittiin ja kranaatteihin; suosi Fire-loitsutehoa, Älykkyyttä ja kriittiä — Ihmismagit (+2% crit miekoilla) ja Örkkimagit (+1% crit kirveillä) hyötyvät rotubonuksistaan."
+            }
+          ]
+        },
+        {
+          "id": "frost",
+          "name_en": "Frost",
+          "provenance": "kb:mage-frost@2026-10-13 (downranking article, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Frost is the most mana-efficient mage spec thanks to its slows and freezes — but Forever's downranking rules mean spammed low-rank spells (like rank 1 Frostbolt) deal less damage and proc talents rarely, so cast appropriate ranks when shattering frozen targets.",
+              "text_ru": "Frost — самый мана-эффективный спек мага благодаря замедлениям и заморозке, но правила даунранкинга Forever означают, что спам низкоранговых заклинаний (вроде rank 1 Frostbolt) наносит меньше урона и редко прокает таланты, так что кастуйте подходящие ранги, разбивая замороженные цели.",
+              "text_fi": "Frost on manatehokkain magi-spekki hidastusten ja jäädytysten ansiosta — mutta Foreverin downranking-säännöt tarkoittavat, että spämmätyt matalan rankin loitsut (kuten rank 1 Frostbolt) tekevät vähemmän damagea ja procittavat talenteja harvoin, joten käytä sopivia rankkeja särkiessäsi jäädytettyjä kohteita."
+            },
+            {
+              "text_en": "Frost safely handles 2–3+ mobs with AoE kiting: gather the melee enemies, freeze them with Frost Nova, step back and shatter with Cone of Cold or Blizzard — keep Polymorph ready for unexpected adds.",
+              "text_ru": "Frost уверенно держит 2–3+ мобов через AoE-кайтинг: соберите ближников, заморозьте их Frost Nova, отойдите и разбейте Cone of Cold или Blizzard — держите Polymorph наготове для неожиданных аддов.",
+              "text_fi": "Frost hoitaa turvallisesti 2–3+ mobia AoE-kitingillä: kerää lähitaistelijat, jäädytä ne Frost Novalla, astu taakse ja särje Cone of Coldilla tai Blizzardilla — pidä Polymorph valmiina yllättäviin addeihin."
+            },
+            {
+              "text_en": "Pair Tailoring + Enchanting or Engineering (iron grenades and target dummies help AoE pulls); stack Frost Spell Power, Intellect and Spirit on staves or one-hand + off-hand (Golemheart Stave ~14, Emberstone Staff ~20, Rod of the Sleepwalker ~30, Illusionary Rod ~40) and carry a high-DPS wand.",
+              "text_ru": "Сочетайте Портняжное дело + Наложение чар или Инженерное дело (железные гранаты и target dummy помогают с AoE-пулами); собирайте силу заклинаний льда, интеллект и дух на посохах или одноручном + левой руке (Golemheart Stave ~14, Emberstone Staff ~20, Rod of the Sleepwalker ~30, Illusionary Rod ~40) и носите Wand с высоким DPS.",
+              "text_fi": "Yhdistä Ompelutyö + Lumous tai Insinöörityö (rautakranaatit ja target dummyt auttavat AoE-vedoissa); kerää Frost-loitsutehoa, Älykkyyttä ja Sielua sauvoihin tai yksi- + off-handiin (Golemheart Stave ~14, Emberstone Staff ~20, Rod of the Sleepwalker ~30, Illusionary Rod ~40) ja kanna korkean DPS:n Wandia."
+            }
+          ]
+        }
+      ]
     }
   }
 }
