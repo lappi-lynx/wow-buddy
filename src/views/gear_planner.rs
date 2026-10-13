@@ -29,20 +29,24 @@ pub fn GearPlannerView(
     on_back: EventHandler<()>,
 ) -> Element {
     let mut level = use_signal(|| 20u8);
+    let mut view_faction = use_signal(|| faction);
 
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
     let registry = AssetRegistry::load_embedded();
     let data = GearPlannerData::load_embedded();
 
-    let bands = data.bands_for(&class_id, faction).to_vec();
+    let active_faction = *view_faction.read();
+    let bands = data.bands_for(&class_id, active_faction).to_vec();
     let highlight = band_highlight(&bands, *level.read());
     let has_data = !bands.is_empty();
-    let faction_name = if faction == Faction::Alliance {
-        i18n_svc.t("alliance_name", lang)
-    } else {
-        i18n_svc.t("horde_name", lang)
-    };
+
+    let alliance_name = i18n_svc.t("alliance_name", lang);
+    let horde_name = i18n_svc.t("horde_name", lang);
+    let active_chip = "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold cursor-pointer";
+    let idle_chip = "text-xs px-2.5 py-1 rounded-full bg-slate-900/60 border border-slate-800 text-slate-400 font-semibold cursor-pointer";
+    let alliance_class = if active_faction == Faction::Alliance { active_chip } else { idle_chip };
+    let horde_class = if active_faction == Faction::Horde { active_chip } else { idle_chip };
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
@@ -53,8 +57,17 @@ pub fn GearPlannerView(
                     span { "←" }
                     span { "{i18n_svc.t(\"btn_back\", lang)}" }
                 }
-                span { class: "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold",
-                    "{faction_name}"
+                div { class: "flex items-center space-x-2",
+                    button {
+                        class: "{alliance_class}",
+                        onclick: move |_| view_faction.set(Faction::Alliance),
+                        "{alliance_name}"
+                    }
+                    button {
+                        class: "{horde_class}",
+                        onclick: move |_| view_faction.set(Faction::Horde),
+                        "{horde_name}"
+                    }
                 }
             }
 

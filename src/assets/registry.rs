@@ -49,8 +49,13 @@ impl AssetRegistry {
     }
 
     /// An embedded `data:` URI for the icon, or the glyph fallback when the id
-    /// is unknown. Never panics.
+    /// is unknown. Gated on the manifest (the single source of truth) so a
+    /// declared-but-ungenerated asset can never silently render the fallback.
+    /// Never panics.
     pub fn item_icon(&self, icon_id: &str) -> &'static str {
+        if !self.has(icon_id) {
+            return ICON_FALLBACK;
+        }
         ICONS
             .iter()
             .find(|(id, _)| *id == icon_id)
