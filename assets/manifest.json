@@ -5,6 +5,12 @@
       "kind": "item_icon",
       "source": "extracted via wow.export (Blizzard (c)) — placeholder pending curator extraction",
       "license": "blizzard-fan-use"
+    },
+    "faction_alliance_shield": {
+      "path": "assets/art/faction/faction_alliance_shield.png",
+      "kind": "faction_art",
+      "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
+      "license": "blizzard-fansite-kit"
     }
   }
 }

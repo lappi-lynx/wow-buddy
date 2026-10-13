@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use serde::Deserialize;
 
-use super::generated::ICONS;
+use super::generated::{ARTS, ICONS};
 
 const MANIFEST_JSON: &str = include_str!("../../assets/manifest.json");
 
@@ -61,5 +61,18 @@ impl AssetRegistry {
             .find(|(id, _)| *id == icon_id)
             .map(|(_, uri)| *uri)
             .unwrap_or(ICON_FALLBACK)
+    }
+
+    /// An embedded `data:` URI for an art asset, or `None` when it is neither
+    /// declared nor generated. `None` is the normal state before the curator
+    /// imports art — callers fall back to their emoji or label.
+    pub fn art_uri(&self, id: &str) -> Option<&'static str> {
+        if !self.has(id) {
+            return None;
+        }
+        ARTS
+            .iter()
+            .find(|(art_id, _)| *art_id == id)
+            .map(|(_, uri)| *uri)
     }
 }
