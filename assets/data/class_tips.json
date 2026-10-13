@@ -145,6 +145,76 @@
           ]
         }
       ]
+    },
+    "paladin": {
+      "specs": [
+        {
+          "id": "holy",
+          "name_en": "Holy",
+          "provenance": "kb:paladin-holy@2026-10-13 (ForeverDB downranking, talents, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Mana is your bottleneck: downranking is heavily nerfed in Forever, so cast full ranks of Flash of Light or Holy Light instead of spamming low ranks — Intellect converts into Spell Healing and Spell Power through talents like Champion of Light.",
+              "text_ru": "Мана — ваше узкое место: в Forever низкоранговые заклинания сильно понерфлены, поэтому кастуйте полные ранги Flash of Light или Holy Light вместо спама низких рангов — интеллект конвертируется в лечение и силу заклинаний через таланты вроде Champion of Light.",
+              "text_fi": "Mana on pullonkaulasi: Foreverissä matalan rankin loitsut on nerfattu rajusti, joten käytä täysiä rankkeja Flash of Light tai Holy Light sen sijaan että spämmäät matalia — Älykkyys muuttuu parannus- ja loitsutehoksi talenttien kautta."
+            },
+            {
+              "text_en": "Solo, pull one mob at a time — Holy has little early offense, so pair up with a questing partner or level by healing dungeons.",
+              "text_ru": "В одиночку пуллите по одному мобу — у Holy мало атакующих способностей на старте, так что играйте в паре или качайтесь, хиля подземелья.",
+              "text_fi": "Yksin vedä yksi mob kerrallaan — Holyssa on vähän hyökkäyskykyjä alussa, joten pelaa parin kanssa tai tasoita parantamalla luolastoja."
+            },
+            {
+              "text_en": "Take Herbalism + Alchemy for mana potions and Intellect elixirs (or Engineering for bombs), and equip a one-hand mace or sword with a shield (or a staff) with Intellect, Spirit and Spell Healing/Power.",
+              "text_ru": "Возьмите Травничество + Алхимию ради зелий маны и эликсиров на интеллект (или Инженерное дело ради бомб) и экипируйте одноручное дробящее или меч со щитом (либо посох) с интеллектом, духом и лечением/силой заклинаний.",
+              "text_fi": "Ota Yrttitaito + Alkimia manapulloihin ja Älykkyyseliksiireihin (tai Insinöörityö pommeihin) ja käytä yksikätistä nuijaa tai miekkaa kilvellä (tai sauvaa), jossa on Älykkyyttä, Sielua ja parannus-/loitsutehoa."
+            }
+          ]
+        },
+        {
+          "id": "protection",
+          "name_en": "Protection",
+          "provenance": "kb:paladin-protection@2026-10-13 (ForeverDB mana/threat notes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Mana fuels all your threat and defense (Consecration, Holy Shield, Judgement, Seals); manage it with Seal of Fury and Shield Specialization refunds, and keep Blessing of Sanctuary or Wisdom up.",
+              "text_ru": "Мана питает всю вашу угрозу и защиту (Consecration, Holy Shield, Judgement, печати); управляйте ею через Seal of Fury и возвраты маны от Shield Specialization и держите Blessing of Sanctuary или Wisdom.",
+              "text_fi": "Mana ruokkii kaiken threatisi ja puolustuksesi (Consecration, Holy Shield, Judgement, sinetit); hallitse sitä Seal of Furyn ja Shield Specializationin manapalautusten kautta ja pidä Blessing of Sanctuary tai Wisdom yllä."
+            },
+            {
+              "text_en": "Protection thrives pulling 3–5+ physical mobs at once: gather them, drop Consecration, run Retribution Aura and block with Holy Shield to reflect Holy damage at every attacker.",
+              "text_ru": "Protection отлично тянет 3–5+ физических мобов разом: соберите их, поставьте Consecration, включите Retribution Aura и блокируйте Holy Shield, отражая урон Света по всем атакующим.",
+              "text_fi": "Protection vetää loistavasti 3–5+ fyysistä mobia kerralla: kerää ne, laske Consecration, laita Retribution Aura päälle ja blokkaa Holy Shieldillä heijastaen pyhää damagea kaikkiin hyökkääjiin."
+            },
+            {
+              "text_en": "Mining + Blacksmithing for Mail/Plate, sturdy shields and Shield Spikes (or Engineering for dynamite pulls); use a fast one-hander for frequent Seal procs and Judgements, and a high-armor shield, prioritising Stamina, Armor and Spell Power.",
+              "text_ru": "Горное дело + Кузнечное дело для Mail/Plate, крепких щитов и шипов на щит (или Инженерное дело для динамитных пулов); берите быстрое одноручное ради частых проках печатей и Judgement и щит с высокой бронёй, в приоритете выносливость, броня и сила заклинаний.",
+              "text_fi": "Kaivostoiminta + Sepäntyö Mail/Plateen, tukevaan kilpeen ja kilpipiikkeihin (tai Insinöörityö dynamiittivetoihin); käytä nopeaa yksikätistä tiheisiin sinettiproceihin ja Judgementiin sekä korkean panssarin kilpeä, painottaen Kestävyyttä, panssaria ja loitsutehoa."
+            }
+          ]
+        },
+        {
+          "id": "retribution",
+          "name_en": "Retribution",
+          "provenance": "kb:paladin-retribution@2026-10-13 (ForeverDB hybrid-tax, leveling-weapons, racials)",
+          "tips": [
+            {
+              "text_en": "Retribution no longer suffers the old hybrid tax — its damage sits within about 5% of pure damage classes — but casting Judgement and Consecration on cooldown drains mana, so keep your Seal up and auto-attack.",
+              "text_ru": "Retribution больше не страдает от старого «гибридного налога» — его урон в пределах ~5% от чистых классов урона — но Judgement и Consecration по кд сливают ману, так что держите печать и бейте автоатакой.",
+              "text_fi": "Retribution ei enää kärsi vanhasta hybridiverosta — sen damage on noin 5% sisällä puhtaista damage-luokista — mutta Judgement ja Consecration cooldownilla valuttavat manan, joten pidä sinetti yllä ja lyö auto-hyökkäyksellä."
+            },
+            {
+              "text_en": "Stick to 1–2 mobs: Retribution has excellent single-target burst, but three or more enemies force you to spend GCDs and mana on self-healing.",
+              "text_ru": "Держитесь 1–2 мобов: у Retribution отличный одиночный бурст, но три и более врага заставляют тратить GCD и ману на самохил.",
+              "text_fi": "Pysy 1–2 mobissa: Retributionilla on erinomainen yhden kohteen burst, mutta kolme tai useampi vihollinen pakottaa käyttämään GCD:t ja manan itsehoitoon."
+            },
+            {
+              "text_en": "Mining + Blacksmithing for two-handers, sharpening stones and Mail/Plate; prioritise slow high-damage two-handers (Giant Mace ~10, Verigan's Fist or Smite's Mighty Hammer ~20, Corpsemaker ~30). Humans (+2% crit with swords) and Dwarves (+1% with maces) gain racial crit.",
+              "text_ru": "Горное дело + Кузнечное дело для двуручного, точильных камней и Mail/Plate; берите медленное двуручное с высоким уроном (Giant Mace ~10, Verigan's Fist или Smite's Mighty Hammer ~20, Corpsemaker ~30). Люди (+2% крита с мечами) и дворфы (+1% с дробящим) получают расовый крит.",
+              "text_fi": "Kaivostoiminta + Sepäntyö 2H-aseisiin, hiomakiviin ja Mail/Plateen; valitse hidas, korkean damagen 2H (Giant Mace ~10, Verigan's Fist tai Smite's Mighty Hammer ~20, Corpsemaker ~30). Ihmiset (+2% crit miekoilla) ja kääpiöt (+1% nuijilla) saavat rotukriitin."
+            }
+          ]
+        }
+      ]
     }
   }
 }

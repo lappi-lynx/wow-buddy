@@ -110,3 +110,8 @@ fn assert_class_authored(data: &ClassTipsData, class_id: &str) {
 fn test_warrior_specs_are_authored() {
     assert_class_authored(&ClassTipsData::load_embedded(), "warrior");
 }
+
+#[test]
+fn test_paladin_specs_are_authored() {
+    assert_class_authored(&ClassTipsData::load_embedded(), "paladin");
+}
