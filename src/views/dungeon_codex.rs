@@ -4,7 +4,13 @@ use crate::models::dungeon::get_dungeon_codex;
 use dioxus::prelude::*;
 
 pub fn get_active_dungeons() -> Vec<&'static str> {
-    vec!["deadmines", "ragefire_chasm"]
+    vec![
+        "ragefire_chasm",
+        "hall_of_thanes",
+        "wailing_caverns",
+        "deadmines",
+        "shadowfang_keep",
+    ]
 }
 
 #[component]
@@ -45,24 +51,26 @@ pub fn DungeonCodexView(
                 }
 
                 // Dungeon Selection Tabs
-                div { class: "flex space-x-3 bg-slate-900 p-1.5 rounded-2xl border border-slate-800",
-                    button {
-                        class: if current_id == "deadmines" {
-                            "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-black shadow-md"
-                        } else {
-                            "px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-slate-200"
-                        },
-                        onclick: move |_| selected_dungeon_id.set("deadmines".to_string()),
-                        "☠️ The Deadmines (17–21)"
-                    }
-                    button {
-                        class: if current_id == "ragefire_chasm" {
-                            "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-black shadow-md"
-                        } else {
-                            "px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-slate-200"
-                        },
-                        onclick: move |_| selected_dungeon_id.set("ragefire_chasm".to_string()),
-                        "🔥 Ragefire Chasm (13–18)"
+                div { class: "flex flex-wrap justify-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800",
+                    for dungeon_id in get_active_dungeons().iter() {
+                        {
+                            let id = dungeon_id.to_string();
+                            let tab = get_dungeon_codex(&id);
+                            let is_active = current_id == id;
+                            let tab_class = if is_active {
+                                "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-black shadow-md cursor-pointer"
+                            } else {
+                                "px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-slate-200 cursor-pointer"
+                            };
+                            rsx! {
+                                button {
+                                    key: "{id}",
+                                    class: "{tab_class}",
+                                    onclick: move |_| selected_dungeon_id.set(id.clone()),
+                                    "{tab.icon} {tab.name} ({tab.level_range})"
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -72,7 +80,7 @@ pub fn DungeonCodexView(
                         span { class: "text-2xl", "⏱️" }
                         div {
                             span { class: "text-xs text-slate-400 block", "{i18n_svc.t(\"ui_estimated_duration\", lang)}" }
-                            span { class: "text-sm sm:text-base font-bold text-amber-300", "~{codex.estimated_time_minutes} min" }
+                            span { class: "text-sm sm:text-base font-bold text-amber-300", "~{codex.estimated_time} min" }
                         }
                     }
                     div { class: "p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3",
