@@ -11,6 +11,12 @@
       "kind": "faction_art",
       "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
       "license": "blizzard-fansite-kit"
+    },
+    "race_human_render": {
+      "path": "assets/art/race/race_human_render.png",
+      "kind": "race_render",
+      "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
+      "license": "blizzard-fansite-kit"
     }
   }
 }

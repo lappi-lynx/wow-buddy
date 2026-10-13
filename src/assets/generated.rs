@@ -14,7 +14,13 @@ pub const ICONS: &[(&str, &str)] = &[(
 )];
 
 /// Art assets (every other `kind`), resolved by `AssetRegistry::art_uri`.
-pub const ARTS: &[(&str, &str)] = &[(
-    "faction_alliance_shield",
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
-)];
+pub const ARTS: &[(&str, &str)] = &[
+    (
+        "faction_alliance_shield",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+    ),
+    (
+        "race_human_render",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+    ),
+];
