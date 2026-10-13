@@ -233,9 +233,9 @@
       "role": "Tank / Melee DPS",
       "difficulty": "Easy to Start, High Skill Ceiling",
       "core_spells": [
-        { "name": "Charge", "description": "Rush toward enemy and generate rage", "icon": "⚔️" },
-        { "name": "Heroic Strike", "description": "Powerful swing increasing weapon damage", "icon": "💥" },
-        { "name": "Taunt", "description": "Forces enemy to attack you in dungeons", "icon": "🛡️" }
+        { "name": "Charge", "description": "Rush toward enemy and generate rage", "icon": "⚔️", "icon_id": "ability_warrior_charge" },
+        { "name": "Heroic Strike", "description": "Powerful swing increasing weapon damage", "icon": "💥", "icon_id": "ability_rogue_ambush" },
+        { "name": "Taunt", "description": "Forces enemy to attack you in dungeons", "icon": "🛡️", "icon_id": "spell_nature_reincarnation" }
       ],
       "icon": "⚔️"
     },
@@ -245,9 +245,9 @@
       "role": "Tank / Healer / Melee DPS",
       "difficulty": "Very Beginner Friendly",
       "core_spells": [
-        { "name": "Holy Light", "description": "Direct healing spell channeling the Light", "icon": "✨" },
-        { "name": "Seal of Righteousness", "description": "Infuses attacks with additional Holy damage", "icon": "🔨" },
-        { "name": "Blessing of Might", "description": "Increases attack power for party members", "icon": "📜" }
+        { "name": "Holy Light", "description": "Direct healing spell channeling the Light", "icon": "✨", "icon_id": "spell_holy_holybolt" },
+        { "name": "Seal of Righteousness", "description": "Infuses attacks with additional Holy damage", "icon": "🔨", "icon_id": "ability_thunderbolt" },
+        { "name": "Blessing of Might", "description": "Increases attack power for party members", "icon": "📜", "icon_id": "spell_holy_fistofjustice" }
       ],
       "icon": "🔨"
     },
@@ -257,9 +257,9 @@
       "role": "Ranged Physical DPS",
       "difficulty": "Great for Solo Leveling",
       "core_spells": [
-        { "name": "Auto Shot", "description": "Shoots arrows/bullets at ranged target", "icon": "🏹" },
-        { "name": "Serpent Sting", "description": "Poisons enemy for damage over time", "icon": "🐍" },
-        { "name": "Tame Beast", "description": "Bond with a wild creature as loyal pet", "icon": "🐾" }
+        { "name": "Auto Shot", "description": "Shoots arrows/bullets at ranged target", "icon": "🏹", "icon_id": "ability_whirlwind" },
+        { "name": "Serpent Sting", "description": "Poisons enemy for damage over time", "icon": "🐍", "icon_id": "ability_hunter_quickshot" },
+        { "name": "Tame Beast", "description": "Bond with a wild creature as loyal pet", "icon": "🐾", "icon_id": "ability_hunter_beasttaming" }
       ],
       "icon": "🏹"
     },
@@ -269,9 +269,9 @@
       "role": "Melee Physical DPS",
       "difficulty": "Moderate",
       "core_spells": [
-        { "name": "Stealth", "description": "Sneak unseen past monsters", "icon": "🗡️" },
-        { "name": "Sinister Strike", "description": "Vicious strike building combo points", "icon": "⚡" },
-        { "name": "Eviscerate", "description": "Finishing move dealing damage per combo point", "icon": "🩸" }
+        { "name": "Stealth", "description": "Sneak unseen past monsters", "icon": "🗡️", "icon_id": "ability_stealth" },
+        { "name": "Sinister Strike", "description": "Vicious strike building combo points", "icon": "⚡", "icon_id": "spell_shadow_ritualofsacrifice" },
+        { "name": "Eviscerate", "description": "Finishing move dealing damage per combo point", "icon": "🩸", "icon_id": "ability_rogue_eviscerate" }
       ],
       "icon": "🗡️"
     },
@@ -281,9 +281,9 @@
       "role": "Healer / Ranged Magic DPS",
       "difficulty": "Beginner Healer Friendly",
       "core_spells": [
-        { "name": "Flash Heal", "description": "Fast emergency heal", "icon": "✨" },
-        { "name": "Power Word: Shield", "description": "Absorbs incoming damage", "icon": "🛡️" },
-        { "name": "Shadow Word: Pain", "description": "Curse dealing shadow damage over time", "icon": "🌑" }
+        { "name": "Flash Heal", "description": "Fast emergency heal", "icon": "✨", "icon_id": "spell_holy_flashheal" },
+        { "name": "Power Word: Shield", "description": "Absorbs incoming damage", "icon": "🛡️", "icon_id": "spell_holy_powerwordshield" },
+        { "name": "Shadow Word: Pain", "description": "Curse dealing shadow damage over time", "icon": "🌑", "icon_id": "spell_shadow_shadowwordpain" }
       ],
       "icon": "✝️"
     },
@@ -293,9 +293,9 @@
       "role": "Healer / Melee or Caster DPS",
       "difficulty": "Moderate",
       "core_spells": [
-        { "name": "Lightning Bolt", "description": "Casts blast of nature electricity", "icon": "⚡" },
-        { "name": "Earthbind Totem", "description": "Totem slowing nearby enemies", "icon": "🗿" },
-        { "name": "Healing Wave", "description": "Substantial primary heal", "icon": "🌊" }
+        { "name": "Lightning Bolt", "description": "Casts blast of nature electricity", "icon": "⚡", "icon_id": "spell_nature_lightning" },
+        { "name": "Earthbind Totem", "description": "Totem slowing nearby enemies", "icon": "🗿", "icon_id": "spell_nature_strengthofearthtotem02" },
+        { "name": "Healing Wave", "description": "Substantial primary heal", "icon": "🌊", "icon_id": "spell_nature_magicimmunity" }
       ],
       "icon": "⚡"
     },
@@ -305,9 +305,9 @@
       "role": "Ranged Magic DPS",
       "difficulty": "Easy to Start",
       "core_spells": [
-        { "name": "Fireball", "description": "Hurls fiery projectile burning enemy", "icon": "🔥" },
-        { "name": "Frost Nova", "description": "Freezes all nearby foes in place", "icon": "❄️" },
-        { "name": "Conjure Food & Water", "description": "Free recovery provisions anytime", "icon": "🍞" }
+        { "name": "Fireball", "description": "Hurls fiery projectile burning enemy", "icon": "🔥", "icon_id": "spell_fire_flamebolt" },
+        { "name": "Frost Nova", "description": "Freezes all nearby foes in place", "icon": "❄️", "icon_id": "spell_frost_frostnova" },
+        { "name": "Conjure Food & Water", "description": "Free recovery provisions anytime", "icon": "🍞", "icon_id": "inv_misc_food_73cinnamonroll" }
       ],
       "icon": "🔮"
     },
@@ -317,9 +317,9 @@
       "role": "Ranged Shadow DPS / Pet Master",
       "difficulty": "Easy Solo Leveler",
       "core_spells": [
-        { "name": "Corruption", "description": "Afflicts enemy with shadow agony", "icon": "💀" },
-        { "name": "Summon Imp", "description": "Calls forth a demon ally", "icon": "🔥" },
-        { "name": "Life Tap", "description": "Trades health for mana", "icon": "🩸" }
+        { "name": "Corruption", "description": "Afflicts enemy with shadow agony", "icon": "💀", "icon_id": "spell_shadow_abominationexplosion" },
+        { "name": "Summon Imp", "description": "Calls forth a demon ally", "icon": "🔥", "icon_id": "spell_shadow_summonimp" },
+        { "name": "Life Tap", "description": "Trades health for mana", "icon": "🩸", "icon_id": "spell_shadow_burningspirit" }
       ],
       "icon": "💀"
     },
@@ -329,9 +329,9 @@
       "role": "Hybrid (Tank, Healer, Melee/Caster DPS)",
       "difficulty": "Versatile / Moderate",
       "core_spells": [
-        { "name": "Moonfire", "description": "Instant blast of lunar radiation", "icon": "🌙" },
-        { "name": "Rejuvenation", "description": "Gentle healing over time leaf", "icon": "🌿" },
-        { "name": "Bear Form", "description": "Shapeshift into sturdy tank beast", "icon": "🐻" }
+        { "name": "Moonfire", "description": "Instant blast of lunar radiation", "icon": "🌙", "icon_id": "spell_nature_starfall" },
+        { "name": "Rejuvenation", "description": "Gentle healing over time leaf", "icon": "🌿", "icon_id": "spell_nature_rejuvenation" },
+        { "name": "Bear Form", "description": "Shapeshift into sturdy tank beast", "icon": "🐻", "icon_id": "ability_racial_bearform" }
       ],
       "icon": "🐾"
     }

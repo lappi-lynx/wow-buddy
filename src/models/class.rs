@@ -5,6 +5,9 @@ pub struct CoreSpell {
     pub name: String,
     pub description: String,
     pub icon: String,
+    /// Embeddable icon asset id (Wowhead icon name); `icon` (emoji) is the fallback.
+    #[serde(default)]
+    pub icon_id: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

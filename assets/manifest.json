@@ -180,6 +180,186 @@
       "source": "Blizzard class icon via wow.zamimg.com CDN (classicon_druid.jpg), imported 2026-10-13 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
     },
+    "ability_warrior_charge": {
+      "path": "assets/icons/spells/ability_warrior_charge.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=11578/charge), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_rogue_ambush": {
+      "path": "assets/icons/spells/ability_rogue_ambush.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25286/heroic-strike), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_reincarnation": {
+      "path": "assets/icons/spells/spell_nature_reincarnation.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=355/taunt), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_holy_holybolt": {
+      "path": "assets/icons/spells/spell_holy_holybolt.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=10329/holy-light), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_thunderbolt": {
+      "path": "assets/icons/spells/ability_thunderbolt.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=20293/seal-of-righteousness), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_holy_fistofjustice": {
+      "path": "assets/icons/spells/spell_holy_fistofjustice.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25291/blessing-of-might), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_whirlwind": {
+      "path": "assets/icons/spells/ability_whirlwind.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=75/auto-shot), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_quickshot": {
+      "path": "assets/icons/spells/ability_hunter_quickshot.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25295/serpent-sting), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_beasttaming": {
+      "path": "assets/icons/spells/ability_hunter_beasttaming.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=1515/tame-beast), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_stealth": {
+      "path": "assets/icons/spells/ability_stealth.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=1784/stealth), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_ritualofsacrifice": {
+      "path": "assets/icons/spells/spell_shadow_ritualofsacrifice.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=1752/sinister-strike), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_rogue_eviscerate": {
+      "path": "assets/icons/spells/ability_rogue_eviscerate.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=2098/eviscerate), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_holy_flashheal": {
+      "path": "assets/icons/spells/spell_holy_flashheal.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=10917/flash-heal), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_holy_powerwordshield": {
+      "path": "assets/icons/spells/spell_holy_powerwordshield.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=10901/power-word-shield), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_shadowwordpain": {
+      "path": "assets/icons/spells/spell_shadow_shadowwordpain.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=10894/shadow-word-pain), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_lightning": {
+      "path": "assets/icons/spells/spell_nature_lightning.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=15208/lightning-bolt), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_strengthofearthtotem02": {
+      "path": "assets/icons/spells/spell_nature_strengthofearthtotem02.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=2484/earthbind-totem), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_magicimmunity": {
+      "path": "assets/icons/spells/spell_nature_magicimmunity.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25357/healing-wave), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_fire_flamebolt": {
+      "path": "assets/icons/spells/spell_fire_flamebolt.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25306/fireball), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_frost_frostnova": {
+      "path": "assets/icons/spells/spell_frost_frostnova.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=10230/frost-nova), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_food_73cinnamonroll": {
+      "path": "assets/icons/spells/inv_misc_food_73cinnamonroll.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=28612/conjure-food), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_abominationexplosion": {
+      "path": "assets/icons/spells/spell_shadow_abominationexplosion.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25311/corruption), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_summonimp": {
+      "path": "assets/icons/spells/spell_shadow_summonimp.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=688/summon-imp), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_burningspirit": {
+      "path": "assets/icons/spells/spell_shadow_burningspirit.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=11689/life-tap), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_starfall": {
+      "path": "assets/icons/spells/spell_nature_starfall.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=9835/moonfire), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_nature_rejuvenation": {
+      "path": "assets/icons/spells/spell_nature_rejuvenation.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=25299/rejuvenation), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_racial_bearform": {
+      "path": "assets/icons/spells/ability_racial_bearform.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon via wow.zamimg.com CDN (from wowhead.com/forever/spell=5487/bear-form), imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_hammer_18": {
+      "path": "assets/icons/items/inv_hammer_18.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_hammer_18) via wow.zamimg.com CDN, imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_hammer_09": {
+      "path": "assets/icons/items/inv_hammer_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_hammer_09) via wow.zamimg.com CDN, imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_hammer_21": {
+      "path": "assets/icons/items/inv_hammer_21.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_hammer_21) via wow.zamimg.com CDN, imported 2026-10-13 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
     "zone_shadowglen_art": {
       "path": "assets/art/zone/zone_shadowglen_art.png",
       "kind": "zone_art",

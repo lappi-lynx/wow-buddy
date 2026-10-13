@@ -30,18 +30,24 @@
             {
               "name": "Heavy Copper Maul",
               "level": 12,
+              "item_id": 6214,
+              "icon_id": "inv_hammer_18",
               "source": "Crafted (Blacksmithing) or early zones",
               "provenance": "kb:leveling-weapons@2026-09-26"
             },
             {
               "name": "Ironforge Greathammer",
               "level": 14,
+              "item_id": 279895,
+              "icon_id": "inv_hammer_21",
               "source": "Dun Morogh / Ironforge",
               "provenance": "kb:leveling-weapons@2026-09-26"
             },
             {
               "name": "Rhahk'Zor's Hammer",
               "level": 16,
+              "item_id": 5187,
+              "icon_id": "inv_hammer_09",
               "source": "Rhahk'Zor, The Deadmines (Westfall)",
               "provenance": "kb:leveling-weapons@2026-09-26"
             }

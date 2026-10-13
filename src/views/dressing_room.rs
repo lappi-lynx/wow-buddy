@@ -1,3 +1,4 @@
+use crate::assets::AssetRegistry;
 use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
@@ -79,6 +80,7 @@ pub fn DressingRoomView(
     let current_tier = get_tier_for_level(*selected_level.read());
     let tier_key = get_tier_label_key(current_tier);
     let tier_text = i18n.read().t(tier_key, lang);
+    let registry = AssetRegistry::load_embedded();
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
@@ -195,13 +197,29 @@ pub fn DressingRoomView(
                     div { class: "space-y-2.5",
                         span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block", "{i18n.read().t(\"ui_core_spells\", lang)}" }
                         for spell in class.core_spells.iter() {
-                            div {
-                                key: "{spell.name}",
-                                class: "flex items-start space-x-3 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
-                                span { class: "text-xl", "{spell.icon}" }
-                                div { class: "flex flex-col",
-                                    span { class: "text-xs sm:text-sm font-bold text-slate-200", "{spell.name}" }
-                                    span { class: "text-xs text-slate-400 leading-tight mt-0.5", "{spell.description}" }
+                            {
+                                let icon_uri = spell
+                                    .icon_id
+                                    .as_deref()
+                                    .and_then(|id| registry.art_uri(id));
+                                rsx! {
+                                    div {
+                                        key: "{spell.name}",
+                                        class: "flex items-start space-x-3 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
+                                        if let Some(uri) = icon_uri {
+                                            img {
+                                                class: "w-9 h-9 rounded-md shrink-0",
+                                                src: "{uri}",
+                                                alt: "{spell.name}",
+                                            }
+                                        } else {
+                                            span { class: "text-xl", "{spell.icon}" }
+                                        }
+                                        div { class: "flex flex-col",
+                                            span { class: "text-xs sm:text-sm font-bold text-slate-200", "{spell.name}" }
+                                            span { class: "text-xs text-slate-400 leading-tight mt-0.5", "{spell.description}" }
+                                        }
+                                    }
                                 }
                             }
                         }
