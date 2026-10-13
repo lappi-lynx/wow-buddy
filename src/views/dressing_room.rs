@@ -1,4 +1,4 @@
-use crate::components::{BlueprintExport, LanguagePicker, ModelViewer};
+use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     gear::{get_tier_for_level, GearTier},
@@ -228,6 +228,13 @@ pub fn DressingRoomView(
                     class: "w-full max-w-lg py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
                     onclick: move |_| on_open_gear_planner.call(()),
                     "{i18n.read().t(\"ui_open_gear_planner\", lang)}"
+                }
+
+                // New Player Tips for the selected class (all specs at once)
+                ClassTipsCard {
+                    current_lang: current_lang,
+                    i18n: i18n,
+                    class_id: class.id.clone(),
                 }
             }
 
