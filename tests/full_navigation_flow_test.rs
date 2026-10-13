@@ -1,4 +1,5 @@
 use wow_buddy::assets::registry::AssetRegistry;
+use wow_buddy::models::class_tips::ClassTipsData;
 use wow_buddy::models::gear_planner::GearPlannerData;
 use wow_buddy::models::{GameData, Faction};
 use wow_buddy::router::Route;
@@ -58,4 +59,15 @@ fn test_art_missing_never_breaks_screens() {
     // отсутствие арта — штатное состояние: хелперы возвращают фоллбек, не паникуют
     assert!(reg.art_uri("nope").is_none());
     let _ = wow_buddy::components::race_tile::race_render_source(&reg, "skyborne", Faction::Horde);
+}
+
+#[test]
+fn test_tips_present_for_a_valid_class_and_absent_for_an_unauthored_one() {
+    let tips = ClassTipsData::load_embedded();
+    // наполненный класс отдаёт спеки
+    assert!(!tips.specs_for("druid").is_empty());
+    // ненаполненный честно пуст (экран покажет empty state, не панику)
+    assert!(tips.specs_for("warrior").is_empty());
+    // отчёт покрытия виден и непуст, пока контент не дозаполнен
+    assert!(!tips.missing_coverage().is_empty());
 }
