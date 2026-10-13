@@ -44,3 +44,24 @@ fn test_complete_ui_labels_translation() {
     assert_eq!(i18n.t("ui_need_warning", Language::En), "⚠️ Warning: Rolling Need for vendor gold will get you kicked and blacklisted on your realm!");
     assert_eq!(i18n.t("ui_greed_success", Language::En), "✓ Perfect! Never roll Need unless it is a direct upgrade you will equip immediately.");
 }
+
+/// EN and FI locales must not contain Cyrillic script (the RU locale may
+/// keep Latin game terms, but not the reverse: no Russian words in EN/FI).
+#[test]
+fn test_en_and_fi_locales_contain_no_cyrillic() {
+    for (name, raw) in [
+        ("en", include_str!("../assets/i18n/en.json")),
+        ("fi", include_str!("../assets/i18n/fi.json")),
+    ] {
+        let map: std::collections::HashMap<String, serde_json::Value> =
+            serde_json::from_str(raw).expect("locale json must parse");
+        for (key, value) in map {
+            if let Some(text) = value.as_str() {
+                assert!(
+                    !text.chars().any(|c| ('\u{0400}'..='\u{04FF}').contains(&c)),
+                    "{name}.json [{key}] contains Cyrillic: {text}"
+                );
+            }
+        }
+    }
+}
