@@ -69,5 +69,9 @@
   "ui_role_label": "Rooli: {role}",
   "ui_progression_guide_for": "Eteneminen: {race}",
   "ui_step_by_step": "Vaiheittainen reittikartta ensimmäisille 10 tunnille",
-  "ui_zone_prefix": "Alue: {zone} (Tasot {levels})"
+  "ui_zone_prefix": "Alue: {zone} (Tasot {levels})",
+  "ui_export_title": "Kohtalosi suunnitelma",
+  "ui_export_btn": "Vie peliin",
+  "ui_export_copied": "Suunnitelma kopioitu leikepöydälle!",
+  "ui_export_hint": "Leikepöytää ei voitu käyttää — valitse teksti yltä ja kopioi se manuaalisesti."
 }

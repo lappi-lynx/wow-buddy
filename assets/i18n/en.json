@@ -69,5 +69,9 @@
   "ui_role_label": "Role: {role}",
   "ui_progression_guide_for": "Progression Guide: {race}",
   "ui_step_by_step": "Step-by-step roadmap for your first 10 hours in WoW Forever 1.60.1",
-  "ui_zone_prefix": "Zone: {zone} (Levels {levels})"
+  "ui_zone_prefix": "Zone: {zone} (Levels {levels})",
+  "ui_export_title": "Your Destiny Blueprint",
+  "ui_export_btn": "Export to Game",
+  "ui_export_copied": "Blueprint copied to clipboard!",
+  "ui_export_hint": "Could not access the clipboard — select the text above and copy it manually."
 }

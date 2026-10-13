@@ -1,5 +1,6 @@
 pub mod bottom_nav;
 pub mod dungeon_rule_card;
+pub mod export_card;
 pub mod faction_shield;
 pub mod faction_theme;
 pub mod language_picker;
@@ -10,6 +11,7 @@ pub mod race_tile;
 
 pub use bottom_nav::{BottomNav, NavTab};
 pub use dungeon_rule_card::DungeonRuleCard;
+pub use export_card::BlueprintExport;
 pub use faction_shield::FactionShield;
 pub use faction_theme::FactionTheme;
 pub use language_picker::LanguagePicker;

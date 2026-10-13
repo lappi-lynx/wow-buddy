@@ -69,5 +69,9 @@
   "ui_role_label": "Роль: {role}",
   "ui_progression_guide_for": "Гид прокачки: {race}",
   "ui_step_by_step": "Пошаговая дорожная карта на первые 10 часов в WoW Forever 1.60.1",
-  "ui_zone_prefix": "Зона: {zone} (Уровни {levels})"
+  "ui_zone_prefix": "Зона: {zone} (Уровни {levels})",
+  "ui_export_title": "Ваше предназначение",
+  "ui_export_btn": "Экспорт в игру",
+  "ui_export_copied": "Шаблон скопирован в буфер обмена!",
+  "ui_export_hint": "Нет доступа к буферу обмена — выделите текст выше и скопируйте вручную."
 }

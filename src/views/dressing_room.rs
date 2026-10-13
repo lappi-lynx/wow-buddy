@@ -1,8 +1,8 @@
-use crate::components::{LanguagePicker, ModelViewer};
+use crate::components::{BlueprintExport, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     gear::{get_tier_for_level, GearTier},
-    ClassInfo, RaceInfo,
+    ClassInfo, Faction, RaceInfo,
 };
 use dioxus::prelude::*;
 
@@ -67,6 +67,7 @@ pub fn DressingRoomView(
     i18n: Signal<I18nService>,
     race: RaceInfo,
     class: ClassInfo,
+    faction: Faction,
     on_back: EventHandler<()>,
     on_continue_to_guide: EventHandler<()>,
 ) -> Element {
@@ -209,6 +210,15 @@ pub fn DressingRoomView(
                         onclick: move |_| on_continue_to_guide.call(()),
                         "{i18n.read().t(\"ui_proceed_to_guide\", lang)}"
                     }
+                }
+
+                // Character Blueprint Export Card
+                BlueprintExport {
+                    faction: faction,
+                    race: race.clone(),
+                    class: class.clone(),
+                    current_lang: current_lang,
+                    i18n: i18n,
                 }
             }
 

@@ -131,6 +131,7 @@ pub fn App() -> Element {
                         i18n: i18n,
                         race: race_obj.clone(),
                         class: class_obj.clone(),
+                        faction: *selected_faction.read(),
                         on_back: move |_| current_route.set(Route::RaceSelector {}),
                         on_continue_to_guide: move |_| current_route.set(Route::ProgressionGuide {}),
                     }
