@@ -1,4 +1,4 @@
-use crate::components::{DungeonRuleCard, LanguagePicker};
+use crate::components::{DungeonRuleCard, LanguagePicker, LootQuiz};
 use crate::i18n::{I18nService, Language};
 use crate::models::dungeon::get_dungeon_codex;
 use dioxus::prelude::*;
@@ -14,7 +14,6 @@ pub fn DungeonCodexView(
     on_back: EventHandler<()>,
 ) -> Element {
     let mut selected_dungeon_id = use_signal(|| "deadmines".to_string());
-    let mut simulated_loot_choice = use_signal(|| "greed".to_string());
 
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
@@ -103,47 +102,9 @@ pub fn DungeonCodexView(
                 }
 
                 // Interactive Loot Etiquette Simulator (Need vs Greed)
-                div { class: "w-full bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col space-y-3",
-                    div { class: "flex justify-between items-center",
-                        h4 { class: "text-sm sm:text-base font-bold text-amber-300",
-                            "{i18n_svc.t(\"ui_loot_etiquette_test\", lang)}"
-                        }
-                        span { class: "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold",
-                            "{i18n_svc.t(\"ui_golden_rule\", lang)}"
-                        }
-                    }
-                    p { class: "text-xs sm:text-sm text-slate-300 leading-relaxed",
-                        "A blue quality item just dropped: [Smite's Mighty Hammer]. You already have an equal or better weapon, or you cannot equip two-handed hammers. Which button do you press?"
-                    }
-                    div { class: "flex space-x-4 pt-1",
-                        button {
-                            class: if *simulated_loot_choice.read() == "greed" {
-                                "flex-1 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 text-white border border-emerald-400 shadow-lg cursor-pointer"
-                            } else {
-                                "flex-1 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 cursor-pointer"
-                            },
-                            onclick: move |_| simulated_loot_choice.set("greed".to_string()),
-                            "{i18n_svc.t(\"ui_greed_btn\", lang)}"
-                        }
-                        button {
-                            class: if *simulated_loot_choice.read() == "need" {
-                                "flex-1 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-rose-700 text-white border border-rose-500 shadow-lg cursor-pointer"
-                            } else {
-                                "flex-1 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 cursor-pointer"
-                            },
-                            onclick: move |_| simulated_loot_choice.set("need".to_string()),
-                            "{i18n_svc.t(\"ui_need_btn\", lang)}"
-                        }
-                    }
-                    if *simulated_loot_choice.read() == "greed" {
-                        div { class: "p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-xs text-emerald-300",
-                            "{i18n_svc.t(\"ui_greed_success\", lang)}"
-                        }
-                    } else {
-                        div { class: "p-3 rounded-xl bg-rose-950/60 border border-rose-500/40 text-xs text-rose-300",
-                            "{i18n_svc.t(\"ui_need_warning\", lang)}"
-                        }
-                    }
+                LootQuiz {
+                    current_lang: current_lang,
+                    i18n: i18n,
                 }
             }
 

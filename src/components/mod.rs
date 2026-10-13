@@ -4,6 +4,7 @@ pub mod faction_shield;
 pub mod faction_theme;
 pub mod language_picker;
 pub mod legacy_preset;
+pub mod loot_quiz;
 pub mod model_viewer;
 pub mod race_tile;
 
@@ -13,5 +14,6 @@ pub use faction_shield::FactionShield;
 pub use faction_theme::FactionTheme;
 pub use language_picker::LanguagePicker;
 pub use legacy_preset::LegacyPresetWidget;
+pub use loot_quiz::{LootQuiz, LootChoice, LOOT_SCENARIO_ITEM};
 pub use model_viewer::ModelViewer;
 pub use race_tile::RaceTile;

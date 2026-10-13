@@ -50,6 +50,8 @@
   "ui_need_warning": "⚠️ Varoitus: Need-vetoaminen kauppakulta vie potkut ja blacklistauksen realmallasi!",
   "ui_need_btn": "⚔️ Need (Ninza-löytä) — Väärin!",
   "ui_greed_btn": "🎲 Greed (Ei kiellä) — Oikein!",
+  "ui_loot_scenario": "Harvinainen sininen laadukas kaksikätinen maila putosi juuri: {item} (Mr. Smite, The Deadmines). Sinulla on jo yhtä hyvä tai parempi ase, tai et voi käyttää kaksikätisiä malkoja. Kumpi painike painat?",
+  "ui_loot_reset": "Yritä uudelleen",
   "ui_legacy_preset_title": "⚡ 1-Klikkauksen Legacy-esiasetus",
   "ui_legacy_preset_desc": "Optimaalinen 16 pisteen jako tasolle 1–20",
   "ui_legacy_points": "16 / 16 pistettä",
