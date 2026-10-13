@@ -1,4 +1,4 @@
-use crate::components::{LanguagePicker, RaceTile};
+use crate::components::{FactionTheme, LanguagePicker, RaceTile};
 use crate::i18n::{I18nService, Language};
 use crate::models::{Faction, GameData, RaceInfo};
 use dioxus::prelude::*;
@@ -45,11 +45,7 @@ pub fn RaceSelectorView(
 
     let active_race = races.iter().find(|r| r.id == current_id).cloned();
 
-    let faction_theme = if faction == Faction::Alliance {
-        "text-blue-400 border-blue-500/40"
-    } else {
-        "text-red-400 border-red-500/40"
-    };
+    let faction_theme = FactionTheme::for_faction(faction);
 
     let faction_title = if faction == Faction::Alliance {
         format!("{} Races", i18n.read().t("alliance_name", lang))
@@ -98,7 +94,7 @@ pub fn RaceSelectorView(
 
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow",
                 div { class: "text-center mb-6",
-                    h2 { class: "text-2xl sm:text-3xl font-extrabold tracking-wide uppercase {faction_theme}",
+                    h2 { class: format!("text-2xl sm:text-3xl font-extrabold tracking-wide uppercase {} {}", faction_theme.accent_text, faction_theme.accent_border),
                         "{faction_title}"
                     }
                     p { class: "text-xs sm:text-sm text-slate-400 mt-1",
