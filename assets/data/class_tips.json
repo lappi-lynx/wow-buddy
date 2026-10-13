@@ -215,6 +215,76 @@
           ]
         }
       ]
+    },
+    "hunter": {
+      "specs": [
+        {
+          "id": "beast_mastery",
+          "name_en": "Beast Mastery",
+          "provenance": "kb:hunter-beast_mastery@2026-10-13 (Best Hunter Pets 1-30 guide, leveling-weapons, ForeverDB)",
+          "tips": [
+            {
+              "text_en": "Your pet is your tank and main damage dealer: keep its happiness in the green by feeding it (a happy pet deals full damage and gains loyalty faster); leave Growl on while soloing, but turn it off in dungeons so you don't steal threat from the tank.",
+              "text_ru": "Питомец — ваш танк и главный источник урона: кормите его, чтобы шкала настроения оставалась зелёной (счастливый питомец бьёт в полную силу и быстрее набирает лояльность); в одиночной игре держите Growl включённым, но в подземельях выключайте его, чтобы не срывать агро с танка.",
+              "text_fi": "Lemmikkisi on tankkisi ja pääasiallinen damagen tekijä: pidä sen tyytyväisyys vihreällä ruokkimalla sitä (tyytyväinen lemmikki tekee täyden damagen ja kerää lojaaliutta nopeammin); pidä Growl päällä yksin pelatessa mutta kytke se pois luolastoissa, ettet varasta threatia tankilta."
+            },
+            {
+              "text_en": "Solo, BM handles 1–2 mobs safely — or 3+ with an AoE pet ability like a Carrion Bird's Screech or a Bear's Swipe; send the pet in first, hold extra targets with Concussive Shot or Freezing Trap, and let Auto-Shots and the pet carry the damage so your mana lasts.",
+              "text_ru": "В одиночку Beast Mastery уверенно держит 1–2 моба — или 3+, если у питомца есть AoE-способность вроде Screech у Carrion Bird или Swipe у медведя; сначала отправляйте питомца, лишние цели держите Concussive Shot или Freezing Trap, а урон пусть несут автоатака и питомец — так маны хватит дольше.",
+              "text_fi": "Yksin BM hoitaa turvallisesti 1–2 mobia — tai 3+ AoE-lemmikkikyvyllä kuten Carrion Birdin Screech tai karhun Swipe; lähetä lemmikki ensin, pidä ylimääräiset kohteet Concussive Shotilla tai Freezing Trapilla ja anna auto-ammuntojen ja lemmikin kantaa damage, jotta mana riittää."
+            },
+            {
+              "text_en": "Take Skinning + Leatherworking for Mail/Leather gear, or Mining + Engineering for guns, ammo and scopes; always use the highest-DPS bow, gun or crossbow with Agility and Stamina, and let BM talents like Unleashed Fury multiply your pet's damage.",
+              "text_ru": "Возьмите Снятие шкур + Кожевничество ради Mail/Leather-брони либо Горное дело + Инженерное дело ради ружей, боеприпасов и прицелов; всегда носите лук, ружьё или арбалет с максимальным DPS и статами на ловкость и выносливость, а таланты Beast Mastery вроде Unleashed Fury приумножают урон питомца.",
+              "text_fi": "Ota Nahkominen + Nahkatyö Mail/Leather-panssariin tai Kaivostoiminta + Insinöörityö kivääreihin, ammuksiin ja tähtäimiin; käytä aina korkeimman DPS:n jousta, kivääriä tai varsijousta Ketteryydellä ja Kestävyydellä, ja anna BM-talenttien kuten Unleashed Furyn kertoa lemmikin damagea."
+            }
+          ]
+        },
+        {
+          "id": "marksmanship",
+          "name_en": "Marksmanship",
+          "provenance": "kb:hunter-marksmanship@2026-10-13 (leveling-weapons, beta notes, ForeverDB)",
+          "tips": [
+            {
+              "text_en": "Aimed Shot, Arcane Shot and Multi-Shot burn through your mana quickly — weave Auto-Shots between them and let the pet hold threat with Bite or Claw while your mana regenerates.",
+              "text_ru": "Aimed Shot, Arcane Shot и Multi-Shot быстро сжигают ману — вплетайте между ними автоатаки и дайте питомцу удерживать угрозу через Bite или Claw, пока мана восстанавливается.",
+              "text_fi": "Aimed Shot, Arcane Shot ja Multi-Shot polttavat manan nopeasti — lomita auto-ammuntoja väliin ja anna lemmikin pitää threatia Bitellä tai Claw'lla manan palautuessa."
+            },
+            {
+              "text_en": "Pull strictly one mob at a time from maximum range: Marksmanship's heavy ranged crits pull threat off the pet easily, and a second enemy forces you into the dead zone in melee.",
+              "text_ru": "Тяните строго по одному мобу и с максимальной дистанции: тяжёлые криты Marksmanship легко срывают угрозу с питомца, а второй враг загоняет вас в мёртвую зону ближнего боя.",
+              "text_fi": "Vedä tiukasti yksi mob kerrallaan ja maksimietäisyydeltä: Marksmanshipin raskaat kriitit repivät threatin helposti lemmikiltä, ja toinen vihollinen pakottaa sinut dead zoneen lähitaisteluun."
+            },
+            {
+              "text_en": "Choose Mining + Engineering for scopes, rifles, dynamite and high-tier ammo; upgrade your ranged weapon every few levels (Truthseeker's Bow, dungeon drops) and stack Ranged Attack Power, Agility and crit on armor.",
+              "text_ru": "Выбирайте Горное дело + Инженерное дело ради прицелов, ружей, динамита и лучших боеприпасов; обновляйте дальнобойное оружие каждые несколько уровней (Truthseeker's Bow, дроп из подземелий) и собирайте силу атаки дальнего боя, ловкость и крит на броне.",
+              "text_fi": "Valitse Kaivostoiminta + Insinöörityö tähtäimiä, kiväärejä, dynamiittia ja parhaita ammuksia varten; päivitä jousi, kivääri tai varsijousi muutaman tason välein (Truthseeker's Bow, luolastopudotukset) ja kerää Ranged Attack Poweria, Ketteryyttä ja kriittiä panssariin."
+            }
+          ]
+        },
+        {
+          "id": "survival",
+          "name_en": "Survival",
+          "provenance": "kb:hunter-survival@2026-10-13 (Warcraft Tavern hunter guide, beta notes, leveling-weapons)",
+          "tips": [
+            {
+              "text_en": "Survival mixes ranged shots with traps and melee (Wing Clip, Mongoose Bite), and each piece costs mana and GCDs — plan every fight; a wolf pet's Furious Howl also boosts physical damage for both of you.",
+              "text_ru": "Survival сочетает дальние выстрелы с ловушками и ближним боем (Wing Clip, Mongoose Bite), и каждый их элемент тратит ману и GCD — планируйте бой; волк с Furious Howl вдобавок усиливает физический урон вам и питомцу.",
+              "text_fi": "Survival yhdistää ammunnat ansoihin ja lähitaisteluun (Wing Clip, Mongoose Bite), ja jokainen osa kuluttaa manaa ja GCD:itä — suunnittele jokainen taistelu; suden Furious Howl lisää fyysistä damagea teille molemmille."
+            },
+            {
+              "text_en": "Survival handles 2–3 mobs better than the other specs through crowd control: Freezing Trap one, Frost Trap + Entrapment to slow the rest, fighting at melee/ranged hybrid range.",
+              "text_ru": "Survival лучше других спеков держит 2–3 моба за счёт контроля: одного в Freezing Trap, остальных замедляйте Frost Trap с Entrapment, сражаясь в гибридной ближне-дальней дистанции.",
+              "text_fi": "Survival hoitaa 2–3 mobia muita spekkejä paremmin joukkokontrollilla: yksi Freezing Trapiin, muut Frost Trapilla ja Entrapmentilla hidastaen, taistellen hybridietäisyydellä."
+            },
+            {
+              "text_en": "Pair Skinning + Leatherworking for armor stats and stamina, or Herbalism + Alchemy for mana potions and Agility/Stamina elixirs; unlike original Vanilla, melee weapon DPS and stats now scale your close-range abilities, so a high-Agility two-hander (or dual-wield) with Hit and crit is a real upgrade.",
+              "text_ru": "Сочетайте Снятие шкур + Кожевничество ради статов брони и выносливости либо Травничество + Алхимию ради зелий маны и эликсиров на ловкость/выносливость; в отличие от оригинального Vanilla, DPS и статы оружия ближнего боя теперь масштабируют ваши способности вблизи, так что двуручное (или два одноручных) с высокой ловкостью, меткостью и критом — реальное усиление.",
+              "text_fi": "Yhdistä Nahkominen + Nahkatyö panssarinstatteihin ja kestävyyteen tai Yrttitaito + Alkimia manapulloihin sekä Ketteryys/Kestävyys-eliksiireihin; toisin kuin alkuperäisessä Vanillassa, lähitaisteluaseen DPS ja statsit skaalaavat nyt lähietäisyyden kykyjä, joten korkean Ketteryyden 2H-ase (tai dual-wield) osumalla ja kriitillä on todellinen parannus."
+            }
+          ]
+        }
+      ]
     }
   }
 }
