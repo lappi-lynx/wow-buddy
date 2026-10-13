@@ -1,0 +1,147 @@
+{
+  "classes": {
+    "warrior": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter club",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "First quest reward"
+            }
+          ],
+          "armor": {
+            "text": "Quest mail pieces (Elwynn Forest)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Heavy Copper Maul",
+              "level": 12,
+              "source": "Crafted (Blacksmithing) or early zones",
+              "provenance": "kb:leveling-weapons@2026-09-26"
+            },
+            {
+              "name": "Ironforge Greathammer",
+              "level": 14,
+              "source": "Dun Morogh / Ironforge",
+              "provenance": "kb:leveling-weapons@2026-09-26"
+            },
+            {
+              "name": "Rhahk'Zor's Hammer",
+              "level": 16,
+              "source": "Rhahk'Zor, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-09-26"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Smite's Mighty Hammer",
+              "level": 20,
+              "item_id": 7230,
+              "icon_id": "inv_hammer_01",
+              "source": "Mr. Smite, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-09-26"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [],
+          "armor": {
+            "text": "Next dungeon bracket (planning)",
+            "source": "Pending KB coverage"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter club",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "First quest reward"
+            }
+          ],
+          "armor": {
+            "text": "Quest mail pieces (Durotar)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [],
+          "armor": {
+            "text": "Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Shadowfang Keep loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        }
+      ]
+    }
+  }
+}
