@@ -75,6 +75,76 @@
           ]
         }
       ]
+    },
+    "warrior": {
+      "specs": [
+        {
+          "id": "arms",
+          "name_en": "Arms",
+          "provenance": "kb:warrior-arms@2026-10-13 (ForeverDB beta notes, leveling-weapons, racials)",
+          "tips": [
+            {
+              "text_en": "Rage comes from slow two-handed swings and crits; don't spam Heroic Strike at low Rage — it replaces your next auto-attack and pauses passive Rage generation.",
+              "text_ru": "Ярость приходит от медленных ударов двуручным и критов; не спамьте Heroic Strike при низкой ярости — он заменяет следующую автоатаку и останавливает пассивную генерацию ярости.",
+              "text_fi": "Rage tulee hitaista 2H-lyönneistä ja kriiteistä; älä spämmi Heroic Strikea matalalla Ragella — se korvaa seuraavan auto-hyökkäyksen ja pysäyttää passiivisen Ragen."
+            },
+            {
+              "text_en": "Pull 1–2 mobs; Sweeping Strikes and Cleave handle two, but pulling 3+ before heavy plate drains your health faster than you build Rage.",
+              "text_ru": "Пулите 1–2 моба; Sweeping Strikes и Cleave держат двоих, но 3+ до тяжёлых лат сливают здоровье быстрее, чем вы копите ярость.",
+              "text_fi": "Vedä 1–2 mobia; Sweeping Strikes ja Cleave hoitavat kaksi, mutta 3+ ennen raskasta platea valuttaa sinut nopeammin kuin keräät Ragea."
+            },
+            {
+              "text_en": "Take Mining + Blacksmithing for Mail/Plate and sharpening stones, and upgrade slow two-handers (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Humans (+2% crit with swords) and Orcs (+1% with axes) get extra value from those weapons.",
+              "text_ru": "Возьмите Горное дело + Кузнечное дело ради Mail/Plate и точильных камней и обновляйте медленное двуручное (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Люди (+2% крита с мечами) и орки (+1% с топорами) получают дополнительную ценность от такого оружия.",
+              "text_fi": "Ota Kaivostoiminta + Sepäntyö Mail/Plate-panssariin ja hiomakiviin sekä päivitä hidas 2H-ase (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Ihmiset (+2% crit miekalla) ja örkit (+1% kirveellä) hyötyvät enemmän."
+            }
+          ]
+        },
+        {
+          "id": "fury",
+          "name_en": "Fury",
+          "provenance": "kb:warrior-fury@2026-10-13 (ForeverDB beta notes, racials)",
+          "tips": [
+            {
+              "text_en": "Dual-wielding generates a steady stream of Rage from off-hand hits and crits, and Whirlwind now strikes with both weapons — but the dual-wield miss penalty can leave you Rage-starved.",
+              "text_ru": "Два одноручных дают ровный поток ярости от ударов левой руки и критов, а Whirlwind теперь бьёт обоими оружиями — но штраф на промах в dual-wield может резко оставить вас без ярости.",
+              "text_fi": "Kaksi yksikätistä tuottaa tasaista Ragea off-hand-osumista ja kriiteistä, ja Whirlwind iskee nyt molemmilla aseilla — mutta dual-wieldin osumapenaltti voi tyhjentää Ragen äkisti."
+            },
+            {
+              "text_en": "Pull one mob at a time: Fury has excellent single-target damage, but hits from several mobs without a shield quickly force you to stop and eat.",
+              "text_ru": "Пулите по одному мобу: у Fury отличный одиночный урон, но удары нескольких мобов без щита быстро заставляют садиться есть.",
+              "text_fi": "Vedä yksi mob kerrallaan: Furyn yhden kohteen damage on erinomainen, mutta usean mobilta tulevat osumat ilman kilpeä pakottavat syömään."
+            },
+            {
+              "text_en": "Take Engineering + Mining for dynamite and utility grenades, and equip two high-DPS one-handers — racial weapon bonuses are now flat +% crit (Orcs/axes, Humans/swords, Dwarves/maces).",
+              "text_ru": "Возьмите Инженерное дело + Горное дело ради динамита и гранат и берите два одноручных с высоким DPS — расовые бонусы к оружию теперь дают плоский +% крита (орки/топоры, люди/мечи, дворфы/дробящее).",
+              "text_fi": "Ota Insinöörityö + Kaivostoiminta dynamiittia ja kranaatteja varten sekä kaksi korkean DPS:n yksikätistä — rotubonukset antavat nyt tasaisen +% crit (örkit/kirveet, ihmiset/miekat, kääpiöt/nuijat)."
+            }
+          ]
+        },
+        {
+          "id": "protection",
+          "name_en": "Protection",
+          "provenance": "kb:warrior-protection@2026-10-13 (ForeverDB beta notes, racials)",
+          "tips": [
+            {
+              "text_en": "Rage comes mainly from taking damage in Defensive Stance; recent fixes corrected damage-taken Rage scaling and stopped absorb shields from reducing Rage gains.",
+              "text_ru": "Ярость приходит в основном от получаемого урона в Defensive Stance; недавние правки исправили масштабирование ярости от урона и убрали снижение генерации ярости щитами-поглотами.",
+              "text_fi": "Rage tulee pääasiassa Defensive Stancen vastaanottamasta damagesta; tuoreet korjaukset korjasivat Ragen skaalauksen ja poistivat absorb-kilpien Rage-vähennyksen."
+            },
+            {
+              "text_en": "Pull 2–3+ mobs: mitigate with Shield Block and Revenge, and Demoralizing Shout now generates threat on all nearby targets.",
+              "text_ru": "Тяните 2–3+ моба: снижайте урон через Shield Block и Revenge, а Demoralizing Shout теперь создаёт угрозу на всех ближайших целях.",
+              "text_fi": "Vedä 2–3+ mobia: vähennä damagea Shield Blockilla ja Revengellä, ja Demoralizing Shout tuottaa nyt threatia kaikkiin lähellä oleviin kohteisiin."
+            },
+            {
+              "text_en": "Take Mining + Blacksmithing for shields, heavy armor and shield spikes, plus First Aid; pair a sturdy shield with a fast one-hander to stack Sunder Armor and hold threat.",
+              "text_ru": "Возьмите Горное дело + Кузнечное дело ради щитов, тяжёлой брони и шипов на щит, плюс Первая помощь; сочетайте крепкий щит с быстрым одноручным, чтобы быстро стакать Sunder Armor и держать агро.",
+              "text_fi": "Ota Kaivostoiminta + Sepäntyö kilpiin, raskaaseen panssariin ja kilpipiikkeihin sekä Ensiapu; yhdistä tukeva kilpi ja nopea yksikätinen, jotta keräät Sunder Armoria ja pidät threatin."
+            }
+          ]
+        }
+      ]
     }
   }
 }

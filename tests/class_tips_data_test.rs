@@ -81,3 +81,32 @@ fn test_spec_info_records_the_dual_spec_uncertainty() {
     assert!(!info.get(Language::En).is_empty());
     assert!(info.provenance.is_some());
 }
+
+/// Shared assertion for every class batch: exactly 3 specs, ≥3 tips each,
+/// provenance present, and the class gone from the coverage report.
+fn assert_class_authored(data: &ClassTipsData, class_id: &str) {
+    let specs = data.specs_for(class_id);
+    assert_eq!(specs.len(), 3, "{class_id} must have exactly 3 specs");
+    for spec in specs {
+        assert!(
+            spec.tips.len() >= 3,
+            "{class_id}/{} has fewer than 3 tips",
+            spec.id
+        );
+        assert!(
+            spec.provenance.is_some(),
+            "{class_id}/{} missing provenance",
+            spec.id
+        );
+    }
+    let prefix = format!("{class_id}/");
+    assert!(!data
+        .missing_coverage()
+        .iter()
+        .any(|m| m.starts_with(&prefix)));
+}
+
+#[test]
+fn test_warrior_specs_are_authored() {
+    assert_class_authored(&ClassTipsData::load_embedded(), "warrior");
+}
