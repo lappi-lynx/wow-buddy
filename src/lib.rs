@@ -7,5 +7,6 @@ pub mod components;
 pub mod i18n;
 pub mod models;
 pub mod router;
+pub mod selection;
 pub mod styles;
 pub mod views;

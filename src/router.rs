@@ -1,6 +1,7 @@
 use crate::components::{BottomNav, NavTab};
 use crate::i18n::{I18nService, LanguageStorage};
 use crate::models::{Faction, GameData, RaceInfo};
+use crate::selection::SelectionState;
 use crate::styles::APP_CSS;
 use crate::views::{
     DressingRoomView, DungeonCodexView, FactionPickerView, ProgressionGuideView, RaceSelectorView,
@@ -80,7 +81,27 @@ pub fn App() -> Element {
                         current_lang: current_lang,
                         i18n: i18n,
                         on_faction_selected: move |f: Faction| {
-                            selected_faction.set(f);
+                            let current = SelectionState {
+                                faction: *selected_faction.read(),
+                                race_id: selected_race
+                                    .read()
+                                    .clone()
+                                    .map(|r| r.id)
+                                    .unwrap_or_default(),
+                                class_id: selected_class
+                                    .read()
+                                    .clone()
+                                    .map(|c| c.id)
+                                    .unwrap_or_default(),
+                            };
+                            let reconciled = current.after_faction_change(&game_data.read(), f);
+                            selected_faction.set(reconciled.faction);
+                            selected_race.set(
+                                game_data.read().get_race_by_id(&reconciled.race_id).cloned(),
+                            );
+                            selected_class.set(
+                                game_data.read().get_class_by_id(&reconciled.class_id).cloned(),
+                            );
                             current_route.set(Route::RaceSelector {});
                         },
                     }
