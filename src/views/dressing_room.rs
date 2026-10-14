@@ -3,7 +3,7 @@ use crate::components::{BlueprintExport, ClassTipsCard, GlossaryTerm, LanguagePi
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     class::{availability, SpellAvailability},
-    gear::{get_tier_for_level, nearest_anchor, tier_short_key, GearTier},
+    gear::{get_tier_for_level, nearest_anchor, tier_short_key},
     glossary::TERMS,
     milestones::{milestones_around, next_milestone},
     ClassInfo, Faction, RaceInfo,
@@ -56,15 +56,6 @@ impl CharacterAnimation {
     }
 }
 
-pub fn get_tier_label_key(tier: GearTier) -> &'static str {
-    match tier {
-        GearTier::Starter => "tier_starter",
-        GearTier::Dungeon => "tier_dungeon",
-        GearTier::ElitePlate => "tier_elite",
-        GearTier::RaidTier2 => "tier_raid",
-    }
-}
-
 #[component]
 pub fn DressingRoomView(
     current_lang: Signal<Language>,
@@ -90,7 +81,11 @@ pub fn DressingRoomView(
         i18n.read().t_with(
             "ui_gear_snap",
             lang,
-            &[("level", level_now.to_string()), ("set", set_name)],
+            &[
+                ("level", level_now.to_string()),
+                ("anchor", anchor.to_string()),
+                ("set", set_name),
+            ],
         )
     };
     let registry = AssetRegistry::load_embedded();
@@ -164,6 +159,7 @@ pub fn DressingRoomView(
                         step: "1",
                         value: "{selected_level.read()}",
                         class: "w-full accent-amber-500 cursor-pointer h-11 bg-slate-800 rounded-lg",
+                        "aria-valuetext": "{snap_label}",
                         oninput: move |evt: Event<FormData>| {
                             if let Ok(lvl) = evt.value().parse::<u8>() {
                                 selected_level.set(lvl);
@@ -205,7 +201,7 @@ pub fn DressingRoomView(
                             span {
                                 key: "{m.level}",
                                 class: "text-xs px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200",
-                                "{i18n.read().t(m.key, lang)}"
+                                "{i18n.read().t_with(m.key, lang, &[(\"level\", m.level.to_string())])}"
                                 if !m.verified {
                                     span { class: "text-amber-400/80", " · {i18n.read().t(\"ui_beta_may_change\", lang)}" }
                                 }
@@ -214,7 +210,10 @@ pub fn DressingRoomView(
                     }
                     if let Some(next) = next_milestone(level_now) {
                         p { class: "text-xs text-amber-300",
-                            "{i18n.read().t_with(\"ui_next_unlock\", lang, &[(\"level\", next.level.to_string())])} — {i18n.read().t(next.key, lang)}"
+                            "{i18n.read().t(\"ui_next_unlock\", lang)}: {i18n.read().t_with(next.key, lang, &[(\"level\", next.level.to_string())])}"
+                            if !next.verified {
+                                span { class: "text-amber-400/80", " · {i18n.read().t(\"ui_beta_may_change\", lang)}" }
+                            }
                         }
                     }
                 }
@@ -257,9 +256,16 @@ pub fn DressingRoomView(
                                             span { class: "text-xs sm:text-sm font-bold text-slate-200", "{spell.name}" }
                                             span { class: "text-xs text-slate-400 leading-tight mt-0.5", "{spell.description}" }
                                         }
-                                        if let SpellAvailability::AtLevel(l) = unlock {
-                                            span { class: "ml-auto shrink-0 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
-                                                "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", l.to_string())])}"
+                                        div { class: "ml-auto shrink-0 flex items-center gap-1",
+                                            if let SpellAvailability::AtLevel(l) = unlock {
+                                                span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
+                                                    "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", l.to_string())])}"
+                                                }
+                                            }
+                                            if !spell.verified {
+                                                span { class: "text-[10px] font-bold uppercase tracking-wider text-amber-400/80",
+                                                    "{i18n.read().t(\"ui_beta_may_change\", lang)}"
+                                                }
                                             }
                                         }
                                     }

@@ -16,3 +16,7 @@ when. Same purpose as `docs/kb-sources/`: a claim can be **checked**.
 2. Record the page URLs and the mapping here.
 3. Import icons via `tools/assets` (CDN download → normalize → manifest →
    generator) — only what the app actually references.
+
+## Cross-references
+
+- Core spell learn levels (abilities-DB extraction + KB confirmation): `docs/kb-sources/spell-levels.md`.

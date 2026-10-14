@@ -24,7 +24,7 @@ pub fn GlossaryTerm(
 
     rsx! {
         button {
-            class: "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 hover:text-amber-300 hover:border-amber-500/40 text-xs cursor-pointer",
+            class: "inline-flex items-center gap-1 px-3 min-h-[44px] rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 hover:text-amber-300 hover:border-amber-500/40 text-xs cursor-pointer",
             onclick: move |_| open.set(true),
             "{btn_label}"
             span { class: "text-[10px] text-slate-500", "?" }

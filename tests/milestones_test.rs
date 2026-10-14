@@ -6,6 +6,9 @@ fn next_milestone_and_around() {
     assert!(next_milestone(60).is_none());
     assert!(milestones_around(38, 5).iter().any(|m| m.level == 40));
     assert!(milestones_around(13, 5).iter().any(|m| m.level == 10));
+    // window is inclusive at the edge
+    assert!(milestones_around(35, 5).iter().any(|m| m.level == 40));
+    assert!(!milestones_around(35, 4).iter().any(|m| m.level == 40));
 }
 
 #[test]

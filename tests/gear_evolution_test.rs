@@ -1,5 +1,5 @@
-use wow_buddy::models::gear::{get_tier_for_level, nearest_anchor, tier_label, GearTier};
-use wow_buddy::views::dressing_room::{get_tier_label_key, CharacterAnimation};
+use wow_buddy::models::gear::{get_tier_for_level, nearest_anchor, tier_label_key, GearTier};
+use wow_buddy::views::dressing_room::CharacterAnimation;
 
 #[test]
 fn test_gear_tier_milestones() {
@@ -12,16 +12,11 @@ fn test_gear_tier_milestones() {
 #[test]
 fn snaps_to_nearest_anchor_ties_go_up() {
     for (level, want) in [
-        (1, 1), (10, 1), (11, 20), (29, 20), (30, 40), (38, 40), (50, 60), (60, 60), (99, 60),
+        (0, 1), (1, 1), (10, 1), (11, 20), (29, 20), (30, 40), (38, 40), (50, 60), (60, 60),
+        (99, 60), (255, 60),
     ] {
         assert_eq!(nearest_anchor(level), want, "level {level}");
     }
-}
-
-#[test]
-fn label_explains_snapping() {
-    assert_eq!(tier_label(38, 40), "Level 38 (Level 40 set)");
-    assert_eq!(tier_label(40, 40), "Level 40");
 }
 
 #[test]
@@ -34,10 +29,10 @@ fn snapping_drives_the_aura_too() {
 
 #[test]
 fn test_gear_tier_label_keys() {
-    assert_eq!(get_tier_label_key(GearTier::Starter), "tier_starter");
-    assert_eq!(get_tier_label_key(GearTier::Dungeon), "tier_dungeon");
-    assert_eq!(get_tier_label_key(GearTier::ElitePlate), "tier_elite");
-    assert_eq!(get_tier_label_key(GearTier::RaidTier2), "tier_raid");
+    assert_eq!(tier_label_key(GearTier::Starter), "tier_starter");
+    assert_eq!(tier_label_key(GearTier::Dungeon), "tier_dungeon");
+    assert_eq!(tier_label_key(GearTier::ElitePlate), "tier_elite");
+    assert_eq!(tier_label_key(GearTier::RaidTier2), "tier_raid");
 }
 
 #[test]

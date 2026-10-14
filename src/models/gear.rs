@@ -23,12 +23,14 @@ pub fn nearest_anchor(level: u8) -> u8 {
     best
 }
 
-/// Pure English snap label (tests/aria): "Level 40" or "Level 38 (Level 40 set)".
-pub fn tier_label(level: u8, anchor: u8) -> String {
-    if level == anchor {
-        format!("Level {level}")
-    } else {
-        format!("Level {level} (Level {anchor} set)")
+/// i18n key of the full tier name for a tier — the single mapping used by the
+/// viewer caption (and any other full-name rendering).
+pub fn tier_label_key(tier: GearTier) -> &'static str {
+    match tier {
+        GearTier::Starter => "tier_starter",
+        GearTier::Dungeon => "tier_dungeon",
+        GearTier::ElitePlate => "tier_elite",
+        GearTier::RaidTier2 => "tier_raid",
     }
 }
 

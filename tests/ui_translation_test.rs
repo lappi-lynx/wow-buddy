@@ -60,6 +60,18 @@ fn test_locales_are_complete_against_english() {
         "placeholder gaps:\n{}",
         placeholder_gaps.join("\n")
     );
+
+    // Reverse direction: keys that exist only in RU/FI are dead weight and
+    // usually the sign of a rename that missed a locale.
+    let mut extras = vec![];
+    for (name, d) in [("ru", &ru), ("fi", &fi)] {
+        for key in d.keys() {
+            if !en.contains_key(key) {
+                extras.push(format!("{name}: {key}"));
+            }
+        }
+    }
+    assert!(extras.is_empty(), "extra keys:\n{}", extras.join("\n"));
 }
 
 #[test]

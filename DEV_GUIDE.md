@@ -135,7 +135,7 @@ When testing manually, verify the following core features:
   - **Lvl 20:** Early dungeon set.
   - **Lvl 40:** Heavy plate & elite armor.
   - **Lvl 60:** Top-level raid armor.
-- Off-anchor levels (e.g. 38) show a snap label — "Level 38 (Heavy Plate)" — and the viewer caption uses the same anchors (ties snap upward).
+- Off-anchor levels (e.g. 38) show a snap label — "Level 38 (Level 40: Heavy Plate)" — and the viewer caption uses the same anchors (ties snap upward). The slider also exposes the same text as `aria-valuetext`.
 - **What unlocks around here:** milestone chips within ±5 levels (first dungeon, talents, Legacy at 25...) plus a "Next unlock" line; rows past 30 carry the "Beta, may change" tag.
 - **Novice Card:** exactly 3 signature class spells. Spells above the selected level show an "Unlocks at level N" chip — a level-1 warrior has only Heroic Strike.
 - **Terminology:** tap any jargon chip (Tank, Aggro, Respec, Need / Greed...) to open the explanation popover; check it in EN, RU, and FI.

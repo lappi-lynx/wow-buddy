@@ -1,7 +1,7 @@
 use crate::assets::AssetRegistry;
 use crate::components::race_tile::class_render_source;
 use crate::i18n::{I18nService, Language};
-use crate::models::{gear::GearTier, ClassInfo, Faction, RaceInfo};
+use crate::models::{gear::{tier_label_key, GearTier}, ClassInfo, Faction, RaceInfo};
 use crate::views::race_selector::format_race_display_name;
 use dioxus::prelude::*;
 
@@ -41,11 +41,11 @@ pub fn ModelViewer(
 
     // Honest mode: no model and no WebGL detection in this build; a paper-doll
     // (the class icon) exists for every class, so the badge reads "Preview".
-    let mode = choose_mode(
-        false,
-        false,
-        !class_render_source(&AssetRegistry::load_embedded(), &class.id).is_empty(),
-    );
+    // One art predicate feeds both the mode and the <img> branch, so the badge
+    // and the rendered content cannot drift apart.
+    let class_art = class_render_source(&AssetRegistry::load_embedded(), &class.id);
+    let has_class_art = class_art.starts_with("data:");
+    let mode = choose_mode(false, false, has_class_art);
     let mode_label = match mode {
         ViewerMode::Model3d => i18n_svc.t("ui_viewer_3d", lang),
         ViewerMode::PaperDoll => i18n_svc.t("ui_viewer_preview", lang),
@@ -65,9 +65,6 @@ pub fn ModelViewer(
         "druid" => "🐾",
         _ => "🛡️",
     };
-    let class_art = class_render_source(&AssetRegistry::load_embedded(), &class.id);
-    let has_class_art = class_art.starts_with("data:");
-
     let tier_aura = match tier {
         GearTier::Starter => "from-slate-800 to-slate-950 border-slate-700",
         GearTier::Dungeon => "from-blue-950/80 to-slate-950 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]",
@@ -75,12 +72,7 @@ pub fn ModelViewer(
         GearTier::RaidTier2 => "from-amber-950/80 to-slate-950 border-amber-500/60 shadow-[0_0_40px_rgba(245,158,11,0.4)]",
     };
 
-    let tier_title = match tier {
-        GearTier::Starter => i18n_svc.t("tier_starter", lang),
-        GearTier::Dungeon => i18n_svc.t("tier_dungeon", lang),
-        GearTier::ElitePlate => i18n_svc.t("tier_elite", lang),
-        GearTier::RaidTier2 => i18n_svc.t("tier_raid", lang),
-    };
+    let tier_title = i18n_svc.t(tier_label_key(tier), lang);
 
     let anim_text = i18n_svc.t_with("ui_animation", lang, &[("anim", animation)]);
 
