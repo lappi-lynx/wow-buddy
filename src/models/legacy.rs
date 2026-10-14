@@ -17,30 +17,40 @@ pub struct LegacyPreset {
 }
 
 pub fn get_starter_legacy_preset() -> LegacyPreset {
+    // Client-verified 16-point leveling build (Forever beta build 1.60.1.70205):
+    // Well Rested 5 + Thrill of Adventure 5 + Talented 5 (prereq: Well Rested 5/5)
+    // + Field Guide 1. Source: docs/foreverdb-sources/legacy-system-explained.md.
     LegacyPreset {
-        name: "Starter Adventurer".to_string(),
+        name: "Leveling Starter".to_string(),
         total_points: 16,
         perks: vec![
             LegacyPerk {
-                id: "swift_stride".to_string(),
-                name: "Swift Stride".to_string(),
-                points: 6,
-                description: "+10% out of combat run speed".to_string(),
-                icon: "👟".to_string(),
+                id: "well_rested".to_string(),
+                name: "Well Rested".to_string(),
+                points: 5,
+                description: "Rested experience accumulates 20% faster and your rested cap is 20% higher.".to_string(),
+                icon: "💤".to_string(),
             },
             LegacyPerk {
-                id: "cozy_camp".to_string(),
-                name: "Cozy Camp".to_string(),
+                id: "thrill_of_adventure".to_string(),
+                name: "Thrill of Adventure".to_string(),
                 points: 5,
-                description: "Extended campfire well-fed and health regeneration".to_string(),
+                description: "Killing blows restore 5% of your maximum Health and Mana over 10 sec (not in dungeons, raids or battlegrounds).".to_string(),
+                icon: "🩹".to_string(),
+            },
+            LegacyPerk {
+                id: "talented".to_string(),
+                name: "Talented".to_string(),
+                points: 5,
+                description: "You gain talent points from level 5 instead of 10 (still at most 51 total). Requires Well Rested 5/5.".to_string(),
+                icon: "🎓".to_string(),
+            },
+            LegacyPerk {
+                id: "field_guide".to_string(),
+                name: "Field Guide".to_string(),
+                points: 1,
+                description: "Reduces your cooldown on adding Camp features by 25%.".to_string(),
                 icon: "🏕️".to_string(),
-            },
-            LegacyPerk {
-                id: "trophy_collector".to_string(),
-                name: "Trophy Collector".to_string(),
-                points: 5,
-                description: "Increased cloth and bonus coin find on beasts and humanoids".to_string(),
-                icon: "💰".to_string(),
             },
         ],
     }

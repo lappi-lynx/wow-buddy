@@ -91,9 +91,10 @@ Follow these steps to manually test all features of the application:
 - Verify the 1–6 lvl checklist customized for your chosen race's starter zone (e.g. Northshire Valley, Coldridge, Shadowglen, Valley of Trials, Deathknell, Camp Narache, Zephras Isle).
 - Check the 6–12 lvl compass direction banner.
 - Click **"Apply 16-Point Preset Now"** to verify the starter Legacy point allocation:
-  - 6 pts: Swift Stride (+10% run speed)
-  - 5 pts: Cozy Camp
-  - 5 pts: Trophy Collector
+  - 5 pts: Well Rested (rested XP accumulates faster)
+  - 5 pts: Thrill of Adventure (killing blows restore Health/Mana)
+  - 5 pts: Talented (talents from level 5 instead of 10)
+  - 1 pt: Field Guide (camp feature cooldown)
 
 ### 6. Screen 5: Dungeon Survival Codex
 - Switch between **The Deadmines (17–21)** and **Ragefire Chasm (13–18)**.

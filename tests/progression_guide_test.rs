@@ -11,6 +11,30 @@ fn test_legacy_points_total_is_16() {
 }
 
 #[test]
+fn test_legacy_preset_uses_verified_client_perks() {
+    let preset = get_starter_legacy_preset();
+    // Client-verified perk ids only (docs/foreverdb-sources/legacy-system-explained.md,
+    // build 1.60.1.70205). Anything else means invented content slipped back in.
+    let allowed = ["well_rested", "thrill_of_adventure", "talented", "field_guide"];
+    assert_eq!(preset.perks.iter().map(|p| p.points).sum::<u8>(), 16);
+    for perk in &preset.perks {
+        assert!(
+            allowed.contains(&perk.id.as_str()),
+            "unverified perk id '{}' in the starter preset",
+            perk.id
+        );
+    }
+    assert!(preset
+        .perks
+        .iter()
+        .any(|p| p.id == "well_rested" && p.points == 5));
+    assert!(preset
+        .perks
+        .iter()
+        .any(|p| p.id == "talented" && p.points == 5));
+}
+
+#[test]
 fn test_starter_zone_reminders() {
     let data = GameData::load_embedded();
     let zone = data.get_starter_zone("northshire").expect("Northshire exists");
