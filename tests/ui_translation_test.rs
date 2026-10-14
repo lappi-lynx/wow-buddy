@@ -104,6 +104,10 @@ fn test_complete_ui_labels_translation() {
     assert_eq!(i18n.t("ui_glossary_title", Language::Ru), "Термины");
     assert_eq!(i18n.t("ui_glossary_title", Language::Fi), "Termistö");
 
+    assert_eq!(i18n.t("ui_pets_title", Language::En), "Pets & Companions");
+    assert_eq!(i18n.t("ui_pets_title", Language::Ru), "Питомцы и спутники");
+    assert_eq!(i18n.t("ui_pets_title", Language::Fi), "Lemmikit ja kumppanit");
+
     // Bottom navigation
     assert_eq!(i18n.t("nav_gear", Language::En), "Gear");
     assert_eq!(i18n.t("nav_gear", Language::Ru), "Снаряжение");

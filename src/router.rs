@@ -4,7 +4,7 @@ use crate::models::{Faction, GameData, RaceInfo};
 use crate::selection::{effective_class_id, SelectionState};
 use crate::styles::APP_CSS;
 use crate::views::{
-    AboutView, DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView,
+    AboutView, DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView, PetsView,
     ProgressionGuideView, RaceSelectorView,
 };
 use dioxus::prelude::*;
@@ -24,6 +24,8 @@ pub enum Route {
     DungeonCodex {},
     #[route("/gear")]
     GearPlanner {},
+    #[route("/pets")]
+    Pets {},
     #[route("/about")]
     About {},
 }
@@ -173,6 +175,14 @@ pub fn App() -> Element {
                         on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
+                Route::Pets {} => rsx! {
+                    PetsView {
+                        current_lang: current_lang,
+                        i18n: i18n,
+                        class: class_obj.clone(),
+                        on_back: move |_| current_route.set(Route::DressingRoom {}),
+                    }
+                },
                 Route::About {} => rsx! {
                     AboutView {
                         current_lang: current_lang,
@@ -222,6 +232,11 @@ fn DungeonCodex() -> Element {
 
 #[component]
 fn GearPlanner() -> Element {
+    rsx! { div {} }
+}
+
+#[component]
+fn Pets() -> Element {
     rsx! { div {} }
 }
 

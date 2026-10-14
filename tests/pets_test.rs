@@ -194,3 +194,28 @@ fn companion_card_teaches_vanity_pets() {
     assert!(en.contains("Westfall") && en.contains("Mechanical Squirrel"), "needs concrete examples");
     assert!(!en.to_lowercase().contains("fish"), "fishing is not a companion source (KB-corrected)");
 }
+
+use wow_buddy::models::pets::{pet_card_kind, pets_sections, PetCardKind, PetsSection};
+use wow_buddy::models::GameData;
+
+#[test]
+fn card_kind_and_sections_cover_the_real_classes() {
+    let game = GameData::load_embedded();
+    let (mut hunters, mut warlocks) = (0, 0);
+    for class in &game.classes {
+        match pet_card_kind(&class.id) {
+            PetCardKind::Hunter => hunters += 1,
+            PetCardKind::Warlock => warlocks += 1,
+            PetCardKind::Companion => {}
+        }
+    }
+    assert_eq!(hunters, 1, "exactly one hunter class");
+    assert_eq!(warlocks, 1, "exactly one warlock class");
+    assert!(matches!(pet_card_kind(""), PetCardKind::Companion), "no hero -> companion view");
+    assert_eq!(
+        pets_sections(PetCardKind::Hunter),
+        &[PetsSection::Basics, PetsSection::Families, PetsSection::Notable, PetsSection::Companion]
+    );
+    assert_eq!(pets_sections(PetCardKind::Warlock), &[PetsSection::Minions, PetsSection::Companion]);
+    assert_eq!(pets_sections(PetCardKind::Companion), &[PetsSection::Companion]);
+}

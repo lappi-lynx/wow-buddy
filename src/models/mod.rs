@@ -21,7 +21,10 @@ pub use gear_planner::{ClassGear, GearArmorLine, GearBand, GearPlannerData, Gear
 pub use glossary::{get_term, Term, TERMS};
 pub use legacy::{get_starter_legacy_preset, LegacyPerk, LegacyPreset};
 pub use milestones::{milestones_around, next_milestone, Milestone, MILESTONES};
-pub use pets::{CompanionCard, Legends, NotablePet, PetFamily, PetsData, SourceRef, TameBasic, WarlockMinion};
+pub use pets::{
+    pet_card_kind, pets_sections, CompanionCard, Legends, NotablePet, PetCardKind, PetFamily,
+    PetsData, PetsSection, SourceRef, TameBasic, WarlockMinion,
+};
 pub use race::RaceInfo;
 pub use reference::{NpcBook, NpcRef};
 pub use zone::StarterZoneInfo;

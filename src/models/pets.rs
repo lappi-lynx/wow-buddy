@@ -99,3 +99,43 @@ impl PetsData {
         serde_json::from_str(PETS_JSON).expect("Embedded pets.json must be valid")
     }
 }
+
+/// Which pets card the Dressing Room shows for a class.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum PetCardKind {
+    Hunter,
+    Warlock,
+    Companion,
+}
+
+/// `""` (no hero selected — deep link) falls back to the companion view.
+pub fn pet_card_kind(class_id: &str) -> PetCardKind {
+    match class_id {
+        "hunter" => PetCardKind::Hunter,
+        "warlock" => PetCardKind::Warlock,
+        _ => PetCardKind::Companion,
+    }
+}
+
+/// The sections the `/pets` view renders, in order, for a card kind.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum PetsSection {
+    Basics,
+    Families,
+    Notable,
+    Minions,
+    Companion,
+}
+
+pub fn pets_sections(kind: PetCardKind) -> &'static [PetsSection] {
+    match kind {
+        PetCardKind::Hunter => &[
+            PetsSection::Basics,
+            PetsSection::Families,
+            PetsSection::Notable,
+            PetsSection::Companion,
+        ],
+        PetCardKind::Warlock => &[PetsSection::Minions, PetsSection::Companion],
+        PetCardKind::Companion => &[PetsSection::Companion],
+    }
+}
