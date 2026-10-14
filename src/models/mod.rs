@@ -6,6 +6,7 @@ pub mod gear;
 pub mod gear_planner;
 pub mod legacy;
 pub mod race;
+pub mod reference;
 pub mod zone;
 
 pub use class::{ClassInfo, CoreSpell};
@@ -16,6 +17,7 @@ pub use gear::{get_tier_for_level, GearTier};
 pub use gear_planner::{ClassGear, GearArmorLine, GearBand, GearPlannerData, GearWeapon};
 pub use legacy::{get_starter_legacy_preset, LegacyPerk, LegacyPreset};
 pub use race::RaceInfo;
+pub use reference::{NpcBook, NpcRef};
 pub use zone::StarterZoneInfo;
 
 use serde::{Deserialize, Serialize};

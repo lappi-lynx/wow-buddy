@@ -1,0 +1,46 @@
+{
+  "npcs": {
+    "marshal_mcbride": {
+      "name": "Marshal McBride",
+      "zone": "Elwynn Forest",
+      "subzone": "Northshire Abbey",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "sten_stoutarm": {
+      "name": "Sten Stoutarm",
+      "zone": "Dun Morogh",
+      "subzone": "Coldridge Valley",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "ilthalaine": {
+      "name": "Ilthalaine",
+      "zone": "Teldrassil",
+      "subzone": "Shadowglen",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "gornek": {
+      "name": "Gornek",
+      "zone": "Durotar",
+      "subzone": "Valley of Trials",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "shadow_priest_sarvis": {
+      "name": "Shadow Priest Sarvis",
+      "zone": "Tirisfal Glades",
+      "subzone": "Deathknell",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "chief_hawkwind": {
+      "name": "Chief Hawkwind",
+      "zone": "Mulgore",
+      "subzone": "Red Cloud Mesa (Camp Narache)",
+      "provenance": "kb:npc-locations@2026-10-14"
+    },
+    "sky_warden_aelora": {
+      "name": "Sky Warden Aelora",
+      "zone": "Zephras Isle",
+      "subzone": "Zephyr's Reach",
+      "provenance": "kb:npc-locations@2026-10-14"
+    }
+  }
+}

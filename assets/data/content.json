@@ -155,6 +155,7 @@
       "name_fi": "Pohjoislaakso",
       "level_range": "1-6",
       "starting_npc": "Marshal McBride",
+      "starting_npc_id": "marshal_mcbride",
       "trainer_reminder": "Visit class trainer at Northshire Abbey at levels 2 and 4.",
       "bag_reminder": "Purchase your first 6-slot bag as soon as you have 5 silver.",
       "next_zone_direction": "Head south through the gates towards Goldshire in Elwynn Forest."
@@ -166,6 +167,7 @@
       "name_fi": "Kylmäharjan Laakso",
       "level_range": "1-6",
       "starting_npc": "Sten Stoutarm",
+      "starting_npc_id": "sten_stoutarm",
       "trainer_reminder": "Train your rank 1 skills at Anvilmar trainers at level 2.",
       "bag_reminder": "Buy an additional pouch from Anvilmar general goods vendor.",
       "next_zone_direction": "Exit east through the pass to Kharanos in Dun Morogh."
@@ -177,6 +179,7 @@
       "name_fi": "Varjonotko (Teldrassil)",
       "level_range": "1-6",
       "starting_npc": "Ilthalaine",
+      "starting_npc_id": "ilthalaine",
       "trainer_reminder": "Visit Aldrassil sanctuary trainers at levels 2 and 4.",
       "bag_reminder": "Clear spiders and buy bags at Aldrassil before leaving.",
       "next_zone_direction": "Descend south towards Dolanaar."
@@ -187,7 +190,8 @@
       "name_en": "Valley of Trials",
       "name_fi": "Koetusten Laakso",
       "level_range": "1-6",
-      "starting_npc": "Karrun",
+      "starting_npc": "Gornek",
+      "starting_npc_id": "gornek",
       "trainer_reminder": "Train skills in the Den at levels 2 and 4.",
       "bag_reminder": "Save copper from boars for first bag vendor outside the Den.",
       "next_zone_direction": "Head north-east to Sen'jin Village and Razor Hill."
@@ -199,6 +203,7 @@
       "name_fi": "Kuolonkellot",
       "level_range": "1-6",
       "starting_npc": "Shadow Priest Sarvis",
+      "starting_npc_id": "shadow_priest_sarvis",
       "trainer_reminder": "Return to the crypt chapel for skill upgrades at level 2 and 4.",
       "bag_reminder": "Sell scavenger junk to buy initial 6-slot bag.",
       "next_zone_direction": "Follow the western road to Brill in Tirisfal Glades."
@@ -210,6 +215,7 @@
       "name_fi": "Narachen Leiri (Mulgore)",
       "level_range": "1-6",
       "starting_npc": "Chief Hawkwind",
+      "starting_npc_id": "chief_hawkwind",
       "trainer_reminder": "Visit the central tent trainers at levels 2 and 4.",
       "bag_reminder": "Check the trade goods vendor for starter satchels.",
       "next_zone_direction": "Head north past the totem gate to Bloodhoof Village."
@@ -221,6 +227,7 @@
       "name_fi": "Zephrasin Saari",
       "level_range": "1-6",
       "starting_npc": "Sky Warden Aelora",
+      "starting_npc_id": "sky_warden_aelora",
       "trainer_reminder": "Ascend the Aerie Spire to unlock wind-infused spells.",
       "bag_reminder": "Gather cloud feathers to barter for a breezy feather-pack.",
       "next_zone_direction": "Take the wind-skiff to either Stormwind Harbor or Bladefist Bay."

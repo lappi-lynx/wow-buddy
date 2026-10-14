@@ -36,6 +36,7 @@ pub fn ProgressionGuideView(
             name_fi: "Aloitusalue".to_string(),
             level_range: "1-6".to_string(),
             starting_npc: "Quartermaster".to_string(),
+            starting_npc_id: None,
             trainer_reminder: "Train skills at levels 2 and 4.".to_string(),
             bag_reminder: "Buy first bag with 5 silver.".to_string(),
             next_zone_direction: "Proceed to main territory.".to_string(),
