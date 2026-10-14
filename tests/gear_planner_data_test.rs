@@ -55,3 +55,30 @@ fn test_missing_provenance_is_reported_not_ignored() {
     assert!(!missing.is_empty(), "expected at least one record flagged as missing provenance");
     assert!(missing.iter().any(|m| m.contains("starter club")));
 }
+
+#[test]
+fn test_every_seeded_band_at_or_below_24_has_a_weapon() {
+    let data = GearPlannerData::load_embedded();
+    for faction in [Faction::Alliance, Faction::Horde] {
+        for band in data.bands_for("warrior", faction) {
+            if band.max_level <= 24 {
+                assert!(
+                    !band.weapons.is_empty(),
+                    "warrior/{faction:?} band {} has no weapons",
+                    band.label
+                );
+            }
+        }
+    }
+}
+
+#[test]
+fn test_horde_weapon_path_from_kb() {
+    let data = GearPlannerData::load_embedded();
+    let band = data.band_for_level("warrior", Faction::Horde, 22).unwrap();
+    let reef = band.weapons.iter().find(|w| w.name == "Reef Axe").unwrap();
+    assert_eq!(reef.item_id, Some(6905));
+    let early = data.band_for_level("warrior", Faction::Horde, 14).unwrap();
+    assert!(early.weapons.iter().any(|w| w.name == "Cursed Felblade"));
+    assert!(early.weapons.iter().any(|w| w.name == "Axe of Orgrimmar"));
+}

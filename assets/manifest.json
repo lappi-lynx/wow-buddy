@@ -6,6 +6,42 @@
       "source": "Blizzard item icon (inv_hammer_01) via wow.zamimg.com CDN, imported 2026-10-13 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
     },
+    "inv_axe_04": {
+      "path": "assets/icons/items/inv_axe_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_axe_04, Axe of Orgrimmar) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_hammer_23": {
+      "path": "assets/icons/items/inv_hammer_23.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_hammer_23, Hammer of Orgrimmar) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_12": {
+      "path": "assets/icons/items/inv_weapon_shortblade_12.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_12, Cursed Felblade) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_throwingaxe_06": {
+      "path": "assets/icons/items/inv_throwingaxe_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_throwingaxe_06, Taskmaster Axe) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_sword_16": {
+      "path": "assets/icons/items/inv_sword_16.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_16, Wingblade) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_halberd_06": {
+      "path": "assets/icons/items/inv_weapon_halberd_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_halberd_06, Reef Axe) via wow.zamimg.com CDN, imported 2026-10-14 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
     "faction_alliance_shield": {
       "path": "assets/art/faction/faction_alliance_shield.png",
       "kind": "faction_art",

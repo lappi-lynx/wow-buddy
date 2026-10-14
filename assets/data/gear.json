@@ -116,7 +116,32 @@
           "label": "12–16",
           "min_level": 12,
           "max_level": 16,
-          "weapons": [],
+          "weapons": [
+            {
+              "name": "Axe of Orgrimmar",
+              "level": 13,
+              "item_id": 15424,
+              "icon_id": "inv_axe_04",
+              "source": "Hidden Enemies (quest chain), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            },
+            {
+              "name": "Hammer of Orgrimmar",
+              "level": 13,
+              "item_id": 15445,
+              "icon_id": "inv_hammer_23",
+              "source": "Hidden Enemies (choice reward), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            },
+            {
+              "name": "Cursed Felblade",
+              "level": 13,
+              "item_id": 14145,
+              "icon_id": "inv_weapon_shortblade_12",
+              "source": "Taragaman the Hungerer, Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            }
+          ],
           "armor": {
             "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
             "source": "Ragefire Chasm loot table (KB 2026-09-17)",
@@ -128,7 +153,32 @@
           "label": "20–24",
           "min_level": 20,
           "max_level": 24,
-          "weapons": [],
+          "weapons": [
+            {
+              "name": "Taskmaster Axe",
+              "level": 18,
+              "item_id": 5194,
+              "icon_id": "inv_throwingaxe_06",
+              "source": "Deviate Eradication (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            },
+            {
+              "name": "Wingblade",
+              "level": 18,
+              "item_id": 6504,
+              "icon_id": "inv_sword_16",
+              "source": "Leaders of the Fang (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            },
+            {
+              "name": "Reef Axe",
+              "level": 22,
+              "item_id": 6905,
+              "icon_id": "inv_weapon_halberd_06",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-14"
+            }
+          ],
           "armor": {
             "text": "Wailing Caverns (15–22, The Barrens)",
             "source": "Wailing Caverns loot table (KB 2026-09-17)",
