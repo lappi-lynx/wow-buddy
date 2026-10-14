@@ -5,6 +5,26 @@ use crate::models::{gear::GearTier, ClassInfo, Faction, RaceInfo};
 use crate::views::race_selector::format_race_display_name;
 use dioxus::prelude::*;
 
+/// What the viewer actually shows. The badge text follows this — it never
+/// reports WebGL capability on its own (we have no 3D models yet).
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ViewerMode {
+    Model3d,
+    PaperDoll,
+    Placeholder,
+}
+
+/// Choose the honest viewer mode from capability + what content exists.
+pub fn choose_mode(webgl_ok: bool, has_model: bool, has_paper_doll: bool) -> ViewerMode {
+    if webgl_ok && has_model {
+        ViewerMode::Model3d
+    } else if has_paper_doll {
+        ViewerMode::PaperDoll
+    } else {
+        ViewerMode::Placeholder
+    }
+}
+
 #[component]
 pub fn ModelViewer(
     current_lang: Signal<Language>,
@@ -17,8 +37,21 @@ pub fn ModelViewer(
 ) -> Element {
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
-    let is_skyborne = race.id == "skyborne";
     let display_race = format_race_display_name(&race, faction);
+
+    // Honest mode: no model and no WebGL detection in this build; a paper-doll
+    // (the class icon) exists for every class, so the badge reads "Preview".
+    let mode = choose_mode(
+        false,
+        false,
+        !class_render_source(&AssetRegistry::load_embedded(), &class.id).is_empty(),
+    );
+    let mode_label = match mode {
+        ViewerMode::Model3d => i18n_svc.t("ui_viewer_3d", lang),
+        ViewerMode::PaperDoll => i18n_svc.t("ui_viewer_preview", lang),
+        ViewerMode::Placeholder => i18n_svc.t("ui_viewer_soon", lang),
+    };
+    let is_3d = mode == ViewerMode::Model3d;
 
     let avatar_glyph = match class.id.as_str() {
         "warrior" => "⚔️",
@@ -50,12 +83,6 @@ pub fn ModelViewer(
     };
 
     let anim_text = i18n_svc.t_with("ui_animation", lang, &[("anim", animation)]);
-    let drag_text = i18n_svc.t("ui_drag_rotate", lang);
-    let art_badge = if is_skyborne {
-        i18n_svc.t("ui_2d_art", lang)
-    } else {
-        i18n_svc.t("ui_webgl_active", lang)
-    };
 
     rsx! {
         div { class: "relative w-full aspect-square max-w-sm sm:max-w-md mx-auto rounded-3xl border-2 bg-gradient-to-b {tier_aura} flex flex-col items-center justify-between p-6 overflow-hidden transition-all duration-300",
@@ -63,14 +90,8 @@ pub fn ModelViewer(
                 span { class: "text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300",
                     "{anim_text}"
                 }
-                if is_skyborne {
-                    span { class: "text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300",
-                        "{art_badge}"
-                    }
-                } else {
-                    span { class: "text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300",
-                        "{art_badge}"
-                    }
+                span { class: "text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300",
+                    "{mode_label}"
                 }
             }
 
@@ -113,8 +134,10 @@ pub fn ModelViewer(
                 }
             }
 
-            div { class: "w-full text-center text-slate-500 text-[11px] uppercase tracking-widest z-10",
-                "{drag_text}"
+            if is_3d {
+                div { class: "w-full text-center text-slate-500 text-[11px] uppercase tracking-widest z-10",
+                    "{i18n_svc.t(\"ui_drag_rotate\", lang)}"
+                }
             }
         }
     }
