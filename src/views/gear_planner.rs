@@ -1,4 +1,6 @@
 use crate::assets::AssetRegistry;
+use crate::components::reference_popover::{item_popover, PopoverData};
+use crate::components::ReferencePopover;
 use crate::i18n::{I18nService, Language};
 use crate::models::gear_planner::{GearBand, GearPlannerData};
 use crate::models::Faction;
@@ -30,6 +32,7 @@ pub fn GearPlannerView(
 ) -> Element {
     let mut level = use_signal(|| 20u8);
     let mut view_faction = use_signal(|| faction);
+    let mut popover = use_signal(|| None::<PopoverData>);
 
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
@@ -139,7 +142,22 @@ pub fn GearPlannerView(
                                                         }
                                                     }
                                                     span { class: "text-amber-500 font-semibold", "Lvl {weapon.level}" }
-                                                    span { class: "font-medium", "{weapon.name}" }
+                                                    {
+                                                        let w_name = weapon.name.clone();
+                                                        let w_icon = weapon.icon_id.clone();
+                                                        let w_source = weapon.source.clone();
+                                                        let reg = registry.clone();
+                                                        rsx! {
+                                                            button {
+                                                                class: "font-medium hover:text-amber-300 cursor-pointer text-left",
+                                                                onclick: move |_| {
+                                                                    let i18n_ref = i18n.read();
+                                                                    popover.set(Some(item_popover(&reg, &i18n_ref, lang, &w_name, w_icon.as_deref(), &w_source)));
+                                                                },
+                                                                "{w_name}"
+                                                            }
+                                                        }
+                                                    }
                                                     span { class: "text-slate-500", "— {weapon.source}" }
                                                 }
                                             }
@@ -151,6 +169,10 @@ pub fn GearPlannerView(
                         }
                     }
                 }
+            }
+
+            if let Some(data) = popover.read().clone() {
+                ReferencePopover { data: data, on_close: move |_| popover.set(None) }
             }
 
             footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6",
