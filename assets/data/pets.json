@@ -1,0 +1,336 @@
+{
+  "sources": {
+    "wowhead_families": {
+      "kind": "wowhead",
+      "path": "docs/wowhead-sources/pets-families.json",
+      "note": "17-family table (name/type/diet) captured 2026-10-14; raw rows + conflicts in the artifact."
+    }
+  },
+  "legends": {
+    "diets": {
+      "meat": {
+        "text_en": "Meat",
+        "text_ru": "Мясо",
+        "text_fi": "Liha"
+      },
+      "fish": {
+        "text_en": "Fish",
+        "text_ru": "Рыба",
+        "text_fi": "Kala"
+      },
+      "cheese": {
+        "text_en": "Cheese",
+        "text_ru": "Сыр",
+        "text_fi": "Juusto"
+      },
+      "bread": {
+        "text_en": "Bread",
+        "text_ru": "Хлеб",
+        "text_fi": "Leipä"
+      },
+      "fungus": {
+        "text_en": "Fungus",
+        "text_ru": "Грибы",
+        "text_fi": "Sienet"
+      },
+      "fruit": {
+        "text_en": "Fruit",
+        "text_ru": "Фрукты",
+        "text_fi": "Hedelmät"
+      },
+      "raw_fish": {
+        "text_en": "Raw Fish",
+        "text_ru": "Сырая рыба",
+        "text_fi": "Raaka kala"
+      }
+    },
+    "types": {
+      "ferocity": {
+        "text_en": "Ferocity",
+        "text_ru": "Свирепость",
+        "text_fi": "Raivoisuus"
+      },
+      "tenacity": {
+        "text_en": "Tenacity",
+        "text_ru": "Стойкость",
+        "text_fi": "Sitkeys"
+      },
+      "cunning": {
+        "text_en": "Cunning",
+        "text_ru": "Хитрость",
+        "text_fi": "Oveluus"
+      }
+    }
+  },
+  "families": [
+    {
+      "id": "cat",
+      "name": "Cat",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat",
+        "fish"
+      ],
+      "note": {
+        "text_en": "Fast attacker; the classic first pet.",
+        "text_ru": "Быстрый хищник; классический первый питомец.",
+        "text_fi": "Nopea hyökkääjä; klassinen ensimmäinen lemmikki."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "pet_type": "tenacity",
+      "diet": [
+        "meat",
+        "fish",
+        "cheese",
+        "bread",
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Tough omnivore that can tank while you shoot.",
+        "text_ru": "Выносливый всеядный: держит удар, пока вы стреляете.",
+        "text_fi": "Sitkeä kaikkiruokainen, joka kestää vahinkoa ampuessasi."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "carrion_bird",
+      "name": "Carrion Bird",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat",
+        "fish"
+      ],
+      "note": {
+        "text_en": "Threat-generating screech and sturdy health.",
+        "text_ru": "Крик пугает врагов и помогает удерживать угрозу; крепкое здоровье.",
+        "text_fi": "Kirkaisu tuottaa uhkaa ja siinä on vankka kestävyys."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat"
+      ],
+      "note": {
+        "text_en": "Speedy melee companion with a bite that hurts.",
+        "text_ru": "Быстрый спутник ближнего боя с ощутимым укусом.",
+        "text_fi": "Nopea lähitaistelukumppani ja tuntuva purenta."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "bird_of_prey",
+      "name": "Bird of Prey",
+      "pet_type": "cunning",
+      "diet": [
+        "meat"
+      ],
+      "note": {
+        "text_en": "Agile flyer from the owl and hawk family.",
+        "text_ru": "Проворный летун из семейства сов и ястребов.",
+        "text_fi": "Kettera lentäjä pöllöjen ja haukkojen heimosta."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "tallstrider",
+      "name": "Tallstrider",
+      "pet_type": "ferocity",
+      "diet": [
+        "cheese",
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Tall runner; fast and easy to feed.",
+        "text_ru": "Высокий бегун; быстрый и нетребовательный в еде.",
+        "text_fi": "Korkea juoksija; nopea ja helppo ruokkia."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "raptor",
+      "name": "Raptor",
+      "pet_type": "cunning",
+      "diet": [
+        "meat"
+      ],
+      "note": {
+        "text_en": "Aggressive damage dealer with strong bites.",
+        "text_ru": "Агрессивный боец с сильными укусами.",
+        "text_fi": "Aggressiivinen vahingontekijä ja voimakas purenta."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "crocolisk",
+      "name": "Crocolisk",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat",
+        "fish"
+      ],
+      "note": {
+        "text_en": "Armored and steady; a patient leveler's pick.",
+        "text_ru": "Бронированный и надёжный; выбор неспешного игрока.",
+        "text_fi": "Panssaroitu ja vakaa; kärsivällisen tasoittajan valinta."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "boar",
+      "name": "Boar",
+      "pet_type": "cunning",
+      "diet": [
+        "meat",
+        "fish",
+        "cheese",
+        "bread",
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Charges the enemy and eats almost anything.",
+        "text_ru": "Бросается в атаку и ест практически всё.",
+        "text_fi": "Ryntää vihollisen kimppuun ja syö lähes mitä vain."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "bat",
+      "name": "Bat",
+      "pet_type": "ferocity",
+      "diet": [
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Flying pest with a handy screech.",
+        "text_ru": "Летающий зверёк с полезным криком.",
+        "text_fi": "Lentävä otus ja kätevä kirkaisu."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "spider",
+      "name": "Spider",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat"
+      ],
+      "note": {
+        "text_en": "Sticky webs slow enemies; bites grow strong.",
+        "text_ru": "Паутина замедляет врагов; укус крепнет с уровнем.",
+        "text_fi": "Verkot hidastavat vihollisia; purenta vahvistuu tasojen myötä."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "wind_serpent",
+      "name": "Wind Serpent",
+      "pet_type": "ferocity",
+      "diet": [
+        "fish",
+        "cheese",
+        "bread"
+      ],
+      "note": {
+        "text_en": "Breathes lightning from range — great against armor.",
+        "text_ru": "Дышит молнией на расстоянии — хорош против брони.",
+        "text_fi": "Iskee salaman kaukaa — oiva panssaroituja vastaan."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "turtle",
+      "name": "Turtle",
+      "pet_type": "tenacity",
+      "diet": [
+        "fish",
+        "fungus",
+        "fruit",
+        "raw_fish"
+      ],
+      "note": {
+        "text_en": "Shelled tank that refuses to die.",
+        "text_ru": "Панцирный танк, который не хочет умирать.",
+        "text_fi": "Kilpinen tankki, joka ei anna periksi."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "hyena",
+      "name": "Hyena",
+      "pet_type": "cunning",
+      "diet": [
+        "meat",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Laughing opportunist with a wicked bite.",
+        "text_ru": "Хохочущий падальщик со злым укусом.",
+        "text_fi": "Naurava tilaisuuden käyttäjä ja ilkeä purenta."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "gorilla",
+      "name": "Gorilla",
+      "pet_type": "ferocity",
+      "diet": [
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Slow, heavy hitter that eats fruit.",
+        "text_ru": "Медленный тяжеловес, который ест фрукты.",
+        "text_fi": "Hidas raskassarjalainen, joka syö hedelmiä."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "scorpid",
+      "name": "Scorpid",
+      "pet_type": "ferocity",
+      "diet": [
+        "meat"
+      ],
+      "note": {
+        "text_en": "Poisons enemies and wears thick armor.",
+        "text_ru": "Отравляет врагов и носит толстую броню.",
+        "text_fi": "Myrkyttää viholliset ja kantaa paksua panssaria."
+      },
+      "source_id": "wowhead_families"
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "pet_type": "tenacity",
+      "diet": [
+        "fish",
+        "bread",
+        "fungus",
+        "fruit"
+      ],
+      "note": {
+        "text_en": "Pinches hard and soaks damage.",
+        "text_ru": "Больно щиплет и хорошо держит урон.",
+        "text_fi": "Puristaa lujaa ja kestää vahinkoa."
+      },
+      "source_id": "wowhead_families"
+    }
+  ],
+  "first_pick": [
+    "cat",
+    "bear",
+    "boar"
+  ]
+}
