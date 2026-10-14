@@ -1,0 +1,39 @@
+{
+  "artifact": "pets-families",
+  "captured": "2026-10-14",
+  "url": "https://www.wowhead.com/forever/hunter-pets",
+  "method": "Browser session (AWS WAF blocks plain HTTP). The families table's tbody rows were read with document.querySelectorAll('table tbody tr'); each row's cells mapped with td.textContent.trim(). Column map used by the reader/tests: td[2]=Name, td[5]=Diet, td[6]=Type. td[0]=beta changelog marker, td[1]=icon, td[3]=Level (empty for families), td[4]=Abilities (empty), td[7]=Pop.",
+  "rows": [
+    ["Unchanged", "", "Cat", "", "", "Meat, Fish", "Ferocity", ""],
+    ["Unchanged", "", "Bear", "", "", "Meat, Fish, Cheese, Bread, Fungus, Fruit", "Tenacity", ""],
+    ["Unchanged", "", "Carrion Bird", "", "", "Meat, Fish", "Ferocity", ""],
+    ["Unchanged", "", "Wolf", "", "", "Meat", "Ferocity", ""],
+    ["UpdatedRenamed", "", "Bird of Prey", "", "", "Meat", "Cunning", ""],
+    ["Unchanged", "", "Tallstrider", "", "", "Cheese, Fungus, Fruit", "Ferocity", ""],
+    ["Unchanged", "", "Raptor", "", "", "Meat", "Cunning", ""],
+    ["Unchanged", "", "Crocolisk", "", "", "Meat, Fish", "Ferocity", ""],
+    ["Unchanged", "", "Boar", "", "", "Meat, Fish, Cheese, Bread, Fungus, Fruit", "Cunning", ""],
+    ["Unchanged", "", "Bat", "", "", "Fungus, Fruit", "Ferocity", ""],
+    ["Unchanged", "", "Spider", "", "", "Meat", "Ferocity", ""],
+    ["Unchanged", "", "Wind Serpent", "", "", "Fish, Cheese, Bread", "Ferocity", ""],
+    ["Unchanged", "", "Turtle", "", "", "Fish, Fungus, Fruit, Raw Fish", "Tenacity", ""],
+    ["Unchanged", "", "Hyena", "", "", "Meat, Fruit", "Cunning", ""],
+    ["Unchanged", "", "Gorilla", "", "", "Fungus, Fruit", "Ferocity", ""],
+    ["Unchanged", "", "Scorpid", "", "", "Meat", "Ferocity", ""],
+    ["Unchanged", "", "Crab", "", "", "Fish, Bread, Fungus, Fruit", "Tenacity", ""]
+  ],
+  "conflicts": {
+    "type_system": "A KB answer (2026-10-14) claimed the Ferocity/Tenacity/Cunning system does not exist in 1.60.1; this DB table has a Type column with exactly those values. The DB wins; the KB reading is recorded in docs/kb-sources/pets.md.",
+    "owl_rename": "The classic Owl family appears here as 'Bird of Prey' with an 'Updated Renamed' beta changelog marker; a KB answer read the client family name as 'Owl'. The DB plus its beta changelog marker win.",
+    "kb_diet_deltas": "The KB's diets differ from this table for Crab (KB lacks Fruit), Turtle (this table adds 'Raw Fish') and Wind Serpent (order differs). The shipped data uses this table; diets are compared as sets because source order is not meaningful."
+  },
+  "spell_checks": [
+    {
+      "name": "Feed Pet",
+      "id": 6991,
+      "url": "https://www.wowhead.com/forever/spell=6991/feed-pet",
+      "tooltip": "Feed your pet the selected item. Feeding your pet increases happiness. Using food close to the pet's level will have a better result.",
+      "note": "The client tooltip states no duration. A KB/video source says the happiness effect lasts 15 seconds (a plan reviewer recalled ~20). Because the client does not state a duration, the UI claims none; this record is the cross-check trail."
+    }
+  ]
+}
