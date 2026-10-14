@@ -68,6 +68,10 @@ To build the site (artifacts under `target/dx/wow-buddy/release/web/public`):
 ```bash
 dx build --platform web --release
 ```
+> Serve the **release** build for manual passes. A *debug* static build
+> (`dx build --platform web` without `--release`) embeds the dev-server
+> toast/hot-reload client and shows "Your app is being rebuilt" when served
+> by a static file server; it is only usable under `dx serve`.
 
 To produce a shippable web bundle:
 ```bash
@@ -123,14 +127,18 @@ When testing manually, verify the following core features:
 - Check that Skyborne is displayed as **High Order Skyborne** (Alliance) or **Windshaper Skyborne** (Horde).
 - Review the Lore Philosophy card, racial ability (`Every Man for Himself`, `Shadowmeld`, `Stoneform`, `Walk on Air`, etc.), and class badges.
 
-### 4. Screen 3: 3D Dressing Room & Gear Evolution
+### 4. Screen 3: Dressing Room & Gear Evolution
 - Test the 4 animation buttons: `[🛡️ Stand]`, `[⚔️ Attack]`, `[✨ Cast]`, `[🕺 Dance]`.
+- The viewer badge must tell the truth: **Preview** (paper-doll art) today — never "3D" until a real model exists. "Drag to rotate" only shows in 3D mode.
 - Move the gear slider between 1, 20, 40, and 60 levels:
   - **Lvl 1:** Starter traveler's cloth & club.
   - **Lvl 20:** Early dungeon set.
   - **Lvl 40:** Heavy plate & elite armor.
-  - **Lvl 60:** Legendary raid Tier 2.
-- Verify the Novice Card displays exactly 3 signature class spells with beginner-friendly explanations.
+  - **Lvl 60:** Top-level raid armor.
+- Off-anchor levels (e.g. 38) show a snap label — "Level 38 (Heavy Plate)" — and the viewer caption uses the same anchors (ties snap upward).
+- **What unlocks around here:** milestone chips within ±5 levels (first dungeon, talents, Legacy at 25...) plus a "Next unlock" line; rows past 30 carry the "Beta, may change" tag.
+- **Novice Card:** exactly 3 signature class spells. Spells above the selected level show an "Unlocks at level N" chip — a level-1 warrior has only Heroic Strike.
+- **Terminology:** tap any jargon chip (Tank, Aggro, Respec, Need / Greed...) to open the explanation popover; check it in EN, RU, and FI.
 
 ### 5. Screen 4: Progression Guide & 16 Legacy Points
 - Check the 1–6 level checklist for your race's starter zone (e.g. Northshire Valley, Valley of Trials, Zephras Isle).
@@ -149,7 +157,7 @@ When testing manually, verify the following core features:
   - Choosing **Need (Swords)** alerts about ninja-looting risks in group play.
 
 ### 7. Persistent Bottom Navigation Bar
-- Tap `[🛡️ Dressing Room]`, `[🧭 Progression]`, `[🏰 Dungeons]` on the bottom bar at any time.
+- Tap `[🛡️ Gear]`, `[🧭 Progression]`, `[🏰 Dungeons]` on the bottom bar at any time.
 - Verify your selected hero, race, and faction context are preserved when switching tabs.
 - Verify UI does not horizontally scroll or clip on narrow screen viewports (< 400px width).
 
@@ -158,3 +166,4 @@ When testing manually, verify the following core features:
 - In the Gear Planner, tap a weapon name — the panel shows its icon (when one exists) and the source line; generic items like "starter club" open without a picture.
 - Close popovers via the ✕ or by tapping the backdrop.
 - Open **ⓘ About & Legal** from the footer of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
+- Every footer reads **Works offline** (not "100% offline"): the app is offline-first and may fetch optional updates.
