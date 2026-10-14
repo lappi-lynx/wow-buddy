@@ -29,7 +29,7 @@ pub fn BottomNav(
     ];
 
     rsx! {
-        nav { class: "fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 border-t border-slate-800/90 backdrop-blur-md px-3 py-2 flex justify-around items-center max-w-lg mx-auto shadow-2xl rounded-t-2xl sm:rounded-none",
+        nav { class: "fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 border-t border-slate-800/90 backdrop-blur-md px-3 py-2 flex justify-around items-center max-w-lg mx-auto shadow-2xl rounded-t-2xl sm:rounded-none",
             for (tab, icon, label) in tabs {
                 {
                     let is_active = active_tab == tab;
