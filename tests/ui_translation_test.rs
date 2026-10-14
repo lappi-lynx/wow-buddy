@@ -1,4 +1,66 @@
+use std::collections::{BTreeSet, HashMap};
+
 use wow_buddy::i18n::{I18nService, Language};
+
+fn dict(raw: &str) -> HashMap<String, String> {
+    serde_json::from_str(raw).expect("locale json must parse")
+}
+
+/// `{name}` placeholder tokens found in a template string.
+fn placeholders(s: &str) -> BTreeSet<String> {
+    let mut out = BTreeSet::new();
+    let mut rest = s;
+    while let Some(start) = rest.find('{') {
+        if let Some(end) = rest[start..].find('}') {
+            let tok = &rest[start..start + end + 1];
+            if tok.len() < 40 && !tok.contains(' ') {
+                out.insert(tok.to_string());
+            }
+            rest = &rest[start + end + 1..];
+        } else {
+            break;
+        }
+    }
+    out
+}
+
+/// Every EN key must exist non-empty in RU/FI, must not echo its own key, and
+/// must keep every `{placeholder}` token the EN template uses.
+#[test]
+fn test_locales_are_complete_against_english() {
+    let en = dict(include_str!("../assets/i18n/en.json"));
+    let ru = dict(include_str!("../assets/i18n/ru.json"));
+    let fi = dict(include_str!("../assets/i18n/fi.json"));
+
+    let mut missing = vec![];
+    let mut placeholder_gaps = vec![];
+    for (key, en_val) in &en {
+        for (name, d) in [("ru", &ru), ("fi", &fi)] {
+            match d.get(key) {
+                None => missing.push(format!("{name}: {key}")),
+                Some(v) => {
+                    if v.trim().is_empty() {
+                        missing.push(format!("{name}: {key} (empty)"));
+                    }
+                    if v == key {
+                        missing.push(format!("{name}: {key} (echoes key)"));
+                    }
+                    for tok in placeholders(en_val) {
+                        if !v.contains(&tok) {
+                            placeholder_gaps.push(format!("{name}: {key} missing {tok}"));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    assert!(missing.is_empty(), "missing keys:\n{}", missing.join("\n"));
+    assert!(
+        placeholder_gaps.is_empty(),
+        "placeholder gaps:\n{}",
+        placeholder_gaps.join("\n")
+    );
+}
 
 #[test]
 fn test_complete_ui_labels_translation() {
