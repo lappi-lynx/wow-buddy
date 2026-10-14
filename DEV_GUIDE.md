@@ -151,3 +151,9 @@ When testing manually, verify the following core features:
 - Tap `[🛡️ Dressing Room]`, `[🧭 Progression]`, `[🏰 Dungeons]` on the bottom bar at any time.
 - Verify your selected hero, race, and faction context are preserved when switching tabs.
 - Verify UI does not horizontally scroll or clip on narrow screen viewports (< 400px width).
+
+### 8. Reference Popovers & About/Legal
+- On the Progression screen, tap the first-quest NPC name (e.g. **Marshal McBride**) — a panel opens with the KB-verified zone/subzone; the NPC name stays English in all locales (only the sentence around it is translated).
+- In the Gear Planner, tap a weapon name — the panel shows its icon (when one exists) and the source line; generic items like "starter club" open without a picture.
+- Close popovers via the ✕ or by tapping the backdrop.
+- Open **ⓘ About & Legal** from the footer of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
