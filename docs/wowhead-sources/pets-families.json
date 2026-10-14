@@ -23,8 +23,8 @@
     ["Unchanged", "", "Crab", "", "", "Fish, Bread, Fungus, Fruit", "Tenacity", ""]
   ],
   "conflicts": {
-    "type_system": "A KB answer (2026-10-14) claimed the Ferocity/Tenacity/Cunning system does not exist in 1.60.1; this DB table has a Type column with exactly those values. The DB wins; the KB reading is recorded in docs/kb-sources/pets.md.",
-    "owl_rename": "The classic Owl family appears here as 'Bird of Prey' with an 'Updated Renamed' beta changelog marker; a KB answer read the client family name as 'Owl'. The DB plus its beta changelog marker win.",
+    "type_system": "KB answers (2026-10-14, three sessions including fresh 9f2a4341) claimed the Ferocity/Tenacity/Cunning system does not exist in 1.60.1; this DB table has a Type column with exactly those values. The DB wins; the KB reading is recorded in docs/kb-sources/pets.md.",
+    "owl_rename": "The classic Owl family appears here as 'Bird of Prey' with an 'Updated Renamed' beta changelog marker; three KB sessions (incl. fresh 9a7c9a9c) read the client family name as 'Owl'. The DB plus its beta changelog marker win; the disagreement is unresolved by consensus and resolved by evidence.",
     "kb_diet_deltas": "The KB's diets differ from this table for Crab (KB lacks Fruit), Turtle (this table adds 'Raw Fish') and Wind Serpent (order differs). The shipped data uses this table; diets are compared as sets because source order is not meaningful."
   },
   "spell_checks": [
@@ -33,7 +33,7 @@
       "id": 6991,
       "url": "https://www.wowhead.com/forever/spell=6991/feed-pet",
       "tooltip": "Feed your pet the selected item. Feeding your pet increases happiness. Using food close to the pet's level will have a better result.",
-      "note": "The client tooltip states no duration. A KB/video source says the happiness effect lasts 15 seconds (a plan reviewer recalled ~20). Because the client does not state a duration, the UI claims none; this record is the cross-check trail."
+      "note": "Two independent checks disagree on whether the client states a duration: the rendered Wowhead spell-page tooltip (browser, 2026-10-14) shows none, while the fresh KB session 9f2a4341 says 'the client tooltip and buff icon state a duration of 15 seconds' (the original video source also said 15 s; a plan reviewer recalled ~20 s). The UI therefore claims no duration; this record is the cross-check trail."
     }
   ]
 }

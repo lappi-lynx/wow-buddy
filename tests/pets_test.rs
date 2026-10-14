@@ -128,3 +128,69 @@ fn first_picks_are_real_families() {
         assert!(ids.contains(pick.as_str()), "unknown first pick {pick}");
     }
 }
+
+#[test]
+fn tame_basics_lead_with_the_level_10_unlock() {
+    let data = PetsData::load_embedded();
+    assert_eq!(data.basics[0].id, "unlock_tame_beast");
+    assert_eq!(data.basics[0].level_at, Some(10));
+    let ids: Vec<&str> = data.basics.iter().map(|b| b.id.as_str()).collect();
+    for want in ["feed_pet", "happiness", "loyalty", "mend_pet", "stables"] {
+        assert!(ids.contains(&want), "missing basic {want}");
+    }
+    let mend = data.basics.iter().find(|b| b.id == "mend_pet").unwrap();
+    assert_eq!(mend.level_at, Some(12));
+    for b in &data.basics {
+        assert_localized(&b.title, &format!("basic {} title", b.id));
+        assert_localized(&b.body, &format!("basic {} body", b.id));
+    }
+}
+
+#[test]
+fn notable_pets_are_in_bracket_with_known_homes() {
+    let data = PetsData::load_embedded();
+    let family_ids: BTreeSet<&str> = data.families.iter().map(|f| f.id.as_str()).collect();
+    let mut last = 0u8;
+    for p in &data.notable {
+        assert!((10..=30).contains(&p.min_level), "{} level {}", p.name, p.min_level);
+        assert!(p.min_level >= last, "{} out of order", p.name);
+        last = p.min_level;
+        assert!(family_ids.contains(p.family_id.as_str()), "{} unknown family", p.name);
+        assert_localized(&p.why, &format!("{} why", p.name));
+        assert_localized(&p.where_hint, &format!("{} where", p.name));
+    }
+    for (name, zone) in [
+        ("The Rake", "Mulgore"),
+        ("Savannah Patriarch", "The Barrens"),
+        ("Greater Flesh Ripper", "Westfall"),
+        ("Giant Grizzled Bear", "Silverpine Forest"),
+        ("Leech Widow", "Wetlands"),
+        ("Cloud Serpent", "Thousand Needles"),
+    ] {
+        let p = data.notable.iter().find(|p| p.name == name).unwrap_or_else(|| panic!("missing {name}"));
+        assert!(p.where_hint.get(Language::En).contains(zone), "{name} in {zone}");
+    }
+}
+
+#[test]
+fn warlock_minions_cover_1_to_30() {
+    let data = PetsData::load_embedded();
+    let got: Vec<(&str, u8)> = data.minions.iter().map(|m| (m.name.as_str(), m.learned_at)).collect();
+    for want in [("Imp", 1), ("Voidwalker", 10), ("Succubus", 20), ("Felhunter", 30)] {
+        assert!(got.contains(&want), "missing minion {want:?}");
+    }
+    for m in &data.minions {
+        assert_localized(&m.role, &format!("minion {} role", m.name));
+    }
+}
+
+#[test]
+fn companion_card_teaches_vanity_pets() {
+    let data = PetsData::load_embedded();
+    let c = data.companion.as_ref().expect("companion card present");
+    assert_localized(&c.title, "companion title");
+    assert_localized(&c.body, "companion body");
+    let en = c.body.get(Language::En);
+    assert!(en.contains("Westfall") && en.contains("Mechanical Squirrel"), "needs concrete examples");
+    assert!(!en.to_lowercase().contains("fish"), "fishing is not a companion source (KB-corrected)");
+}

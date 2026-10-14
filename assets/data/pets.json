@@ -4,6 +4,11 @@
       "kind": "wowhead",
       "path": "docs/wowhead-sources/pets-families.json",
       "note": "17-family table (name/type/diet) captured 2026-10-14; raw rows + conflicts in the artifact."
+    },
+    "kb_pets": {
+      "kind": "kb",
+      "path": "docs/kb-sources/pets.md",
+      "note": "Tame basics, notable pets, warlock minions and companion pets; KB sessions 2026-10-14."
     }
   },
   "legends": {
@@ -332,5 +337,257 @@
     "cat",
     "bear",
     "boar"
-  ]
+  ],
+  "basics": [
+    {
+      "id": "unlock_tame_beast",
+      "level_at": 10,
+      "title": {
+        "text_en": "Tame Beast (level 10)",
+        "text_ru": "Приручение зверя (10 уровень)",
+        "text_fi": "Tame Beast (taso 10)"
+      },
+      "body": {
+        "text_en": "Finish the hunter trainer's quest chain to learn Tame Beast, Call Pet, Dismiss Pet, Feed Pet and Revive Pet; the pet trainer and stable master open with it.",
+        "text_ru": "Пройдите цепочку заданий классового тренера охотника, чтобы выучить Tame Beast, Call Pet, Dismiss Pet, Feed Pet и Revive Pet; вместе с ними откроются тренер питомцев и смотритель стойл.",
+        "text_fi": "Suorita metsästäjän kouluttajan tehtäväketju ja opit Tame Beast, Call Pet, Dismiss Pet, Feed Pet sekä Revive Pet; samalla avautuvat lemmikkikouluttaja ja tallimestari."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "feed_pet",
+      "level_at": 10,
+      "title": {
+        "text_en": "Feeding",
+        "text_ru": "Кормление",
+        "text_fi": "Ruokinta"
+      },
+      "body": {
+        "text_en": "Use Feed Pet with food matching the family's diet. Happiness recovers over the effect's duration — let it finish before feeding again.",
+        "text_ru": "Используйте Feed Pet с едой из рациона семейства. Счастье питомца восстанавливается, пока действует эффект — дождитесь его окончания, прежде чем кормить снова.",
+        "text_fi": "Käytä Feed Pet -kykyä heimon ruokavalion mukaiseen ruokaan. Onnellisuus palautuu vaikutuksen keston ajan — odota, että se päättyy, ennen kuin ruokit uudelleen."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "happiness",
+      "title": {
+        "text_en": "Happiness",
+        "text_ru": "Настроение",
+        "text_fi": "Onnellisuus"
+      },
+      "body": {
+        "text_en": "Green face: full damage and fastest loyalty. Yellow: normal damage. Red: reduced damage and loyalty drains — left red too long, the pet abandons you.",
+        "text_ru": "Зелёная мордочка: полный урон и самый быстрый рост лояльности. Жёлтая: обычный урон. Красная: сниженный урон и падение лояльности — если питомец долго голоден, он может убежать.",
+        "text_fi": "Vihreä naama: täysi vahinko ja nopein lojaalius. Keltainen: normaali vahinko. Punainen: heikompi vahinko ja lojaalius laskee — liian kauan punaisena ja lemmikki karkaa."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "loyalty",
+      "title": {
+        "text_en": "Loyalty",
+        "text_ru": "Лояльность",
+        "text_fi": "Lojaalius"
+      },
+      "body": {
+        "text_en": "Six loyalty levels: Rebellious, Unruly, Submissive, Dependable, Faithful, Best Friend. Fighting while green earns points, and each level grants pet training points.",
+        "text_ru": "Шесть уровней лояльности: Rebellious, Unruly, Submissive, Dependable, Faithful, Best Friend. Бои при зелёном настроении приносят очки, и каждый уровень даёт очки тренировки питомца.",
+        "text_fi": "Kuusi lojaaliustasoa: Rebellious, Unruly, Submissive, Dependable, Faithful, Best Friend. Taistelu vihreänä kartuttaa pisteitä, ja jokainen taso antaa lemmikin koulutuspisteitä."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "mend_pet",
+      "level_at": 12,
+      "title": {
+        "text_en": "Revive & Mend",
+        "text_ru": "Воскрешение и лечение",
+        "text_fi": "Herätys ja parannus"
+      },
+      "body": {
+        "text_en": "Revive Pet brings a fallen pet back (learned with Tame Beast); Mend Pet is a channeled heal you learn at level 12 — use it to save food.",
+        "text_ru": "Revive Pet возвращает павшего питомца (учится вместе с Tame Beast); Mend Pet — каналируемое лечение, которое открывается на 12 уровне; оно экономит еду.",
+        "text_fi": "Revive Pet palauttaa kaatuneen lemmikin (opitaan Tame Beastin kanssa); Mend Pet on kanavoitu parannus, jonka opit tasolla 12 — säästät ruokaa."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "stables",
+      "title": {
+        "text_en": "Stables",
+        "text_ru": "Стойла",
+        "text_fi": "Tallit"
+      },
+      "body": {
+        "text_en": "Keep three pets: one active and two stabled. Extra stable slots cost silver at first, then gold.",
+        "text_ru": "Можно держать трёх питомцев: один активный и два в стойле. Дополнительные ячейки стоят сначала серебро, потом золото.",
+        "text_fi": "Voit pitää kolmea lemmikkiä: yksi aktiivinen ja kaksi tallissa. Lisätallipaikat maksavat ensin hopeaa, sitten kultaa."
+      },
+      "source_id": "kb_pets"
+    }
+  ],
+  "notable": [
+    {
+      "id": "the_rake",
+      "name": "The Rake",
+      "family_id": "cat",
+      "min_level": 10,
+      "where_hint": {
+        "text_en": "Mulgore — rare spawn",
+        "text_ru": "Mulgore — редкий противник",
+        "text_fi": "Mulgore — harvinainen"
+      },
+      "why": {
+        "text_en": "Unusually fast attacks make it a top early pet.",
+        "text_ru": "Необычно быстрые атаки делают его лучшим ранним питомцем.",
+        "text_fi": "Tavallista nopeammat hyökkäykset tekevät siitä huippuluokan varhaisen lemmikin."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "giant_grizzled_bear",
+      "name": "Giant Grizzled Bear",
+      "family_id": "bear",
+      "min_level": 12,
+      "where_hint": {
+        "text_en": "Silverpine Forest (also Black Bear Patriarch, Loch Modan / Ashenvale, 16)",
+        "text_ru": "Silverpine Forest (а также Black Bear Patriarch, Loch Modan / Ashenvale, 16)",
+        "text_fi": "Silverpine Forest (myös Black Bear Patriarch, Loch Modan / Ashenvale, 16)"
+      },
+      "why": {
+        "text_en": "Teaches Swipe early and stays durable; bears can also teach Claw at 16.",
+        "text_ru": "Рано учит Swipe и остаётся выносливым; медведи также учат Claw на 16 уровне.",
+        "text_fi": "Opettaa varhain Swipen ja kestää hyvin; karhut opettavat myös Clawin tasolla 16."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "savannah_patriarch",
+      "name": "Savannah Patriarch",
+      "family_id": "cat",
+      "min_level": 15,
+      "where_hint": {
+        "text_en": "The Barrens",
+        "text_ru": "The Barrens",
+        "text_fi": "The Barrens"
+      },
+      "why": {
+        "text_en": "The reliable fast cat if The Rake is taken.",
+        "text_ru": "Надёжный быстрый кот, если The Rake уже занят.",
+        "text_fi": "Luotettava nopea kissa, jos The Rake on varattu."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "greater_flesh_ripper",
+      "name": "Greater Flesh Ripper",
+      "family_id": "carrion_bird",
+      "min_level": 16,
+      "where_hint": {
+        "text_en": "Westfall",
+        "text_ru": "Westfall",
+        "text_fi": "Westfall"
+      },
+      "why": {
+        "text_en": "Teaches Screech — threat and an attack-power debuff, ideal for solo play.",
+        "text_ru": "Учит Screech — угроза и снижение силы атаки врагов, идеален для одиночной игры.",
+        "text_fi": "Opettaa Screechin — uhkaa ja hyökkäysvoiman heikennystä, ihanteellinen yksinpeluuseen."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "leech_widow",
+      "name": "Leech Widow",
+      "family_id": "spider",
+      "min_level": 24,
+      "where_hint": {
+        "text_en": "Wetlands",
+        "text_ru": "Wetlands",
+        "text_fi": "Wetlands"
+      },
+      "why": {
+        "text_en": "Teaches a stronger Bite rank — a damage jump at 24.",
+        "text_ru": "Учит более сильному рангу Bite — скачок урона на 24 уровне.",
+        "text_fi": "Opettaa vahvemman Biten — vahinkoloikka tasolla 24."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "cloud_serpent",
+      "name": "Cloud Serpent",
+      "family_id": "wind_serpent",
+      "min_level": 25,
+      "where_hint": {
+        "text_en": "Thousand Needles",
+        "text_ru": "Thousand Needles",
+        "text_fi": "Thousand Needles"
+      },
+      "why": {
+        "text_en": "Teaches a stronger Lightning Breath; ranged Nature damage ignores armor.",
+        "text_ru": "Учит более сильному Lightning Breath; дальний урон от магии природы игнорирует броню.",
+        "text_fi": "Opettaa vahvemman Lightning Breathin; kaukovahinko luonnonmagialla ohittaa panssarin."
+      },
+      "source_id": "kb_pets"
+    }
+  ],
+  "minions": [
+    {
+      "id": "imp",
+      "name": "Imp",
+      "learned_at": 1,
+      "role": {
+        "text_en": "Ranged fire damage plus Blood Pact stamina for the party — the safe default.",
+        "text_ru": "Дальний огненный урон и Blood Pact — запас здоровья для группы; безопасный выбор по умолчанию.",
+        "text_fi": "Kaukotulivahinko ja Blood Pact -lisäkestävyys ryhmälle — turvallinen oletus."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "voidwalker",
+      "name": "Voidwalker",
+      "learned_at": 10,
+      "role": {
+        "text_en": "Your tank: Torment and Suffering hold aggro while you cast, and Sacrifice shields you.",
+        "text_ru": "Ваш танк: Torment и Suffering держат угрозу, пока вы колдуете, а Sacrifice даёт вам щит.",
+        "text_fi": "Tankkisi: Torment ja Suffering pitävät uhan loitsiessasi, ja Sacrifice antaa sinulle suojan."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "succubus",
+      "name": "Succubus",
+      "learned_at": 20,
+      "role": {
+        "text_en": "Highest melee damage of your demons; Seduction takes one enemy out of the fight.",
+        "text_ru": "Самый высокий урон в ближнем бою среди демонов; Seduction выводит одного врага из боя.",
+        "text_fi": "Demoneistasi suurin lähitaisteluvahinko; Seduction poistaa yhden vihollisen pelistä."
+      },
+      "source_id": "kb_pets"
+    },
+    {
+      "id": "felhunter",
+      "name": "Felhunter",
+      "learned_at": 30,
+      "role": {
+        "text_en": "Anti-caster: Spell Lock silences, Devour Magic dispels, Paranoia spots stealth.",
+        "text_ru": "Анти-кастер: Spell Lock сбивает и запирает заклинания, Devour Magic снимает эффекты, Paranoia раскрывает незаметность.",
+        "text_fi": "Loitsun torjuja: Spell Lock vaientaa, Devour Magic poistaa tehosteita, Paranoia paljastaa piiloutumisen."
+      },
+      "source_id": "kb_pets"
+    }
+  ],
+  "companion": {
+    "title": {
+      "text_en": "Companion pets",
+      "text_ru": "Питомцы-спутники",
+      "text_fi": "Seuralemmistöt"
+    },
+    "body": {
+      "text_en": "Every class can collect cosmetic companions — they never fight and take no pet slot. City vendors sell cats, owls, snakes, rabbits and parrots; quests (the Westfall chicken), Engineering (Mechanical Squirrel) and rare world drops add more.",
+      "text_ru": "Любой класс может собирать декоративных спутников — они не сражаются и не занимают слот питомца. Городские торговцы продают кошек, сов, змей, кроликов и попугаев; квесты (вестфолльская курица), инженерное дело (Mechanical Squirrel) и редкие находки в мире добавляют остальных.",
+      "text_fi": "Mikä tahansa luokka voi kerätä koristeellisia seuralaisia — ne eivät taistele eivätkä vie lemmikkipaikkaa. Kaupunkikauppiaat myyvät kissoja, pöllöjä, käärmeitä, kaneja ja papukaijoja; tehtävät (Westfallin kana), insinöörityö (Mechanical Squirrel) ja harvinaiset maailmanpudotukset tuovat lisää."
+    },
+    "source_id": "kb_pets"
+  }
 }
