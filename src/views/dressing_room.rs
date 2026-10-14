@@ -3,6 +3,7 @@ use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelVie
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     gear::{get_tier_for_level, nearest_anchor, tier_short_key, GearTier},
+    milestones::{milestones_around, next_milestone},
     ClassInfo, Faction, RaceInfo,
 };
 use dioxus::prelude::*;
@@ -190,6 +191,30 @@ pub fn DressingRoomView(
                             class: "hover:text-amber-400 cursor-pointer",
                             onclick: move |_| selected_level.set(60),
                             "Lvl 60"
+                        }
+                    }
+                }
+
+                // "What unlocks around here" + next unlock
+                div { class: "w-full max-w-lg bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
+                    div { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider",
+                        "{i18n.read().t(\"ui_unlocks_around\", lang)}"
+                    }
+                    div { class: "flex flex-wrap gap-2",
+                        for m in milestones_around(level_now, 5) {
+                            span {
+                                key: "{m.level}",
+                                class: "text-xs px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200",
+                                "{i18n.read().t(m.key, lang)}"
+                                if !m.verified {
+                                    span { class: "text-amber-400/80", " · {i18n.read().t(\"ui_beta_may_change\", lang)}" }
+                                }
+                            }
+                        }
+                    }
+                    if let Some(next) = next_milestone(level_now) {
+                        p { class: "text-xs text-amber-300",
+                            "{i18n.read().t_with(\"ui_next_unlock\", lang, &[(\"level\", next.level.to_string())])} — {i18n.read().t(next.key, lang)}"
                         }
                     }
                 }
