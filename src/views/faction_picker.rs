@@ -8,6 +8,7 @@ use dioxus::prelude::*;
 pub fn FactionPickerView(
     current_lang: Signal<Language>,
     i18n: Signal<I18nService>,
+    on_open_about: EventHandler<()>,
     on_faction_selected: EventHandler<Faction>,
 ) -> Element {
     let lang = *current_lang.read();
@@ -70,8 +71,13 @@ pub fn FactionPickerView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl text-center py-4 text-xs text-slate-600 border-t border-slate-900 mt-6",
+            footer { class: "w-full max-w-5xl text-center py-4 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
                 "{i18n_svc.t(\"footer_offline\", lang)}"
+                button {
+                    class: "text-slate-500 hover:text-amber-300 cursor-pointer",
+                    onclick: move |_| on_open_about.call(()),
+                    "{i18n_svc.t(\"btn_about\", lang)}"
+                }
             }
         }
     }

@@ -4,8 +4,8 @@ use crate::models::{Faction, GameData, RaceInfo};
 use crate::selection::{effective_class_id, SelectionState};
 use crate::styles::APP_CSS;
 use crate::views::{
-    DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView, ProgressionGuideView,
-    RaceSelectorView,
+    AboutView, DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView,
+    ProgressionGuideView, RaceSelectorView,
 };
 use dioxus::prelude::*;
 use dioxus::document as document;
@@ -24,6 +24,8 @@ pub enum Route {
     DungeonCodex {},
     #[route("/gear")]
     GearPlanner {},
+    #[route("/about")]
+    About {},
 }
 
 /// Root application shell maintaining character state across views.
@@ -83,6 +85,7 @@ pub fn App() -> Element {
                     FactionPickerView {
                         current_lang: current_lang,
                         i18n: i18n,
+                        on_open_about: move |_| current_route.set(Route::About {}),
                         on_faction_selected: move |f: Faction| {
                             let current = SelectionState {
                                 faction: *selected_faction.read(),
@@ -170,6 +173,13 @@ pub fn App() -> Element {
                         on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
+                Route::About {} => rsx! {
+                    AboutView {
+                        current_lang: current_lang,
+                        i18n: i18n,
+                        on_back: move |_| current_route.set(Route::FactionPicker {}),
+                    }
+                },
             }
 
             if let Some(tab) = active_tab {
@@ -212,5 +222,10 @@ fn DungeonCodex() -> Element {
 
 #[component]
 fn GearPlanner() -> Element {
+    rsx! { div {} }
+}
+
+#[component]
+fn About() -> Element {
     rsx! { div {} }
 }
