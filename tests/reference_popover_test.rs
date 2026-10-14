@@ -67,3 +67,22 @@ fn test_item_popover_without_icon_still_opens() {
         popover.lines
     );
 }
+
+#[test]
+fn test_item_popover_unknown_icon_falls_back_to_none() {
+    let reg = AssetRegistry::load_embedded();
+    let i18n = I18nService::load_embedded();
+    let popover = item_popover(
+        &reg,
+        &i18n,
+        Language::En,
+        "Test Item",
+        Some("nonexistent_icon"),
+        "Vendor",
+    );
+    assert!(
+        popover.icon.is_none(),
+        "unknown icon ids must not surface the glyph fallback as an image"
+    );
+    assert!(popover.lines.iter().any(|l| l.contains("Vendor")));
+}

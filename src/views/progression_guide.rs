@@ -130,16 +130,20 @@ pub fn ProgressionGuideView(
                             p { class: "text-xs sm:text-sm text-slate-300 leading-relaxed",
                                 span { "{first_quest_before}" }
                                 if let Some(npc_id) = clickable_npc.clone() {
-                                    button {
-                                        class: "font-semibold text-amber-300 hover:text-amber-200 cursor-pointer underline decoration-dotted underline-offset-2",
-                                        onclick: move |_| {
-                                            let book = NpcBook::load_embedded();
-                                            let i18n_ref = i18n.read();
-                                            if let Some(data) = npc_popover(&book, &i18n_ref, lang, &npc_id) {
-                                                popover.set(Some(data));
+                                    {
+                                        let book = npc_book.clone();
+                                        rsx! {
+                                            button {
+                                                class: "font-semibold text-amber-300 hover:text-amber-200 cursor-pointer underline decoration-dotted underline-offset-2",
+                                                onclick: move |_| {
+                                                    let i18n_ref = i18n.read();
+                                                    if let Some(data) = npc_popover(&book, &i18n_ref, lang, &npc_id) {
+                                                        popover.set(Some(data));
+                                                    }
+                                                },
+                                                "{zone.starting_npc}"
                                             }
-                                        },
-                                        "{zone.starting_npc}"
+                                        }
                                     }
                                 } else {
                                     span { "{zone.starting_npc}" }
