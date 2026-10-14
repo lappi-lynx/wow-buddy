@@ -6,7 +6,7 @@ use crate::models::{
     gear::{get_tier_for_level, nearest_anchor, tier_short_key},
     glossary::TERMS,
     milestones::{milestones_around, next_milestone},
-    pets::{pet_card_kind, PetCardKind},
+    pets::{pet_card_kind, PetCardKind, PetsData},
     ClassInfo, Faction, RaceInfo,
 };
 use dioxus::prelude::*;
@@ -326,6 +326,7 @@ pub fn DressingRoomView(
                 // Pets entry card — hunter/warlock/companion variant
                 {
                     let kind = pet_card_kind(&class.id);
+                    let tame_level = PetsData::load_embedded().basics.first().and_then(|b| b.level_at);
                     let (title_key, body_key) = match kind {
                         PetCardKind::Hunter => ("ui_pets_card_hunter", "ui_pets_card_hunter_body"),
                         PetCardKind::Warlock => ("ui_pets_card_warlock", "ui_pets_card_warlock_body"),
@@ -335,9 +336,11 @@ pub fn DressingRoomView(
                         div { class: "w-full max-w-lg bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
                             div { class: "flex items-center justify-between",
                                 span { class: "text-sm font-bold text-amber-300", "🐾 {i18n.read().t(title_key, lang)}" }
-                                if kind == PetCardKind::Hunter && level_now < 10 {
-                                    span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
-                                        "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", \"10\".to_string())])}"
+                                if kind == PetCardKind::Hunter {
+                                    if let Some(lvl) = tame_level.filter(|l| level_now < *l) {
+                                        span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
+                                            "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", lvl.to_string())])}"
+                                        }
                                     }
                                 }
                             }

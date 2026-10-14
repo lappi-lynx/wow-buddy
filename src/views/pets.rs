@@ -85,10 +85,10 @@ pub fn PetsView(
                                             }
                                             div { class: "flex flex-col items-end shrink-0 ml-3",
                                                 span { class: "text-[10px] uppercase tracking-wider text-slate-400",
-                                                    "{data.legends.types.get(f.pet_type.as_str()).map(|t| t.get(lang).to_string()).unwrap_or_default()}"
+                                                    "{i18n_svc.t(\"ui_pets_type\", lang)}: {data.legends.types.get(f.pet_type.as_str()).map(|t| t.get(lang).to_string()).unwrap_or_default()}"
                                                 }
                                                 span { class: "text-[10px] text-slate-500",
-                                                    "{f.diet.iter().map(|d| data.legends.diets.get(d.as_str()).map(|l| l.get(lang).to_string()).unwrap_or_default()).collect::<Vec<_>>().join(\" · \")}"
+                                                    "{i18n_svc.t(\"ui_pets_diet\", lang)}: {f.diet.iter().map(|d| data.legends.diets.get(d.as_str()).map(|l| l.get(lang).to_string()).unwrap_or_default()).collect::<Vec<_>>().join(\" · \")}"
                                                 }
                                             }
                                         }
