@@ -171,7 +171,7 @@ pub fn DressingRoomView(
                         },
                     }
 
-                    div { class: "flex justify-between text-[11px] font-bold text-slate-500 px-1",
+                    div { class: "flex justify-between text-[11px] font-bold text-slate-400 px-1",
                         button {
                             class: "hover:text-amber-400 cursor-pointer",
                             onclick: move |_| selected_level.set(1),
@@ -316,7 +316,7 @@ pub fn DressingRoomView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6",
+            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-400 border-t border-slate-900 mt-6",
                 "{i18n.read().t(\"footer_offline\", lang)}"
             }
         }

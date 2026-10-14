@@ -135,7 +135,7 @@ pub fn ModelViewer(
             }
 
             if is_3d {
-                div { class: "w-full text-center text-slate-500 text-[11px] uppercase tracking-widest z-10",
+                div { class: "w-full text-center text-slate-400 text-[11px] uppercase tracking-widest z-10",
                     "{i18n_svc.t(\"ui_drag_rotate\", lang)}"
                 }
             }

@@ -27,8 +27,12 @@ fn test_export_keys_exist_in_all_locales() {
     let en: serde_json::Value = serde_json::from_str(include_str!("../assets/i18n/en.json")).unwrap();
     let fi: serde_json::Value = serde_json::from_str(include_str!("../assets/i18n/fi.json")).unwrap();
     for dict in [&ru, &en, &fi] {
-        for key in ["ui_export_title", "ui_export_btn", "ui_export_copied", "ui_export_hint"] {
+        for key in ["ui_export_title", "ui_export_plan", "ui_export_copied", "ui_export_hint"] {
             assert!(dict.get(key).is_some(), "missing key {key}");
         }
     }
+    assert_eq!(
+        en.get("ui_export_plan").and_then(|v| v.as_str()),
+        Some("Copy my character plan")
+    );
 }

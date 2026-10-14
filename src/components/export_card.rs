@@ -79,7 +79,7 @@ pub fn BlueprintExport(
                 }
 
                 button {
-                    class: "w-full py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer",
+                    class: "w-full py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
                     onclick: move |_| {
                         copied.set(false);
                         copy_failed.set(false);
@@ -92,7 +92,7 @@ pub fn BlueprintExport(
                             }
                         });
                     },
-                    "📋 {i18n_svc.t(\"ui_export_btn\", lang)}"
+                    "📋 {i18n_svc.t(\"ui_export_plan\", lang)}"
                 }
 
                 if *copied.read() {

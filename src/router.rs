@@ -79,7 +79,7 @@ pub fn App() -> Element {
         document::Style {
             "{APP_CSS}"
         }
-        div { class: "min-h-screen bg-slate-950 text-slate-100 pb-16 sm:pb-0 font-sans antialiased",
+        div { class: "min-h-screen bg-slate-950 text-slate-100 pb-20 font-sans antialiased",
             match *current_route.read() {
                 Route::FactionPicker {} => rsx! {
                     FactionPickerView {
