@@ -9,6 +9,7 @@ pub mod legacy_preset;
 pub mod loot_quiz;
 pub mod model_viewer;
 pub mod race_tile;
+pub mod reference_popover;
 
 pub use bottom_nav::{BottomNav, NavTab};
 pub use class_tips_card::ClassTipsCard;
@@ -21,3 +22,4 @@ pub use legacy_preset::LegacyPresetWidget;
 pub use loot_quiz::{LootQuiz, LootChoice, LOOT_SCENARIO_ITEM};
 pub use model_viewer::ModelViewer;
 pub use race_tile::RaceTile;
+pub use reference_popover::{PopoverData, ReferencePopover};
