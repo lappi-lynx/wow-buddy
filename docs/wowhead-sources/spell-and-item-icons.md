@@ -53,3 +53,18 @@ Item pages: `https://www.wowhead.com/forever/item=<id>/<slug>` (found via
 | Ironforge Greathammer | 279895 | inv_hammer_21 |
 | Rhahk'Zor's Hammer | 5187 | inv_hammer_09 |
 | Smite's Mighty Hammer | 7230 | inv_hammer_01 (imported earlier) |
+
+## Cross-check 2026-10-14 — Wowhead Forever abilities DB + KB (ID-level)
+
+**Trigger:** user request — re-validate every mapped spell before launch ("make sure we don't bring error at this stage").
+
+**Method (this pass):** each class's database page `https://www.wowhead.com/forever/spells/abilities/<class>` was read in a browser session (WAF); every row for our spell names was extracted with its rank IDs and its icon (inline `background-image` on the row's `ins` element).
+
+**Result: all 27 mappings verified, zero errors.**
+- Every spell appears on its class's abilities page (`missing: []` for all 9 classes).
+- Every icon matches the mapping exactly, including the non-obvious classic ones: Charge `ability_warrior_charge`, Heroic Strike `ability_rogue_ambush`, Taunt `spell_nature_reincarnation`, Auto Shot `ability_whirlwind`, Sinister Strike `spell_shadow_ritualofsacrifice`, Healing Wave `spell_nature_magicimmunity`, Moonfire `spell_nature_starfall`, Bear Form `ability_racial_bearform`.
+- Rank-ID notes (no action needed): our recorded IDs are specific rank variants (e.g. Holy Light `10329` = Rank 9, verified via its spell page; the abilities page slice is capped at 100 rows). Mage `Conjure Food` has two rank icon variants (`inv_misc_food_10`, `inv_misc_food_73cinnamonroll`); our mapping uses the latter, a valid rank icon.
+- KB annotation (no action): the KB reads ID `28612` as *Conjure Water Rank 7* while both Wowhead pages list it under *Conjure Food* — our combined "Conjure Food & Water" entry covers either reading; the icon is unaffected.
+
+**KB second pass (MCP, fresh session, 2026-10-14):** the full 27 spell-ID/name/class triples were submitted; the KB confirmed every ID+name corresponds to the listed class — "no misassigned classes or incorrect IDs in the set" (ranks noted per spell, e.g. Charge Rank 3, Taunt base rank).
+
