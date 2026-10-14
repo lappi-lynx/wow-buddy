@@ -2,7 +2,7 @@ use crate::assets::AssetRegistry;
 use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
-    gear::{get_tier_for_level, GearTier},
+    gear::{get_tier_for_level, nearest_anchor, tier_short_key, GearTier},
     ClassInfo, Faction, RaceInfo,
 };
 use dioxus::prelude::*;
@@ -80,6 +80,18 @@ pub fn DressingRoomView(
     let current_tier = get_tier_for_level(*selected_level.read());
     let tier_key = get_tier_label_key(current_tier);
     let tier_text = i18n.read().t(tier_key, lang);
+    let level_now = *selected_level.read();
+    let anchor = nearest_anchor(level_now);
+    let set_name = i18n.read().t(tier_short_key(anchor), lang).to_string();
+    let snap_label = if level_now == anchor {
+        set_name.clone()
+    } else {
+        i18n.read().t_with(
+            "ui_gear_snap",
+            lang,
+            &[("level", level_now.to_string()), ("set", set_name)],
+        )
+    };
     let registry = AssetRegistry::load_embedded();
 
     rsx! {
@@ -140,7 +152,7 @@ pub fn DressingRoomView(
                             "{i18n.read().t_with(\"ui_gear_evolution\", lang, &[(\"level\", selected_level.read().to_string())])}"
                         }
                         span { class: "text-xs font-bold text-amber-400",
-                            "{tier_text}"
+                            "{snap_label}"
                         }
                     }
 
@@ -150,7 +162,7 @@ pub fn DressingRoomView(
                         max: "60",
                         step: "1",
                         value: "{selected_level.read()}",
-                        class: "w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg",
+                        class: "w-full accent-amber-500 cursor-pointer h-11 bg-slate-800 rounded-lg",
                         oninput: move |evt: Event<FormData>| {
                             if let Ok(lvl) = evt.value().parse::<u8>() {
                                 selected_level.set(lvl);
