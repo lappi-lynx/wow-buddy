@@ -26,6 +26,9 @@ fn test_complete_ui_labels_translation() {
     assert_eq!(i18n.t("ui_gear_evolution", Language::En), "Gear Evolution (Level {level})");
     assert_eq!(i18n.t("ui_drag_rotate", Language::En), "Drag to rotate • Pinch to zoom");
     assert_eq!(i18n.t("ui_core_spells", Language::En), "3 Core Beginner Spells");
+    assert_eq!(i18n.t("ui_glossary_title", Language::En), "Terminology");
+    assert_eq!(i18n.t("ui_glossary_title", Language::Ru), "Термины");
+    assert_eq!(i18n.t("ui_glossary_title", Language::Fi), "Termistö");
 
     // Progression Guide View Labels
     assert_eq!(i18n.t("ui_starter_glade_checklist", Language::En), "Starter Glade Checklist (Lvl 1–6)");

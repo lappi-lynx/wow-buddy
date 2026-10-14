@@ -237,8 +237,8 @@
     {
       "id": "warrior",
       "name": "Warrior",
-      "role": "Tank / Melee DPS",
-      "difficulty": "Easy to Start, High Skill Ceiling",
+      "role": "Protector and close-range fighter",
+      "difficulty": "Easy to learn, rewarding to master",
       "core_spells": [
         { "name": "Charge", "description": "Rush toward enemy and generate rage", "icon": "⚔️", "icon_id": "ability_warrior_charge", "learned_at": 4, "verified": true },
         { "name": "Heroic Strike", "description": "Powerful swing increasing weapon damage", "icon": "💥", "icon_id": "ability_rogue_ambush", "learned_at": 1, "verified": true },
@@ -249,8 +249,8 @@
     {
       "id": "paladin",
       "name": "Paladin",
-      "role": "Tank / Healer / Melee DPS",
-      "difficulty": "Very Beginner Friendly",
+      "role": "Protector, healer or close-range fighter",
+      "difficulty": "Very beginner friendly",
       "core_spells": [
         { "name": "Holy Light", "description": "Direct healing spell channeling the Light", "icon": "✨", "icon_id": "spell_holy_holybolt", "learned_at": 1, "verified": true },
         { "name": "Seal of Righteousness", "description": "Infuses attacks with additional Holy damage", "icon": "🔨", "icon_id": "ability_thunderbolt", "learned_at": 1, "verified": true },
@@ -261,8 +261,8 @@
     {
       "id": "hunter",
       "name": "Hunter",
-      "role": "Ranged Physical DPS",
-      "difficulty": "Great for Solo Leveling",
+      "role": "Ranged fighter with a loyal pet",
+      "difficulty": "Great for solo leveling",
       "core_spells": [
         { "name": "Auto Shot", "description": "Shoots arrows/bullets at ranged target", "icon": "🏹", "icon_id": "ability_whirlwind", "learned_at": 1, "verified": true },
         { "name": "Serpent Sting", "description": "Poisons enemy for damage over time", "icon": "🐍", "icon_id": "ability_hunter_quickshot", "learned_at": 4, "verified": true },
@@ -273,7 +273,7 @@
     {
       "id": "rogue",
       "name": "Rogue",
-      "role": "Melee Physical DPS",
+      "role": "Close-range damage dealer",
       "difficulty": "Moderate",
       "core_spells": [
         { "name": "Stealth", "description": "Sneak unseen past monsters", "icon": "🗡️", "icon_id": "ability_stealth", "learned_at": 1, "verified": true },
@@ -285,8 +285,8 @@
     {
       "id": "priest",
       "name": "Priest",
-      "role": "Healer / Ranged Magic DPS",
-      "difficulty": "Beginner Healer Friendly",
+      "role": "Healer or ranged magic damage",
+      "difficulty": "Beginner healer friendly",
       "core_spells": [
         { "name": "Flash Heal", "description": "Fast emergency heal", "icon": "✨", "icon_id": "spell_holy_flashheal", "learned_at": 20, "verified": true },
         { "name": "Power Word: Shield", "description": "Absorbs incoming damage", "icon": "🛡️", "icon_id": "spell_holy_powerwordshield", "learned_at": 6, "verified": true },
@@ -297,7 +297,7 @@
     {
       "id": "shaman",
       "name": "Shaman",
-      "role": "Healer / Melee or Caster DPS",
+      "role": "Healer, magic or close-range fighter",
       "difficulty": "Moderate",
       "core_spells": [
         { "name": "Lightning Bolt", "description": "Casts blast of nature electricity", "icon": "⚡", "icon_id": "spell_nature_lightning", "learned_at": 1, "verified": true },
@@ -309,8 +309,8 @@
     {
       "id": "mage",
       "name": "Mage",
-      "role": "Ranged Magic DPS",
-      "difficulty": "Easy to Start",
+      "role": "Ranged magic damage",
+      "difficulty": "Easy to start",
       "core_spells": [
         { "name": "Fireball", "description": "Hurls fiery projectile burning enemy", "icon": "🔥", "icon_id": "spell_fire_flamebolt", "learned_at": 1, "verified": true },
         { "name": "Frost Nova", "description": "Freezes all nearby foes in place", "icon": "❄️", "icon_id": "spell_frost_frostnova", "learned_at": 10, "verified": true },
@@ -321,8 +321,8 @@
     {
       "id": "warlock",
       "name": "Warlock",
-      "role": "Ranged Shadow DPS / Pet Master",
-      "difficulty": "Easy Solo Leveler",
+      "role": "Ranged shadow damage with a demon pet",
+      "difficulty": "Easy solo leveler",
       "core_spells": [
         { "name": "Corruption", "description": "Afflicts enemy with shadow agony", "icon": "💀", "icon_id": "spell_shadow_abominationexplosion", "learned_at": 4, "verified": true },
         { "name": "Summon Imp", "description": "Calls forth a demon ally", "icon": "🔥", "icon_id": "spell_shadow_summonimp", "learned_at": 1, "verified": true },
@@ -333,8 +333,8 @@
     {
       "id": "druid",
       "name": "Druid",
-      "role": "Hybrid (Tank, Healer, Melee/Caster DPS)",
-      "difficulty": "Versatile / Moderate",
+      "role": "Shapeshifter: protector, healer or damage dealer",
+      "difficulty": "Versatile — moderate",
       "core_spells": [
         { "name": "Moonfire", "description": "Instant blast of lunar radiation", "icon": "🌙", "icon_id": "spell_nature_starfall", "learned_at": 4, "verified": true },
         { "name": "Rejuvenation", "description": "Gentle healing over time leaf", "icon": "🌿", "icon_id": "spell_nature_rejuvenation", "learned_at": 4, "verified": true },

@@ -1,9 +1,10 @@
 use crate::assets::AssetRegistry;
-use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelViewer};
+use crate::components::{BlueprintExport, ClassTipsCard, GlossaryTerm, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     class::{availability, SpellAvailability},
     gear::{get_tier_for_level, nearest_anchor, tier_short_key, GearTier},
+    glossary::TERMS,
     milestones::{milestones_around, next_milestone},
     ClassInfo, Faction, RaceInfo,
 };
@@ -80,8 +81,6 @@ pub fn DressingRoomView(
 
     let lang = *current_lang.read();
     let current_tier = get_tier_for_level(*selected_level.read());
-    let tier_key = get_tier_label_key(current_tier);
-    let tier_text = i18n.read().t(tier_key, lang);
     let level_now = *selected_level.read();
     let anchor = nearest_anchor(level_now);
     let set_name = i18n.read().t(tier_short_key(anchor), lang).to_string();
@@ -273,6 +272,23 @@ pub fn DressingRoomView(
                         class: "w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer mt-2",
                         onclick: move |_| on_continue_to_guide.call(()),
                         "{i18n.read().t(\"ui_proceed_to_guide\", lang)}"
+                    }
+                }
+
+                // Terminology (tap-to-explain)
+                div { class: "w-full max-w-lg bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
+                    div { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider",
+                        "{i18n.read().t(\"ui_glossary_title\", lang)}"
+                    }
+                    div { class: "flex flex-wrap gap-2",
+                        for term in TERMS.iter() {
+                            GlossaryTerm {
+                                key: "{term.id}",
+                                term_id: term.id.to_string(),
+                                current_lang: current_lang,
+                                i18n: i18n,
+                            }
+                        }
                     }
                 }
 
