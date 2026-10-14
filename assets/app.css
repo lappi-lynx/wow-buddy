@@ -1292,6 +1292,12 @@
   .underline {
     text-decoration-line: underline;
   }
+  .decoration-dotted {
+    text-decoration-style: dotted;
+  }
+  .underline-offset-2 {
+    text-underline-offset: 2px;
+  }
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1498,6 +1504,9 @@
     }
     .hover\:from-red-900\/90:hover {
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+    .hover\:text-amber-200:hover {
+      color: var(--color-amber-200);
     }
     .hover\:text-amber-300:hover {
       color: var(--color-amber-300);
