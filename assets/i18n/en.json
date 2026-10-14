@@ -30,6 +30,7 @@
   "ui_unlocks_around": "What unlocks around here",
   "ui_next_unlock": "Next unlock: level {level}",
   "ui_beta_may_change": "Beta, may change",
+  "ui_unlocks_at": "Unlocks at level {level}",
   "rule_timing_title": "Run Duration: ~35-45 min",
   "rule_bags_title": "Bags: Clear at least 10 slots before entry",
   "rule_tank_pull_title": "Only Tank Pulls! Single pack focus",

@@ -357,6 +357,9 @@
   .-ml-\[18px\] {
     margin-left: calc(18px * -1);
   }
+  .ml-auto {
+    margin-left: auto;
+  }
   .block {
     display: block;
   }

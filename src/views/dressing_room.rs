@@ -2,6 +2,7 @@ use crate::assets::AssetRegistry;
 use crate::components::{BlueprintExport, ClassTipsCard, LanguagePicker, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
+    class::{availability, SpellAvailability},
     gear::{get_tier_for_level, nearest_anchor, tier_short_key, GearTier},
     milestones::{milestones_around, next_milestone},
     ClassInfo, Faction, RaceInfo,
@@ -239,6 +240,7 @@ pub fn DressingRoomView(
                                     .icon_id
                                     .as_deref()
                                     .and_then(|id| registry.art_uri(id));
+                                let unlock = availability(spell, level_now);
                                 rsx! {
                                     div {
                                         key: "{spell.name}",
@@ -255,6 +257,11 @@ pub fn DressingRoomView(
                                         div { class: "flex flex-col",
                                             span { class: "text-xs sm:text-sm font-bold text-slate-200", "{spell.name}" }
                                             span { class: "text-xs text-slate-400 leading-tight mt-0.5", "{spell.description}" }
+                                        }
+                                        if let SpellAvailability::AtLevel(l) = unlock {
+                                            span { class: "ml-auto shrink-0 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
+                                                "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", l.to_string())])}"
+                                            }
                                         }
                                     }
                                 }
