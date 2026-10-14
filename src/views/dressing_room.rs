@@ -6,6 +6,7 @@ use crate::models::{
     gear::{get_tier_for_level, nearest_anchor, tier_short_key},
     glossary::TERMS,
     milestones::{milestones_around, next_milestone},
+    pets::{pet_card_kind, PetCardKind},
     ClassInfo, Faction, RaceInfo,
 };
 use dioxus::prelude::*;
@@ -66,6 +67,7 @@ pub fn DressingRoomView(
     on_back: EventHandler<()>,
     on_continue_to_guide: EventHandler<()>,
     on_open_gear_planner: EventHandler<()>,
+    on_open_pets: EventHandler<()>,
 ) -> Element {
     let mut selected_level = use_signal(|| 1u8);
     let mut current_animation = use_signal(|| CharacterAnimation::Stand);
@@ -319,6 +321,34 @@ pub fn DressingRoomView(
                     current_lang: current_lang,
                     i18n: i18n,
                     class_id: class.id.clone(),
+                }
+
+                // Pets entry card — hunter/warlock/companion variant
+                {
+                    let kind = pet_card_kind(&class.id);
+                    let (title_key, body_key) = match kind {
+                        PetCardKind::Hunter => ("ui_pets_card_hunter", "ui_pets_card_hunter_body"),
+                        PetCardKind::Warlock => ("ui_pets_card_warlock", "ui_pets_card_warlock_body"),
+                        PetCardKind::Companion => ("ui_pets_card_companion", "ui_pets_card_companion_body"),
+                    };
+                    rsx! {
+                        div { class: "w-full max-w-lg bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
+                            div { class: "flex items-center justify-between",
+                                span { class: "text-sm font-bold text-amber-300", "🐾 {i18n.read().t(title_key, lang)}" }
+                                if kind == PetCardKind::Hunter && level_now < 10 {
+                                    span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
+                                        "{i18n.read().t_with(\"ui_unlocks_at\", lang, &[(\"level\", \"10\".to_string())])}"
+                                    }
+                                }
+                            }
+                            p { class: "text-xs text-slate-400", "{i18n.read().t(body_key, lang)}" }
+                            button {
+                                class: "w-full py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
+                                onclick: move |_| on_open_pets.call(()),
+                                "{i18n.read().t(\"ui_pets_open\", lang)}"
+                            }
+                        }
+                    }
                 }
             }
 

@@ -167,3 +167,15 @@ When testing manually, verify the following core features:
 - Close popovers via the ✕ or by tapping the backdrop.
 - Open **ⓘ About & Legal** from the footer of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
 - Every footer reads **Works offline** (not "100% offline"): the app is offline-first and may fetch optional updates.
+
+### 9. Pets (`/pets`)
+- Hunter: dressing room → "Hunter pets" card → guide opens with "Tame basics" first
+  (Tame Beast at level 10, Mend Pet at level 12), an "Unlocks at level 10" chip on the
+  card while under level 10, "Safe first picks" (Cat / Bear / Boar), the full family
+  list behind "Show all 17 families", and "Notable pets" 10–30 with level chips.
+- Warlock: "Warlock minions" card → four demons with level chips and roles, plus the
+  companion section.
+- Other classes: companion-only view (no hunter or warlock claims).
+- Deep link /pets without a hero shows the companion view.
+- Sources: `docs/wowhead-sources/pets-families.json` (raw table + conflicts) and
+  `docs/kb-sources/pets.md` (KB answers + confirmations).

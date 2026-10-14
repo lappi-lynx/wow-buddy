@@ -146,6 +146,7 @@ pub fn App() -> Element {
                         on_back: move |_| current_route.set(Route::RaceSelector {}),
                         on_continue_to_guide: move |_| current_route.set(Route::ProgressionGuide {}),
                         on_open_gear_planner: move |_| current_route.set(Route::GearPlanner {}),
+                        on_open_pets: move |_| current_route.set(Route::Pets {}),
                     }
                 },
                 Route::ProgressionGuide {} => rsx! {
