@@ -1,5 +1,5 @@
 use wow_buddy::i18n::{I18nService, Language};
-use wow_buddy::models::legacy::{preset_summary, resolve_preset, LegacyCatalog};
+use wow_buddy::models::legacy::{resolve_preset, LegacyCatalog};
 use wow_buddy::models::GameData;
 use wow_buddy::views::progression_guide::{get_starter_zone_reminders, split_first_quest};
 
@@ -38,7 +38,6 @@ fn test_legacy_presets_use_verified_client_perks() {
         .collect();
     assert!(balanced.contains(&("well_rested".into(), 5)));
     assert!(balanced.contains(&("talented".into(), 5)));
-    assert!(preset_summary(&catalog, "balanced").ends_with("16 points"));
 }
 
 #[test]

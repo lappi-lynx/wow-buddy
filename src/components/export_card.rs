@@ -20,7 +20,7 @@ pub fn build_export_string(faction: Faction, race_display_name: &str, class_name
 /// succeeded. On web the Clipboard API is asynchronous, so the returned
 /// promise is awaited: a rejection (denied permission, insecure context, etc.)
 /// is surfaced as a failure instead of an optimistic "copied!" toast.
-pub(crate) async fn copy_to_clipboard(text: String) -> bool {
+async fn copy_to_clipboard(text: String) -> bool {
     #[cfg(target_arch = "wasm32")]
     {
         if let Some(window) = web_sys::window() {

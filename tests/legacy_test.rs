@@ -80,7 +80,7 @@ fn validator_rejects_broken_allocations() {
         .is_err());
 }
 
-use wow_buddy::models::legacy::{preset_summary, resolve_preset};
+use wow_buddy::models::legacy::resolve_preset;
 
 #[test]
 fn balanced_preset_is_the_known_16_point_build() {
@@ -97,9 +97,5 @@ fn balanced_preset_is_the_known_16_point_build() {
             ("talented".into(), 5),
             ("field_guide".into(), 1)
         ]
-    );
-    assert_eq!(
-        preset_summary(&c, "balanced"),
-        "Well Rested 5 · Thrill of Adventure 5 · Talented 5 · Field Guide 1 — 16 points"
     );
 }

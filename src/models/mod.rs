@@ -26,8 +26,7 @@ pub use gear::{get_tier_for_level, GearTier};
 pub use gear_planner::{ClassGear, GearArmorLine, GearBand, GearPlannerData, GearWeapon};
 pub use glossary::{get_term, Term, TERMS};
 pub use legacy::{
-    preset_summary, resolve_preset, Allocation, LegacyCatalog, LegacyPerkDef, LegacyPresetDef,
-    PerkPrereq,
+    resolve_preset, Allocation, LegacyCatalog, LegacyPerkDef, LegacyPresetDef, PerkPrereq,
 };
 pub use localized::Tr;
 pub use milestones::{milestones_around, next_milestone, Milestone, MILESTONES};

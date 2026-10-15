@@ -133,15 +133,3 @@ pub fn resolve_preset(catalog: &LegacyCatalog, preset_id: &str) -> Vec<(LegacyPe
         .collect()
 }
 
-/// The copyable allocation summary, e.g.
-/// "Well Rested 5 · Thrill of Adventure 5 · Talented 5 · Field Guide 1 — 16 points".
-/// Perk names are client terms and stay English in every locale.
-pub fn preset_summary(catalog: &LegacyCatalog, preset_id: &str) -> String {
-    let resolved = resolve_preset(catalog, preset_id);
-    let parts: Vec<String> = resolved
-        .iter()
-        .map(|(p, n)| format!("{} {}", p.name.en, n))
-        .collect();
-    let total: u8 = resolved.iter().map(|(_, n)| n).sum();
-    format!("{} — {total} points", parts.join(" · "))
-}
