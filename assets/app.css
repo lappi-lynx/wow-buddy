@@ -464,6 +464,9 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
+  .w-\[74px\] {
+    width: 74px;
+  }
   .w-full {
     width: 100%;
   }
@@ -962,6 +965,12 @@
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }
+  .bg-slate-800\/60 {
+    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-800) 60%, transparent);
+    }
+  }
   .bg-slate-800\/80 {
     background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1118,6 +1127,9 @@
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);

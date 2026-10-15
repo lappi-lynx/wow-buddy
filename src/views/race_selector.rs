@@ -1,3 +1,5 @@
+use crate::assets::AssetRegistry;
+use crate::components::race_tile::class_render_source;
 use crate::components::{FactionTheme, LanguagePicker, RaceTile};
 use crate::i18n::{I18nService, Language};
 use crate::models::{ClassInfo, Faction, GameData, RaceInfo};
@@ -171,10 +173,16 @@ pub fn RaceSelectorView(
                                         let cls_id = cls.clone();
                                         let is_active = effective_class.as_deref() == Some(cls_id.as_str());
                                         let badge_class = if is_active {
-                                            "text-xs px-2.5 py-1 rounded-md bg-amber-500 border border-amber-400 text-black capitalize font-bold cursor-pointer"
+                                            "flex flex-col items-center gap-1 p-2 w-[74px] rounded-xl bg-amber-500/20 border-2 border-amber-400 cursor-pointer"
                                         } else {
-                                            "text-xs px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-300 capitalize font-medium cursor-pointer hover:border-slate-500"
+                                            "flex flex-col items-center gap-1 p-2 w-[74px] rounded-xl bg-slate-800/60 border-2 border-slate-700 cursor-pointer hover:border-slate-500"
                                         };
+                                        let label_class = if is_active {
+                                            "text-[9px] capitalize font-bold text-amber-300"
+                                        } else {
+                                            "text-[9px] capitalize font-medium text-slate-400"
+                                        };
+                                        let art = class_render_source(&AssetRegistry::load_embedded(), &cls_id);
                                         rsx! {
                                             button {
                                                 key: "{cls_id}",
@@ -184,7 +192,12 @@ pub fn RaceSelectorView(
                                                         selected_class.set(Some(cls_obj.clone()));
                                                     }
                                                 },
-                                                "{cls_id}"
+                                                if art.starts_with("data:") {
+                                                    img { class: "w-9 h-9 object-contain rounded-md", src: "{art}", alt: "{cls_id}" }
+                                                } else {
+                                                    span { class: "text-xl", "🛡️" }
+                                                }
+                                                span { class: "{label_class}", "{cls_id}" }
                                             }
                                         }
                                     }
