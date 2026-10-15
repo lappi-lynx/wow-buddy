@@ -8,12 +8,12 @@ use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
 use dioxus::prelude::*;
 
-/// Character-sheet columns (partner's layout): left = weapon + chest/legs/feet,
-/// middle = head/neck/shoulders/hands + the back (cloak) at the bottom,
-/// right = wrist/finger/trinket/waist. On desktop the columns read
-/// left -> middle -> right; on mobile they stack middle-first (head on top).
-const LEFT_COLUMN_SLOTS: [&str; 3] = ["chest", "legs", "feet"];
-const MIDDLE_COLUMN_SLOTS: [&str; 5] = ["head", "neck", "shoulders", "hands", "back"];
+/// Character-sheet columns (partner's layout): left = weapon + back/chest/
+/// legs/feet, middle = head/neck/shoulders/hands, right = wrist/finger/
+/// trinket/waist. Three columns from 768px up (md); below that they stack
+/// middle-first (head on top).
+const LEFT_COLUMN_SLOTS: [&str; 4] = ["back", "chest", "legs", "feet"];
+const MIDDLE_COLUMN_SLOTS: [&str; 4] = ["head", "neck", "shoulders", "hands"];
 const RIGHT_COLUMN_SLOTS: [&str; 4] = ["wrist", "finger", "trinket", "waist"];
 
 /// The band id to highlight for `level`: the containing band if one exists,
@@ -135,22 +135,22 @@ pub fn GearPlannerView(
                                     }
                                 }
                                 if let Some(band) = current_band.as_ref() {
-                                    div { class: "flex-1 flex flex-col lg:flex-row gap-2",
+                                    div { class: "flex-1 flex flex-col md:flex-row gap-2",
                                         // Middle column (mobile-first: head reads on top);
                                         // desktop order: left -> middle -> right.
-                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-2 lg:w-40 shrink-0 gap-2",
+                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-2 md:w-40 shrink-0 gap-2",
                                             for slot in MIDDLE_COLUMN_SLOTS.iter() {
                                                 { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                             }
                                         }
                                         // Right column: wrist/finger/trinket/waist
-                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-3 lg:w-40 shrink-0 gap-2",
+                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-3 md:w-40 shrink-0 gap-2",
                                             for slot in RIGHT_COLUMN_SLOTS.iter() {
                                                 { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                             }
                                         }
                                         // Left column: weapon + chest/legs/feet
-                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-1 lg:w-40 shrink-0 gap-2",
+                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-1 md:w-40 shrink-0 gap-2",
                                             if let Some(weapon) = band.weapons.first() {
                                                 { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
                                             }
