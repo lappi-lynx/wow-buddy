@@ -1871,6 +1871,232 @@
           }
         }
       ]
+    },
+    "druid": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter staff",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Teldrassil)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Heavy Copper Maul",
+              "level": 12,
+              "item_id": 6214,
+              "icon_id": "inv_hammer_18",
+              "source": "Crafted (Blacksmithing) or early zones",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rhahk'Zor's Hammer",
+              "level": 16,
+              "item_id": 5187,
+              "icon_id": "inv_hammer_09",
+              "source": "Rhahk'Zor, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Staff of Westfall",
+              "level": 20,
+              "item_id": 2042,
+              "icon_id": "inv_staff_10",
+              "source": "The Defias Brotherhood (quest, Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Emberstone Staff",
+              "level": 17,
+              "item_id": 5201,
+              "icon_id": "inv_staff_13",
+              "source": "Captain Greenskin, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Smite's Mighty Hammer",
+              "level": 20,
+              "item_id": 7230,
+              "icon_id": "inv_hammer_01",
+              "source": "Mr. Smite, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Mechanic's Pipehammer",
+              "level": 30,
+              "item_id": 9604,
+              "icon_id": "inv_mace_04",
+              "source": "Data Rescue (quest, Gnomeregan)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "level": 24,
+              "item_id": 1155,
+              "icon_id": "inv_staff_06",
+              "source": "Lady Sarevess, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Gnomeregan (29–38, Dun Morogh) / Blackfathom Deeps (24–32, Ashenvale)",
+            "source": "Gnomeregan & Blackfathom Deeps loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter staff",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Mulgore)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Heavy Copper Maul",
+              "level": 12,
+              "item_id": 6214,
+              "icon_id": "inv_hammer_18",
+              "source": "Crafted (Blacksmithing) or early zones",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Hammer of Orgrimmar",
+              "level": 13,
+              "item_id": 15445,
+              "icon_id": "inv_hammer_23",
+              "source": "Hidden Enemies (choice reward), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Living Root",
+              "level": 18,
+              "item_id": 6631,
+              "icon_id": "inv_staff_25",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Crescent Staff",
+              "level": 22,
+              "item_id": 6505,
+              "icon_id": "inv_staff_04",
+              "source": "Leaders of the Fang (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Rod of the Sleepwalker",
+              "level": 24,
+              "item_id": 1155,
+              "icon_id": "inv_staff_06",
+              "source": "Lady Sarevess, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Odo's Ley Staff",
+              "level": 21,
+              "item_id": 6318,
+              "icon_id": "inv_staff_25",
+              "source": "Odo the Blindwatcher, Shadowfang Keep (Silverpine Forest)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ]
     }
   }
 }

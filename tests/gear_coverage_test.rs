@@ -104,3 +104,8 @@ fn mage_is_complete() {
 fn warlock_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "warlock");
 }
+
+#[test]
+fn druid_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "druid");
+}
