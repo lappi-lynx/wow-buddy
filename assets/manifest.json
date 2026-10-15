@@ -833,6 +833,114 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_pants_03, Runed Copper Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_14": {
+      "path": "assets/icons/items/inv_misc_cape_14.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_14, Heavy Woolen Cloak) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_01": {
+      "path": "assets/icons/items/inv_pants_01.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_01, Heavy Woolen Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_boots_09": {
+      "path": "assets/icons/items/inv_boots_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_boots_09, Red Woolen Boots) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shoulder_06": {
+      "path": "assets/icons/items/inv_shoulder_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shoulder_06, Double-Stitched Woolen Shoulders) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_13": {
+      "path": "assets/icons/items/inv_chest_cloth_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_13, Gray Woolen Robe) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_22": {
+      "path": "assets/icons/items/inv_gauntlets_22.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_22, Hands of Darkness) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_16": {
+      "path": "assets/icons/items/inv_gauntlets_16.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_16, Truefaith Gloves) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shoulder_13": {
+      "path": "assets/icons/items/inv_shoulder_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shoulder_13, Magician's Mantle / Feline Mantle) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_10": {
+      "path": "assets/icons/items/inv_belt_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_10, Belt of Arugal) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_31": {
+      "path": "assets/icons/items/inv_chest_cloth_31.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_31, Robes of Arugal) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_06": {
+      "path": "assets/icons/items/inv_pants_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_06, Darkweave Breeches) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_08": {
+      "path": "assets/icons/items/inv_pants_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_08, Azure Silk Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_helmet_29": {
+      "path": "assets/icons/items/inv_helmet_29.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_helmet_29, Azure Silk Hood) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_22": {
+      "path": "assets/icons/items/inv_belt_22.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_22, Azure Silk Belt) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_37": {
+      "path": "assets/icons/items/inv_chest_cloth_37.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_37, Azure Silk Vest) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_14": {
+      "path": "assets/icons/items/inv_chest_cloth_14.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_14, Azure Silk Cloak) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_ring_28": {
+      "path": "assets/icons/items/inv_jewelry_ring_28.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_ring_28, Lorekeeper's Ring) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_13": {
+      "path": "assets/icons/items/inv_bracer_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_13, Crystalline Cuffs) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

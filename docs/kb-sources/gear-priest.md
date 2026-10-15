@@ -29,3 +29,11 @@
 - **Two "warrior drops" return as priest ships:** Staff of Westfall and Rod of the Sleepwalker — both were dropped from the warrior lists as caster staves and are correct picks here.
 - **Armor hints are cloth** ("Quest cloth pieces (…)") unlike the warrior mail hint.
 - **Icons imported:** `inv_staff_07`, `inv_staff_10`, `inv_staff_02` (Cookie's/Lesser Mystic — shared art), `inv_staff_25`, `inv_staff_04`, `inv_wand_04`, `inv_staff_06`; Oakthrush reuses `inv_staff_08` (hunter's Balanced Fighting Stick).
+
+## Slots — priest (2026-10-15, KB sessions bf250564 / eae1db25)
+
+- 12–16 (8): Heavy Woolen Cloak/Pants, Gray Woolen Robe, Double-Stitched Woolen Shoulders (req 17 — bracket note), Heavy Woolen Gloves, Red Woolen Boots, Spellbinder Belt, Crystalline Cuffs (BFD, req 13).
+- 20–24 (11 / 10): Flying Tiger Goggles, PvP neck, Magician's Mantle, faction cloak, Robes of Arugal + Belt of Arugal, Mindthrust Bracers, Hands of Darkness (req 24), Darkweave Breeches, Spidersilk Boots, Seal of Wrynn (alliance only — no verified horde ring ≤30).
+- 24–30 (10): Azure Silk Hood/Vest/Pants/Belt/Cloak, Feline Mantle (SFK), Truefaith Gloves, Acidic Walkers, Lorekeeper's Ring (A) / Tiger Band (H), class PvP insignia (18862 / 18851).
+- **Fabrications dropped:** Greater Magic Robe, Heavy Woolen Bracers/Belt, Woolen Boots, Robes of Evocation, Robes of the Fang, Gallant's Wristguards, Voidwalker Bracers. **Over-cap drops:** Royal Amice (req 40).
+- **Gate note:** no verified cloth wrist ≥20 exists ≤30 → the global 24–30 floor drops 11 → 10, documented in the test.

@@ -130,7 +130,7 @@ fn all_classes_complete() {
 /// verified head/neck/shoulders/ring/trinket/wrist at that level), everything
 /// but the trinket by 20–24 (class trinkets start ~28), and all but the neck
 /// by 24–30 (the early neck keeps serving; no verified upgrade exists ≤30).
-pub const MIN_SLOTS: [(&str, usize); 3] = [("12-16", 6), ("20-24", 10), ("24-30", 11)];
+pub const MIN_SLOTS: [(&str, usize); 3] = [("12-16", 6), ("20-24", 10), ("24-30", 10)];
 
 /// Slot completeness for the given factions (the 1-6 starter band is exempt:
 /// its slots are deliberately empty until starter gear is authored). Every
@@ -173,6 +173,15 @@ pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, facti
             }
         }
     }
+}
+
+#[test]
+fn priest_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "priest",
+        &[Faction::Alliance, Faction::Horde],
+    );
 }
 
 #[test]

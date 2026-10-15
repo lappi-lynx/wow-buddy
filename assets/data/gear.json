@@ -2364,6 +2364,72 @@
             "text": "The Hall of Thanes (13–20, Ironforge)",
             "source": "The Hall of Thanes loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "back": {
+              "name": "Heavy Woolen Cloak",
+              "level": 16,
+              "item_id": 4311,
+              "icon_id": "inv_misc_cape_14",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "chest": {
+              "name": "Gray Woolen Robe",
+              "level": 16,
+              "item_id": 2585,
+              "icon_id": "inv_chest_cloth_13",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Double-Stitched Woolen Shoulders",
+              "level": 17,
+              "item_id": 4314,
+              "icon_id": "inv_shoulder_06",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "wrist": {
+              "name": "Crystalline Cuffs",
+              "level": 13,
+              "item_id": 14148,
+              "icon_id": "inv_bracer_13",
+              "source": "Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "hands": {
+              "name": "Heavy Woolen Gloves",
+              "level": 12,
+              "item_id": 4310,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "waist": {
+              "name": "Spellbinder Belt",
+              "level": 8,
+              "item_id": 4684,
+              "icon_id": "inv_belt_04",
+              "source": "World drop / vendor",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "legs": {
+              "name": "Heavy Woolen Pants",
+              "level": 17,
+              "item_id": 4316,
+              "icon_id": "inv_pants_01",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "feet": {
+              "name": "Red Woolen Boots",
+              "level": 15,
+              "item_id": 4313,
+              "icon_id": "inv_boots_09",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            }
           }
         },
         {
@@ -2393,6 +2459,96 @@
             "text": "The Deadmines (18–23, Westfall)",
             "source": "The Deadmines loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "head": {
+              "name": "Flying Tiger Goggles",
+              "level": 20,
+              "item_id": 4368,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Magician's Mantle",
+              "level": 20,
+              "item_id": 12998,
+              "icon_id": "inv_shoulder_13",
+              "source": "World drop 20–28",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "chest": {
+              "name": "Robes of Arugal",
+              "level": 23,
+              "item_id": 6324,
+              "icon_id": "inv_chest_cloth_31",
+              "source": "Archmage Arugal, Shadowfang Keep",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "wrist": {
+              "name": "Mindthrust Bracers",
+              "level": 17,
+              "item_id": 1974,
+              "icon_id": "inv_bracer_07",
+              "source": "World drop / vendor",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "hands": {
+              "name": "Hands of Darkness",
+              "level": 24,
+              "item_id": 7047,
+              "icon_id": "inv_gauntlets_22",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "waist": {
+              "name": "Belt of Arugal",
+              "level": 23,
+              "item_id": 6392,
+              "icon_id": "inv_belt_10",
+              "source": "Archmage Arugal, Shadowfang Keep",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "legs": {
+              "name": "Darkweave Breeches",
+              "level": 17,
+              "item_id": 12987,
+              "icon_id": "inv_pants_06",
+              "source": "World drop / vendor",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "feet": {
+              "name": "Spidersilk Boots",
+              "level": 20,
+              "item_id": 4320,
+              "icon_id": "inv_boots_05",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "neck": {
+              "name": "Sentinel's Medallion",
+              "level": 18,
+              "item_id": 20444,
+              "icon_id": "inv_jewelry_necklace_13",
+              "source": "Silverwing Sentinels vendor",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "back": {
+              "name": "Cape of the Brotherhood",
+              "level": 19,
+              "item_id": 5193,
+              "icon_id": "inv_misc_cape_08",
+              "source": "Edwin VanCleef, The Deadmines",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "finger": {
+              "name": "Seal of Wrynn",
+              "level": 20,
+              "item_id": 2933,
+              "icon_id": "inv_jewelry_ring_05",
+              "source": "An Audience with the King (quest, Stormwind)",
+              "provenance": "kb:bf250564@2026-10-15"
+            }
           }
         },
         {
@@ -2430,6 +2586,88 @@
             "text": "Blackfathom Deeps (24–32, Ashenvale) / Gnomeregan (29–38, Dun Morogh)",
             "source": "Blackfathom Deeps & Gnomeregan loot tables (KB 2026-10-15)",
             "provenance": "kb:dungeons@2026-10-15"
+          },
+          "slots": {
+            "head": {
+              "name": "Azure Silk Hood",
+              "level": 24,
+              "item_id": 7048,
+              "icon_id": "inv_helmet_29",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Feline Mantle",
+              "level": 23,
+              "item_id": 3748,
+              "icon_id": "inv_shoulder_05",
+              "source": "Shadowfang Keep",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "back": {
+              "name": "Azure Silk Cloak",
+              "level": 30,
+              "item_id": 7053,
+              "icon_id": "inv_chest_cloth_14",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "chest": {
+              "name": "Azure Silk Vest",
+              "level": 25,
+              "item_id": 4324,
+              "icon_id": "inv_chest_cloth_37",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "hands": {
+              "name": "Truefaith Gloves",
+              "level": 25,
+              "item_id": 7049,
+              "icon_id": "inv_gauntlets_16",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "waist": {
+              "name": "Azure Silk Belt",
+              "level": 30,
+              "item_id": 7052,
+              "icon_id": "inv_belt_22",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "legs": {
+              "name": "Azure Silk Pants",
+              "level": 23,
+              "item_id": 7046,
+              "icon_id": "inv_pants_08",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "feet": {
+              "name": "Acidic Walkers",
+              "level": 27,
+              "item_id": 9454,
+              "icon_id": "inv_boots_05",
+              "source": "Grubbis, Gnomeregan",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "finger": {
+              "name": "Lorekeeper's Ring",
+              "level": 18,
+              "item_id": 20431,
+              "icon_id": "inv_jewelry_ring_28",
+              "source": "Silverwing Sentinels vendor",
+              "provenance": "kb:bf250564@2026-10-15"
+            },
+            "trinket": {
+              "name": "Insignia of the Alliance",
+              "level": 28,
+              "item_id": 18862,
+              "icon_id": "inv_jewelry_trinketpvp_01",
+              "source": "Officer Areyn (PvP vendor, Stormwind)",
+              "provenance": "kb:bf250564@2026-10-15"
+            }
           }
         }
       ],
@@ -2480,6 +2718,72 @@
             "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
             "source": "Ragefire Chasm loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "back": {
+              "name": "Heavy Woolen Cloak",
+              "level": 16,
+              "item_id": 4311,
+              "icon_id": "inv_misc_cape_14",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "chest": {
+              "name": "Gray Woolen Robe",
+              "level": 16,
+              "item_id": 2585,
+              "icon_id": "inv_chest_cloth_13",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Double-Stitched Woolen Shoulders",
+              "level": 17,
+              "item_id": 4314,
+              "icon_id": "inv_shoulder_06",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "wrist": {
+              "name": "Crystalline Cuffs",
+              "level": 13,
+              "item_id": 14148,
+              "icon_id": "inv_bracer_13",
+              "source": "Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "hands": {
+              "name": "Heavy Woolen Gloves",
+              "level": 12,
+              "item_id": 4310,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "waist": {
+              "name": "Spellbinder Belt",
+              "level": 8,
+              "item_id": 4684,
+              "icon_id": "inv_belt_04",
+              "source": "World drop / vendor",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "legs": {
+              "name": "Heavy Woolen Pants",
+              "level": 17,
+              "item_id": 4316,
+              "icon_id": "inv_pants_01",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "feet": {
+              "name": "Red Woolen Boots",
+              "level": 15,
+              "item_id": 4313,
+              "icon_id": "inv_boots_09",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            }
           }
         },
         {
@@ -2509,6 +2813,88 @@
             "text": "Wailing Caverns (15–22, The Barrens)",
             "source": "Wailing Caverns loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "head": {
+              "name": "Flying Tiger Goggles",
+              "level": 20,
+              "item_id": 4368,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Magician's Mantle",
+              "level": 20,
+              "item_id": 12998,
+              "icon_id": "inv_shoulder_13",
+              "source": "World drop 20–28",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "chest": {
+              "name": "Robes of Arugal",
+              "level": 23,
+              "item_id": 6324,
+              "icon_id": "inv_chest_cloth_31",
+              "source": "Archmage Arugal, Shadowfang Keep",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "wrist": {
+              "name": "Mindthrust Bracers",
+              "level": 17,
+              "item_id": 1974,
+              "icon_id": "inv_bracer_07",
+              "source": "World drop / vendor",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "hands": {
+              "name": "Hands of Darkness",
+              "level": 24,
+              "item_id": 7047,
+              "icon_id": "inv_gauntlets_22",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "waist": {
+              "name": "Belt of Arugal",
+              "level": 23,
+              "item_id": 6392,
+              "icon_id": "inv_belt_10",
+              "source": "Archmage Arugal, Shadowfang Keep",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "legs": {
+              "name": "Darkweave Breeches",
+              "level": 17,
+              "item_id": 12987,
+              "icon_id": "inv_pants_06",
+              "source": "World drop / vendor",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "feet": {
+              "name": "Spidersilk Boots",
+              "level": 20,
+              "item_id": 4320,
+              "icon_id": "inv_boots_05",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "neck": {
+              "name": "Scout's Medallion",
+              "level": 18,
+              "item_id": 20442,
+              "icon_id": "inv_jewelry_necklace_14",
+              "source": "Warsong Outriders vendor (Kelm Hargunth)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "back": {
+              "name": "Sentry Cloak",
+              "level": 19,
+              "item_id": 2059,
+              "icon_id": "inv_misc_cape_04",
+              "source": "World drop",
+              "provenance": "kb:eae1db25@2026-10-15"
+            }
           }
         },
         {
@@ -2538,6 +2924,88 @@
             "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
             "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
             "provenance": "kb:dungeons@2026-10-15"
+          },
+          "slots": {
+            "head": {
+              "name": "Azure Silk Hood",
+              "level": 24,
+              "item_id": 7048,
+              "icon_id": "inv_helmet_29",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Feline Mantle",
+              "level": 23,
+              "item_id": 3748,
+              "icon_id": "inv_shoulder_05",
+              "source": "Shadowfang Keep",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "back": {
+              "name": "Azure Silk Cloak",
+              "level": 30,
+              "item_id": 7053,
+              "icon_id": "inv_chest_cloth_14",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "chest": {
+              "name": "Azure Silk Vest",
+              "level": 25,
+              "item_id": 4324,
+              "icon_id": "inv_chest_cloth_37",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "hands": {
+              "name": "Truefaith Gloves",
+              "level": 25,
+              "item_id": 7049,
+              "icon_id": "inv_gauntlets_16",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "waist": {
+              "name": "Azure Silk Belt",
+              "level": 30,
+              "item_id": 7052,
+              "icon_id": "inv_belt_22",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "legs": {
+              "name": "Azure Silk Pants",
+              "level": 23,
+              "item_id": 7046,
+              "icon_id": "inv_pants_08",
+              "source": "Crafted (Tailoring)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "feet": {
+              "name": "Acidic Walkers",
+              "level": 27,
+              "item_id": 9454,
+              "icon_id": "inv_boots_05",
+              "source": "Grubbis, Gnomeregan",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "finger": {
+              "name": "Tiger Band",
+              "level": 30,
+              "item_id": 6749,
+              "icon_id": "inv_jewelry_ring_13",
+              "source": "Willix the Importer (quest, level 30)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            },
+            "trinket": {
+              "name": "Insignia of the Horde",
+              "level": 28,
+              "item_id": 18851,
+              "icon_id": "inv_jewelry_trinketpvp_02",
+              "source": "Sergeant Ba'sha (PvP vendor, Orgrimmar)",
+              "provenance": "kb:eae1db25@2026-10-15"
+            }
           }
         }
       ]
