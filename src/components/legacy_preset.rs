@@ -82,7 +82,7 @@ pub fn LegacyPresetWidget(
                             }
                         }
                         div {
-                            h4 { class: "text-xs sm:text-sm font-bold text-slate-200", "{perk.name.get(lang)}" }
+                            h4 { class: "text-xs sm:text-sm font-bold text-slate-200", "{perk.name.en}" }
                             p { class: "text-[11px] text-slate-400 leading-tight mt-1", "{perk.desc.get(lang)}" }
                         }
                     }

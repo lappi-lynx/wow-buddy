@@ -75,8 +75,15 @@ impl LegacyCatalog {
         let planned: std::collections::BTreeMap<&str, u8> =
             alloc.iter().map(|a| (a.id.as_str(), a.points)).collect();
         let mut spent: std::collections::BTreeMap<&str, u8> = std::collections::BTreeMap::new();
+        let mut seen: std::collections::BTreeSet<&str> = std::collections::BTreeSet::new();
         let mut total: u8 = 0;
         for a in alloc {
+            if a.points == 0 {
+                return Err(format!("{}: zero-point entries are not allocations", a.id));
+            }
+            if !seen.insert(a.id.as_str()) {
+                return Err(format!("{}: duplicate entry", a.id));
+            }
             let perk = self
                 .perk(&a.id)
                 .ok_or_else(|| format!("unknown perk {}", a.id))?;

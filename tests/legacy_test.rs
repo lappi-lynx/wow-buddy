@@ -60,6 +60,24 @@ fn validator_rejects_broken_allocations() {
             ("field_guide", 2)
         ]))
         .is_err());
+    // Tree prereq satisfied (11 Adventure >= 10) but the specific-perk prereq
+    // is not: Frequent Flier needs Field Guide 3/3, this alloc has 1/3
+    assert!(c
+        .validate_allocation(&alloc(&[
+            ("well_rested", 5),
+            ("thrill_of_adventure", 5),
+            ("field_guide", 1),
+            ("frequent_flier", 1)
+        ]))
+        .is_err());
+    // Duplicate entries for one perk are rejected
+    assert!(c
+        .validate_allocation(&alloc(&[("well_rested", 3), ("well_rested", 2)]))
+        .is_err());
+    // Zero-point entries are rejected
+    assert!(c
+        .validate_allocation(&alloc(&[("well_rested", 5), ("thrill_of_adventure", 0)]))
+        .is_err());
 }
 
 use wow_buddy::models::legacy::{preset_summary, resolve_preset};
