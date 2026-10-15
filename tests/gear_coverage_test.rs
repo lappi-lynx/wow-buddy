@@ -1,3 +1,4 @@
+use wow_buddy::assets::registry::{AssetRegistry, ICON_FALLBACK};
 use wow_buddy::models::gear_planner::GearPlannerData;
 
 pub const EXPECTED_CLASSES: [&str; 9] = [
@@ -108,4 +109,35 @@ fn warlock_is_complete() {
 #[test]
 fn druid_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "druid");
+}
+
+#[test]
+fn all_classes_complete() {
+    let data = GearPlannerData::load_embedded();
+    assert_eq!(data.classes.len(), EXPECTED_CLASSES.len());
+    for c in EXPECTED_CLASSES {
+        assert_class_complete(&data, c);
+    }
+}
+
+#[test]
+fn every_gear_icon_resolves_to_embedded_bytes() {
+    let reg = AssetRegistry::load_embedded();
+    let data = GearPlannerData::load_embedded();
+    for class in EXPECTED_CLASSES {
+        let gear = data.classes.get(class).unwrap_or_else(|| panic!("{class} missing"));
+        for bands in [&gear.alliance, &gear.horde] {
+            for band in bands {
+                for w in &band.weapons {
+                    if let Some(id) = &w.icon_id {
+                        assert_ne!(
+                            reg.item_icon(id),
+                            ICON_FALLBACK,
+                            "{class} {id} has no embedded bytes"
+                        );
+                    }
+                }
+            }
+        }
+    }
 }

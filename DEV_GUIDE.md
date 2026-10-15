@@ -164,6 +164,7 @@ When testing manually, verify the following core features:
 ### 8. Reference Popovers & About/Legal
 - On the Progression screen, tap the first-quest NPC name (e.g. **Marshal McBride**) — a panel opens with the KB-verified zone/subzone; the NPC name stays English in all locales (only the sentence around it is translated).
 - In the Gear Planner, tap a weapon name — the panel shows its icon (when one exists) and the source line; generic items like "starter club" open without a picture.
+- Gear coverage: all **9 classes × both factions** ship level bands **1–6 / 12–16 / 20–24 / 24–30** (Track C). 30–60 arrives with the post-Nov-4 sync. Coverage is enforced by `tests/gear_coverage_test.rs` (`all_classes_complete`, `every_gear_icon_resolves_to_embedded_bytes`); per-class provenance lives in `docs/kb-sources/gear-<class>.md`.
 - Close popovers via the ✕ or by tapping the backdrop.
 - Open **ⓘ About & Legal** from the footer of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
 - Every footer reads **Works offline** (not "100% offline"): the app is offline-first and may fetch optional updates.
