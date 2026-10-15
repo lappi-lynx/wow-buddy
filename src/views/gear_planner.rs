@@ -8,13 +8,14 @@ use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
 use dioxus::prelude::*;
 
-/// Character-sheet columns (partner's layout): left = weapon + back/chest/
-/// legs/feet, middle = head/neck/shoulders/hands, right = wrist/finger/
-/// trinket/waist. Three columns from 768px up (md); below that they stack
-/// middle-first (head on top).
-const LEFT_COLUMN_SLOTS: [&str; 4] = ["back", "chest", "legs", "feet"];
-const MIDDLE_COLUMN_SLOTS: [&str; 4] = ["head", "neck", "shoulders", "hands"];
-const RIGHT_COLUMN_SLOTS: [&str; 4] = ["wrist", "finger", "trinket", "waist"];
+/// Character-sheet layout (partner's spec): the weapon and its alternates
+/// share one full-width top row; below it four fixed columns keep the same
+/// shape at every width — chest/legs/feet · head/neck/shoulders ·
+/// back/hands/finger · waist/wrist/trinket.
+const COL1_SLOTS: [&str; 3] = ["chest", "legs", "feet"];
+const COL2_SLOTS: [&str; 3] = ["head", "neck", "shoulders"];
+const COL3_SLOTS: [&str; 3] = ["back", "hands", "finger"];
+const COL4_SLOTS: [&str; 3] = ["waist", "wrist", "trinket"];
 
 /// The band id to highlight for `level`: the containing band if one exists,
 /// otherwise the next band above it (used when the level is in a gap).
@@ -135,38 +136,45 @@ pub fn GearPlannerView(
                                     }
                                 }
                                 if let Some(band) = current_band.as_ref() {
-                                    div { class: "flex-1 flex flex-col md:flex-row gap-2",
-                                        // Middle column (mobile-first: head reads on top);
-                                        // desktop order: left -> middle -> right.
-                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-2 md:w-40 shrink-0 gap-2",
-                                            for slot in MIDDLE_COLUMN_SLOTS.iter() {
-                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
-                                            }
-                                        }
-                                        // Right column: wrist/finger/trinket/waist
-                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-3 md:w-40 shrink-0 gap-2",
-                                            for slot in RIGHT_COLUMN_SLOTS.iter() {
-                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
-                                            }
-                                        }
-                                        // Left column: weapon + chest/legs/feet
-                                        div { class: "grid grid-cols-2 md:grid-cols-1 md:order-1 md:w-40 shrink-0 gap-2",
+                                    div { class: "flex-1 flex flex-col gap-3",
+                                        // Weapon row: the main weapon + its alternatives
+                                        div { class: "w-full flex flex-wrap items-start gap-3",
                                             if let Some(weapon) = band.weapons.first() {
                                                 { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
                                             }
-                                            for slot in LEFT_COLUMN_SLOTS.iter() {
-                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                            if band.weapons.len() > 1 {
+                                                div { class: "flex flex-col gap-1 pt-1",
+                                                    span { class: "text-[10px] font-semibold uppercase tracking-wider text-slate-500",
+                                                        "{i18n_svc.t(\"ui_gear_alternatives\", lang)}"
+                                                    }
+                                                    div { class: "flex flex-wrap gap-1.5",
+                                                        for weapon in band.weapons.iter().skip(1) {
+                                                            { alt_weapon_chip(weapon, &registry, i18n, lang, popover) }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
-                                    }
-                                    if band.weapons.len() > 1 {
-                                        div { class: "w-full flex flex-col gap-1.5 pt-1",
-                                            span { class: "text-[10px] font-semibold uppercase tracking-wider text-slate-500",
-                                                "{i18n_svc.t(\"ui_gear_alternatives\", lang)}"
+                                        // Four fixed columns — the same shape at every screen size
+                                        div { class: "grid grid-cols-4 gap-2 w-full",
+                                            div { class: "flex flex-col gap-2",
+                                                for slot in COL1_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                }
                                             }
-                                            div { class: "flex flex-wrap gap-1.5",
-                                                for weapon in band.weapons.iter().skip(1) {
-                                                    { alt_weapon_chip(weapon, &registry, i18n, lang, popover) }
+                                            div { class: "flex flex-col gap-2",
+                                                for slot in COL2_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                }
+                                            }
+                                            div { class: "flex flex-col gap-2",
+                                                for slot in COL3_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                }
+                                            }
+                                            div { class: "flex flex-col gap-2",
+                                                for slot in COL4_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                                 }
                                             }
                                         }
