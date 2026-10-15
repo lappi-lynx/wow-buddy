@@ -99,3 +99,8 @@ fn shaman_is_complete() {
 fn mage_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "mage");
 }
+
+#[test]
+fn warlock_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "warlock");
+}

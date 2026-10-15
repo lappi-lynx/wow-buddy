@@ -563,6 +563,12 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_staff_13, Emberstone Staff) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_staff_09": {
+      "path": "assets/icons/items/inv_staff_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_09, Staff of Soran'ruk) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }
