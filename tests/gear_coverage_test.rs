@@ -84,3 +84,8 @@ fn hunter_is_complete() {
 fn rogue_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "rogue");
 }
+
+#[test]
+fn priest_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "priest");
+}

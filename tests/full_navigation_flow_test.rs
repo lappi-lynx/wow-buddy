@@ -49,8 +49,10 @@ fn test_gear_planner_data_covers_seeded_class_and_reports_gaps() {
     // сидированный класс имеет данные по обеим фракциям
     assert!(!gear.bands_for("warrior", Faction::Alliance).is_empty());
     assert!(!gear.bands_for("warrior", Faction::Horde).is_empty());
-    // несидированный класс честно пуст (экран покажет "no data", не панику)
-    assert!(gear.bands_for("priest", Faction::Alliance).is_empty());
+    // неизвестный класс честно пуст (экран покажет "no data", не панику) —
+    // после Track C все 9 классов заполнены, поэтому берём никогда не
+    // существующий id, а не несидированный класс
+    assert!(gear.bands_for("nonexistent", Faction::Alliance).is_empty());
 }
 
 #[test]

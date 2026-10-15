@@ -935,6 +935,232 @@
           }
         }
       ]
+    },
+    "priest": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter mace",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest cloth pieces (Elwynn Forest)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Oakthrush Staff",
+              "level": 14,
+              "item_id": 15397,
+              "icon_id": "inv_staff_08",
+              "source": "The Fragments Within (quest, Alliance)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Greater Magic Wand",
+              "level": 13,
+              "item_id": 11288,
+              "icon_id": "inv_staff_07",
+              "source": "Crafted (Enchanting)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Staff of Westfall",
+              "level": 20,
+              "item_id": 2042,
+              "icon_id": "inv_staff_10",
+              "source": "The Defias Brotherhood (quest, Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Cookie's Stirring Rod",
+              "level": 17,
+              "item_id": 5198,
+              "icon_id": "inv_staff_02",
+              "source": "Cookie, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Lesser Mystic Wand",
+              "level": 26,
+              "item_id": 11289,
+              "icon_id": "inv_staff_02",
+              "source": "Crafted (Enchanting)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Gravestone Scepter",
+              "level": 27,
+              "item_id": 7001,
+              "icon_id": "inv_wand_04",
+              "source": "Blackfathom Villainy (quest), Blackfathom Deeps",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "level": 24,
+              "item_id": 1155,
+              "icon_id": "inv_staff_06",
+              "source": "Lady Sarevess, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Gnomeregan (29–38, Dun Morogh)",
+            "source": "Blackfathom Deeps & Gnomeregan loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter mace",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest cloth pieces (Durotar)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Greater Magic Wand",
+              "level": 13,
+              "item_id": 11288,
+              "icon_id": "inv_staff_07",
+              "source": "Crafted (Enchanting)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Tail Spike",
+              "level": 16,
+              "item_id": 6448,
+              "icon_id": "inv_weapon_shortblade_10",
+              "source": "Skum, Wailing Caverns (stat-stick dagger)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Living Root",
+              "level": 18,
+              "item_id": 6631,
+              "icon_id": "inv_staff_25",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Crescent Staff",
+              "level": 22,
+              "item_id": 6505,
+              "icon_id": "inv_staff_04",
+              "source": "Leaders of the Fang (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Lesser Mystic Wand",
+              "level": 26,
+              "item_id": 11289,
+              "icon_id": "inv_staff_02",
+              "source": "Crafted (Enchanting)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "level": 24,
+              "item_id": 1155,
+              "icon_id": "inv_staff_06",
+              "source": "Lady Sarevess, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ]
     }
   }
 }

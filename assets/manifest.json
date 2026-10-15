@@ -509,6 +509,48 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_sword_33, Outlaw Sabre) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_staff_07": {
+      "path": "assets/icons/items/inv_staff_07.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_07, Greater Magic Wand) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_10": {
+      "path": "assets/icons/items/inv_staff_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_10, Staff of Westfall) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_02": {
+      "path": "assets/icons/items/inv_staff_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_02, Cookie's Stirring Rod / Lesser Mystic Wand) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_25": {
+      "path": "assets/icons/items/inv_staff_25.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_25, Living Root) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_04": {
+      "path": "assets/icons/items/inv_staff_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_04, Crescent Staff) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_wand_04": {
+      "path": "assets/icons/items/inv_wand_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_wand_04, Gravestone Scepter) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_06": {
+      "path": "assets/icons/items/inv_staff_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_06, Rod of the Sleepwalker) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }
