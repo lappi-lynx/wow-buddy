@@ -10,6 +10,7 @@ pub mod localized;
 pub mod milestones;
 pub mod pets;
 pub mod race;
+pub mod readiness;
 pub mod reference;
 pub mod zone;
 
@@ -31,6 +32,9 @@ pub use pets::{
     PetsData, PetsSection, SourceRef, TameBasic, WarlockMinion,
 };
 pub use race::RaceInfo;
+pub use readiness::{
+    readiness_level, GroupFinding, ReadinessData, ReadinessItem, ReadinessLevel,
+};
 pub use reference::{NpcBook, NpcRef};
 pub use zone::StarterZoneInfo;
 

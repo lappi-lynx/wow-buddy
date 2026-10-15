@@ -1,0 +1,78 @@
+{
+  "threshold_almost": 5,
+  "items": [
+    {
+      "id": "repair",
+      "text": {
+        "en": "Repair your gear",
+        "ru": "Почините снаряжение",
+        "fi": "Korjaa varusteesi"
+      }
+    },
+    {
+      "id": "food_water",
+      "text": {
+        "en": "Bring food and drink",
+        "ru": "Возьмите еду и воду",
+        "fi": "Ota ruokaa ja juomaa"
+      }
+    },
+    {
+      "id": "potions",
+      "text": {
+        "en": "Carry health/mana potions",
+        "ru": "Имейте зелья здоровья/маны",
+        "fi": "Pidä terveys-/manapulloja"
+      }
+    },
+    {
+      "id": "bags",
+      "text": {
+        "en": "Clear 10+ bag slots",
+        "ru": "Освободите 10+ ячеек в сумках",
+        "fi": "Tyhjennä 10+ laukkupaikkaa"
+      }
+    },
+    {
+      "id": "quests",
+      "text": {
+        "en": "Pick up the dungeon quests",
+        "ru": "Возьмите задания подземелья",
+        "fi": "Nouda luolaston tehtävät"
+      }
+    },
+    {
+      "id": "level",
+      "text": {
+        "en": "Be in the level range",
+        "ru": "Будьте в нужном уровне",
+        "fi": "Ole tasovälillä"
+      }
+    },
+    {
+      "id": "role",
+      "text": {
+        "en": "Know your group role",
+        "ru": "Знайте свою роль в группе",
+        "fi": "Tunne roolisi ryhmässä"
+      }
+    },
+    {
+      "id": "time",
+      "text": {
+        "en": "Reserve ~45–90 minutes",
+        "ru": "Запланируйте ~45–90 минут",
+        "fi": "Varaa ~45–90 minuuttia"
+      }
+    }
+  ],
+  "group_finding": {
+    "text": {
+      "en": "Ask in the world channel or use the in-game group finder for your level range.",
+      "ru": "Спросите в мировом чате или воспользуйтесь внутриигровым поиском группы для вашего диапазона уровней.",
+      "fi": "Kysy maailmankanavalla tai käytä pelinsisäistä ryhmänhakua tasovälillesi."
+    },
+    "verified": false,
+    "provenance": null
+  }
+}

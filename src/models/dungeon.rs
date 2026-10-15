@@ -14,6 +14,11 @@ pub struct DungeonCodexInfo {
     pub name: String,
     pub icon: String,
     pub level_range: String,
+    /// Numeric bounds for level-aware filtering (mirror `level_range`).
+    #[serde(default)]
+    pub min_level: u8,
+    #[serde(default)]
+    pub max_level: u8,
     /// KB-verified clear-time estimate, kept as a range string (e.g. "60–90")
     /// so no single-minute precision is invented.
     pub estimated_time: String,
@@ -64,6 +69,8 @@ pub fn get_dungeon_codex(dungeon_id: &str) -> DungeonCodexInfo {
             name: "The Deadmines".to_string(),
             icon: "☠️".to_string(),
             level_range: "17–21".to_string(),
+            min_level: 17,
+            max_level: 21,
             estimated_time: "45".to_string(),
             bag_slots_required: 10,
             rules: deadmines_rules,
@@ -73,6 +80,8 @@ pub fn get_dungeon_codex(dungeon_id: &str) -> DungeonCodexInfo {
             name: "Wailing Caverns".to_string(),
             icon: "🐍".to_string(),
             level_range: "15–22".to_string(),
+            min_level: 15,
+            max_level: 22,
             estimated_time: "60–90".to_string(),
             bag_slots_required: 10,
             rules: vec![
@@ -107,6 +116,8 @@ pub fn get_dungeon_codex(dungeon_id: &str) -> DungeonCodexInfo {
             name: "Shadowfang Keep".to_string(),
             icon: "🐺".to_string(),
             level_range: "18–25".to_string(),
+            min_level: 18,
+            max_level: 25,
             estimated_time: "45–60".to_string(),
             bag_slots_required: 10,
             rules: vec![
@@ -141,6 +152,8 @@ pub fn get_dungeon_codex(dungeon_id: &str) -> DungeonCodexInfo {
             name: "The Hall of Thanes".to_string(),
             icon: "⚒️".to_string(),
             level_range: "13–20".to_string(),
+            min_level: 13,
+            max_level: 20,
             estimated_time: "30–45".to_string(),
             bag_slots_required: 10,
             rules: vec![
@@ -175,9 +188,32 @@ pub fn get_dungeon_codex(dungeon_id: &str) -> DungeonCodexInfo {
             name: "Ragefire Chasm".to_string(),
             icon: "🔥".to_string(),
             level_range: "13–18".to_string(),
+            min_level: 13,
+            max_level: 18,
             estimated_time: "35".to_string(),
             bag_slots_required: 10,
             rules: deadmines_rules,
         },
     }
+}
+
+/// The codex dungeon ids in display order (single source for level queries).
+pub const DUNGEON_IDS: [&str; 5] = [
+    "ragefire_chasm",
+    "hall_of_thanes",
+    "wailing_caverns",
+    "deadmines",
+    "shadowfang_keep",
+];
+
+pub fn get_all_dungeons() -> Vec<DungeonCodexInfo> {
+    DUNGEON_IDS.iter().map(|id| get_dungeon_codex(id)).collect()
+}
+
+/// The dungeons whose level range contains `level`.
+pub fn dungeons_for_level(level: u8) -> Vec<DungeonCodexInfo> {
+    get_all_dungeons()
+        .into_iter()
+        .filter(|d| level >= d.min_level && level <= d.max_level)
+        .collect()
 }
