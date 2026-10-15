@@ -69,3 +69,8 @@ pub fn assert_class_complete(data: &GearPlannerData, class_id: &str) {
 fn warrior_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "warrior");
 }
+
+#[test]
+fn paladin_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "paladin");
+}

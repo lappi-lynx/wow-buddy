@@ -425,6 +425,12 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_weapon_halbard_01, Corpsemaker) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_hammer_05": {
+      "path": "assets/icons/items/inv_hammer_05.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_hammer_05, Verigan's Fist) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }
