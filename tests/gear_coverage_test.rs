@@ -176,6 +176,15 @@ pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, facti
 }
 
 #[test]
+fn paladin_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "paladin",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
 fn hunter_slots_complete() {
     // Both factions (Alliance elf + Horde). The other classes land with the
     // remaining fills; the umbrella gate (Task 13) requires all nine.

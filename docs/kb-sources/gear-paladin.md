@@ -28,3 +28,10 @@
 - **Armor lines** reuse the verified dungeon pools: Hall of Thanes (13–20), Deadmines (18–23), RFC (13–18), WC (15–22) with the 2026-09-17 dungeon provenance; 24–30 lines use BFD (24–32) and SFK (18–25) with today's provenance.
 - **Icons:** `inv_hammer_05` (Verigan's Fist) imported 2026-10-15; every other icon was already embedded.
 - The KB's per-class lists remain a *candidate* source only — three fabrications and two wrong ids were caught here by the DB check, the same failure mode the warrior batches documented.
+
+## Slots — paladin (2026-10-15, KB sessions 475d083e / 5be72fae)
+
+- 12–16 (7): Runed Copper set (Breastplate/Bracers/Gauntlets/Belt/Pants) + Rough Bronze Boots + the crafted cloak — all Blacksmithing mail, faction-neutral.
+- 20–24 (11): Flying Tiger Goggles, PvP neck (Sentinel's/Scout's), Serpent's Shoulders, faction cloak, Silvered Bronze (Breastplate/Gauntlets/Boots) + Patterned Bronze Bracers, Dark Leather Belt/Pants, PvP/signature ring.
+- 24–30 (11): Green Tinted Goggles, Elite Shoulders (req 25), Shining Silver Breastplate, Barbaric Bracers, Deviate Scale Gloves/Belt, Silvered Bronze Leggings (req 26), Wrangler's Boots, Tiger Band, class PvP insignia.
+- **Fabrications dropped:** "Ironchain Shoulders/Leggings", "Ironclad Bracers", "Cobalt Belt", "Silvered Bronze Belt", "River Pride Amulet", "Outrider's Cloak". **Over-cap drops:** Golden Scale Bracers (req 32), Gauntlets of the Sea (req 41 — KB said 25). Elite Shoulders is req 25 (KB said 21) → moved to 24–30.

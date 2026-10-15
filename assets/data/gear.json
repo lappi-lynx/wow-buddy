@@ -306,6 +306,64 @@
             "text": "The Hall of Thanes (13–20, Ironforge)",
             "source": "The Hall of Thanes loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "back": {
+              "name": "Embossed Leather Cloak",
+              "level": 8,
+              "item_id": 2310,
+              "icon_id": "inv_helmet_48",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "chest": {
+              "name": "Runed Copper Breastplate",
+              "level": 13,
+              "item_id": 2864,
+              "icon_id": "inv_chest_plate03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "wrist": {
+              "name": "Runed Copper Bracers",
+              "level": 14,
+              "item_id": 2854,
+              "icon_id": "inv_bracer_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "hands": {
+              "name": "Runed Copper Gauntlets",
+              "level": 7,
+              "item_id": 3472,
+              "icon_id": "inv_gauntlets_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "waist": {
+              "name": "Runed Copper Belt",
+              "level": 13,
+              "item_id": 2857,
+              "icon_id": "inv_belt_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "legs": {
+              "name": "Runed Copper Pants",
+              "level": 8,
+              "item_id": 3473,
+              "icon_id": "inv_pants_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "feet": {
+              "name": "Rough Bronze Boots",
+              "level": 13,
+              "item_id": 6350,
+              "icon_id": "inv_boots_01",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            }
           }
         },
         {
@@ -335,6 +393,96 @@
             "text": "The Deadmines (18–23, Westfall)",
             "source": "The Deadmines loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "head": {
+              "name": "Flying Tiger Goggles",
+              "level": 20,
+              "item_id": 4368,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Serpent's Shoulders",
+              "level": 18,
+              "item_id": 5404,
+              "icon_id": "inv_shoulder_08",
+              "source": "Lady Anacondra, Wailing Caverns",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "chest": {
+              "name": "Silvered Bronze Breastplate",
+              "level": 21,
+              "item_id": 2869,
+              "icon_id": "inv_chest_chain_09",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "wrist": {
+              "name": "Patterned Bronze Bracers",
+              "level": 20,
+              "item_id": 2868,
+              "icon_id": "inv_bracer_07",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "hands": {
+              "name": "Silvered Bronze Gauntlets",
+              "level": 22,
+              "item_id": 3483,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "waist": {
+              "name": "Dark Leather Belt",
+              "level": 20,
+              "item_id": 4249,
+              "icon_id": "inv_belt_03",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "legs": {
+              "name": "Dark Leather Pants",
+              "level": 18,
+              "item_id": 5961,
+              "icon_id": "inv_pants_09",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "feet": {
+              "name": "Silvered Bronze Boots",
+              "level": 21,
+              "item_id": 3482,
+              "icon_id": "inv_boots_01",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "neck": {
+              "name": "Sentinel's Medallion",
+              "level": 18,
+              "item_id": 20444,
+              "icon_id": "inv_jewelry_necklace_13",
+              "source": "Silverwing Sentinels vendor (Ashenvale)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "back": {
+              "name": "Cape of the Brotherhood",
+              "level": 19,
+              "item_id": 5193,
+              "icon_id": "inv_misc_cape_08",
+              "source": "Edwin VanCleef, The Deadmines (Westfall)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "finger": {
+              "name": "Seal of Wrynn",
+              "level": 20,
+              "item_id": 2933,
+              "icon_id": "inv_jewelry_ring_05",
+              "source": "An Audience with the King (quest, Stormwind)",
+              "provenance": "kb:475d083e@2026-10-15"
+            }
           }
         },
         {
@@ -364,6 +512,96 @@
             "text": "Blackfathom Deeps (24–32, Ashenvale)",
             "source": "Blackfathom Deeps loot table (KB 2026-10-15)",
             "provenance": "kb:dungeons@2026-10-15"
+          },
+          "slots": {
+            "head": {
+              "name": "Green Tinted Goggles",
+              "level": 24,
+              "item_id": 4385,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Elite Shoulders",
+              "level": 25,
+              "item_id": 4835,
+              "icon_id": "inv_shoulder_05",
+              "source": "Vendor / Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "chest": {
+              "name": "Shining Silver Breastplate",
+              "level": 24,
+              "item_id": 2870,
+              "icon_id": "inv_chest_plate15",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "wrist": {
+              "name": "Barbaric Bracers",
+              "level": 27,
+              "item_id": 18948,
+              "icon_id": "inv_bracer_15",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "hands": {
+              "name": "Deviate Scale Gloves",
+              "level": 16,
+              "item_id": 6467,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "waist": {
+              "name": "Deviate Scale Belt",
+              "level": 18,
+              "item_id": 6468,
+              "icon_id": "inv_belt_09",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "legs": {
+              "name": "Silvered Bronze Leggings",
+              "level": 26,
+              "item_id": 10423,
+              "icon_id": "inv_pants_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "feet": {
+              "name": "Wrangler's Boots",
+              "level": 20,
+              "item_id": 15330,
+              "icon_id": "inv_boots_05",
+              "source": "World drop 20–28 / Targorr the Dread, The Stockades",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "finger": {
+              "name": "Tiger Band",
+              "level": 30,
+              "item_id": 6749,
+              "icon_id": "inv_jewelry_ring_13",
+              "source": "Willix the Importer (quest, level 30)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "trinket": {
+              "name": "Insignia of the Alliance",
+              "level": 28,
+              "item_id": 18856,
+              "icon_id": "inv_jewelry_trinketpvp_01",
+              "source": "Officer Areyn (PvP vendor, Stormwind)",
+              "provenance": "kb:475d083e@2026-10-15"
+            },
+            "back": {
+              "name": "Caretaker's Cape",
+              "level": 18,
+              "item_id": 20428,
+              "icon_id": "inv_misc_cape_13",
+              "source": "Silverwing Sentinels vendor (Ashenvale)",
+              "provenance": "kb:475d083e@2026-10-15"
+            }
           }
         }
       ],
@@ -422,6 +660,64 @@
             "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
             "source": "Ragefire Chasm loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "back": {
+              "name": "Embossed Leather Cloak",
+              "level": 8,
+              "item_id": 2310,
+              "icon_id": "inv_helmet_48",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "chest": {
+              "name": "Runed Copper Breastplate",
+              "level": 13,
+              "item_id": 2864,
+              "icon_id": "inv_chest_plate03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "wrist": {
+              "name": "Runed Copper Bracers",
+              "level": 14,
+              "item_id": 2854,
+              "icon_id": "inv_bracer_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "hands": {
+              "name": "Runed Copper Gauntlets",
+              "level": 7,
+              "item_id": 3472,
+              "icon_id": "inv_gauntlets_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "waist": {
+              "name": "Runed Copper Belt",
+              "level": 13,
+              "item_id": 2857,
+              "icon_id": "inv_belt_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "legs": {
+              "name": "Runed Copper Pants",
+              "level": 8,
+              "item_id": 3473,
+              "icon_id": "inv_pants_03",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "feet": {
+              "name": "Rough Bronze Boots",
+              "level": 13,
+              "item_id": 6350,
+              "icon_id": "inv_boots_01",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            }
           }
         },
         {
@@ -451,6 +747,96 @@
             "text": "Wailing Caverns (15–22, The Barrens)",
             "source": "Wailing Caverns loot table (KB 2026-09-17)",
             "provenance": "kb:dungeons@2026-09-17"
+          },
+          "slots": {
+            "head": {
+              "name": "Flying Tiger Goggles",
+              "level": 20,
+              "item_id": 4368,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Serpent's Shoulders",
+              "level": 18,
+              "item_id": 5404,
+              "icon_id": "inv_shoulder_08",
+              "source": "Lady Anacondra, Wailing Caverns",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "chest": {
+              "name": "Silvered Bronze Breastplate",
+              "level": 21,
+              "item_id": 2869,
+              "icon_id": "inv_chest_chain_09",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "wrist": {
+              "name": "Patterned Bronze Bracers",
+              "level": 20,
+              "item_id": 2868,
+              "icon_id": "inv_bracer_07",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "hands": {
+              "name": "Silvered Bronze Gauntlets",
+              "level": 22,
+              "item_id": 3483,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "waist": {
+              "name": "Dark Leather Belt",
+              "level": 20,
+              "item_id": 4249,
+              "icon_id": "inv_belt_03",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "legs": {
+              "name": "Dark Leather Pants",
+              "level": 18,
+              "item_id": 5961,
+              "icon_id": "inv_pants_09",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "feet": {
+              "name": "Silvered Bronze Boots",
+              "level": 21,
+              "item_id": 3482,
+              "icon_id": "inv_boots_01",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "neck": {
+              "name": "Scout's Medallion",
+              "level": 18,
+              "item_id": 20442,
+              "icon_id": "inv_jewelry_necklace_14",
+              "source": "Warsong Outriders vendor (Kelm Hargunth)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "back": {
+              "name": "Sentry Cloak",
+              "level": 19,
+              "item_id": 2059,
+              "icon_id": "inv_misc_cape_04",
+              "source": "World drop",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "finger": {
+              "name": "Seal of Sylvanas",
+              "level": 27,
+              "item_id": 6414,
+              "icon_id": "inv_jewelry_ring_15",
+              "source": "Arugal Must Die (quest, Silverpine Forest)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            }
           }
         },
         {
@@ -480,6 +866,96 @@
             "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
             "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
             "provenance": "kb:dungeons@2026-10-15"
+          },
+          "slots": {
+            "head": {
+              "name": "Green Tinted Goggles",
+              "level": 24,
+              "item_id": 4385,
+              "icon_id": "inv_helmet_47",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "shoulders": {
+              "name": "Elite Shoulders",
+              "level": 25,
+              "item_id": 4835,
+              "icon_id": "inv_shoulder_05",
+              "source": "Vendor / Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "chest": {
+              "name": "Shining Silver Breastplate",
+              "level": 24,
+              "item_id": 2870,
+              "icon_id": "inv_chest_plate15",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "wrist": {
+              "name": "Barbaric Bracers",
+              "level": 27,
+              "item_id": 18948,
+              "icon_id": "inv_bracer_15",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "hands": {
+              "name": "Deviate Scale Gloves",
+              "level": 16,
+              "item_id": 6467,
+              "icon_id": "inv_gauntlets_05",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "waist": {
+              "name": "Deviate Scale Belt",
+              "level": 18,
+              "item_id": 6468,
+              "icon_id": "inv_belt_09",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "legs": {
+              "name": "Silvered Bronze Leggings",
+              "level": 26,
+              "item_id": 10423,
+              "icon_id": "inv_pants_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "feet": {
+              "name": "Wrangler's Boots",
+              "level": 20,
+              "item_id": 15330,
+              "icon_id": "inv_boots_05",
+              "source": "World drop 20–28 / Targorr the Dread, The Stockades",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "finger": {
+              "name": "Tiger Band",
+              "level": 30,
+              "item_id": 6749,
+              "icon_id": "inv_jewelry_ring_13",
+              "source": "Willix the Importer (quest, level 30)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "trinket": {
+              "name": "Insignia of the Horde",
+              "level": 28,
+              "item_id": 18846,
+              "icon_id": "inv_jewelry_trinketpvp_02",
+              "source": "Sergeant Ba'sha (PvP vendor, Orgrimmar)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            },
+            "back": {
+              "name": "Dark Leather Cloak",
+              "level": 17,
+              "item_id": 2316,
+              "icon_id": "inv_misc_cape_10",
+              "source": "Crafted (Leatherworking)",
+              "provenance": "kb:5be72fae@2026-10-15"
+            }
           }
         }
       ]

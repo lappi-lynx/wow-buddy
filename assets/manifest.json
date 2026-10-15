@@ -761,6 +761,78 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_boots_04, Footpads of the Fang) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_chest_plate03": {
+      "path": "assets/icons/items/inv_chest_plate03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_plate03, Runed Copper Breastplate) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_03": {
+      "path": "assets/icons/items/inv_bracer_03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_03, Runed Copper Bracers) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_04": {
+      "path": "assets/icons/items/inv_gauntlets_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_04, Runed Copper Gauntlets) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_03": {
+      "path": "assets/icons/items/inv_belt_03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_03, Runed Copper Belt / Dark Leather Belt) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_boots_01": {
+      "path": "assets/icons/items/inv_boots_01.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_boots_01, Rough Bronze Boots / Silvered Bronze Boots) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shoulder_05": {
+      "path": "assets/icons/items/inv_shoulder_05.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shoulder_05, Elite Shoulders) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_chain_09": {
+      "path": "assets/icons/items/inv_chest_chain_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_chain_09, Silvered Bronze Breastplate) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_07": {
+      "path": "assets/icons/items/inv_bracer_07.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_07, Patterned Bronze Bracers) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_04": {
+      "path": "assets/icons/items/inv_pants_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_04, Silvered Bronze Leggings) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_ring_15": {
+      "path": "assets/icons/items/inv_jewelry_ring_15.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_ring_15, Seal of Sylvanas) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_plate15": {
+      "path": "assets/icons/items/inv_chest_plate15.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_plate15, Shining Silver Breastplate) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_03": {
+      "path": "assets/icons/items/inv_pants_03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_03, Runed Copper Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }
