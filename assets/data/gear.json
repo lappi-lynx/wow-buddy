@@ -1161,6 +1161,240 @@
           }
         }
       ]
+    },
+    "shaman": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter mace",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest mail pieces (Dun Morogh)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Heavy Copper Maul",
+              "level": 12,
+              "item_id": 6214,
+              "icon_id": "inv_hammer_18",
+              "source": "Crafted (Blacksmithing) or early zones",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Ironforge Greathammer",
+              "level": 14,
+              "item_id": 279895,
+              "icon_id": "inv_hammer_21",
+              "source": "Dun Morogh / Ironforge",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rhahk'Zor's Hammer",
+              "level": 16,
+              "item_id": 5187,
+              "icon_id": "inv_hammer_09",
+              "source": "Rhahk'Zor, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Smite's Mighty Hammer",
+              "level": 20,
+              "item_id": 7230,
+              "icon_id": "inv_hammer_01",
+              "source": "Mr. Smite, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Emberstone Staff",
+              "level": 17,
+              "item_id": 5201,
+              "icon_id": "inv_staff_13",
+              "source": "Captain Greenskin, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Reef Axe",
+              "level": 22,
+              "item_id": 6905,
+              "icon_id": "inv_weapon_halberd_06",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Mechanic's Pipehammer",
+              "level": 30,
+              "item_id": 9604,
+              "icon_id": "inv_mace_04",
+              "source": "Data Rescue (quest, Gnomeregan)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Corpsemaker",
+              "level": 29,
+              "item_id": 6687,
+              "icon_id": "inv_weapon_halbard_01",
+              "source": "Overlord Ramtusk, Razorfen Kraul (The Barrens)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Gnomeregan (29–38, Dun Morogh) / Razorfen Kraul (29–38, The Barrens)",
+            "source": "Gnomeregan & Razorfen Kraul loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter mace",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest mail pieces (Durotar)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Hammer of Orgrimmar",
+              "level": 13,
+              "item_id": 15445,
+              "icon_id": "inv_hammer_23",
+              "source": "Hidden Enemies (choice reward), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Axe of Orgrimmar",
+              "level": 13,
+              "item_id": 15424,
+              "icon_id": "inv_axe_04",
+              "source": "Hidden Enemies (choice reward), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Crescent Staff",
+              "level": 22,
+              "item_id": 6505,
+              "icon_id": "inv_staff_04",
+              "source": "Leaders of the Fang (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Reef Axe",
+              "level": 22,
+              "item_id": 6905,
+              "icon_id": "inv_weapon_halberd_06",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Corpsemaker",
+              "level": 29,
+              "item_id": 6687,
+              "icon_id": "inv_weapon_halbard_01",
+              "source": "Overlord Ramtusk, Razorfen Kraul (The Barrens)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "level": 24,
+              "item_id": 1155,
+              "icon_id": "inv_staff_06",
+              "source": "Lady Sarevess, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Razorfen Kraul (29–38, The Barrens)",
+            "source": "Blackfathom Deeps & Razorfen Kraul loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ]
     }
   }
 }
