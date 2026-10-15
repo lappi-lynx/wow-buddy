@@ -709,6 +709,232 @@
           }
         }
       ]
+    },
+    "rogue": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter dagger",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Elwynn Forest)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Poniard",
+              "level": 14,
+              "item_id": 2208,
+              "icon_id": "inv_sword_12",
+              "source": "Sold by weaponsmith vendors",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Big Bronze Knife",
+              "level": 15,
+              "item_id": 3848,
+              "icon_id": "inv_weapon_shortblade_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Cruel Barb",
+              "level": 19,
+              "item_id": 5191,
+              "icon_id": "inv_sword_24",
+              "source": "Edwin VanCleef, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Blackfang",
+              "level": 20,
+              "item_id": 2236,
+              "icon_id": "inv_weapon_shortblade_02",
+              "source": "World drop",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Prison Shank",
+              "level": 23,
+              "item_id": 2941,
+              "icon_id": "inv_weapon_shortblade_18",
+              "source": "Bruegal Ironknuckle, The Stockades (Stormwind)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Toxic Revenger",
+              "level": 27,
+              "item_id": 9453,
+              "icon_id": "inv_weapon_shortblade_02",
+              "source": "Viscous Fallout, Gnomeregan (Dun Morogh)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Meteor Shard",
+              "level": 23,
+              "item_id": 6220,
+              "icon_id": "inv_weapon_shortblade_25",
+              "source": "Archmage Arugal, Shadowfang Keep (Silverpine Forest)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Gnomeregan (29–38, Dun Morogh)",
+            "source": "Blackfathom Deeps & Gnomeregan loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter dagger",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Durotar)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Tail Spike",
+              "level": 16,
+              "item_id": 6448,
+              "icon_id": "inv_weapon_shortblade_10",
+              "source": "Skum, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Big Bronze Knife",
+              "level": 15,
+              "item_id": 3848,
+              "icon_id": "inv_weapon_shortblade_04",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Blackfang",
+              "level": 20,
+              "item_id": 2236,
+              "icon_id": "inv_weapon_shortblade_02",
+              "source": "World drop",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Wingblade",
+              "level": 18,
+              "item_id": 6504,
+              "icon_id": "inv_sword_16",
+              "source": "Leaders of the Fang (quest), Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Meteor Shard",
+              "level": 23,
+              "item_id": 6220,
+              "icon_id": "inv_weapon_shortblade_25",
+              "source": "Archmage Arugal, Shadowfang Keep (Silverpine Forest)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Outlaw Sabre",
+              "level": 30,
+              "item_id": 16886,
+              "icon_id": "inv_sword_33",
+              "source": "Baron Aquanis (quest chain), Blackfathom Deeps",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ]
     }
   }
 }

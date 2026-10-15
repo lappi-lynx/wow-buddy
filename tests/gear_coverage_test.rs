@@ -79,3 +79,8 @@ fn paladin_is_complete() {
 fn hunter_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "hunter");
 }
+
+#[test]
+fn rogue_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "rogue");
+}

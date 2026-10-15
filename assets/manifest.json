@@ -467,6 +467,48 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_sword_14, Heavy Copper Broadsword) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_sword_12": {
+      "path": "assets/icons/items/inv_sword_12.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_12, Poniard) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_04": {
+      "path": "assets/icons/items/inv_weapon_shortblade_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_04, Big Bronze Knife) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_10": {
+      "path": "assets/icons/items/inv_weapon_shortblade_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_10, Tail Spike) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_02": {
+      "path": "assets/icons/items/inv_weapon_shortblade_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_02, Blackfang / Toxic Revenger) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_25": {
+      "path": "assets/icons/items/inv_weapon_shortblade_25.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_25, Meteor Shard) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_18": {
+      "path": "assets/icons/items/inv_weapon_shortblade_18.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_18, Prison Shank) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_sword_33": {
+      "path": "assets/icons/items/inv_sword_33.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_33, Outlaw Sabre) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }
