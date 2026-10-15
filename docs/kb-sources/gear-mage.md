@@ -27,3 +27,8 @@
 - **Wand line for mages** matches the priest path (Greater Magic Wand → Cookie's → Lesser Mystic Wand → Gravestone Scepter); the guide routes the same caster weapons for the four cloth classes.
 - **Bracket notes:** Cookie's/Emberstone (req 17) sit in the 20–24 band (Cruel Barb precedent); Rod of the Sleepwalker (24) is exact-band.
 - **Alliance armor pool**: HoT / Deadmines / BFD + Gnomeregan; horde: RFC / WC / BFD + SFK.
+
+## Slots — mage (2026-10-15)
+
+- Cloth, reusing the **priest's verified set wholesale** (Woolen → Arugal/Darkweave/Spidersilk → Azure Silk/Feline/Truefaith/Acidic) with the mage insignias (Alliance 18859, Horde 18850 — both ForeverDB-verified).
+- Availability: A 8/11/10 · H 8/10/10.

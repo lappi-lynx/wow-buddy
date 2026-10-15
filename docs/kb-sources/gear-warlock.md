@@ -23,3 +23,8 @@
 - **Staff of Soran'ruk is the warlock's class-quest staff** — shipped at the quest's level 25, in the 24–30 band.
 - **Tail Spike** repeats as a horde 12–16 stat-stick (verified dagger).
 - **Icon imported:** `inv_staff_09` (Staff of Soran'ruk); all others reused.
+
+## Slots — warlock (2026-10-15)
+
+- Cloth, reusing the priest set wholesale with the warlock insignias (Alliance 18858, Horde 18852 — verified).
+- Availability: A 8/11/10 · H 8/10/10.

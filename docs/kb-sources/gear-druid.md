@@ -26,3 +26,8 @@
 - **Bracket note (acc. to review follow-up):** Odo's Ley Staff (req 21) is filed in the horde 24–30 band because the KB guide routes Shadowfang Keep in that pool; unlike the gap-level items (Cruel Barb 19), 21 sits at the bottom of the 20–24 range — it is a late-pickup staff that remains useful until Rod of the Sleepwalker. The `level` field keeps the verified 21.
 - **Cavedweller's Mace made its third appearance as a fabrication** — the fidelity table keeps rejecting it (as with the earlier two).
 - This closes the last fill task: `gear_coverage_test` is 9/9 before the Task-10 gate.
+
+## Slots — druid (2026-10-15)
+
+- Leather, reusing the **hunter/rogue sets wholesale** (crafted basics → Fang/Wrangler's → Dark Leather/Hillman's/Deviate Scale) with the druid insignias (Alliance 18863, Horde 18853 — verified).
+- Availability: A 6/11/11 · H 6/10/11.

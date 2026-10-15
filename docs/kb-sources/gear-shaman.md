@@ -28,3 +28,8 @@
 - **Rod of the Sleepwalker** appears here as a *melee-capable staff filler* for horde 24–30 — it is the KB's own suggestion for the band and DB-verified; if a better 2H is found later, it replaces first.
 - **Bracket note:** Emberstone Staff (req 17) sits in the 20–24 band per the KB guide assignment (Cruel Barb precedent).
 - **Icons imported:** `inv_mace_04` (Mechanic's Pipehammer), `inv_staff_13` (Emberstone Staff); everything else reuses already-embedded icons.
+
+## Slots — shaman (2026-10-15)
+
+- Mail, so the **paladin's verified Blacksmithing set is reused wholesale** (Runed Copper → Silvered Bronze/Patterned Bronze → Shining Silver/Elite/Silvered Bronze Leggings) with the faction cloaks/necks/rings/PvP items and the **class insignia** (Horde 18845 verified; **no Alliance shaman insignia exists in the DB** — a classic-era gap — so the Alliance 24–30 set has 10 slots with no trinket).
+- Availability: A 7/11/10 · H 7/11/11.
