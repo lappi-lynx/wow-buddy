@@ -713,6 +713,54 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_jewelry_trinketpvp_01, Insignia of the Alliance) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_necklace_14": {
+      "path": "assets/icons/items/inv_jewelry_necklace_14.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_necklace_14, Scout's Medallion) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_04": {
+      "path": "assets/icons/items/inv_misc_cape_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_04, Sentry Cloak) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_10": {
+      "path": "assets/icons/items/inv_misc_cape_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_10, Dark Leather Cloak) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_09": {
+      "path": "assets/icons/items/inv_belt_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_09, Deviate Scale Belt) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_09": {
+      "path": "assets/icons/items/inv_pants_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_09, Dark Leather Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_trinketpvp_02": {
+      "path": "assets/icons/items/inv_jewelry_trinketpvp_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_trinketpvp_02, Insignia of the Horde) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_leather_10": {
+      "path": "assets/icons/items/inv_chest_leather_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_leather_10, Hillman's Leather Vest) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_boots_04": {
+      "path": "assets/icons/items/inv_boots_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_boots_04, Footpads of the Fang) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

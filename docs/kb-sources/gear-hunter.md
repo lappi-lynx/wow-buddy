@@ -34,3 +34,11 @@
 - **Fabrications caught by the fidelity pass** (dropped): "Embossed Leather Bracers", "Embossed Leather Belt", "Blackened Defias Bracers", "Barkhide Shoulders", "River Pride Amulet", "Triprunner Pants", "Deviate Scale Boots" — none exist in the Forever DB. Replacements came from the real families (Wrangler's, Fine/Embossed Leather, Deviate Scale, Dark Leather, Fang set).
 - **Wrong-slot/wrong-class catches:** Chausses of Westfall is **mail** (hunters cannot wear mail before 40 in 1.60.1) → dropped; "Band of the Tiger" → the real item is **Tiger Band** (quest: Willix the Importer); "Sentinel's Medallion"/"Caretaker's Cape" have **req-58 variants** (19538/19530) — the **req-18** versions (20444/20428) shipped.
 - **Icons:** 24 new item icons imported (list in `assets/manifest.json`, source lines name each item).
+
+## Slots — Horde hunter (2026-10-15, KB session 315742e3)
+
+- 12–16: the same crafted basics (Embossed Cloak/Vest/Pants, Fine Gloves/Belt/Boots) — faction-neutral Leatherworking, reused.
+- 20–24: Flying Tiger Goggles, Scout's Medallion (Warsong vendor), Serpent's Shoulders + the Fang set (Armor/Gloves/Belt/Leggings/Footpads), Sentry Cloak, Wrangler's Wristbands (world drop).
+- 24–30: Green Tinted Goggles, Dark Leather Shoulders/Cloak/Pants, Hillman's Leather Vest (req 15 — bracket note), Barbaric Bracers, Deviate Scale Gloves/Belt, Wrangler's Boots, Tiger Band, Insignia of the Horde (Hunter, Sgt. Ba'sha).
+- **Dropped as non-existent:** "Embossed Leather Bracers/Belt", "Bracers of the Fang", "Deviate Scale Vest/Pants/Boots", "Outrider's Cloak", "Barkhide Shoulders", "Band of the Tiger" (→ Tiger Band). "Gloves of the Fang" is a world drop per the DB, not the WC drop the KB named.
+- **Slot availability** matches the alliance side: 6/10/11 (no 12–16 wrist/finger/trinket/neck/head/shoulders; no 20–24 trinket; no 24–30 neck).

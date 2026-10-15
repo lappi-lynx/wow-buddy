@@ -177,10 +177,13 @@ pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, facti
 
 #[test]
 fn hunter_slots_complete() {
-    // Pilot: Alliance hunter (the partner's elf-hunter example). Horde hunter
-    // and the other classes land with the remaining fills; the umbrella gate
-    // (Task 13) requires both factions for all nine.
-    assert_class_slots_complete(&GearPlannerData::load_embedded(), "hunter", &[Faction::Alliance]);
+    // Both factions (Alliance elf + Horde). The other classes land with the
+    // remaining fills; the umbrella gate (Task 13) requires all nine.
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "hunter",
+        &[Faction::Alliance, Faction::Horde],
+    );
 }
 
 #[test]
