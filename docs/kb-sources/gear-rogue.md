@@ -30,3 +30,8 @@
 - **Alliance 24–30 second weapon:** Mechanic's Pipehammer was the KB's suggestion but is a 2H mace; Toxic Revenger + Meteor Shard are the two verified daggers.
 - **Alliance armor pool** now reads BFD / Gnomeregan (the guide routes Alliance through Gnomeregan); horde stays BFD / SFK.
 - **Icons imported:** `inv_sword_12` (Poniard), `inv_weapon_shortblade_04` (Big Bronze Knife), `inv_weapon_shortblade_10` (Tail Spike), `inv_weapon_shortblade_02` (Blackfang & Toxic Revenger — shared art), `inv_weapon_shortblade_25` (Meteor Shard), `inv_weapon_shortblade_18` (Prison Shank), `inv_sword_33` (Outlaw Sabre).
+
+## Slots — rogue (2026-10-15)
+
+- Leather like the hunter, so the two faction sets are reused wholesale (the crafted basics, the Fang set + Wrangler's/Sentry for 20–24, Dark Leather/Hillman's/Deviate Scale + Wrangler's Boots/Tiger Band for 24–30), with the **class-specific PvP insignia** swapped in: Insignia of the Alliance (Rogue, 18857) / Insignia of the Horde (Rogue, 18849) — both ForeverDB-verified (PvP vendors).
+- Availability: 6/11/11 (alliance) and 6/10/11 (horde — no verified 20–24 ring for horde; Seal of Sylvanas sits at the 24–30 tier).

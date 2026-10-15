@@ -176,6 +176,15 @@ pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, facti
 }
 
 #[test]
+fn rogue_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "rogue",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
 fn paladin_slots_complete() {
     assert_class_slots_complete(
         &GearPlannerData::load_embedded(),
