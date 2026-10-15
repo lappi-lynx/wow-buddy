@@ -84,7 +84,6 @@
   "rule_healer_mana_title": "Мана лекаря: ждать питья при мане < 30%",
   "rule_loot_etiquette_title": "Этикет лута: Greed по умолчанию, Need только если наденешь сейчас",
   "btn_choose": "Выбрать",
-  "btn_back": "Назад",
   "select_language": "Язык",
   "select": "Выбрать",
   "app_name": "WoW Buddy",

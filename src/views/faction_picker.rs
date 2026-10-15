@@ -34,9 +34,6 @@ pub fn FactionPickerView(
                         "{i18n_svc.t(\"app_name\", lang)}"
                     }
                 }
-                div { class: "flex items-center space-x-2",
-                    LanguagePicker { current_lang: current_lang }
-                }
             }
 
             main { class: "w-full max-w-4xl flex flex-col items-center flex-grow justify-center my-4",
@@ -72,6 +69,7 @@ pub fn FactionPickerView(
             }
 
             footer { class: "w-full max-w-5xl text-center py-4 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
+                LanguagePicker { current_lang: current_lang }
                 "{i18n_svc.t(\"footer_offline\", lang)}"
                 button {
                     class: "text-slate-500 hover:text-amber-300 cursor-pointer",
