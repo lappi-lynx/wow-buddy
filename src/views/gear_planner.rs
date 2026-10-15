@@ -8,12 +8,13 @@ use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
 use dioxus::prelude::*;
 
-/// Character-sheet layout (partner's natural-flow ordering): the left column
-/// holds the weapon plus utility slots; the armour grid reads top-left to
-/// bottom-right head -> feet.
-const LEFT_COLUMN_SLOTS: [&str; 4] = ["back", "waist", "finger", "trinket"];
-const TOP_ROW_SLOTS: [&str; 4] = ["head", "neck", "shoulders", "chest"];
-const BOTTOM_ROW_SLOTS: [&str; 4] = ["wrist", "hands", "legs", "feet"];
+/// Character-sheet columns (partner's layout): left = weapon + chest/legs/feet,
+/// middle = head/neck/shoulders/hands + the back (cloak) at the bottom,
+/// right = wrist/finger/trinket/waist. On desktop the columns read
+/// left -> middle -> right; on mobile they stack middle-first (head on top).
+const LEFT_COLUMN_SLOTS: [&str; 3] = ["chest", "legs", "feet"];
+const MIDDLE_COLUMN_SLOTS: [&str; 5] = ["head", "neck", "shoulders", "hands", "back"];
+const RIGHT_COLUMN_SLOTS: [&str; 4] = ["wrist", "finger", "trinket", "waist"];
 
 /// The band id to highlight for `level`: the containing band if one exists,
 /// otherwise the next band above it (used when the level is in a gap).
@@ -135,22 +136,21 @@ pub fn GearPlannerView(
                                 }
                                 if let Some(band) = current_band.as_ref() {
                                     div { class: "flex-1 flex flex-col lg:flex-row gap-2",
-                                        // Armour grid (mobile-first: the head row reads first)
-                                        div { class: "flex-1 flex flex-col gap-2",
-                                            div { class: "grid grid-cols-2 sm:grid-cols-4 gap-2",
-                                                for slot in TOP_ROW_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
-                                                }
-                                            }
-                                            div { class: "grid grid-cols-2 sm:grid-cols-4 gap-2",
-                                                for slot in BOTTOM_ROW_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
-                                                }
+                                        // Middle column (mobile-first: head reads on top);
+                                        // desktop order: left -> middle -> right.
+                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-2 lg:w-40 shrink-0 gap-2",
+                                            for slot in MIDDLE_COLUMN_SLOTS.iter() {
+                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                             }
                                         }
-                                        // Utility column: weapon + back/waist/finger/trinket
-                                        // (leftmost on desktop, below the armour grid on mobile)
-                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-first lg:w-40 shrink-0 gap-2",
+                                        // Right column: wrist/finger/trinket/waist
+                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-3 lg:w-40 shrink-0 gap-2",
+                                            for slot in RIGHT_COLUMN_SLOTS.iter() {
+                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                            }
+                                        }
+                                        // Left column: weapon + chest/legs/feet
+                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-1 lg:w-40 shrink-0 gap-2",
                                             if let Some(weapon) = band.weapons.first() {
                                                 { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
                                             }
