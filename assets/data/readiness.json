@@ -68,11 +68,11 @@
   ],
   "group_finding": {
     "text": {
-      "en": "Ask in the world channel or use the in-game group finder for your level range.",
-      "ru": "Спросите в мировом чате или воспользуйтесь внутриигровым поиском группы для вашего диапазона уровней.",
-      "fi": "Kysy maailmankanavalla tai käytä pelinsisäistä ryhmänhakua tasovälillesi."
+      "en": "Use the premade Group Finder: leaders post listings for dungeons (with tags), or solo players post themselves to be invited. No auto-queue or teleport — the party walks to the entrance.",
+      "ru": "Используйте поиск группы (премад-доска): лидеры публикуют объявления по подземельям (с тегами), а одиночки могут разместиться для приглашения. Автоочереди и телепорта нет — группа идёт к входу пешком.",
+      "fi": "Käytä premade-ryhmänhakua: johtajat julkaisevat ilmoituksia luolastoista (tunistein), tai sooloilijat ilmoittautuvat kutsuttaviksi. Automaattijonoa tai teleporttia ei ole — ryhmä kävelee sisäänkäynnille."
     },
-    "verified": false,
-    "provenance": null
+    "verified": true,
+    "provenance": "kb:542bc6e7@2026-10-15"
   }
 }

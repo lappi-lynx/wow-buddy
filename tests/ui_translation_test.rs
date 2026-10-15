@@ -129,6 +129,11 @@ fn test_complete_ui_labels_translation() {
     assert_eq!(i18n.t("ui_golden_rule", Language::En), "Golden Rule");
     assert_eq!(i18n.t("ui_need_warning", Language::En), "⚠️ Warning: Rolling Need for vendor gold will get you kicked and blacklisted on your realm!");
     assert_eq!(i18n.t("ui_greed_success", Language::En), "✓ Perfect! Never roll Need unless it is a direct upgrade you will equip immediately.");
+
+    // Dungeon readiness (Track E)
+    assert_eq!(i18n.t("ui_readiness_title", Language::En), "Dungeon readiness");
+    assert_eq!(i18n.t("ui_readiness_title", Language::Ru), "Готовность к подземелью");
+    assert_eq!(i18n.t("ui_readiness_title", Language::Fi), "Luolastovalmius");
 }
 
 /// EN and FI locales must not contain Cyrillic script (the RU locale may

@@ -11,13 +11,19 @@ fn readiness_meter_thresholds() {
 }
 
 #[test]
-fn readiness_dataset_is_8_items_and_unverified_group_finding() {
+fn readiness_dataset_is_8_items_and_verified_group_finding() {
     let d = ReadinessData::load_embedded();
     assert_eq!(d.items.len(), 8);
     assert!(
-        !d.group_finding.verified,
-        "group formation stays unverified until the KB confirms"
+        d.group_finding.verified,
+        "the KB confirmed the premade Group Finder (session 542bc6e7)"
     );
+    assert!(d
+        .group_finding
+        .provenance
+        .as_deref()
+        .map(|p| !p.trim().is_empty())
+        .unwrap_or(false));
     for it in &d.items {
         for l in [Language::En, Language::Ru, Language::Fi] {
             assert!(!it.text.get(l).trim().is_empty(), "{} {l:?}", it.id);

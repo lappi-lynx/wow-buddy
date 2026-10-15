@@ -1,4 +1,4 @@
-use crate::components::{DungeonRuleCard, LanguagePicker, LootQuiz};
+use crate::components::{DungeonRuleCard, LanguagePicker, LootQuiz, ReadinessCard};
 use crate::i18n::{I18nService, Language};
 use crate::models::dungeon::get_dungeon_codex;
 use dioxus::prelude::*;
@@ -73,6 +73,9 @@ pub fn DungeonCodexView(
                         }
                     }
                 }
+
+                // Readiness checklist + meter + find-a-group card
+                ReadinessCard { current_lang: current_lang, i18n: i18n }
 
                 // Summary Stats Bar
                 div { class: "w-full grid grid-cols-1 sm:grid-cols-3 gap-3",
