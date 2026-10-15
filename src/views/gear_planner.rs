@@ -165,7 +165,8 @@ pub fn GearPlannerView(
                                             }
                                         }
                                         // Bottom row: the trinket + the alternate weapon picks (dashed)
-                                        div { class: "w-full flex flex-wrap gap-2 items-start",
+                                        // on the same 4-column grid, so the tiles match the rows above
+                                        div { class: "grid grid-cols-4 gap-2 w-full",
                                             { slot_tile(BOTTOM_SLOT, BOTTOM_SLOT, band.slots.get(BOTTOM_SLOT), &registry, i18n, lang, popover, false) }
                                             for weapon in band.weapons.iter().skip(1) {
                                                 { slot_tile(&weapon.name, "weapon", Some(weapon), &registry, i18n, lang, popover, true) }
