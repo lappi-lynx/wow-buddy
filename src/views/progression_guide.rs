@@ -192,6 +192,26 @@ pub fn ProgressionGuideView(
                     i18n: i18n,
                 }
 
+                // Fishing & Cooking (Track E)
+                {
+                    let fishing = crate::models::fishing::FishingData::load_embedded();
+                    rsx! {
+                        div { class: "w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col space-y-3",
+                            h3 { class: "text-base sm:text-lg font-bold text-amber-300",
+                                "🎣 {fishing.title.get(lang)}"
+                            }
+                            ol { class: "flex flex-col space-y-1.5 list-decimal list-inside",
+                                for step in fishing.steps.iter() {
+                                    li { key: "{step.id}", class: "text-xs sm:text-sm text-slate-300",
+                                        "{step.text.get(lang)}"
+                                    }
+                                }
+                            }
+                            p { class: "text-xs text-slate-400", "{fishing.tie_in.get(lang)}" }
+                        }
+                    }
+                }
+
                 // Next Module Button
                 div { class: "w-full max-w-md pt-2",
                     button {

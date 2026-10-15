@@ -1,0 +1,40 @@
+{
+  "title": {
+    "en": "Fishing & Cooking",
+    "ru": "Рыбалка и кулинария",
+    "fi": "Kalastus ja ruoanlaitto"
+  },
+  "steps": [
+    {
+      "id": "trainer",
+      "text": {
+        "en": "Learn Fishing at level 5 from a fishing trainer in any capital city or starting town.",
+        "ru": "Научитесь рыбалке на 5 уровне у тренера рыбалки в любой столице или стартовом городке.",
+        "fi": "Opettele kalastus tasolla 5 kalastuskouluttajalta missä tahansa pääkaupungissa tai alkukylässä."
+      }
+    },
+    {
+      "id": "pole",
+      "text": {
+        "en": "Equip a fishing pole in your main hand; bait and lures help in higher-level waters.",
+        "ru": "Возьмите удочку в правую руку; наживка и приманки помогают в водах высокого уровня.",
+        "fi": "Varusta onki pääkäteen; syötit ja vieheet auttavat korkeamman tason vesillä."
+      }
+    },
+    {
+      "id": "cast",
+      "text": {
+        "en": "Stand by water, cast, and wait for the bobber to dip — then right-click it to reel in.",
+        "ru": "Встаньте у воды, закиньте удочку и дождитесь всплеска поплавка — затем кликните по нему правой кнопкой.",
+        "fi": "Seiso veden äärellä, heitä onki ja odota kohon uppoamista — klikkaa sitä oikealla painikkeella."
+      }
+    }
+  ],
+  "tie_in": {
+    "en": "Cook your catch with Cooking — the food restores health and mana between fights, and in Forever cooked food grants +5% experience.",
+    "ru": "Готовьте улов с помощью кулинарии — еда восстанавливает здоровье и ману между боями, а в Forever приготовленная еда даёт +5% к опыту.",
+    "fi": "Valmista saaliisi ruoanlaitolla — ruoka palauttaa terveyttä ja manaa taisteluiden välissä, ja Foreverissä valmistettu ruoka antaa +5% kokemusta."
+  },
+  "verified": true,
+  "provenance": "kb:e136eda7@2026-10-15"
+}
