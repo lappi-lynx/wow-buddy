@@ -1,5 +1,5 @@
 use crate::assets::AssetRegistry;
-use crate::components::{BlueprintExport, ClassTipsCard, GlossaryTerm, LanguagePicker, ModelViewer};
+use crate::components::{AppFooter, BlueprintExport, ClassTipsCard, GlossaryTerm, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     class::{availability, SpellAvailability},
@@ -64,7 +64,6 @@ pub fn DressingRoomView(
     race: RaceInfo,
     class: ClassInfo,
     faction: Faction,
-    on_back: EventHandler<()>,
     on_continue_to_guide: EventHandler<()>,
     on_open_gear_planner: EventHandler<()>,
     on_open_pets: EventHandler<()>,
@@ -94,13 +93,6 @@ pub fn DressingRoomView(
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
-            header { class: "w-full max-w-5xl mx-auto flex justify-between items-center py-3 border-b border-slate-800/80 mb-4",
-                button {
-                    class: "flex items-center justify-center w-9 h-9 text-base text-slate-400 hover:text-amber-300 transition-colors rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60 cursor-pointer",
-                    onclick: move |_| on_back.call(()),
-                    "←"
-                }
-            }
 
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow space-y-6",
                 // 3D Dressing Room Canvas
@@ -152,6 +144,8 @@ pub fn DressingRoomView(
 
                     input {
                         r#type: "range",
+                        // dragging the slider must never register as a back swipe
+                        onpointerdown: move |evt: Event<PointerData>| evt.stop_propagation(),
                         min: "1",
                         max: "60",
                         step: "1",
@@ -351,10 +345,6 @@ pub fn DressingRoomView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-400 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n.read().t(\"footer_offline\", lang)}"
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }

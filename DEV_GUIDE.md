@@ -166,8 +166,9 @@ When testing manually, verify the following core features:
 - In the Gear Planner, tap a weapon name — the panel shows its icon (when one exists) and the source line; generic items like "starter club" open without a picture.
 - Gear coverage: all **9 classes × both factions** ship level bands **1–6 / 12–16 / 20–24 / 24–30** (Track C). 30–60 arrives with the post-Nov-4 sync. Coverage is enforced by `tests/gear_coverage_test.rs` (`all_classes_complete`, `every_gear_icon_resolves_to_embedded_bytes`); per-class provenance lives in `docs/kb-sources/gear-<class>.md`.
 - Close popovers via the ✕ or by tapping the backdrop.
-- Open **ⓘ About & Legal** from the footer of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
-- Every footer reads **Works offline** (not "100% offline"): the app is offline-first and may fetch optional updates.
+- Open **About** from the top-right of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
+- Every footer is one line: the guide name on the left and the compact **EN/FI/RU** language selector on the right.
+- Sub-screens have no header bar: go back with the floating **←** button (desktop) or a horizontal swipe (mobile / trackpad).
 
 ### 9. Pets (`/pets`)
 - Hunter: dressing room → "Hunter pets" card → guide opens with "Tame basics" first
@@ -184,8 +185,8 @@ When testing manually, verify the following core features:
 ### 10. Guides (Track E)
 - Progression guide: the Legacy preset picker (Balanced / Explorer / Coin Saver tabs; "Copy allocation"
   copies the summary — the app never changes your in-game build), the Fishing & Cooking card
-  (3 KB-verified steps + the Forever-only +5% XP from cooked food), and the Comfort tips deck
-  (10 cards, ←/→, `{current} / {total}` counter).
+  (3 KB-verified steps + the Forever-only +5% XP from cooked food), and the Comfort tips card
+  (one random tip of the ten per visit — no arrows, no counter).
 - Dungeon codex: the readiness card — tick the 8 checklist items to move the
   Not ready / Almost ready / Ready meter (5/8 threshold), set your level to see the dungeons in
   range, and read the KB-verified "How do I find a group?" card (premade Group Finder).

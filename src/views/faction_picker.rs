@@ -1,4 +1,4 @@
-use crate::components::{FactionShield, LanguagePicker};
+use crate::components::{AppFooter, FactionShield};
 use crate::i18n::{I18nService, Language};
 pub use crate::models::faction::get_faction_meta;
 use crate::models::Faction;
@@ -34,6 +34,11 @@ pub fn FactionPickerView(
                         "{i18n_svc.t(\"app_name\", lang)}"
                     }
                 }
+                button {
+                    class: "text-xs font-semibold uppercase tracking-wider text-slate-500 hover:text-amber-300 transition-colors cursor-pointer",
+                    onclick: move |_| on_open_about.call(()),
+                    "{i18n_svc.t(\"btn_about\", lang)}"
+                }
             }
 
             main { class: "w-full max-w-4xl flex flex-col items-center flex-grow justify-center my-4",
@@ -68,15 +73,6 @@ pub fn FactionPickerView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl text-center py-4 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n_svc.t(\"footer_offline\", lang)}"
-                button {
-                    class: "text-slate-500 hover:text-amber-300 cursor-pointer",
-                    onclick: move |_| on_open_about.call(()),
-                    "{i18n_svc.t(\"btn_about\", lang)}"
-                }
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }

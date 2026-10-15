@@ -1,3 +1,4 @@
+pub mod app_footer;
 pub mod bottom_nav;
 pub mod class_tips_card;
 pub mod comfort_deck;
@@ -14,9 +15,10 @@ pub mod race_tile;
 pub mod readiness_card;
 pub mod reference_popover;
 
+pub use app_footer::AppFooter;
 pub use bottom_nav::{BottomNav, NavTab};
 pub use class_tips_card::ClassTipsCard;
-pub use comfort_deck::ComfortDeck;
+pub use comfort_deck::{pick_index_seeded, ComfortDeck};
 pub use dungeon_rule_card::DungeonRuleCard;
 pub use export_card::BlueprintExport;
 pub use faction_shield::FactionShield;

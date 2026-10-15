@@ -30,6 +30,21 @@ pub enum Route {
     About {},
 }
 
+/// The parent of each view — the target of the floating back button and the
+/// horizontal swipe gesture (`None` on the root, where there is nowhere back to).
+fn back_route(route: &Route) -> Option<Route> {
+    match route {
+        Route::FactionPicker {} => None,
+        Route::RaceSelector {} => Some(Route::FactionPicker {}),
+        Route::DressingRoom {} => Some(Route::RaceSelector {}),
+        Route::ProgressionGuide {} => Some(Route::DressingRoom {}),
+        Route::DungeonCodex {} => Some(Route::ProgressionGuide {}),
+        Route::GearPlanner {} => Some(Route::DressingRoom {}),
+        Route::Pets {} => Some(Route::DressingRoom {}),
+        Route::About {} => Some(Route::FactionPicker {}),
+    }
+}
+
 /// Root application shell maintaining character state across views.
 #[component]
 pub fn App() -> Element {
@@ -51,6 +66,11 @@ pub fn App() -> Element {
     });
 
     let mut current_route = use_signal(|| Route::FactionPicker {});
+    let back_target = back_route(&current_route.read());
+    // Swipe-back gesture state: the pointer-press origin and the accumulated
+    // horizontal trackpad wheel delta.
+    let mut gesture_start = use_signal(|| None::<(f64, f64)>);
+    let mut wheel_accum = use_signal(|| 0.0_f64);
 
     let nav_to_tab = move |tab: NavTab| {
         match tab {
@@ -81,7 +101,53 @@ pub fn App() -> Element {
         document::Style {
             "{APP_CSS}"
         }
-        div { class: "min-h-screen bg-slate-950 text-slate-100 pb-20 font-sans antialiased",
+        div {
+            class: "min-h-screen bg-slate-950 text-slate-100 pb-20 font-sans antialiased",
+            onpointerdown: move |evt: Event<PointerData>| {
+                let point = evt.client_coordinates();
+                gesture_start.set(Some((point.x, point.y)));
+            },
+            onpointerup: move |evt: Event<PointerData>| {
+                let start = *gesture_start.read();
+                gesture_start.set(None);
+                if let Some((sx, sy)) = start {
+                    let point = evt.client_coordinates();
+                    let (dx, dy) = (point.x - sx, point.y - sy);
+                    if dx.abs() > 80.0 && dx.abs() > dy.abs() * 1.5 {
+                        let target = back_route(&current_route.read());
+                        if let Some(target) = target {
+                            current_route.set(target);
+                        }
+                    }
+                }
+            },
+            onpointercancel: move |_| gesture_start.set(None),
+            onwheel: move |evt: Event<WheelData>| {
+                let delta = evt.delta().strip_units();
+                if delta.x.abs() > 1.0 && delta.x.abs() > delta.y.abs() {
+                    let accumulated = *wheel_accum.read() + delta.x;
+                    if accumulated.abs() > 140.0 {
+                        wheel_accum.set(0.0);
+                        let target = back_route(&current_route.read());
+                        if let Some(target) = target {
+                            current_route.set(target);
+                        }
+                    } else {
+                        wheel_accum.set(accumulated);
+                    }
+                }
+            },
+
+            if let Some(target) = back_target.clone() {
+                button {
+                    class: "fixed z-40 flex items-center justify-center w-9 h-9 rounded-full bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-amber-300 hover:border-slate-700 transition-colors cursor-pointer",
+                    style: "top: 0.75rem; left: 0.75rem;",
+                    "aria-label": "Back",
+                    onclick: move |_| current_route.set(target.clone()),
+                    "←"
+                }
+            }
+
             match *current_route.read() {
                 Route::FactionPicker {} => rsx! {
                     FactionPickerView {
@@ -122,7 +188,6 @@ pub fn App() -> Element {
                         faction: *selected_faction.read(),
                         selected_race_id: use_signal(|| Some(race_obj.id.clone())),
                         selected_class: selected_class,
-                        on_back: move |_| current_route.set(Route::FactionPicker {}),
                         on_race_selected: move |r: RaceInfo| {
                             let faction = *selected_faction.read();
                             let current_id = selected_class.read().as_ref().map(|c| c.id.clone());
@@ -143,7 +208,6 @@ pub fn App() -> Element {
                         race: race_obj.clone(),
                         class: class_obj.clone(),
                         faction: *selected_faction.read(),
-                        on_back: move |_| current_route.set(Route::RaceSelector {}),
                         on_continue_to_guide: move |_| current_route.set(Route::ProgressionGuide {}),
                         on_open_gear_planner: move |_| current_route.set(Route::GearPlanner {}),
                         on_open_pets: move |_| current_route.set(Route::Pets {}),
@@ -156,7 +220,6 @@ pub fn App() -> Element {
                         game_data: game_data,
                         race: race_obj.clone(),
                         faction: *selected_faction.read(),
-                        on_back: move |_| current_route.set(Route::DressingRoom {}),
                         on_continue_to_dungeons: move |_| current_route.set(Route::DungeonCodex {}),
                     }
                 },
@@ -164,7 +227,6 @@ pub fn App() -> Element {
                     DungeonCodexView {
                         current_lang: current_lang,
                         i18n: i18n,
-                        on_back: move |_| current_route.set(Route::ProgressionGuide {}),
                     }
                 },
                 Route::GearPlanner {} => rsx! {
@@ -173,7 +235,6 @@ pub fn App() -> Element {
                         i18n: i18n,
                         faction: *selected_faction.read(),
                         class_id: class_obj.id.clone(),
-                        on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
                 Route::Pets {} => rsx! {
@@ -181,14 +242,12 @@ pub fn App() -> Element {
                         current_lang: current_lang,
                         i18n: i18n,
                         class: class_obj.clone(),
-                        on_back: move |_| current_route.set(Route::DressingRoom {}),
                     }
                 },
                 Route::About {} => rsx! {
                     AboutView {
                         current_lang: current_lang,
                         i18n: i18n,
-                        on_back: move |_| current_route.set(Route::FactionPicker {}),
                     }
                 },
             }

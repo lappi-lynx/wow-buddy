@@ -19,9 +19,9 @@ pub fn LanguagePicker(
     };
 
     rsx! {
-        div { class: "relative inline-block text-sm",
+        div { class: "relative inline-block",
             select {
-                class: "bg-slate-800 text-amber-300 border border-amber-600/40 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-md font-medium transition",
+                class: "bg-slate-900 text-amber-300 border border-amber-600/30 rounded-md px-2 py-1 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer transition",
                 value: "{current_lang.read().code()}",
                 onchange: on_select,
                 for lang in Language::all() {
@@ -29,7 +29,7 @@ pub fn LanguagePicker(
                         key: "{lang.code()}",
                         value: "{lang.code()}",
                         selected: *lang == *current_lang.read(),
-                        "{lang.label()}"
+                        "{lang.code().to_uppercase()}"
                     }
                 }
             }

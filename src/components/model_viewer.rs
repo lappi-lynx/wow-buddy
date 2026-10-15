@@ -78,6 +78,8 @@ pub fn ModelViewer(
 
     rsx! {
         div { class: "relative w-full aspect-square max-w-sm sm:max-w-md mx-auto rounded-3xl border-2 bg-gradient-to-b {tier_aura} flex flex-col items-center justify-between p-6 overflow-hidden transition-all duration-300",
+            // the card invites dragging ("Drag to rotate") — never treat that as a back swipe
+            onpointerdown: move |evt: Event<PointerData>| evt.stop_propagation(),
             div { class: "w-full flex justify-between items-center z-10",
                 span { class: "text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300",
                     "{anim_text}"

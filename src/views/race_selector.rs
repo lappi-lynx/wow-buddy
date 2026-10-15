@@ -1,6 +1,6 @@
 use crate::assets::AssetRegistry;
 use crate::components::race_tile::class_render_source;
-use crate::components::{FactionTheme, LanguagePicker, RaceTile};
+use crate::components::{AppFooter, FactionTheme, RaceTile};
 use crate::i18n::{I18nService, Language};
 use crate::models::{ClassInfo, Faction, GameData, RaceInfo};
 use crate::selection::effective_class_id;
@@ -41,7 +41,6 @@ pub fn RaceSelectorView(
     faction: Faction,
     selected_race_id: Signal<Option<String>>,
     selected_class: Signal<Option<ClassInfo>>,
-    on_back: EventHandler<()>,
     on_race_selected: EventHandler<RaceInfo>,
 ) -> Element {
     let lang = *current_lang.read();
@@ -102,13 +101,6 @@ pub fn RaceSelectorView(
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
-            header { class: "w-full max-w-5xl mx-auto flex justify-between items-center py-3 border-b border-slate-800/80 mb-6",
-                button {
-                    class: "flex items-center justify-center w-9 h-9 text-base text-slate-400 hover:text-amber-300 transition-colors rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60 cursor-pointer",
-                    onclick: move |_| on_back.call(()),
-                    "←"
-                }
-            }
 
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow",
                 div { class: "text-center mb-6",
@@ -217,10 +209,6 @@ pub fn RaceSelectorView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n.read().t(\"footer_offline\", lang)}"
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }

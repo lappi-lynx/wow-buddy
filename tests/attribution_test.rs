@@ -18,12 +18,19 @@ fn test_every_asset_has_a_source_and_license() {
 }
 
 #[test]
-fn test_attribution_shown_in_every_locale_footer() {
-    // единственный футер (на каждом экране) обязан нести атрибуцию Blizzard
+fn test_blizzard_attribution_ships_on_the_about_view() {
+    // the one-line footer carries only the guide name + language picker now;
+    // the verbatim Blizzard disclaimer lives on the About & Legal screen
+    let about = include_str!("../src/views/about.rs");
+    assert!(about.contains("in no way associated with or endorsed by Blizzard Entertainment"));
+}
+
+#[test]
+fn test_footer_labels_the_guide_in_every_locale() {
     let i18n = I18nService::load_embedded();
     for lang in [Language::Ru, Language::En, Language::Fi] {
-        let footer = i18n.t("footer_offline", lang);
-        assert!(footer.contains("Blizzard"), "footer missing attribution for {lang:?}");
+        let footer = i18n.t("footer_guide", lang);
+        assert!(footer.contains("World of Warcraft"), "footer missing guide name for {lang:?}");
     }
 }
 

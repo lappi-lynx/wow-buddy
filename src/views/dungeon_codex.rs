@@ -1,4 +1,4 @@
-use crate::components::{DungeonRuleCard, LanguagePicker, LootQuiz, ReadinessCard};
+use crate::components::{AppFooter, DungeonRuleCard, LootQuiz, ReadinessCard};
 use crate::i18n::{I18nService, Language};
 use crate::models::dungeon::get_dungeon_codex;
 use dioxus::prelude::*;
@@ -17,7 +17,6 @@ pub fn get_active_dungeons() -> Vec<&'static str> {
 pub fn DungeonCodexView(
     current_lang: Signal<Language>,
     i18n: Signal<I18nService>,
-    on_back: EventHandler<()>,
 ) -> Element {
     let mut selected_dungeon_id = use_signal(|| "deadmines".to_string());
 
@@ -28,13 +27,6 @@ pub fn DungeonCodexView(
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
-            header { class: "w-full max-w-5xl mx-auto flex justify-between items-center py-3 border-b border-slate-800/80 mb-4",
-                button {
-                    class: "flex items-center justify-center w-9 h-9 text-base text-slate-400 hover:text-amber-300 transition-colors rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60 cursor-pointer",
-                    onclick: move |_| on_back.call(()),
-                    "←"
-                }
-            }
 
             main { class: "w-full max-w-4xl mx-auto flex flex-col items-center flex-grow space-y-6",
                 div { class: "text-center",
@@ -115,10 +107,6 @@ pub fn DungeonCodexView(
                 }
             }
 
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n_svc.t(\"footer_offline\", lang)}"
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }

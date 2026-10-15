@@ -65,7 +65,7 @@ Then run for your desired environment:
 Follow these steps to manually test all features of the application:
 
 ### 1. Language Dropdown (Extensible & Persistent)
-- Click the language selector in the header to switch between **English**, **Русский**, and **Suomi**.
+- Click the language selector at the right of the footer (shows **EN / RU / FI**) to switch language.
 - Verify that all texts update immediately across screens without resetting hero selection.
 - Check that preference is persisted to local storage cache (`~/.cache/wow-buddy/language_preference.json` on desktop/mobile or browser `localStorage`).
 

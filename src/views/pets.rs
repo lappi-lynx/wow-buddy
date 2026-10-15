@@ -1,4 +1,4 @@
-use crate::components::LanguagePicker;
+use crate::components::AppFooter;
 use crate::i18n::{I18nService, Language};
 use crate::models::pets::{pet_card_kind, pets_sections, PetCardKind, PetsData, PetsSection};
 use crate::models::ClassInfo;
@@ -12,7 +12,6 @@ pub fn PetsView(
     current_lang: Signal<Language>,
     i18n: Signal<I18nService>,
     class: ClassInfo,
-    on_back: EventHandler<()>,
 ) -> Element {
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
@@ -22,15 +21,10 @@ pub fn PetsView(
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8",
-            header { class: "w-full max-w-5xl mx-auto flex justify-between items-center py-3 border-b border-slate-800/80 mb-4",
-                button {
-                    class: "flex items-center justify-center w-9 h-9 text-base text-slate-400 hover:text-amber-300 transition-colors rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60 cursor-pointer",
-                    onclick: move |_| on_back.call(()),
-                    "←"
-                }
-                h1 { class: "text-base sm:text-lg font-bold text-amber-300", "{i18n_svc.t(\"ui_pets_title\", lang)}" }
-            }
             main { class: "w-full max-w-3xl mx-auto flex flex-col space-y-4 flex-grow",
+                h2 { class: "text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-wide text-center",
+                    "{i18n_svc.t(\"ui_pets_title\", lang)}"
+                }
                 for section in pets_sections(kind).iter() {
                     match *section {
                         PetsSection::Basics => rsx! {
@@ -144,10 +138,6 @@ pub fn PetsView(
                     }
                 }
             }
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-400 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n_svc.t(\"footer_offline\", lang)}"
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }

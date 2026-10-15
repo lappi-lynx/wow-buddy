@@ -2,7 +2,7 @@ use crate::assets::AssetRegistry;
 use crate::components::reference_popover::{item_popover, PopoverData};
 use crate::components::race_tile::class_render_source;
 use crate::components::ReferencePopover;
-use crate::components::LanguagePicker;
+use crate::components::AppFooter;
 use crate::i18n::{I18nService, Language};
 use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
@@ -40,7 +40,6 @@ pub fn GearPlannerView(
     i18n: Signal<I18nService>,
     faction: Faction,
     class_id: String,
-    on_back: EventHandler<()>,
 ) -> Element {
     let mut level = use_signal(|| 20u8);
     let mut view_faction = use_signal(|| faction);
@@ -64,13 +63,17 @@ pub fn GearPlannerView(
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
-            header { class: "w-full max-w-5xl mx-auto flex justify-between items-center py-3 border-b border-slate-800/80 mb-4",
-                button {
-                    class: "flex items-center justify-center w-9 h-9 text-base text-slate-400 hover:text-amber-300 transition-colors rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60 cursor-pointer",
-                    onclick: move |_| on_back.call(()),
-                    "←"
+
+            main { class: "w-full max-w-3xl mx-auto flex flex-col flex-grow space-y-5",
+                div { class: "text-center",
+                    h2 { class: "text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-wide",
+                        "{i18n_svc.t(\"ui_gear_planner_title\", lang)}"
+                    }
+                    p { class: "text-xs sm:text-sm text-slate-400 mt-1",
+                        "{i18n_svc.t(\"ui_gear_planner_subtitle\", lang)}"
+                    }
                 }
-                div { class: "flex items-center space-x-2",
+                div { class: "flex justify-center items-center space-x-2",
                     button {
                         class: "{alliance_class}",
                         onclick: move |_| view_faction.set(Faction::Alliance),
@@ -82,17 +85,6 @@ pub fn GearPlannerView(
                         "{horde_name}"
                     }
                 }
-            }
-
-            main { class: "w-full max-w-3xl mx-auto flex flex-col flex-grow space-y-5",
-                div { class: "text-center",
-                    h2 { class: "text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-wide",
-                        "{i18n_svc.t(\"ui_gear_planner_title\", lang)}"
-                    }
-                    p { class: "text-xs sm:text-sm text-slate-400 mt-1",
-                        "{i18n_svc.t(\"ui_gear_planner_subtitle\", lang)}"
-                    }
-                }
 
                 div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
                     span { class: "text-xs uppercase tracking-wider font-semibold text-slate-400",
@@ -100,6 +92,8 @@ pub fn GearPlannerView(
                     }
                     input {
                         r#type: "range",
+                        // dragging the slider must never register as a back swipe
+                        onpointerdown: move |evt: Event<PointerData>| evt.stop_propagation(),
                         min: "1",
                         max: "60",
                         step: "1",
@@ -184,11 +178,7 @@ pub fn GearPlannerView(
                 ReferencePopover { data: data, on_close: move |_| popover.set(None) }
             }
 
-            footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
-                LanguagePicker { current_lang: current_lang }
-                "{i18n_svc.t(\"footer_offline\", lang)}"
-            }
-        }
+            AppFooter { current_lang: current_lang, i18n: i18n }        }
     }
 }
 
