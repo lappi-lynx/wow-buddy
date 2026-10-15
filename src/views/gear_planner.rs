@@ -8,14 +8,15 @@ use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
 use dioxus::prelude::*;
 
-/// Character-sheet layout (partner's spec): the weapon and its alternates
-/// share one full-width top row; below it four fixed columns keep the same
-/// shape at every width — chest/legs/feet · head/neck/shoulders ·
-/// back/hands/finger · waist/wrist/trinket.
-const COL1_SLOTS: [&str; 3] = ["chest", "legs", "feet"];
-const COL2_SLOTS: [&str; 3] = ["head", "neck", "shoulders"];
+/// Character-sheet layout (partner's spec): four fixed columns keep the same
+/// shape at every width — weapon/chest/feet · head/shoulders/legs ·
+/// back/hands/finger · neck/waist/wrist — with the trinket and the alternate
+/// weapon picks (dashed) sharing the bottom row.
+const COL1_SLOTS: [&str; 2] = ["chest", "feet"]; // + the weapon on top
+const COL2_SLOTS: [&str; 3] = ["head", "shoulders", "legs"];
 const COL3_SLOTS: [&str; 3] = ["back", "hands", "finger"];
-const COL4_SLOTS: [&str; 3] = ["waist", "wrist", "trinket"];
+const COL4_SLOTS: [&str; 3] = ["neck", "waist", "wrist"];
+const BOTTOM_SLOT: &str = "trinket";
 
 /// The band id to highlight for `level`: the containing band if one exists,
 /// otherwise the next band above it (used when the level is in a gap).
@@ -136,46 +137,38 @@ pub fn GearPlannerView(
                                     }
                                 }
                                 if let Some(band) = current_band.as_ref() {
-                                    div { class: "flex-1 flex flex-col gap-3",
-                                        // Weapon row: the main weapon + its alternatives
-                                        div { class: "w-full flex flex-wrap items-start gap-3",
-                                            if let Some(weapon) = band.weapons.first() {
-                                                { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
-                                            }
-                                            if band.weapons.len() > 1 {
-                                                div { class: "flex flex-col gap-1 pt-1",
-                                                    span { class: "text-[10px] font-semibold uppercase tracking-wider text-slate-500",
-                                                        "{i18n_svc.t(\"ui_gear_alternatives\", lang)}"
-                                                    }
-                                                    div { class: "flex flex-wrap gap-1.5",
-                                                        for weapon in band.weapons.iter().skip(1) {
-                                                            { alt_weapon_chip(weapon, &registry, i18n, lang, popover) }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
+                                    div { class: "flex-1 flex flex-col gap-2",
                                         // Four fixed columns — the same shape at every screen size
                                         div { class: "grid grid-cols-4 gap-2 w-full",
                                             div { class: "flex flex-col gap-2",
+                                                if let Some(weapon) = band.weapons.first() {
+                                                    { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover, false) }
+                                                }
                                                 for slot in COL1_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover, false) }
                                                 }
                                             }
                                             div { class: "flex flex-col gap-2",
                                                 for slot in COL2_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover, false) }
                                                 }
                                             }
                                             div { class: "flex flex-col gap-2",
                                                 for slot in COL3_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover, false) }
                                                 }
                                             }
                                             div { class: "flex flex-col gap-2",
                                                 for slot in COL4_SLOTS.iter() {
-                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover, false) }
                                                 }
+                                            }
+                                        }
+                                        // Bottom row: the trinket + the alternate weapon picks (dashed)
+                                        div { class: "w-full flex flex-wrap gap-2 items-start",
+                                            { slot_tile(BOTTOM_SLOT, BOTTOM_SLOT, band.slots.get(BOTTOM_SLOT), &registry, i18n, lang, popover, false) }
+                                            for weapon in band.weapons.iter().skip(1) {
+                                                { slot_tile(&weapon.name, "weapon", Some(weapon), &registry, i18n, lang, popover, true) }
                                             }
                                         }
                                     }
@@ -208,6 +201,7 @@ fn slot_tile(
     i18n: Signal<I18nService>,
     lang: Language,
     popover: Signal<Option<PopoverData>>,
+    dashed: bool,
 ) -> Element {
     let (name, uri, source, lvl, icon_opt) = match item {
         Some(it) => {
@@ -225,10 +219,16 @@ fn slot_tile(
         None => (String::new(), String::new(), String::new(), 0u8, None),
     };
     let has_item = item.is_some();
-    let tile_class = if has_item {
-        "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 cursor-pointer min-h-[92px]"
-    } else {
-        "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-950/40 border border-slate-900 min-h-[92px] cursor-default"
+    let tile_class = match (has_item, dashed) {
+        (true, true) => {
+            "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-900/60 border border-dashed border-slate-600 hover:border-amber-500/40 cursor-pointer min-h-[92px]"
+        }
+        (true, false) => {
+            "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 cursor-pointer min-h-[92px]"
+        }
+        (false, _) => {
+            "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-950/40 border border-slate-900 min-h-[92px] cursor-default"
+        }
     };
     let reg = registry.clone();
     let name_for_pop = name.clone();
@@ -261,38 +261,3 @@ fn slot_tile(
     }
 }
 
-/// A labelled alternate weapon pick: icon + name + level, tappable for the
-/// source popover.
-fn alt_weapon_chip(
-    weapon: &GearWeapon,
-    registry: &AssetRegistry,
-    i18n: Signal<I18nService>,
-    lang: Language,
-    popover: Signal<Option<PopoverData>>,
-) -> Element {
-    let uri = registry
-        .item_icon(weapon.icon_id.as_deref().unwrap_or(""))
-        .to_string();
-    let name = weapon.name.clone();
-    let source = weapon.source.clone();
-    let icon_opt = weapon.icon_id.clone();
-    let lvl = weapon.level;
-    let reg = registry.clone();
-    let name_for_pop = name.clone();
-    let mut popover = popover;
-    rsx! {
-        button {
-            key: "{name}",
-            class: "flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-900/70 border border-dashed border-slate-700 hover:border-amber-500/40 text-slate-300 cursor-pointer",
-            onclick: move |_| {
-                let i18n_ref = i18n.read();
-                popover.set(Some(item_popover(&reg, &i18n_ref, lang, &name_for_pop, icon_opt.as_deref(), &source)));
-            },
-            if uri.starts_with("data:") {
-                img { class: "w-4 h-4 object-contain", src: "{uri}", alt: "" }
-            }
-            span { class: "text-[10px] font-semibold", "{name}" }
-            span { class: "text-[9px] text-amber-500", "Lvl {lvl}" }
-        }
-    }
-}
