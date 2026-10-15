@@ -61,3 +61,27 @@ fn validator_rejects_broken_allocations() {
         ]))
         .is_err());
 }
+
+use wow_buddy::models::legacy::{preset_summary, resolve_preset};
+
+#[test]
+fn balanced_preset_is_the_known_16_point_build() {
+    let c = LegacyCatalog::load_embedded();
+    let ids: Vec<(String, u8)> = resolve_preset(&c, "balanced")
+        .into_iter()
+        .map(|(p, n)| (p.id.clone(), n))
+        .collect();
+    assert_eq!(
+        ids,
+        vec![
+            ("well_rested".into(), 5),
+            ("thrill_of_adventure".into(), 5),
+            ("talented".into(), 5),
+            ("field_guide".into(), 1)
+        ]
+    );
+    assert_eq!(
+        preset_summary(&c, "balanced"),
+        "Well Rested 5 · Thrill of Adventure 5 · Talented 5 · Field Guide 1 — 16 points"
+    );
+}

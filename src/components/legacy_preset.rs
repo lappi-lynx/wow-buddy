@@ -1,25 +1,27 @@
+use crate::components::export_card::copy_to_clipboard;
 use crate::i18n::{I18nService, Language};
-use crate::models::legacy::{get_starter_legacy_preset, LegacyPreset};
+use crate::models::legacy::{preset_summary, resolve_preset, LegacyCatalog};
 use dioxus::prelude::*;
 
+/// Legacy presets: Balanced / Explorer / Coin Saver. Applying a preset only
+/// selects it and copies the allocation summary — the app never claims to
+/// change the in-game build.
 #[component]
 pub fn LegacyPresetWidget(
     current_lang: Signal<Language>,
     i18n: Signal<I18nService>,
-    on_applied: Option<EventHandler<LegacyPreset>>,
 ) -> Element {
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
-    let preset = get_starter_legacy_preset();
-    let mut is_applied = use_signal(|| false);
+    let catalog = LegacyCatalog::load_embedded();
+    let mut selected = use_signal(|| "balanced".to_string());
+    let mut copied = use_signal(|| false);
+    let mut copy_failed = use_signal(|| false);
 
-    let preset_clone = preset.clone();
-    let apply_handler = move |_| {
-        is_applied.set(true);
-        if let Some(ref handler) = on_applied {
-            handler.call(preset_clone.clone());
-        }
-    };
+    let selected_id = selected.read().clone();
+    let resolved = resolve_preset(&catalog, &selected_id);
+    let total: u8 = resolved.iter().map(|(_, n)| *n).sum();
+    let summary = preset_summary(&catalog, &selected_id);
 
     rsx! {
         div { class: "w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col space-y-4",
@@ -33,24 +35,55 @@ pub fn LegacyPresetWidget(
                     }
                 }
                 span { class: "text-xs px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold",
-                    "{i18n_svc.t(\"ui_legacy_points\", lang)}"
+                    "{total} / {LegacyCatalog::SEASONAL_CAP}"
+                }
+            }
+
+            div { class: "flex flex-wrap items-center gap-2",
+                span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider",
+                    "{i18n_svc.t(\"ui_legacy_preset_pick\", lang)}"
+                }
+                for preset in catalog.presets.iter() {
+                    {
+                        let is_active = preset.id == selected_id;
+                        let tab_class = if is_active {
+                            "px-3 py-1.5 rounded-xl border text-xs font-bold bg-amber-500/20 border-amber-500/40 text-amber-300 cursor-pointer"
+                        } else {
+                            "px-3 py-1.5 rounded-xl border text-xs font-semibold bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 cursor-pointer"
+                        };
+                        rsx! {
+                            button {
+                                key: "{preset.id}",
+                                class: "{tab_class}",
+                                onclick: {
+                                    let id = preset.id.clone();
+                                    move |_| {
+                                        selected.set(id.clone());
+                                        copied.set(false);
+                                        copy_failed.set(false);
+                                    }
+                                },
+                                "{preset.name.get(lang)}"
+                            }
+                        }
+                    }
                 }
             }
 
             div { class: "grid grid-cols-1 sm:grid-cols-3 gap-3",
-                for perk in preset.perks.iter() {
+                for (perk, points) in resolved.iter() {
                     div {
                         key: "{perk.id}",
                         class: "flex flex-col justify-between p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 shadow-inner",
                         div { class: "flex items-center justify-between mb-2",
-                            span { class: "text-2xl", "{perk.icon}" }
+                            span { class: "text-2xl", "✦" }
                             span { class: "text-xs font-extrabold px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30",
-                                "{perk.points} pts"
+                                "{points} pts"
                             }
                         }
                         div {
-                            h4 { class: "text-xs sm:text-sm font-bold text-slate-200", "{perk.name}" }
-                            p { class: "text-[11px] text-slate-400 leading-tight mt-1", "{perk.description}" }
+                            h4 { class: "text-xs sm:text-sm font-bold text-slate-200", "{perk.name.get(lang)}" }
+                            p { class: "text-[11px] text-slate-400 leading-tight mt-1", "{perk.desc.get(lang)}" }
                         }
                     }
                 }
@@ -59,17 +92,36 @@ pub fn LegacyPresetWidget(
             div { class: "pt-2 flex flex-col sm:flex-row items-center justify-between gap-3",
                 button {
                     class: "w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer text-center",
-                    onclick: apply_handler,
-                    if *is_applied.read() {
-                        "{i18n_svc.t(\"ui_apply_legacy_applied\", lang)}"
+                    onclick: {
+                        let summary = summary.clone();
+                        move |_| {
+                            copied.set(false);
+                            copy_failed.set(false);
+                            let text = summary.clone();
+                            spawn(async move {
+                                if copy_to_clipboard(text).await {
+                                    copied.set(true);
+                                } else {
+                                    copy_failed.set(true);
+                                }
+                            });
+                        }
+                    },
+                    if *copied.read() {
+                        "{i18n_svc.t(\"ui_legacy_copied\", lang)}"
                     } else {
-                        "{i18n_svc.t(\"ui_apply_legacy\", lang)}"
+                        "{i18n_svc.t(\"ui_legacy_copy_summary\", lang)}"
                     }
                 }
-                button {
-                    class: "w-full sm:w-auto py-2.5 px-4 rounded-xl font-semibold text-xs text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700 bg-slate-950/40 transition-colors cursor-pointer",
-                    "{i18n_svc.t(\"ui_manual_tweak\", lang)}"
+                if *copy_failed.read() {
+                    span { class: "text-xs text-amber-400",
+                        "{i18n_svc.t(\"ui_export_hint\", lang)}"
+                    }
                 }
+            }
+
+            p { class: "text-[11px] text-slate-500",
+                "{i18n_svc.t(\"ui_legacy_disclaimer\", lang)}"
             }
         }
     }

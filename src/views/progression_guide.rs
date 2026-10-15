@@ -186,7 +186,7 @@ pub fn ProgressionGuideView(
                     }
                 }
 
-                // 16 Legacy Points Preset Widget
+                // Legacy Presets (Balanced / Explorer / Coin Saver)
                 LegacyPresetWidget {
                     current_lang: current_lang,
                     i18n: i18n,
