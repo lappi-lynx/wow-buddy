@@ -180,3 +180,14 @@ When testing manually, verify the following core features:
 - Deep link /pets without a hero shows the companion view.
 - Sources: `docs/wowhead-sources/pets-families.json` (raw table + conflicts) and
   `docs/kb-sources/pets.md` (KB answers + confirmations).
+
+### 10. Guides (Track E)
+- Progression guide: the Legacy preset picker (Balanced / Explorer / Coin Saver tabs; "Copy allocation"
+  copies the summary — the app never changes your in-game build), the Fishing & Cooking card
+  (3 KB-verified steps + the Forever-only +5% XP from cooked food), and the Comfort tips deck
+  (10 cards, ←/→, `{current} / {total}` counter).
+- Dungeon codex: the readiness card — tick the 8 checklist items to move the
+  Not ready / Almost ready / Ready meter (5/8 threshold), set your level to see the dungeons in
+  range, and read the KB-verified "How do I find a group?" card (premade Group Finder).
+- Sources: `docs/foreverdb-sources/legacy-system-explained.md` (21 perks), KB sessions `542bc6e7`
+  (grouping) and `e136eda7` (fishing).
