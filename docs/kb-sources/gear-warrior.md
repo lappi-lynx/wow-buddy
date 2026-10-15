@@ -27,3 +27,8 @@
 - **Provenance strings in `gear.json`:** weapons `kb:leveling-weapons@2026-10-15`, armor `kb:dungeons@2026-10-15`.
 - **Icons:** `inv_sword_42`, `inv_sword_24`, `inv_axe_12`, `inv_weapon_halbard_01` fetched from the `wow.zamimg.com` CDN, converted to 64 px WebP, declared in `assets/manifest.json`, embedded via `tools/assets/generate.mjs`.
 - The horde batch's own artifact (`docs/kb-sources/gear-warrior-horde.md`) remains the reference for the 12–16 and 20–24 horde fills.
+
+## Slots — warrior (2026-10-15)
+
+- Mail/plate(40) like the paladin, so the **paladin's verified Blacksmithing set is reused wholesale** with the warrior insignias (Alliance 18854, Horde 18834 — verified) at 24–30.
+- Availability: A 7/11/11 · H 7/11/11.

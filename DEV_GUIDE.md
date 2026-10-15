@@ -191,3 +191,16 @@ When testing manually, verify the following core features:
   range, and read the KB-verified "How do I find a group?" card (premade Group Finder).
 - Sources: `docs/foreverdb-sources/legacy-system-explained.md` (21 perks), KB sessions `542bc6e7`
   (grouping) and `e136eda7` (fishing).
+
+### 11. Gear inventory sheet (Track "UI polish & armor")
+- All **9 classes × both factions** ship the paper-doll slot sheet: one weapon row
+  (primary + dashed alternates) and four slot columns (weapon/chest/feet ·
+  head/shoulders/legs · back/hands/finger · neck/waist/wrist) + a bottom row
+  with the trinket and the alternate weapon tiles. Dragging the slider swaps
+  the whole set per band; tapping any tile opens its source popover.
+- Slot availability is honest per band (empty "—" where the game has nothing:
+  no trinkets before ~28, no cloth wrist ≥20 ≤30, no Alliance shaman insignia).
+- Gate: `tests/gear_coverage_test.rs` — every class/faction band meets the
+  per-band floor (6/10/10), every present slot carries id+icon+provenance, and
+  every slot icon resolves to embedded bytes. Per-class artifacts:
+  `docs/kb-sources/gear-<class>.md`.

@@ -214,6 +214,23 @@ fn hunter_slots_complete() {
 }
 
 #[test]
+fn warrior_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "warrior",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
+fn all_classes_slots_complete() {
+    let data = GearPlannerData::load_embedded();
+    for c in EXPECTED_CLASSES {
+        assert_class_slots_complete(&data, c, &[Faction::Alliance, Faction::Horde]);
+    }
+}
+
+#[test]
 fn every_gear_icon_resolves_to_embedded_bytes() {
     let reg = AssetRegistry::load_embedded();
     let data = GearPlannerData::load_embedded();
@@ -221,14 +238,14 @@ fn every_gear_icon_resolves_to_embedded_bytes() {
         let gear = data.classes.get(class).unwrap_or_else(|| panic!("{class} missing"));
         for bands in [&gear.alliance, &gear.horde] {
             for band in bands {
-                for w in &band.weapons {
-                    if let Some(id) = &w.icon_id {
-                        assert_ne!(
-                            reg.item_icon(id),
-                            ICON_FALLBACK,
-                            "{class} {id} has no embedded bytes"
-                        );
-                    }
+                let weapon_icons = band.weapons.iter().map(|w| w.icon_id.clone());
+                let slot_icons = band.slots.values().map(|s| s.icon_id.clone());
+                for icon in weapon_icons.chain(slot_icons).flatten() {
+                    assert_ne!(
+                        reg.item_icon(&icon),
+                        ICON_FALLBACK,
+                        "{class} {icon} has no embedded bytes"
+                    );
                 }
             }
         }
