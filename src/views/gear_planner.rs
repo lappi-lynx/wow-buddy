@@ -1,9 +1,10 @@
 use crate::assets::AssetRegistry;
 use crate::components::reference_popover::{item_popover, PopoverData};
+use crate::components::race_tile::class_render_source;
 use crate::components::ReferencePopover;
 use crate::components::LanguagePicker;
 use crate::i18n::{I18nService, Language};
-use crate::models::gear_planner::{GearBand, GearPlannerData};
+use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon, SLOT_ORDER};
 use crate::models::Faction;
 use dioxus::prelude::*;
 
@@ -42,7 +43,6 @@ pub fn GearPlannerView(
 
     let active_faction = *view_faction.read();
     let bands = data.bands_for(&class_id, active_faction).to_vec();
-    let highlight = band_highlight(&bands, *level.read());
     let has_data = !bands.is_empty();
 
     let alliance_name = i18n_svc.t("alliance_name", lang);
@@ -108,60 +108,42 @@ pub fn GearPlannerView(
                         "{i18n_svc.t(\"ui_gear_no_data\", lang)}"
                     }
                 } else {
-                    div { class: "border-l-2 border-slate-800 pl-4 flex flex-col space-y-6",
-                        for band in bands.iter() {
-                            {
-                                let is_current = highlight.as_deref() == Some(band.id.as_str());
-                                let current_label = i18n_svc.t("ui_gear_current", lang);
-                                let band_class = if is_current {
-                                    "border-l-2 border-amber-500 pl-3 -ml-[18px]"
-                                } else {
-                                    "border-l-2 border-transparent pl-3 -ml-[18px]"
-                                };
-                                rsx! {
-                                    div {
-                                        key: "{band.id}",
-                                        class: "{band_class}",
-                                        div { class: "flex items-center space-x-2",
-                                            span { class: "text-sm font-bold text-amber-400", "{band.label}" }
-                                            if is_current {
-                                                span { class: "text-xs font-semibold text-emerald-400", "★ {current_label}" }
+                    {
+                        let current_band = data
+                            .band_for_level(&class_id, active_faction, *level.read())
+                            .or_else(|| data.next_band_for_level(&class_id, active_faction, *level.read()));
+                        let class_art = class_render_source(&registry, &class_id);
+                        rsx! {
+                            div { class: "w-full flex flex-col lg:flex-row gap-4",
+                                div { class: "flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-900/80 border border-slate-800 lg:w-52 shrink-0",
+                                    if class_art.starts_with("data:") {
+                                        img { class: "w-24 h-24 object-contain", src: "{class_art}", alt: "{class_id}" }
+                                    } else {
+                                        span { class: "text-5xl", "🛡️" }
+                                    }
+                                    span { class: "text-sm font-bold text-amber-300 mt-2 capitalize", "{class_id}" }
+                                    if let Some(band) = current_band.as_ref() {
+                                        span { class: "text-xs text-slate-500 mt-1 text-center", "▤ {band.armor.text}" }
+                                    }
+                                }
+                                if let Some(band) = current_band.as_ref() {
+                                    div { class: "flex-1 flex flex-col space-y-2",
+                                        div { class: "grid grid-cols-3 sm:grid-cols-4 gap-2",
+                                            if let Some(weapon) = band.weapons.first() {
+                                                { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
+                                            }
+                                            for slot in SLOT_ORDER.iter() {
+                                                { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                             }
                                         }
-                                        div { class: "mt-1 flex flex-col space-y-1",
-                                            for weapon in band.weapons.iter() {
-                                                div {
-                                                    key: "{weapon.name}",
-                                                    class: "flex items-center space-x-2 text-xs sm:text-sm text-slate-200",
-                                                    {
-                                                        let icon = registry.item_icon(weapon.icon_id.as_deref().unwrap_or(""));
-                                                        if icon.starts_with("data:") {
-                                                            rsx! { img { class: "w-4 h-4 object-contain", src: "{icon}", alt: "" } }
-                                                        } else {
-                                                            rsx! { span { class: "text-base", "{icon}" } }
-                                                        }
+                                        if band.weapons.len() > 1 {
+                                            div { class: "flex flex-wrap gap-1.5",
+                                                for weapon in band.weapons.iter().skip(1) {
+                                                    span { key: "{weapon.name}", class: "text-[10px] px-2 py-0.5 rounded-full bg-slate-900/70 border border-slate-800 text-slate-400",
+                                                        "{weapon.name}"
                                                     }
-                                                    span { class: "text-amber-500 font-semibold", "Lvl {weapon.level}" }
-                                                    {
-                                                        let w_name = weapon.name.clone();
-                                                        let w_icon = weapon.icon_id.clone();
-                                                        let w_source = weapon.source.clone();
-                                                        let reg = registry.clone();
-                                                        rsx! {
-                                                            button {
-                                                                class: "font-medium hover:text-amber-300 cursor-pointer text-left",
-                                                                onclick: move |_| {
-                                                                    let i18n_ref = i18n.read();
-                                                                    popover.set(Some(item_popover(&reg, &i18n_ref, lang, &w_name, w_icon.as_deref(), &w_source)));
-                                                                },
-                                                                "{w_name}"
-                                                            }
-                                                        }
-                                                    }
-                                                    span { class: "text-slate-500", "— {weapon.source}" }
                                                 }
                                             }
-                                            div { class: "text-xs text-slate-400", "▤ {band.armor.text}" }
                                         }
                                     }
                                 }
@@ -178,6 +160,69 @@ pub fn GearPlannerView(
             footer { class: "w-full max-w-5xl mx-auto text-center py-3 text-xs text-slate-600 border-t border-slate-900 mt-6 flex flex-col items-center space-y-2",
                 LanguagePicker { current_lang: current_lang }
                 "{i18n_svc.t(\"footer_offline\", lang)}"
+            }
+        }
+    }
+}
+
+/// One equipment tile: icon + slot label + item name/level; tapping an item
+/// opens the shared reference popover.
+fn slot_tile(
+    key: &str,
+    label: &str,
+    item: Option<&GearWeapon>,
+    registry: &AssetRegistry,
+    i18n: Signal<I18nService>,
+    lang: Language,
+    popover: Signal<Option<PopoverData>>,
+) -> Element {
+    let (name, uri, source, lvl, icon_opt) = match item {
+        Some(it) => {
+            let uri = registry
+                .item_icon(it.icon_id.as_deref().unwrap_or(""))
+                .to_string();
+            (
+                it.name.clone(),
+                uri,
+                it.source.clone(),
+                it.level,
+                it.icon_id.clone(),
+            )
+        }
+        None => (String::new(), String::new(), String::new(), 0u8, None),
+    };
+    let has_item = item.is_some();
+    let tile_class = if has_item {
+        "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 cursor-pointer min-h-[92px]"
+    } else {
+        "flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-950/40 border border-slate-900 min-h-[92px] cursor-default"
+    };
+    let reg = registry.clone();
+    let name_for_pop = name.clone();
+    let mut popover = popover;
+    rsx! {
+        button {
+            key: "{key}",
+            class: "{tile_class}",
+            onclick: move |_| {
+                if !name_for_pop.is_empty() {
+                    let i18n_ref = i18n.read();
+                    popover.set(Some(item_popover(&reg, &i18n_ref, lang, &name_for_pop, icon_opt.as_deref(), &source)));
+                }
+            },
+            if has_item {
+                if uri.starts_with("data:") {
+                    img { class: "w-8 h-8 object-contain", src: "{uri}", alt: "" }
+                } else {
+                    span { class: "text-xl", "{uri}" }
+                }
+            } else {
+                span { class: "text-xl text-slate-700", "—" }
+            }
+            span { class: "text-[9px] uppercase tracking-wider text-slate-500", "{label}" }
+            if has_item {
+                span { class: "text-[10px] font-semibold text-slate-200 text-center leading-tight", "{name}" }
+                span { class: "text-[9px] text-amber-500", "Lvl {lvl}" }
             }
         }
     }

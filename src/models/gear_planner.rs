@@ -6,6 +6,23 @@ use super::faction::Faction;
 
 const GEAR_JSON: &str = include_str!("../../assets/data/gear.json");
 
+/// Equipment slot ids for the paper-doll sheet, in display order. The weapon
+/// is not a slot — it comes from the band's `weapons`.
+pub const SLOT_ORDER: [&str; 12] = [
+    "head",
+    "neck",
+    "shoulders",
+    "back",
+    "chest",
+    "wrist",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "finger",
+    "trinket",
+];
+
 /// A single recommended weapon within a level band.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct GearWeapon {
@@ -40,6 +57,9 @@ pub struct GearBand {
     pub max_level: u8,
     #[serde(default)]
     pub weapons: Vec<GearWeapon>,
+    /// Per-slot armor/jewelry recommendations (SLOT_ORDER ids).
+    #[serde(default)]
+    pub slots: std::collections::BTreeMap<String, GearWeapon>,
     pub armor: GearArmorLine,
 }
 

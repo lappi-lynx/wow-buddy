@@ -1,5 +1,6 @@
 use wow_buddy::assets::registry::{AssetRegistry, ICON_FALLBACK};
-use wow_buddy::models::gear_planner::GearPlannerData;
+use wow_buddy::models::gear_planner::{GearPlannerData, SLOT_ORDER};
+use wow_buddy::models::Faction;
 
 pub const EXPECTED_CLASSES: [&str; 9] = [
     "warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid",
@@ -123,6 +124,63 @@ fn all_classes_complete() {
     for c in EXPECTED_CLASSES {
         assert_class_complete(&data, c);
     }
+}
+
+/// Honest per-band slot availability before 30: the 12–16 basics (no
+/// verified head/neck/shoulders/ring/trinket/wrist at that level), everything
+/// but the trinket by 20–24 (class trinkets start ~28), and all but the neck
+/// by 24–30 (the early neck keeps serving; no verified upgrade exists ≤30).
+pub const MIN_SLOTS: [(&str, usize); 3] = [("12-16", 6), ("20-24", 10), ("24-30", 11)];
+
+/// Slot completeness for the given factions (the 1-6 starter band is exempt:
+/// its slots are deliberately empty until starter gear is authored). Every
+/// present slot must be well-formed and each band must reach its minimum.
+pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, factions: &[Faction]) {
+    let gear = data
+        .classes
+        .get(class_id)
+        .unwrap_or_else(|| panic!("{class_id} missing from gear.json"));
+    for faction in factions {
+        let (key, bands) = match faction {
+            Faction::Alliance => ("alliance", &gear.alliance),
+            Faction::Horde => ("horde", &gear.horde),
+        };
+        for band in bands {
+            if band.id == "1-6" {
+                continue;
+            }
+            let min = MIN_SLOTS
+                .iter()
+                .find(|(id, _)| *id == band.id)
+                .map(|(_, n)| *n)
+                .unwrap_or_else(|| panic!("unknown band {}", band.id));
+            assert!(
+                band.slots.len() >= min,
+                "{class_id}/{key}/{} has {} slots, needs >= {min}",
+                band.id,
+                band.slots.len()
+            );
+            for (slot, item) in &band.slots {
+                assert!(
+                    SLOT_ORDER.contains(&slot.as_str()),
+                    "{class_id}/{key}/{}/{slot} unknown slot",
+                    band.id
+                );
+                assert!(item.item_id.is_some(), "{class_id}/{key}/{}/{slot} item_id", band.id);
+                assert!(item.icon_id.is_some(), "{class_id}/{key}/{}/{slot} icon_id", band.id);
+                assert!(item.provenance.is_some(), "{class_id}/{key}/{}/{slot} provenance", band.id);
+                assert!(!item.source.trim().is_empty(), "{class_id}/{key}/{}/{slot} source", band.id);
+            }
+        }
+    }
+}
+
+#[test]
+fn hunter_slots_complete() {
+    // Pilot: Alliance hunter (the partner's elf-hunter example). Horde hunter
+    // and the other classes land with the remaining fills; the umbrella gate
+    // (Task 13) requires both factions for all nine.
+    assert_class_slots_complete(&GearPlannerData::load_embedded(), "hunter", &[Faction::Alliance]);
 }
 
 #[test]

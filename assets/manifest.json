@@ -569,6 +569,150 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_staff_09, Staff of Soran'ruk) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_helmet_48": {
+      "path": "assets/icons/items/inv_helmet_48.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_helmet_48, Embossed Leather Cloak) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_leather_09": {
+      "path": "assets/icons/items/inv_chest_leather_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_leather_09, Fine Leather Tunic) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_05": {
+      "path": "assets/icons/items/inv_gauntlets_05.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_05, Fine Leather Gloves) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_04": {
+      "path": "assets/icons/items/inv_belt_04.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_04, Fine Leather Belt) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_02": {
+      "path": "assets/icons/items/inv_pants_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_02, Fine Leather Pants) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_boots_06": {
+      "path": "assets/icons/items/inv_boots_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_boots_06, Fine Leather Boots) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_helmet_47": {
+      "path": "assets/icons/items/inv_helmet_47.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_helmet_47, Flying Tiger Goggles / Green Tinted Goggles) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_necklace_13": {
+      "path": "assets/icons/items/inv_jewelry_necklace_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_necklace_13, Sentinel's Medallion) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shoulder_08": {
+      "path": "assets/icons/items/inv_shoulder_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shoulder_08, Serpent's Shoulders) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_08": {
+      "path": "assets/icons/items/inv_misc_cape_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_08, Cape of the Brotherhood) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_leather_08": {
+      "path": "assets/icons/items/inv_chest_leather_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_leather_08, Blackened Defias Armor) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_06": {
+      "path": "assets/icons/items/inv_bracer_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_06, Wrangler's Wristbands) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_18": {
+      "path": "assets/icons/items/inv_gauntlets_18.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_18, Blackened Defias Gloves) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_26": {
+      "path": "assets/icons/items/inv_belt_26.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_26, Blackened Defias Belt) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_boots_05": {
+      "path": "assets/icons/items/inv_boots_05.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_boots_05, Blackened Defias Boots / Wrangler's Boots / Embossed Leather Boots) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_ring_05": {
+      "path": "assets/icons/items/inv_jewelry_ring_05.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_ring_05, Seal of Wrynn) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shoulder_12": {
+      "path": "assets/icons/items/inv_shoulder_12.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shoulder_12, Dark Leather Shoulders) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_13": {
+      "path": "assets/icons/items/inv_misc_cape_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_13, Caretaker's Cape) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_shirt_16": {
+      "path": "assets/icons/items/inv_shirt_16.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_shirt_16, Armor of the Fang) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_15": {
+      "path": "assets/icons/items/inv_bracer_15.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_15, Barbaric Bracers) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_belt_30": {
+      "path": "assets/icons/items/inv_belt_30.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_belt_30, Belt of the Fang) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_pants_11": {
+      "path": "assets/icons/items/inv_pants_11.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_pants_11, Leggings of the Fang) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_ring_13": {
+      "path": "assets/icons/items/inv_jewelry_ring_13.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_ring_13, Tiger Band) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_trinketpvp_01": {
+      "path": "assets/icons/items/inv_jewelry_trinketpvp_01.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_trinketpvp_01, Insignia of the Alliance) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

@@ -26,3 +26,11 @@
 - **Master Hunter's Bow quest level**: ForeverDB shows the quest's difficulty level 43; it is the classic level-30 Hemet Nesingwary chain reward with no item required level — shipped at 30 with this note (same pattern as Whirlwind Axe).
 - **Starter band:** "starter bow" + "Quest leather pieces (…)" hints (Elwynn/Durotar), exempt from provenance (deliberate).
 - **Icons imported:** `inv_weapon_bow_10`, `inv_weapon_bow_11`, `inv_weapon_bow_01`, `inv_weapon_rifle_07`, `inv_staff_08`, `inv_sword_14`.
+
+## Slot pilot — Alliance hunter armor (Track "UI polish & armor", 2026-10-15)
+
+- **KB session:** `3a979e48` (per-slot armor/jewelry, 12–16 / 20–24 / 24–30) — **ForeverDB-verified** item by item (`foreverdb.net/item/<id>`): existence, armor type, real equipment slot, required level.
+- **Shipped slots** (alliance): 12–16 → back/chest/hands/waist/legs/feet (6); 20–24 → + head/neck/shoulders/wrist/finger (11); 24–30 → + trinket (11; no verified neck upgrade ≤30 exists — the 20–24 Medallion keeps serving).
+- **Fabrications caught by the fidelity pass** (dropped): "Embossed Leather Bracers", "Embossed Leather Belt", "Blackened Defias Bracers", "Barkhide Shoulders", "River Pride Amulet", "Triprunner Pants", "Deviate Scale Boots" — none exist in the Forever DB. Replacements came from the real families (Wrangler's, Fine/Embossed Leather, Deviate Scale, Dark Leather, Fang set).
+- **Wrong-slot/wrong-class catches:** Chausses of Westfall is **mail** (hunters cannot wear mail before 40 in 1.60.1) → dropped; "Band of the Tiger" → the real item is **Tiger Band** (quest: Willix the Importer); "Sentinel's Medallion"/"Caretaker's Cape" have **req-58 variants** (19538/19530) — the **req-18** versions (20444/20428) shipped.
+- **Icons:** 24 new item icons imported (list in `assets/manifest.json`, source lines name each item).
