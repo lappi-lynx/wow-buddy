@@ -431,6 +431,42 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_hammer_05, Verigan's Fist) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_weapon_bow_11": {
+      "path": "assets/icons/items/inv_weapon_bow_11.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_bow_11, Master Hunter's Bow) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_bow_10": {
+      "path": "assets/icons/items/inv_weapon_bow_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_bow_10, Venomstrike) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_bow_01": {
+      "path": "assets/icons/items/inv_weapon_bow_01.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_bow_01, Heavy Recurve Bow) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_rifle_07": {
+      "path": "assets/icons/items/inv_weapon_rifle_07.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_rifle_07, Silver-plated Shotgun) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_staff_08": {
+      "path": "assets/icons/items/inv_staff_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_staff_08, Balanced Fighting Stick) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_sword_14": {
+      "path": "assets/icons/items/inv_sword_14.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_14, Heavy Copper Broadsword) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

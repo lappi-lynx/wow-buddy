@@ -483,6 +483,232 @@
           }
         }
       ]
+    },
+    "hunter": {
+      "alliance": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter bow",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Elwynn Forest)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Balanced Fighting Stick",
+              "level": 12,
+              "item_id": 6215,
+              "icon_id": "inv_staff_08",
+              "source": "Wanted: “Hogger” (quest, Elwynn Forest)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Heavy Copper Broadsword",
+              "level": 14,
+              "item_id": 3487,
+              "icon_id": "inv_sword_14",
+              "source": "Crafted (Blacksmithing)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Hall of Thanes (13–20, Ironforge)",
+            "source": "The Hall of Thanes loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Venomstrike",
+              "level": 19,
+              "item_id": 6469,
+              "icon_id": "inv_weapon_bow_10",
+              "source": "Lord Serpentis, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Heavy Recurve Bow",
+              "level": 20,
+              "item_id": 3027,
+              "icon_id": "inv_weapon_bow_01",
+              "source": "Sold by bow vendors",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Silver-plated Shotgun",
+              "level": 21,
+              "item_id": 4379,
+              "icon_id": "inv_weapon_rifle_07",
+              "source": "Crafted (Engineering)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "The Deadmines (18–23, Westfall)",
+            "source": "The Deadmines loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Corpsemaker",
+              "level": 29,
+              "item_id": 6687,
+              "icon_id": "inv_weapon_halbard_01",
+              "source": "Overlord Ramtusk, Razorfen Kraul (The Barrens)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Master Hunter's Bow",
+              "level": 30,
+              "item_id": 17686,
+              "icon_id": "inv_weapon_bow_11",
+              "source": "Big Game Hunter (Hemet Nesingwary quest chain, Stranglethorn Vale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale)",
+            "source": "Blackfathom Deeps loot table (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ],
+      "horde": [
+        {
+          "id": "1-6",
+          "label": "1–6",
+          "min_level": 1,
+          "max_level": 6,
+          "weapons": [
+            {
+              "name": "starter bow",
+              "level": 1,
+              "item_id": null,
+              "icon_id": null,
+              "source": "Starting gear"
+            }
+          ],
+          "armor": {
+            "text": "Quest leather pieces (Durotar)",
+            "source": "Starting zone quests"
+          }
+        },
+        {
+          "id": "12-16",
+          "label": "12–16",
+          "min_level": 12,
+          "max_level": 16,
+          "weapons": [
+            {
+              "name": "Axe of Orgrimmar",
+              "level": 13,
+              "item_id": 15424,
+              "icon_id": "inv_axe_04",
+              "source": "Hidden Enemies (choice reward), Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Cursed Felblade",
+              "level": 13,
+              "item_id": 14145,
+              "icon_id": "inv_weapon_shortblade_12",
+              "source": "Taragaman the Hungerer, Ragefire Chasm",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Ragefire Chasm (13–18, Orgrimmar/Durotar)",
+            "source": "Ragefire Chasm loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "20-24",
+          "label": "20–24",
+          "min_level": 20,
+          "max_level": 24,
+          "weapons": [
+            {
+              "name": "Venomstrike",
+              "level": 19,
+              "item_id": 6469,
+              "icon_id": "inv_weapon_bow_10",
+              "source": "Lord Serpentis, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Reef Axe",
+              "level": 22,
+              "item_id": 6905,
+              "icon_id": "inv_weapon_halberd_06",
+              "source": "Verdan the Everliving, Wailing Caverns",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Wailing Caverns (15–22, The Barrens)",
+            "source": "Wailing Caverns loot table (KB 2026-09-17)",
+            "provenance": "kb:dungeons@2026-09-17"
+          }
+        },
+        {
+          "id": "24-30",
+          "label": "24–30",
+          "min_level": 24,
+          "max_level": 30,
+          "weapons": [
+            {
+              "name": "Corpsemaker",
+              "level": 29,
+              "item_id": 6687,
+              "icon_id": "inv_weapon_halbard_01",
+              "source": "Overlord Ramtusk, Razorfen Kraul (The Barrens)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Master Hunter's Bow",
+              "level": 30,
+              "item_id": 17686,
+              "icon_id": "inv_weapon_bow_11",
+              "source": "Big Game Hunter (Hemet Nesingwary quest chain, Stranglethorn Vale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
+          "armor": {
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
+          }
+        }
+      ]
     }
   }
 }
