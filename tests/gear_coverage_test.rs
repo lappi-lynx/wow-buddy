@@ -135,6 +135,10 @@ pub const MIN_SLOTS: [(&str, usize); 3] = [("12-16", 6), ("20-24", 10), ("24-30"
 /// Slot completeness for the given factions (the 1-6 starter band is exempt:
 /// its slots are deliberately empty until starter gear is authored). Every
 /// present slot must be well-formed and each band must reach its minimum.
+///
+/// Like weapon levels, a slot item's `level` keeps its VERIFIED required
+/// level and is deliberately not bounded by the band (the 12-16 crafted
+/// basics are req 7-11; the artifacts record the band assignment).
 pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, factions: &[Faction]) {
     let gear = data
         .classes
@@ -173,6 +177,42 @@ pub fn assert_class_slots_complete(data: &GearPlannerData, class_id: &str, facti
             }
         }
     }
+}
+
+#[test]
+fn shaman_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "shaman",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
+fn mage_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "mage",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
+fn warlock_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "warlock",
+        &[Faction::Alliance, Faction::Horde],
+    );
+}
+
+#[test]
+fn druid_slots_complete() {
+    assert_class_slots_complete(
+        &GearPlannerData::load_embedded(),
+        "druid",
+        &[Faction::Alliance, Faction::Horde],
+    );
 }
 
 #[test]

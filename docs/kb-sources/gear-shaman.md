@@ -31,5 +31,6 @@
 
 ## Slots — shaman (2026-10-15)
 
-- Mail, so the **paladin's verified Blacksmithing set is reused wholesale** (Runed Copper → Silvered Bronze/Patterned Bronze → Shining Silver/Elite/Silvered Bronze Leggings) with the faction cloaks/necks/rings/PvP items and the **class insignia** (Horde 18845 verified; **no Alliance shaman insignia exists in the DB** — a classic-era gap — so the Alliance 24–30 set has 10 slots with no trinket).
-- Availability: A 7/11/10 · H 7/11/11.
+- **Correction (review + KB session 1eb1fcad):** the first pass claimed shamans wear mail below 40 — **wrong**. Like hunters, shamans wear **cloth/leather until level 40** (mail proficiency trains at 40). The blacksmithing-mail set was replaced with the hunter leather set: crafted basics (12–16), Fang/Wrangler's/Sentry (20–24), Dark Leather/Hillman's/Deviate Scale/Wrangler's Boots/Tiger Band (24–30).
+- Insignia: **Insignia of the Horde 18845** verified (Shaman). **No Alliance shaman insignia exists in the DB** (the alliance list is exactly the classic eight classes) → the Alliance 24–30 set is an honest 10 slots with no trinket.
+- Availability: A 6/11/10 · H 6/10/11.

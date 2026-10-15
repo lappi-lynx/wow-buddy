@@ -69,6 +69,7 @@ pub fn RaceSelectorView(
         format!("{} Races", i18n.read().t("horde_name", lang))
     };
 
+    let class_registry = AssetRegistry::load_embedded();
     let (active_name, active_lore, active_ability_name, active_ability_desc, available_classes) =
         if let Some(ref r) = active_race {
             let name = format_race_display_name(r, faction);
@@ -182,7 +183,7 @@ pub fn RaceSelectorView(
                                         } else {
                                             "text-[9px] capitalize font-medium text-slate-400"
                                         };
-                                        let art = class_render_source(&AssetRegistry::load_embedded(), &cls_id);
+                                        let art = class_render_source(&class_registry, &cls_id);
                                         rsx! {
                                             button {
                                                 key: "{cls_id}",

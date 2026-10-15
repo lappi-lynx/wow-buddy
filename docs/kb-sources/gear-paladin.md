@@ -35,3 +35,7 @@
 - 20–24 (11): Flying Tiger Goggles, PvP neck (Sentinel's/Scout's), Serpent's Shoulders, faction cloak, Silvered Bronze (Breastplate/Gauntlets/Boots) + Patterned Bronze Bracers, Dark Leather Belt/Pants, PvP/signature ring.
 - 24–30 (11): Green Tinted Goggles, Elite Shoulders (req 25), Shining Silver Breastplate, Barbaric Bracers, Deviate Scale Gloves/Belt, Silvered Bronze Leggings (req 26), Wrangler's Boots, Tiger Band, class PvP insignia.
 - **Fabrications dropped:** "Ironchain Shoulders/Leggings", "Ironclad Bracers", "Cobalt Belt", "Silvered Bronze Belt", "River Pride Amulet", "Outrider's Cloak". **Over-cap drops:** Golden Scale Bracers (req 32), Gauntlets of the Sea (req 41 — KB said 25). Elite Shoulders is req 25 (KB said 21) → moved to 24–30.
+
+## Slots correction (review, 2026-10-15)
+
+- The first pass shipped the **Hunter** insignia (18856/18846) on the paladin. Corrected: Alliance → **18864 (Paladin)**; **no Horde paladin insignia exists in the DB** (the horde list is the classic eight classes) → the Horde 24–30 set is an honest 10 slots (KB session 1eb1fcad + the item lists).
