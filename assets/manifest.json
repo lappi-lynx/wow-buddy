@@ -401,6 +401,30 @@
       "kind": "zone_art",
       "source": "placeholder pending WoW Fan Site Kit import (johnwhitegm.github.io/wowfansitekit)",
       "license": "blizzard-fansite-kit"
+    },
+    "inv_sword_42": {
+      "path": "assets/icons/items/inv_sword_42.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_42, Strike of the Hydra) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_sword_24": {
+      "path": "assets/icons/items/inv_sword_24.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_sword_24, Cruel Barb) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_axe_12": {
+      "path": "assets/icons/items/inv_axe_12.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_axe_12, Whirlwind Axe) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_halbard_01": {
+      "path": "assets/icons/items/inv_weapon_halbard_01.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_halbard_01, Corpsemaker) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

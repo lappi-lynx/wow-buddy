@@ -71,6 +71,14 @@
               "icon_id": "inv_hammer_01",
               "source": "Mr. Smite, The Deadmines (Westfall)",
               "provenance": "kb:leveling-weapons@2026-09-26"
+            },
+            {
+              "name": "Cruel Barb",
+              "level": 19,
+              "item_id": 5191,
+              "icon_id": "inv_sword_24",
+              "source": "Edwin VanCleef, The Deadmines (Westfall)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
             }
           ],
           "armor": {
@@ -84,10 +92,28 @@
           "label": "24–30",
           "min_level": 24,
           "max_level": 30,
-          "weapons": [],
+          "weapons": [
+            {
+              "name": "Strike of the Hydra",
+              "level": 26,
+              "item_id": 6909,
+              "icon_id": "inv_sword_42",
+              "source": "Aku'mai, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Whirlwind Axe",
+              "level": 30,
+              "item_id": 6975,
+              "icon_id": "inv_axe_12",
+              "source": "Whirlwind Weapon quest chain (Cyclonian, Arathi Highlands)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
           "armor": {
-            "text": "Next dungeon bracket (planning)",
-            "source": "Pending KB coverage"
+            "text": "Blackfathom Deeps (24–32, Ashenvale)",
+            "source": "Blackfathom Deeps loot table (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
           }
         }
       ],
@@ -190,11 +216,36 @@
           "label": "24–30",
           "min_level": 24,
           "max_level": 30,
-          "weapons": [],
+          "weapons": [
+            {
+              "name": "Strike of the Hydra",
+              "level": 26,
+              "item_id": 6909,
+              "icon_id": "inv_sword_42",
+              "source": "Aku'mai, Blackfathom Deeps (Ashenvale)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Corpsemaker",
+              "level": 29,
+              "item_id": 6687,
+              "icon_id": "inv_weapon_halbard_01",
+              "source": "Overlord Ramtusk, Razorfen Kraul (The Barrens)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            },
+            {
+              "name": "Whirlwind Axe",
+              "level": 30,
+              "item_id": 6975,
+              "icon_id": "inv_axe_12",
+              "source": "Whirlwind Weapon quest chain (Cyclonian, Arathi Highlands)",
+              "provenance": "kb:leveling-weapons@2026-10-15"
+            }
+          ],
           "armor": {
-            "text": "Shadowfang Keep (18–25, Silverpine Forest)",
-            "source": "Shadowfang Keep loot table (KB 2026-09-17)",
-            "provenance": "kb:dungeons@2026-09-17"
+            "text": "Blackfathom Deeps (24–32, Ashenvale) / Shadowfang Keep (18–25, Silverpine Forest)",
+            "source": "Blackfathom Deeps & Shadowfang Keep loot tables (KB 2026-10-15)",
+            "provenance": "kb:dungeons@2026-10-15"
           }
         }
       ]
