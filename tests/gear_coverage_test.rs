@@ -14,6 +14,11 @@ pub const BANDS: [(&str, u8, u8); 4] = [
 /// Every class ships both factions' four bands with real, sourced content.
 /// The `1-6` starter band is exempt from the provenance/item-id rules (it
 /// carries the generic starter weapon deliberately, mirroring warrior).
+///
+/// Weapon `level` is deliberately NOT bounded by the band's min/max: the KB
+/// guide files some pickups with the bracket they route with (Cruel Barb 19,
+/// Cookie's/Emberstone 17, Meteor Shard 23, Odo's 21), and each per-class
+/// artifact records why. Band placement is a reviewed decision, not a check.
 pub fn assert_class_complete(data: &GearPlannerData, class_id: &str) {
     let gear = data
         .classes

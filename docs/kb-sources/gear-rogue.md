@@ -26,7 +26,7 @@
 
 ## Notes
 
-- **Bracket notes:** Meteor Shard (req 23) is listed in the 24–30 band for both factions — the best dagger until Toxic Revenger/Gnomeregan and the KB guide's own bracket pick (same pattern as Cruel Barb at 19 in 20–24).
+- **Bracket note (acc. to review follow-up):** Meteor Shard (req 23) is filed in the 24–30 band because the KB guide routes Arugal/Shadowfang Keep in its late-bracket pool; unlike Cruel Barb (19, which sits in the 17–19 gap), 23 is the top of the 20–24 range — it is a late-20s pickup and stays the best dagger until Toxic Revenger. The `level` field keeps the verified 23.
 - **Alliance 24–30 second weapon:** Mechanic's Pipehammer was the KB's suggestion but is a 2H mace; Toxic Revenger + Meteor Shard are the two verified daggers.
 - **Alliance armor pool** now reads BFD / Gnomeregan (the guide routes Alliance through Gnomeregan); horde stays BFD / SFK.
 - **Icons imported:** `inv_sword_12` (Poniard), `inv_weapon_shortblade_04` (Big Bronze Knife), `inv_weapon_shortblade_10` (Tail Spike), `inv_weapon_shortblade_02` (Blackfang & Toxic Revenger — shared art), `inv_weapon_shortblade_25` (Meteor Shard), `inv_weapon_shortblade_18` (Prison Shank), `inv_sword_33` (Outlaw Sabre).

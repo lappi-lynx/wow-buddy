@@ -23,6 +23,6 @@
 ## Notes
 
 - **Armor hints are leather** ("Quest leather pieces (Teldrassil / Mulgore)") — druid-appropriate, and the first use of Teldrassil/Mulgore in the set.
-- **Bracket note:** Odo's Ley Staff (req 21) sits in the horde 24–30 band as the guide's SFK pickup (Cruel Barb precedent); the alliance 24–30 pair is exact-band.
+- **Bracket note (acc. to review follow-up):** Odo's Ley Staff (req 21) is filed in the horde 24–30 band because the KB guide routes Shadowfang Keep in that pool; unlike the gap-level items (Cruel Barb 19), 21 sits at the bottom of the 20–24 range — it is a late-pickup staff that remains useful until Rod of the Sleepwalker. The `level` field keeps the verified 21.
 - **Cavedweller's Mace made its third appearance as a fabrication** — the fidelity table keeps rejecting it (as with the earlier two).
 - This closes the last fill task: `gear_coverage_test` is 9/9 before the Task-10 gate.
