@@ -94,3 +94,8 @@ fn priest_is_complete() {
 fn shaman_is_complete() {
     assert_class_complete(&GearPlannerData::load_embedded(), "shaman");
 }
+
+#[test]
+fn mage_is_complete() {
+    assert_class_complete(&GearPlannerData::load_embedded(), "mage");
+}
