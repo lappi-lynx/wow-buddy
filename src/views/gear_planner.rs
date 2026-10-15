@@ -4,9 +4,16 @@ use crate::components::race_tile::class_render_source;
 use crate::components::ReferencePopover;
 use crate::components::LanguagePicker;
 use crate::i18n::{I18nService, Language};
-use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon, SLOT_ORDER};
+use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
 use dioxus::prelude::*;
+
+/// Character-sheet layout (partner's natural-flow ordering): the left column
+/// holds the weapon plus utility slots; the armour grid reads top-left to
+/// bottom-right head -> feet.
+const LEFT_COLUMN_SLOTS: [&str; 4] = ["back", "waist", "finger", "trinket"];
+const TOP_ROW_SLOTS: [&str; 4] = ["head", "neck", "shoulders", "chest"];
+const BOTTOM_ROW_SLOTS: [&str; 4] = ["wrist", "hands", "legs", "feet"];
 
 /// The band id to highlight for `level`: the containing band if one exists,
 /// otherwise the next band above it (used when the level is in a gap).
@@ -127,21 +134,39 @@ pub fn GearPlannerView(
                                     }
                                 }
                                 if let Some(band) = current_band.as_ref() {
-                                    div { class: "flex-1 flex flex-col space-y-2",
-                                        div { class: "grid grid-cols-3 sm:grid-cols-4 gap-2",
+                                    div { class: "flex-1 flex flex-col lg:flex-row gap-2",
+                                        // Armour grid (mobile-first: the head row reads first)
+                                        div { class: "flex-1 flex flex-col gap-2",
+                                            div { class: "grid grid-cols-2 sm:grid-cols-4 gap-2",
+                                                for slot in TOP_ROW_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                }
+                                            }
+                                            div { class: "grid grid-cols-2 sm:grid-cols-4 gap-2",
+                                                for slot in BOTTOM_ROW_SLOTS.iter() {
+                                                    { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
+                                                }
+                                            }
+                                        }
+                                        // Utility column: weapon + back/waist/finger/trinket
+                                        // (leftmost on desktop, below the armour grid on mobile)
+                                        div { class: "grid grid-cols-2 lg:grid-cols-1 lg:order-first lg:w-40 shrink-0 gap-2",
                                             if let Some(weapon) = band.weapons.first() {
                                                 { slot_tile("weapon", "weapon", Some(weapon), &registry, i18n, lang, popover) }
                                             }
-                                            for slot in SLOT_ORDER.iter() {
+                                            for slot in LEFT_COLUMN_SLOTS.iter() {
                                                 { slot_tile(slot, slot, band.slots.get(*slot), &registry, i18n, lang, popover) }
                                             }
                                         }
-                                        if band.weapons.len() > 1 {
+                                    }
+                                    if band.weapons.len() > 1 {
+                                        div { class: "w-full flex flex-col gap-1.5 pt-1",
+                                            span { class: "text-[10px] font-semibold uppercase tracking-wider text-slate-500",
+                                                "{i18n_svc.t(\"ui_gear_alternatives\", lang)}"
+                                            }
                                             div { class: "flex flex-wrap gap-1.5",
                                                 for weapon in band.weapons.iter().skip(1) {
-                                                    span { key: "{weapon.name}", class: "text-[10px] px-2 py-0.5 rounded-full bg-slate-900/70 border border-slate-800 text-slate-400",
-                                                        "{weapon.name}"
-                                                    }
+                                                    { alt_weapon_chip(weapon, &registry, i18n, lang, popover) }
                                                 }
                                             }
                                         }
@@ -224,6 +249,42 @@ fn slot_tile(
                 span { class: "text-[10px] font-semibold text-slate-200 text-center leading-tight", "{name}" }
                 span { class: "text-[9px] text-amber-500", "Lvl {lvl}" }
             }
+        }
+    }
+}
+
+/// A labelled alternate weapon pick: icon + name + level, tappable for the
+/// source popover.
+fn alt_weapon_chip(
+    weapon: &GearWeapon,
+    registry: &AssetRegistry,
+    i18n: Signal<I18nService>,
+    lang: Language,
+    popover: Signal<Option<PopoverData>>,
+) -> Element {
+    let uri = registry
+        .item_icon(weapon.icon_id.as_deref().unwrap_or(""))
+        .to_string();
+    let name = weapon.name.clone();
+    let source = weapon.source.clone();
+    let icon_opt = weapon.icon_id.clone();
+    let lvl = weapon.level;
+    let reg = registry.clone();
+    let name_for_pop = name.clone();
+    let mut popover = popover;
+    rsx! {
+        button {
+            key: "{name}",
+            class: "flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-900/70 border border-dashed border-slate-700 hover:border-amber-500/40 text-slate-300 cursor-pointer",
+            onclick: move |_| {
+                let i18n_ref = i18n.read();
+                popover.set(Some(item_popover(&reg, &i18n_ref, lang, &name_for_pop, icon_opt.as_deref(), &source)));
+            },
+            if uri.starts_with("data:") {
+                img { class: "w-4 h-4 object-contain", src: "{uri}", alt: "" }
+            }
+            span { class: "text-[10px] font-semibold", "{name}" }
+            span { class: "text-[9px] text-amber-500", "Lvl {lvl}" }
         }
     }
 }
