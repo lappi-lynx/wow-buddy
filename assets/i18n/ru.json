@@ -119,6 +119,8 @@
   "ui_readiness_ready": "Готовы",
   "ui_find_group": "Как найти группу?",
   "ui_level_range": "В вашем диапазоне уровней",
+  "ui_comfort_title": "Советы для комфорта",
+  "ui_comfort_counter": "{current} / {total}",
   "ui_need_warning": "⚠️ Внимание: Нуждо-катка на вендорное золото приведет к кику и бану на вашем реалме!",
   "ui_need_btn": "⚔️ Нужно (Need) — Ниндзя-лут!",
   "ui_greed_btn": "🎲 Не откажусь (Greed) — Верно!",

@@ -1,5 +1,5 @@
 use crate::components::reference_popover::{npc_popover, PopoverData};
-use crate::components::{LanguagePicker, LegacyPresetWidget, ReferencePopover};
+use crate::components::{ComfortDeck, LanguagePicker, LegacyPresetWidget, ReferencePopover};
 use crate::i18n::{I18nService, Language};
 use crate::models::{reference::NpcBook, Faction, GameData, RaceInfo, StarterZoneInfo};
 use crate::views::race_selector::format_race_display_name;
@@ -211,6 +211,9 @@ pub fn ProgressionGuideView(
                         }
                     }
                 }
+
+                // Comfort tips deck (Track E)
+                ComfortDeck { current_lang: current_lang, i18n: i18n }
 
                 // Next Module Button
                 div { class: "w-full max-w-md pt-2",

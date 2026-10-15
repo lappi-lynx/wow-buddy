@@ -425,6 +425,9 @@
   .h-full {
     height: 100%;
   }
+  .min-h-\[3rem\] {
+    min-height: 3rem;
+  }
   .min-h-\[44px\] {
     min-height: 44px;
   }
@@ -1633,6 +1636,9 @@
     --tw-scale-y: 95%;
     --tw-scale-z: 95%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .disabled\:opacity-40:disabled {
+    opacity: 40%;
   }
   @media (width >= 40rem) {
     .sm\:inset-x-auto {

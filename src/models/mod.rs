@@ -1,5 +1,6 @@
 pub mod class;
 pub mod class_tips;
+pub mod comfort_tips;
 pub mod dungeon;
 pub mod faction;
 pub mod fishing;
@@ -17,6 +18,7 @@ pub mod zone;
 
 pub use class::{ClassInfo, CoreSpell};
 pub use class_tips::{ClassTips, ClassTipsData, LocalizedText, SpecTips};
+pub use comfort_tips::{ComfortTip, ComfortTipsData};
 pub use dungeon::{get_dungeon_codex, DungeonCodexInfo, DungeonRule};
 pub use faction::{get_faction_meta, Faction, FactionMeta};
 pub use fishing::{FishingData, FishingStep};

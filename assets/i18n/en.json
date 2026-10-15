@@ -119,6 +119,8 @@
   "ui_readiness_ready": "Ready",
   "ui_find_group": "How do I find a group?",
   "ui_level_range": "In your level range",
+  "ui_comfort_title": "Comfort tips",
+  "ui_comfort_counter": "{current} / {total}",
   "ui_need_warning": "⚠️ Warning: Rolling Need for vendor gold will get you kicked and blacklisted on your realm!",
   "ui_need_btn": "⚔️ Need — Ninja Looting!",
   "ui_greed_btn": "🎲 Greed — Correct!",

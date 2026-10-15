@@ -1,0 +1,84 @@
+{
+  "tips": [
+    {
+      "id": "quest_hubs",
+      "text": {
+        "en": "Grab every quest in a hub before heading out — you clear zones in one loop.",
+        "ru": "Берите все задания в хабе перед выходом — так зона проходится за один круг.",
+        "fi": "Nouda kaikki tehtävät keskuksesta ennen lähtöä — selvität alueen yhdellä kierroksella."
+      }
+    },
+    {
+      "id": "inns_rested",
+      "text": {
+        "en": "Log out in an inn or capital city to bank rested XP.",
+        "ru": "Выходите из игры в таверне или столице, чтобы копить опыт отдыха.",
+        "fi": "Kirjaudu ulos majatalossa tai pääkaupungissa kerryttääksesi lepokokemusta."
+      }
+    },
+    {
+      "id": "trainer_visits",
+      "text": {
+        "en": "Visit your class trainer every few levels — new ranks matter more than gear.",
+        "ru": "Заходите к тренеру каждые пару уровней — новые ранги важнее экипировки.",
+        "fi": "Vieraile luokkakouluttajalla muutaman tason välein — uudet rankit ovat tärkeämpiä kuin varusteet."
+      }
+    },
+    {
+      "id": "bags",
+      "text": {
+        "en": "Buy bigger bags early; empty bag space is gold over time.",
+        "ru": "Купите сумки побольше пораньше — свободное место со временем окупается.",
+        "fi": "Osta isommat laukut varhain — vapaa tila on ajan mittaan kultaa."
+      }
+    },
+    {
+      "id": "flight_paths",
+      "text": {
+        "en": "Unlock flight paths as you go — they're the cheapest fast travel.",
+        "ru": "Открывайте маршруты полётов по пути — это самый дешёвый быстрый транспорт.",
+        "fi": "Avaa lentoreittejä edetessäsi — ne ovat halvin nopea matkustus."
+      }
+    },
+    {
+      "id": "hearthstone",
+      "text": {
+        "en": "Set your Hearthstone to the inn nearest your current quest hub.",
+        "ru": "Привяжите камень возвращения к таверне у текущего хаба заданий.",
+        "fi": "Sido Hearthstone majataloon lähimmän tehtäväkeskuksen luona."
+      }
+    },
+    {
+      "id": "dungeons",
+      "text": {
+        "en": "Run a dungeon when you're in its level range — quest XP plus loot is a big spike.",
+        "ru": "Идите в подземелье, когда вы в его диапазоне уровней — опыт заданий плюс добыча дают большой скачок.",
+        "fi": "Käy luolastossa, kun olet sen tasovälillä — tehtävä-XP ja saalis ovat iso hyppäys."
+      }
+    },
+    {
+      "id": "breaks",
+      "text": {
+        "en": "Take breaks — a rested player plays better and dies less.",
+        "ru": "Делайте перерывы — отдохнувший игрок играет лучше и умирает реже.",
+        "fi": "Pidä taukoja — levännyt pelaaja pelaa paremmin ja kuolee vähemmän."
+      }
+    },
+    {
+      "id": "green_drops",
+      "text": {
+        "en": "Sell unneeded greens on the auction house, not the vendor.",
+        "ru": "Продавайте ненужные зелёные вещи на аукционе, а не торговцу.",
+        "fi": "Myy tarpeettomat vihreät huutokaupassa, älä kauppiaalle."
+      }
+    },
+    {
+      "id": "bank_alts",
+      "text": {
+        "en": "Mail spare materials to a bank character to keep your bags clean.",
+        "ru": "Отправляйте лишние материалы почтой персонажу-банкиру, чтобы сумки были свободны.",
+        "fi": "Lähetä ylimääräiset materiaalit postilla pankkihahmolle, jotta laukut pysyvät siisteinä."
+      }
+    }
+  ]
+}

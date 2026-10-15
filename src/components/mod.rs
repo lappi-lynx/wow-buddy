@@ -1,5 +1,6 @@
 pub mod bottom_nav;
 pub mod class_tips_card;
+pub mod comfort_deck;
 pub mod dungeon_rule_card;
 pub mod export_card;
 pub mod faction_shield;
@@ -15,6 +16,7 @@ pub mod reference_popover;
 
 pub use bottom_nav::{BottomNav, NavTab};
 pub use class_tips_card::ClassTipsCard;
+pub use comfort_deck::ComfortDeck;
 pub use dungeon_rule_card::DungeonRuleCard;
 pub use export_card::BlueprintExport;
 pub use faction_shield::FactionShield;

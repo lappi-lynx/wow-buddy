@@ -119,6 +119,8 @@
   "ui_readiness_ready": "Valmis",
   "ui_find_group": "Miten löydän ryhmän?",
   "ui_level_range": "Tasovälilläsi",
+  "ui_comfort_title": "Mukavuusvinkit",
+  "ui_comfort_counter": "{current} / {total}",
   "ui_need_warning": "⚠️ Varoitus: Need-vetoaminen kauppakulta vie potkut ja blacklistauksen realmallasi!",
   "ui_need_btn": "⚔️ Need (Ninza-löytä) — Väärin!",
   "ui_greed_btn": "🎲 Greed (Ei kiellä) — Oikein!",
