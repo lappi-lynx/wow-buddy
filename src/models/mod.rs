@@ -6,6 +6,7 @@ pub mod gear;
 pub mod gear_planner;
 pub mod glossary;
 pub mod legacy;
+pub mod localized;
 pub mod milestones;
 pub mod pets;
 pub mod race;
@@ -19,7 +20,11 @@ pub use faction::{get_faction_meta, Faction, FactionMeta};
 pub use gear::{get_tier_for_level, GearTier};
 pub use gear_planner::{ClassGear, GearArmorLine, GearBand, GearPlannerData, GearWeapon};
 pub use glossary::{get_term, Term, TERMS};
-pub use legacy::{get_starter_legacy_preset, LegacyPerk, LegacyPreset};
+pub use legacy::{
+    get_starter_legacy_preset, Allocation, LegacyCatalog, LegacyPerk, LegacyPerkDef,
+    LegacyPreset, LegacyPresetDef, PerkPrereq,
+};
+pub use localized::Tr;
 pub use milestones::{milestones_around, next_milestone, Milestone, MILESTONES};
 pub use pets::{
     pet_card_kind, pets_sections, CompanionCard, Legends, NotablePet, PetCardKind, PetFamily,

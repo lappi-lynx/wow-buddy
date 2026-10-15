@@ -1,0 +1,463 @@
+{
+  "perks": [
+    {
+      "id": "master_chef",
+      "tree": "professions",
+      "ranks": 5,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Master Chef",
+        "ru": "Мастер-повар",
+        "fi": "Mestarikokki"
+      },
+      "desc": {
+        "en": "Cooking recipes: 50% chance for an extra result",
+        "ru": "Кулинария: 50% шанс получить дополнительный результат",
+        "fi": "Ruoanlaitto: 50% mahdollisuus ylimääräiseen tulokseen"
+      }
+    },
+    {
+      "id": "working_overtime",
+      "tree": "professions",
+      "ranks": 5,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Working Overtime",
+        "ru": "Сверхурочные",
+        "fi": "Ylityöt"
+      },
+      "desc": {
+        "en": "+20% chance to gain a skill increase from any tradeskill use",
+        "ru": "+20% шанс получить повышение навыка от любого ремесла",
+        "fi": "+20% mahdollisuus saada taitonousu mistä tahansa ammatista"
+      }
+    },
+    {
+      "id": "bartering",
+      "tree": "professions",
+      "ranks": 2,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Bartering",
+        "ru": "Торг",
+        "fi": "Vaihtokauppa"
+      },
+      "desc": {
+        "en": "Vendor prices −10%",
+        "ru": "Цены у торговцев −10%",
+        "fi": "Kauppiaan hinnat −10%"
+      }
+    },
+    {
+      "id": "dedicated_study",
+      "tree": "professions",
+      "ranks": 1,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Dedicated Study",
+        "ru": "Усердная учёба",
+        "fi": "Omistautunut opiskelu"
+      },
+      "desc": {
+        "en": "+1 skill in your lowest tradeskill",
+        "ru": "+1 к навыку в самом низком ремесле",
+        "fi": "+1 taito alhaisimpaan ammattiisi"
+      }
+    },
+    {
+      "id": "bountiful_harvest",
+      "tree": "professions",
+      "ranks": 5,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Bountiful Harvest",
+        "ru": "Щедрый урожай",
+        "fi": "Runsas sato"
+      },
+      "desc": {
+        "en": "Discover 100% more Scarce materials (Mining/Herbalism/Skinning)",
+        "ru": "Находите на 100% больше редких материалов (горное дело/травничество/снятие шкур)",
+        "fi": "Löydät 100% enemmän harvinaisia materiaaleja (louhinta/yrttien keruu/nahkominen)"
+      }
+    },
+    {
+      "id": "performance_bonus",
+      "tree": "professions",
+      "ranks": 3,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Performance Bonus",
+        "ru": "Премия за результат",
+        "fi": "Tulospalkkio"
+      },
+      "desc": {
+        "en": "15% chance for 100% more Merchant's Favor on crate turn-ins",
+        "ru": "15% шанс получить на 100% больше Merchant's Favor при сдаче ящиков",
+        "fi": "15% mahdollisuus 100% suurempaan Merchant's Favoriin laatikkopalautuksista"
+      }
+    },
+    {
+      "id": "luremaster",
+      "tree": "professions",
+      "ranks": 2,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Luremaster",
+        "ru": "Мастер наживки",
+        "fi": "Syöttimestari"
+      },
+      "desc": {
+        "en": "With a Lure active: 50% chance to catch an extra fish",
+        "ru": "С активной наживкой: 50% шанс поймать дополнительную рыбу",
+        "fi": "Aktiivisen syötin kanssa: 50% mahdollisuus ylimääräiseen kalaan"
+      }
+    },
+    {
+      "id": "high_alert",
+      "tree": "adventure",
+      "ranks": 2,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "High Alert",
+        "ru": "Повышенная бдительность",
+        "fi": "Korkea valppaus"
+      },
+      "desc": {
+        "en": "Detect stealthed targets as if +2 levels (not in BGs)",
+        "ru": "Замечаете скрытых врагов, как будто вы на 2 уровня выше (не на полях боя)",
+        "fi": "Havaitset hiipivät kohteet kuin olisit 2 tasoa korkeampi (ei taistelukentillä)"
+      }
+    },
+    {
+      "id": "well_rested",
+      "tree": "adventure",
+      "ranks": 5,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Well Rested",
+        "ru": "Хороший отдых",
+        "fi": "Hyvin levännyt"
+      },
+      "desc": {
+        "en": "Rested XP accumulates 20% faster; rested cap +20%",
+        "ru": "Опыт отдыха копится на 20% быстрее; лимит отдыха +20%",
+        "fi": "Lepokokemus kertyy 20% nopeammin; lepokatto +20%"
+      }
+    },
+    {
+      "id": "talented",
+      "tree": "adventure",
+      "ranks": 5,
+      "prereq_tree_points": 5,
+      "prereq_perk": {
+        "id": "well_rested",
+        "ranks": 5
+      },
+      "name": {
+        "en": "Talented",
+        "ru": "Талантливый",
+        "fi": "Lahjakas"
+      },
+      "desc": {
+        "en": "Talent points every level from level 5 (still max 51)",
+        "ru": "Очки талантов с 5 уровня вместо 10 (максимум всё те же 51)",
+        "fi": "Talenttipisteet joka tasolta alkaen tasosta 5 (edelleen enintään 51)"
+      }
+    },
+    {
+      "id": "thrill_of_adventure",
+      "tree": "adventure",
+      "ranks": 5,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Thrill of Adventure",
+        "ru": "Азарт приключений",
+        "fi": "Seikkailun hurma"
+      },
+      "desc": {
+        "en": "Killing blow: +5% max Health/Mana over 10 s (not in dungeons/raids/BGs)",
+        "ru": "Добивающий удар: +5% к максимуму здоровья/маны на 10 сек (не в подземельях/рейдах/на полях боя)",
+        "fi": "Tappoisku: +5% maksimi terveyteen/manaan 10 s ajan (ei luolastoissa/raideissa/taistelukentillä)"
+      }
+    },
+    {
+      "id": "field_guide",
+      "tree": "adventure",
+      "ranks": 3,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Field Guide",
+        "ru": "Полевой справочник",
+        "fi": "Kenttäopas"
+      },
+      "desc": {
+        "en": "Camp-feature cooldown −25%",
+        "ru": "Перезарядка функций лагеря −25%",
+        "fi": "Leirin ominaisuuksien jäähtyminen −25%"
+      }
+    },
+    {
+      "id": "frequent_flier",
+      "tree": "adventure",
+      "ranks": 1,
+      "prereq_tree_points": 10,
+      "prereq_perk": {
+        "id": "field_guide",
+        "ranks": 3
+      },
+      "name": {
+        "en": "Frequent Flier",
+        "ru": "Частый пассажир",
+        "fi": "Kanta-asiakas"
+      },
+      "desc": {
+        "en": "Flight paths −50% cost, +20% flight speed",
+        "ru": "Маршруты полёта −50% к цене, +20% к скорости",
+        "fi": "Lentoreitit −50% hinnasta, +20% nopeudesta"
+      }
+    },
+    {
+      "id": "field_medicine",
+      "tree": "adventure",
+      "ranks": 2,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Field Medicine",
+        "ru": "Полевая медицина",
+        "fi": "Kenttälääkintä"
+      },
+      "desc": {
+        "en": "Recently Bandaged duration −10 s (not in dungeons/raids/BGs)",
+        "ru": "Длительность «Недавно перевязан» −10 сек (не в подземельях/рейдах/на полях боя)",
+        "fi": "Recently Bandaged -kesto −10 s (ei luolastoissa/raideissa/taistelukentillä)"
+      }
+    },
+    {
+      "id": "for_great_honor",
+      "tree": "resourcefulness",
+      "ranks": 5,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "For Great Honor",
+        "ru": "Ради великой чести",
+        "fi": "Suuren kunnian puolesta"
+      },
+      "desc": {
+        "en": "+10% Honor Points",
+        "ru": "+10% к очкам чести",
+        "fi": "+10% kunniapisteisiin"
+      }
+    },
+    {
+      "id": "gourmand",
+      "tree": "resourcefulness",
+      "ranks": 3,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Gourmand",
+        "ru": "Гурман",
+        "fi": "Herkkusuu"
+      },
+      "desc": {
+        "en": "Food buff durations +100%",
+        "ru": "Длительность эффектов еды +100%",
+        "fi": "Ruokatehosteiden kesto +100%"
+      }
+    },
+    {
+      "id": "permanence",
+      "tree": "resourcefulness",
+      "ranks": 2,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Permanence",
+        "ru": "Постоянство",
+        "fi": "Pysyvyys"
+      },
+      "desc": {
+        "en": "Party/raid long-duration buffs +100% duration; camp rest benefits +100%",
+        "ru": "Длительные баффы группы/рейда +100% к длительности; бонусы отдыха в лагере +100%",
+        "fi": "Ryhmän/raidin pitkäkestoiset tehosteet +100% kestoa; leirin lepoedut +100%"
+      }
+    },
+    {
+      "id": "quick_and_the_dead",
+      "tree": "resourcefulness",
+      "ranks": 2,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "The Quick and the Dead",
+        "ru": "Живой и мёртвый",
+        "fi": "Nopeat ja kuolleet"
+      },
+      "desc": {
+        "en": "Dead movement +10%; after a rez your helpful spells cost nothing for 2 min",
+        "ru": "Скорость передвижения после смерти +10%; после воскрешения ваши полезные заклинания 2 мин ничего не стоят",
+        "fi": "Kuolleena liikkuminen +10%; herätyksen jälkeen hyödylliset loitsut maksavat 2 min mitään"
+      }
+    },
+    {
+      "id": "reagent_economy",
+      "tree": "resourcefulness",
+      "ranks": 1,
+      "prereq_tree_points": 10,
+      "prereq_perk": {
+        "id": "quick_and_the_dead",
+        "ranks": 2
+      },
+      "name": {
+        "en": "Reagent Economy",
+        "ru": "Экономия реагентов",
+        "fi": "Reagenssitalous"
+      },
+      "desc": {
+        "en": "Class abilities need no vendor reagents",
+        "ru": "Классовые способности не требуют покупных реагентов",
+        "fi": "Luokkakyvyt eivät tarvitse kauppiaalta ostettavia reagensseja"
+      }
+    },
+    {
+      "id": "reinforce",
+      "tree": "resourcefulness",
+      "ranks": 5,
+      "prereq_tree_points": 0,
+      "prereq_perk": null,
+      "name": {
+        "en": "Reinforce",
+        "ru": "Укрепление",
+        "fi": "Vahvistus"
+      },
+      "desc": {
+        "en": "40% less durability loss on death",
+        "ru": "На 40% меньше потери прочности при смерти",
+        "fi": "40% vähemmän kestävyyden menetystä kuollessa"
+      }
+    },
+    {
+      "id": "diplomat",
+      "tree": "resourcefulness",
+      "ranks": 5,
+      "prereq_tree_points": 5,
+      "prereq_perk": null,
+      "name": {
+        "en": "Diplomat",
+        "ru": "Дипломат",
+        "fi": "Diplomaatti"
+      },
+      "desc": {
+        "en": "+10% reputation gains",
+        "ru": "+10% к получаемой репутации",
+        "fi": "+10% maineen karttumiseen"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "balanced",
+      "name": {
+        "en": "Balanced",
+        "ru": "Сбалансированный",
+        "fi": "Tasapainoinen"
+      },
+      "allocation": [
+        {
+          "id": "well_rested",
+          "points": 5
+        },
+        {
+          "id": "thrill_of_adventure",
+          "points": 5
+        },
+        {
+          "id": "talented",
+          "points": 5
+        },
+        {
+          "id": "field_guide",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "explorer",
+      "name": {
+        "en": "Explorer",
+        "ru": "Исследователь",
+        "fi": "Tutkimusmatkailija"
+      },
+      "allocation": [
+        {
+          "id": "well_rested",
+          "points": 5
+        },
+        {
+          "id": "thrill_of_adventure",
+          "points": 2
+        },
+        {
+          "id": "field_guide",
+          "points": 3
+        },
+        {
+          "id": "frequent_flier",
+          "points": 1
+        },
+        {
+          "id": "gourmand",
+          "points": 3
+        },
+        {
+          "id": "permanence",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "coin_saver",
+      "name": {
+        "en": "Coin Saver",
+        "ru": "Бережливый",
+        "fi": "Kolikon säästäjä"
+      },
+      "allocation": [
+        {
+          "id": "working_overtime",
+          "points": 5
+        },
+        {
+          "id": "bartering",
+          "points": 2
+        },
+        {
+          "id": "performance_bonus",
+          "points": 3
+        },
+        {
+          "id": "reinforce",
+          "points": 5
+        },
+        {
+          "id": "permanence",
+          "points": 1
+        }
+      ]
+    }
+  ],
+  "source": "foreverdb:legacy-system-explained@2026-10-14"
+}
