@@ -159,8 +159,8 @@ pub fn RaceSelectorView(
                         }
 
                         div { class: "pt-2",
-                            span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2", "{i18n.read().t(\"ui_available_classes\", lang)}" }
-                            div { class: "flex flex-wrap gap-2",
+                            span { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2 text-center", "{i18n.read().t(\"ui_available_classes\", lang)}" }
+                            div { class: "flex flex-wrap gap-2 justify-center",
                                 for cls in available_classes.iter() {
                                     {
                                         let cls_id = cls.clone();
