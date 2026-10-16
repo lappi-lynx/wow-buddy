@@ -1,9 +1,10 @@
 use crate::assets::AssetRegistry;
-use crate::components::{AppFooter, BlueprintExport, ClassTipsCard, GlossaryTerm, ModelViewer};
+use crate::components::{AppFooter, BlueprintExport, ClassTipsCard, GlossaryTerm, LevelSlider, ModelViewer};
 use crate::i18n::{I18nService, Language};
 use crate::models::{
     class::{availability, SpellAvailability},
     gear::{get_tier_for_level, nearest_anchor, tier_short_key},
+    gear_planner::GearPlannerData,
     glossary::TERMS,
     milestones::{milestones_around, next_milestone},
     pets::{pet_card_kind, PetCardKind, PetsData},
@@ -90,6 +91,11 @@ pub fn DressingRoomView(
         )
     };
     let registry = AssetRegistry::load_embedded();
+    let band_starts: Vec<u8> = GearPlannerData::load_embedded()
+        .bands_for(&class.id, faction)
+        .iter()
+        .map(|b| b.min_level)
+        .collect();
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8 select-none",
@@ -135,28 +141,19 @@ pub fn DressingRoomView(
                 div { class: "w-full max-w-lg bg-slate-900/80 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl flex flex-col space-y-3",
                     div { class: "flex justify-between items-center",
                         span { class: "text-xs uppercase tracking-wider font-semibold text-slate-400",
-                            "{i18n.read().t_with(\"ui_gear_evolution\", lang, &[(\"level\", selected_level.read().to_string())])}"
+                            "{i18n.read().t_with(\"ui_gear_at_level\", lang, &[(\"level\", selected_level.read().to_string())])}"
                         }
                         span { class: "text-xs font-bold text-amber-400",
                             "{snap_label}"
                         }
                     }
 
-                    input {
-                        r#type: "range",
-                        // dragging the slider must never register as a back swipe
-                        onpointerdown: move |evt: Event<PointerData>| evt.stop_propagation(),
-                        min: "1",
-                        max: "60",
-                        step: "1",
-                        value: "{selected_level.read()}",
-                        class: "w-full accent-amber-500 cursor-pointer h-11 bg-slate-800 rounded-lg",
-                        "aria-valuetext": "{snap_label}",
-                        oninput: move |evt: Event<FormData>| {
-                            if let Ok(lvl) = evt.value().parse::<u8>() {
-                                selected_level.set(lvl);
-                            }
-                        },
+                    LevelSlider {
+                        level: selected_level,
+                        band_starts: band_starts.clone(),
+                        current_lang: current_lang,
+                        i18n: i18n,
+                        aria_value_text: snap_label.clone(),
                     }
 
                     div { class: "flex justify-between text-[11px] font-bold text-slate-400 px-1",

@@ -3,6 +3,7 @@ use crate::components::reference_popover::{item_popover, PopoverData};
 use crate::components::race_tile::class_render_source;
 use crate::components::ReferencePopover;
 use crate::components::AppFooter;
+use crate::components::LevelSlider;
 use crate::i18n::{I18nService, Language};
 use crate::models::gear_planner::{GearBand, GearPlannerData, GearWeapon};
 use crate::models::Faction;
@@ -52,6 +53,7 @@ pub fn GearPlannerView(
 
     let active_faction = *view_faction.read();
     let bands = data.bands_for(&class_id, active_faction).to_vec();
+    let band_starts: Vec<u8> = bands.iter().map(|b| b.min_level).collect();
     let has_data = !bands.is_empty();
 
     let alliance_name = i18n_svc.t("alliance_name", lang);
@@ -88,22 +90,13 @@ pub fn GearPlannerView(
 
                 div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
                     span { class: "text-xs uppercase tracking-wider font-semibold text-slate-400",
-                        "{i18n_svc.t_with(\"ui_gear_evolution\", lang, &[(\"level\", level.read().to_string())])}"
+                        "{i18n_svc.t_with(\"ui_gear_at_level\", lang, &[(\"level\", level.read().to_string())])}"
                     }
-                    input {
-                        r#type: "range",
-                        // dragging the slider must never register as a back swipe
-                        onpointerdown: move |evt: Event<PointerData>| evt.stop_propagation(),
-                        min: "1",
-                        max: "60",
-                        step: "1",
-                        value: "{level.read()}",
-                        class: "w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg",
-                        oninput: move |evt: Event<FormData>| {
-                            if let Ok(lvl) = evt.value().parse::<u8>() {
-                                level.set(lvl);
-                            }
-                        },
+                    LevelSlider {
+                        level: level,
+                        band_starts: band_starts.clone(),
+                        current_lang: current_lang,
+                        i18n: i18n,
                     }
                 }
 

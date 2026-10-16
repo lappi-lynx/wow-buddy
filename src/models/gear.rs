@@ -1,3 +1,4 @@
+use crate::models::milestones::MILESTONES;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -52,4 +53,59 @@ pub fn get_tier_for_level(level: u8) -> GearTier {
         60 => GearTier::RaidTier2,
         _ => GearTier::Starter,
     }
+}
+
+/// The kind of marking a slider dot carries.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum DotKind {
+    /// The recommended gear set changes at this level (amber dot).
+    SetChange,
+    /// A leveling milestone (blue dot).
+    Milestone,
+}
+
+/// One progress dot on the 1–60 level slider.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct SliderDot {
+    pub level: u8,
+    pub kind: DotKind,
+}
+
+/// Progress dots for the level slider: set-change dots from the given band
+/// start levels plus the tier anchors at 40 and 60 (level 1 is the track start,
+/// so it never gets a dot), and milestone dots for every milestone at level 10
+/// or above. Sorted by level; ties keep `SetChange` first.
+pub fn slider_dots(band_starts: &[u8]) -> Vec<SliderDot> {
+    let mut dots: Vec<SliderDot> = Vec::new();
+    for level in band_starts
+        .iter()
+        .copied()
+        .chain(TIER_ANCHORS.iter().copied().filter(|a| *a >= 40))
+    {
+        if level <= 1 {
+            continue;
+        }
+        if !dots
+            .iter()
+            .any(|d| d.kind == DotKind::SetChange && d.level == level)
+        {
+            dots.push(SliderDot {
+                level,
+                kind: DotKind::SetChange,
+            });
+        }
+    }
+    for milestone in MILESTONES.iter().filter(|m| m.level >= 10) {
+        dots.push(SliderDot {
+            level: milestone.level,
+            kind: DotKind::Milestone,
+        });
+    }
+    dots.sort_by_key(|d| {
+        (
+            d.level,
+            if d.kind == DotKind::SetChange { 0 } else { 1 },
+        )
+    });
+    dots
 }

@@ -1,4 +1,4 @@
-use wow_buddy::models::gear::{get_tier_for_level, nearest_anchor, tier_label_key, GearTier};
+use wow_buddy::models::gear::{get_tier_for_level, nearest_anchor, slider_dots, tier_label_key, DotKind, GearTier};
 use wow_buddy::views::dressing_room::CharacterAnimation;
 
 #[test]
@@ -43,4 +43,25 @@ fn test_character_animations() {
     assert_eq!(CharacterAnimation::Attack.as_str(), "attack");
     assert_eq!(CharacterAnimation::Cast.as_str(), "cast");
     assert_eq!(CharacterAnimation::Dance.as_str(), "dance");
+}
+
+#[test]
+fn dots_merge_bands_and_anchors() {
+    let dots = slider_dots(&[12, 20, 24, 30]);
+    let set: Vec<u8> = dots
+        .iter()
+        .filter(|d| d.kind == DotKind::SetChange)
+        .map(|d| d.level)
+        .collect();
+    assert_eq!(set, vec![12, 20, 24, 30, 40, 60]); // 20 dedups with the tier anchor
+    let ms: Vec<u8> = dots
+        .iter()
+        .filter(|d| d.kind == DotKind::Milestone)
+        .map(|d| d.level)
+        .collect();
+    assert_eq!(ms, vec![10, 13, 15, 25, 40, 60]); // level-2 milestone excluded
+    assert!(dots.iter().all(|d| d.level >= 2 && d.level <= 60));
+    assert!(!slider_dots(&[])
+        .iter()
+        .any(|d| d.kind == DotKind::SetChange && d.level == 1));
 }
