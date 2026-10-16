@@ -106,16 +106,260 @@
       "id": "wailing_caverns",
       "name": "Wailing Caverns",
       "icon": "🐍",
-      "level_range": "15–22",
+      "level_range": "15–24",
       "min_level": 15,
-      "max_level": 22,
+      "max_level": 24,
       "estimated_time": "60–90",
       "bag_slots_required": 10,
-      "recommended_avg_level": null,
-      "mobs": [],
-      "watch_out": [],
-      "prep": null,
-      "loot": [],
+      "recommended_avg_level": {
+        "text": {
+          "text_en": "Average 20+ for a 5-man",
+          "text_ru": "Средний уровень 20+ для группы из 5",
+          "text_fi": "Keskiarvo taso 20+ viidelle"
+        },
+        "verified": false,
+        "source_id": "kb"
+      },
+      "mobs": [
+        {
+          "name": "Deviate wildlife",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Ravagers, Vipers, Shamblers, Dreadfangs — a corrupted dream (quest: Deviate Eradication).",
+            "text_ru": "Разорители, гадюки, шаркуны, ужасоклыки — искажённый сон (задание «Deviate Eradication»).",
+            "text_fi": "Raiderit, kyyt, kaivajat — turmeltunut uni (tehtävä Deviate Eradication)."
+          }
+        },
+        {
+          "name": "Druids of the Fang",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Druids who fear/sleep and self-heal — interrupt Healing Touch.",
+            "text_ru": "Друиды, которые усыпляют и лечатся — прерывайте Healing Touch.",
+            "text_fi": "Druidit nukuttavat ja parantavat — keskeytä Healing Touch."
+          }
+        },
+        {
+          "name": "Lady Anacondra",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 1 · Sleep on a non-tank ~18s · interrupt her Healing Touch (2.5s).",
+            "text_ru": "Босс 1 · сон на не-танка ~18 сек · прерывайте её Healing Touch (2.5 сек).",
+            "text_fi": "Pomo 1 · uni ei-tankkiin ~18 s · keskeytä Healing Touch (2,5 s)."
+          }
+        },
+        {
+          "name": "Lord Cobrahn",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 2 · Serpent Form (+50 damage) · Sleep ~16s · interrupt Healing Touch.",
+            "text_ru": "Босс 2 · Змеиная форма (+50 урона) · сон ~16 сек · прерывайте Healing Touch.",
+            "text_fi": "Pomo 2 · käärmemuoto (+50 vahinkoa) · uni ~16 s · keskeytä Healing Touch."
+          }
+        },
+        {
+          "name": "Kresh",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 3 · turtle guardian — his shell shield is the drop.",
+            "text_ru": "Босс 3 · черепаший страж — его щит и есть добыча.",
+            "text_fi": "Pomo 3 · kilpikonnavahti — kilpi on saalis."
+          }
+        },
+        {
+          "name": "Lord Pythas",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 4 · Thunderclap (ranged stay >10 yd) · Sleep ~16s.",
+            "text_ru": "Босс 4 · Thunderclap (дальним держаться >10 м) · сон ~16 сек.",
+            "text_fi": "Pomo 4 · Thunderclap (kauko >10 jaardia) · uni ~16 s."
+          }
+        },
+        {
+          "name": "Skum",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 5 · Chained Bolt arcs to up to 3 targets — interrupt it.",
+            "text_ru": "Босс 5 · Chained Bolt отскакивает до 3 целей — прерывайте.",
+            "text_fi": "Pomo 5 · Chained Bolt kimmokkeena 3 kohteeseen — keskeytä."
+          }
+        },
+        {
+          "name": "Lord Serpentis",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 6 · big self-heal (3.5s cast) · Sleep ~14s — interrupt and dispel.",
+            "text_ru": "Босс 6 · мощное самоисцеление (3.5 сек) · сон ~14 сек — прерывайте и снимайте.",
+            "text_fi": "Pomo 6 · iso itsensäparannus (3,5 s) · uni ~14 s — keskeytä ja puhdista."
+          }
+        },
+        {
+          "name": "Verdan the Everliving",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 7 · Grasping Vines: knock-down + immobilize (ranged stay >10 yd).",
+            "text_ru": "Босс 7 · Grasping Vines: сбивает с ног и обездвиживает (дальним >10 м).",
+            "text_fi": "Pomo 7 · Grasping Vines: kaato ja liikkumattomuus (kauko >10 jaardia)."
+          }
+        },
+        {
+          "name": "Mutanus the Devourer",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 8 · Thundercrack stun (20 yd) · Terrify ~21s · Naralex's Nightmare: CC the taken player, don't kill them.",
+            "text_ru": "Босс 8 · оглушение Thundercrack (20 м) · Terrify ~21 сек · Naralex's Nightmare:控制 схваченного игрока, не убивайте его.",
+            "text_fi": "Pomo 8 · Thundercrack-tainnutus (20 jaardia) · Terrify ~21 s · Naralex's Nightmare: hallitse vallattu pelaaja, älä tapa."
+          }
+        }
+      ],
+      "watch_out": [
+        {
+          "text": {
+            "text_en": "Forever dungeon XP: quest XP inside dungeons -50%, creature XP +20% (Oct 8 beta build).",
+            "text_ru": "Опыт в подземельях Forever: опыт за задания -50%, опыт за убийства +20% (бета-сборка 8 октября).",
+            "text_fi": "Foreverin luolasto-XP: tehtävä-XP -50 %, tappo-XP +20 % (8. lokakuun betaversio)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Sleep and fear land on non-tanks throughout the caves — dispel or cleanse when you can.",
+            "text_ru": "Сон и страх ложатся на не-танков по всем пещерам — снимайте, если можете.",
+            "text_fi": "Uni ja pelko osuvat ei-tankkeihin läpi luolien — puhdista kun voit."
+          },
+          "verified": false
+        },
+        {
+          "text": {
+            "text_en": "Interrupt the Druids' Healing Touch (2.5–3.5s casts) or the fights stall.",
+            "text_ru": "Прерывайте Healing Touch друидов (каст 2.5–3.5 сек), иначе бои затягиваются.",
+            "text_fi": "Keskeytä druidien Healing Touch (2,5–3,5 s) tai taistelut jumittuvat."
+          },
+          "verified": false
+        },
+        {
+          "text": {
+            "text_en": "No summoning stone — everyone walks to the Barrens entrance; the group finder lets you enter from level 10.",
+            "text_ru": "Камня встречи нет — все идут ко входу в Степях; группоиск пускает с 10 уровня.",
+            "text_fi": "Ei kokouskiveä — kaikki kävelevät Barrensin sisäänkäynnille; ryhmähaku päästää sisään tasolta 10."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Forever changed the loot: 31 zone items touched, 6 of them brand new — classic loot lists are wrong.",
+            "text_ru": "Forever изменил добычу: затронуто 31 предмет, 6 из них новые — классические списки неверны.",
+            "text_fi": "Forever muutti saaliin: 31 esinettä muutettu, 6 täysin uusia — classic-listat ovat väärässä."
+          },
+          "verified": true
+        }
+      ],
+      "prep": {
+        "potions": {
+          "text_en": "Carry health and mana potions — the caves are full of nature damage.",
+          "text_ru": "Возьмите зелья здоровья и маны — в пещерах полно урона природы.",
+          "text_fi": "Ota terveys- ja manapulloja — luolat ovat täynnä luonnonvahinkoa."
+        },
+        "buffs": [
+          {
+            "text_en": "Profession campfire: health, mana and secondary stats.",
+            "text_ru": "Профессиональный костёр: здоровье, мана и вторичные характеристики.",
+            "text_fi": "Ammattikunnan nuotio: terveys, mana ja toissijaiset."
+          },
+          {
+            "text_en": "Cooked food: +5% XP in Forever (see Fishing & Cooking).",
+            "text_ru": "Приготовленная еда: +5% опыта в Forever (см. «Рыбалка и кулинария»).",
+            "text_fi": "Valmistettu ruoka: +5 % XP (katso Kalastus & kokkaus)."
+          },
+          {
+            "text_en": "Poison cleansing, if your group has it.",
+            "text_ru": "Снятие ядов, если есть в группе.",
+            "text_fi": "Myrkynpuhdistus, jos ryhmässä on."
+          }
+        ]
+      },
+      "loot": [
+        {
+          "item_id": 10410,
+          "name": "Leggings of the Fang",
+          "icon_id": "inv_pants_11",
+          "slot": "Legs",
+          "source": "Lord Cobrahn · 20%",
+          "verified": true
+        },
+        {
+          "item_id": 5970,
+          "name": "Serpent Gloves",
+          "icon_id": "inv_gauntlets_19",
+          "slot": "Hands",
+          "source": "Lord Serpentis · 25%",
+          "verified": true
+        },
+        {
+          "item_id": 6632,
+          "name": "Feyscale Cloak",
+          "icon_id": "inv_misc_cape_02",
+          "slot": "Cloak",
+          "source": "Deviate Faerie Dragon (rare)",
+          "verified": true
+        },
+        {
+          "item_id": 6469,
+          "name": "Venomstrike",
+          "icon_id": "inv_weapon_bow_10",
+          "slot": "Bow",
+          "source": "Lord Serpentis · 25%",
+          "verified": true
+        },
+        {
+          "item_id": 6473,
+          "name": "Armor of the Fang",
+          "icon_id": "inv_shirt_16",
+          "slot": "Chest",
+          "source": "Lord Pythas · 60%",
+          "verified": true
+        }
+      ],
       "sources": {
         "kb": {
           "kind": "kb",
@@ -124,6 +368,10 @@
         "wowhead": {
           "kind": "wowhead",
           "path": "docs/wowhead-sources/dungeon-wailing-caverns.json"
+        },
+        "foreverdb": {
+          "kind": "foreverdb",
+          "path": "docs/foreverdb-sources/dungeon-wailing-caverns.md"
         }
       },
       "rules": [

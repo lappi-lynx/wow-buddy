@@ -1,0 +1,255 @@
+{
+  "source": "https://www.wowhead.com/forever/zone=718/wailing-caverns",
+  "pulled": "2026-10-16",
+  "note": "Forever zone changelog table: one row per zone item (change status, name, ilvl, req level, source boss).",
+  "items": [
+    {
+      "change": "UpdatedEffects changed, Level changed +1",
+      "id": 5243,
+      "ilvl": 23,
+      "name": "Firebelcher",
+      "req": 18,
+      "source": "Deviate Faerie Dragon"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed +1",
+      "id": 5404,
+      "ilvl": 23,
+      "name": "Serpent's Shoulders",
+      "req": 18,
+      "source": "Lady Anacondra"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 5970,
+      "ilvl": 23,
+      "name": "Serpent Gloves",
+      "req": 18,
+      "source": "Lord Serpentis"
+    },
+    {
+      "change": "UpdatedQuality changed, Details changed",
+      "id": 6446,
+      "ilvl": 25,
+      "name": "Snakeskin Bag",
+      "req": null,
+      "source": "Lady Anacondra"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +3",
+      "id": 6447,
+      "ilvl": 21,
+      "name": "Worn Turtle Shell Shield",
+      "req": 16,
+      "source": "Kresh"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +3",
+      "id": 6448,
+      "ilvl": 21,
+      "name": "Tail Spike",
+      "req": 16,
+      "source": "Skum"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6449,
+      "ilvl": 23,
+      "name": "Glowing Lizardscale Cloak",
+      "req": 18,
+      "source": "Skum"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 6459,
+      "ilvl": 23,
+      "name": "Savage Trodders",
+      "req": 18,
+      "source": "Lord Serpentis"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6460,
+      "ilvl": 22,
+      "name": "Cobrahn's Grasp",
+      "req": 17,
+      "source": "Lord Cobrahn"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed +2",
+      "id": 6461,
+      "ilvl": 25,
+      "name": "Slime-encrusted Pads",
+      "req": 20,
+      "source": "Mutanus the Devourer"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 6463,
+      "ilvl": 24,
+      "name": "Deep Fathom Ring",
+      "req": 19,
+      "source": "Mutanus the Devourer"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 6465,
+      "ilvl": 22,
+      "name": "Robe of the Moccasin",
+      "req": 17,
+      "source": "Lord Cobrahn"
+    },
+    {
+      "change": "UpdatedDamage changed, Effects changed",
+      "id": 6469,
+      "ilvl": 24,
+      "name": "Venomstrike",
+      "req": 19,
+      "source": "Lord Serpentis"
+    },
+    {
+      "change": "UpdatedEffects changed, New icon",
+      "id": 6472,
+      "ilvl": 24,
+      "name": "Stinging Viper",
+      "req": 19,
+      "source": "Lord Pythas"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 6473,
+      "ilvl": 23,
+      "name": "Armor of the Fang",
+      "req": 18,
+      "source": "Lord Pythas"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6627,
+      "ilvl": 23,
+      "name": "Mutant Scale Breastplate",
+      "req": 18,
+      "source": "Mutanus the Devourer"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed +3",
+      "id": 6629,
+      "ilvl": 22,
+      "name": "Sporid Cape",
+      "req": 17,
+      "source": "Verdan the Everliving"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6630,
+      "ilvl": 24,
+      "name": "Seedcloud Buckler",
+      "req": 19,
+      "source": "Verdan the Everliving"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +2",
+      "id": 6631,
+      "ilvl": 23,
+      "name": "Living Root",
+      "req": 18,
+      "source": "Verdan the Everliving"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 6632,
+      "ilvl": 21,
+      "name": "Feyscale Cloak",
+      "req": 16,
+      "source": "Deviate Faerie Dragon"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 10410,
+      "ilvl": 22,
+      "name": "Leggings of the Fang",
+      "req": 17,
+      "source": "Lord Cobrahn"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 10411,
+      "ilvl": 22,
+      "name": "Footpads of the Fang",
+      "req": 17,
+      "source": "Lord Serpentis"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed +1",
+      "id": 10412,
+      "ilvl": 21,
+      "name": "Belt of the Fang",
+      "req": 16,
+      "source": "Lady Anacondra"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 10413,
+      "ilvl": 19,
+      "name": "Gloves of the Fang",
+      "req": 14,
+      "source": "Druid of the Fang"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 13245,
+      "ilvl": 23,
+      "name": "Kresh's Back",
+      "req": 18,
+      "source": "Kresh"
+    },
+    {
+      "change": "New",
+      "id": 273084,
+      "ilvl": 22,
+      "name": "Cloak of Hermitic Bliss",
+      "req": 17,
+      "source": "Kresh"
+    },
+    {
+      "change": "New",
+      "id": 273087,
+      "ilvl": 25,
+      "name": "Blueprint: Journeyman Campfire",
+      "req": null,
+      "source": "Lord Serpentis"
+    },
+    {
+      "change": "New",
+      "id": 273088,
+      "ilvl": 22,
+      "name": "Snake Eye Kaleidoscope",
+      "req": 17,
+      "source": "Lady Anacondra"
+    },
+    {
+      "change": "New",
+      "id": 273089,
+      "ilvl": 22,
+      "name": "Slither Cord",
+      "req": 17,
+      "source": "Lord Pythas"
+    },
+    {
+      "change": "New",
+      "id": 273098,
+      "ilvl": 25,
+      "name": "Blueprint: Field Guide",
+      "req": null,
+      "source": "Lady Anacondra"
+    },
+    {
+      "change": "New",
+      "id": 273137,
+      "ilvl": 22,
+      "name": "Skum's Bucket",
+      "req": 17,
+      "source": "Skum"
+    }
+  ]
+}
