@@ -67,3 +67,9 @@ Recorded below once the loot candidates are picked.
   language).
 - Full verification tables: `docs/foreverdb-sources/dungeon-deadmines.md`
   and `docs/wowhead-sources/dungeon-deadmines.json`.
+
+## Addendum (2026-10-16, Task 6)
+
+- The global Forever dungeon XP rules also apply here (quest XP -50%,
+  creature XP +20%, October 8 beta build) — the entry's watch-out list carries them
+  from the Task 6 pass (KB sessions `6b4fb703` / `a33f9deb`).

@@ -947,6 +947,54 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_jewelry_ring_09, Lavishly Jeweled Ring, Deadmines — Gilnid) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_gauntlets_19": {
+      "path": "assets/icons/items/inv_gauntlets_19.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_gauntlets_19, Serpent Gloves (Wailing Caverns, Lord Serpentis)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_cape_02": {
+      "path": "assets/icons/items/inv_misc_cape_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_cape_02, Feyscale Cloak (Wailing Caverns, Deviate Faerie Dragon)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_talisman_06": {
+      "path": "assets/icons/items/inv_jewelry_talisman_06.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_talisman_06, Worgenbane Talisman (Shadowfang Keep, Commander Springvale)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_bracer_10": {
+      "path": "assets/icons/items/inv_bracer_10.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_bracer_10, Graveweave Bindings (Shadowfang Keep)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_24": {
+      "path": "assets/icons/items/inv_chest_cloth_24.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_24, Robe of Evocation (Ragefire Chasm, Jergosh the Invoker)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_axe_18": {
+      "path": "assets/icons/items/inv_axe_18.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_axe_18, Durgen's Crescent Axe (Hall of Thanes, client clue)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_chest_cloth_09": {
+      "path": "assets/icons/items/inv_chest_cloth_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_chest_cloth_09, Robes of the Disgraced Thane (Hall of Thanes, client clue)) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_weapon_shortblade_24": {
+      "path": "assets/icons/items/inv_weapon_shortblade_24.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_weapon_shortblade_24, Assassin's Blade, Shadowfang Keep — Wolf Master Nandos) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

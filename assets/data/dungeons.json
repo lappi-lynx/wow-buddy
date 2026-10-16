@@ -945,6 +945,14 @@
             "text_fi": "Uudet Deadmines-esineet ovat asiakkaassa, mutta pelaajat eivät ole vahvistaneet niitä (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — niiden pudotukset voivat muuttua."
           },
           "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Forever dungeon XP: quest XP inside dungeons -50%, creature XP +20% (Oct 8 beta build).",
+            "text_ru": "Опыт в подземельях Forever: опыт за задания -50%, опыт за убийства +20% (бета-сборка 8 октября).",
+            "text_fi": "Foreverin luolasto-XP: tehtävä-XP -50 %, tappo-XP +20 % (8. lokakuun betaversio)."
+          },
+          "verified": true
         }
       ],
       "prep": {

@@ -56,7 +56,8 @@ impl AssetRegistry {
     /// An embedded `data:` URI for the icon, or the glyph fallback when the id
     /// is unknown. Gated on the manifest (the single source of truth) so a
     /// declared-but-ungenerated asset can never silently render the fallback.
-    /// Never panics.
+    /// Falls back to the arts pool, because some Forever items reuse a spell
+    /// icon file (e.g. Bone Knuckles → `ability_whirlwind`). Never panics.
     pub fn item_icon(&self, icon_id: &str) -> &'static str {
         if !self.has(icon_id) {
             return ICON_FALLBACK;
@@ -64,6 +65,7 @@ impl AssetRegistry {
         ICONS
             .iter()
             .find(|(id, _)| *id == icon_id)
+            .or_else(|| ARTS.iter().find(|(id, _)| *id == icon_id))
             .map(|(_, uri)| *uri)
             .unwrap_or(ICON_FALLBACK)
     }

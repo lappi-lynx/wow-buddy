@@ -82,3 +82,15 @@ fn deadmines_pilot_content_is_complete() {
     assert!(dm.loot.len() >= 3, "deadmines: loot {}", dm.loot.len());
     assert!(dm.prep.is_some(), "deadmines: no prep");
 }
+
+#[test]
+fn all_dungeons_content_complete() {
+    let data = DungeonsData::load_embedded();
+    for d in data.dungeons.iter() {
+        assert!(d.recommended_avg_level.is_some(), "{}: no recommended level", d.id);
+        assert!(d.mobs.len() >= 5, "{}: mobs {}", d.id, d.mobs.len());
+        assert!(d.watch_out.len() >= 3, "{}: watch_out {}", d.id, d.watch_out.len());
+        assert!(d.prep.is_some(), "{}: no prep", d.id);
+        assert!(d.loot.len() >= 3, "{}: loot {}", d.id, d.loot.len());
+    }
+}
