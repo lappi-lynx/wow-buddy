@@ -1,0 +1,351 @@
+{
+  "source": "https://www.wowhead.com/forever/zone=209/shadowfang-keep",
+  "pulled": "2026-10-16",
+  "note": "Forever zone changelog table: one row per zone item (change status, name, ilvl, req level, source boss).",
+  "items": [
+    {
+      "change": "UpdatedQuality changed, Details changed",
+      "id": 932,
+      "ilvl": 25,
+      "name": "Fel Steed Saddlebags",
+      "req": null,
+      "source": "Fel Steed"
+    },
+    {
+      "change": "UpdatedDamage changed",
+      "id": 1292,
+      "ilvl": 25,
+      "name": "Butcher's Cleaver",
+      "req": 20,
+      "source": "Razorclaw the Butcher"
+    },
+    {
+      "change": "UpdatedEffects changed",
+      "id": 1318,
+      "ilvl": 23,
+      "name": "Night Reaver",
+      "req": 18,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedEffects changed",
+      "id": 1482,
+      "ilvl": 24,
+      "name": "Shadowfang",
+      "req": 19,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "Unchanged",
+      "id": 1483,
+      "ilvl": 21,
+      "name": "Face Smasher",
+      "req": 16,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed",
+      "id": 1484,
+      "ilvl": 22,
+      "name": "Witching Stave",
+      "req": 17,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed",
+      "id": 1489,
+      "ilvl": 25,
+      "name": "Gloomshroud Armor",
+      "req": 20,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "Unchanged",
+      "id": 1935,
+      "ilvl": 24,
+      "name": "Assassin's Blade",
+      "req": 19,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed",
+      "id": 1974,
+      "ilvl": 22,
+      "name": "Mindthrust Bracers",
+      "req": 17,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedEffects changed",
+      "id": 2205,
+      "ilvl": 25,
+      "name": "Duskbringer",
+      "req": 20,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed",
+      "id": 2292,
+      "ilvl": 25,
+      "name": "Necrology Robes",
+      "req": 20,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "Unchanged",
+      "id": 2807,
+      "ilvl": 23,
+      "name": "Guillotine Axe",
+      "req": 18,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +1",
+      "id": 3191,
+      "ilvl": 26,
+      "name": "Arced War Axe",
+      "req": 21,
+      "source": "Commander Springvale"
+    },
+    {
+      "change": "UpdatedStats changed",
+      "id": 3194,
+      "ilvl": 21,
+      "name": "Black Malice",
+      "req": 16,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 3230,
+      "ilvl": 27,
+      "name": "Black Wolf Bracers",
+      "req": 22,
+      "source": "Fenrus the Devourer"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed",
+      "id": 3748,
+      "ilvl": 28,
+      "name": "Feline Mantle",
+      "req": 23,
+      "source": "Wolf Master Nandos"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +3",
+      "id": 5254,
+      "ilvl": 22,
+      "name": "Rugged Spaulders",
+      "req": 17,
+      "source": "Rethilgore"
+    },
+    {
+      "change": "UpdatedStats changed",
+      "id": 5943,
+      "ilvl": 25,
+      "name": "Rift Bracers",
+      "req": 20,
+      "source": "Arugal's Voidwalker"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +4",
+      "id": 6220,
+      "ilvl": 28,
+      "name": "Meteor Shard",
+      "req": 23,
+      "source": "Archmage Arugal"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 6226,
+      "ilvl": 24,
+      "name": "Bloody Apron",
+      "req": 19,
+      "source": "Razorclaw the Butcher"
+    },
+    {
+      "change": "UpdatedStats changed, Quality changed",
+      "id": 6314,
+      "ilvl": 27,
+      "name": "Wolfmaster Cape",
+      "req": 22,
+      "source": "Wolf Master Nandos"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed",
+      "id": 6318,
+      "ilvl": 26,
+      "name": "Odo's Ley Staff",
+      "req": 21,
+      "source": "Odo the Blindwatcher"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed +1",
+      "id": 6319,
+      "ilvl": 26,
+      "name": "Girdle of the Blindwatcher",
+      "req": 21,
+      "source": "Odo the Blindwatcher"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6320,
+      "ilvl": 26,
+      "name": "Commander's Crest",
+      "req": 21,
+      "source": "Commander Springvale"
+    },
+    {
+      "change": "UpdatedStats changed, Effects changed +1",
+      "id": 6321,
+      "ilvl": 26,
+      "name": "Silverlaine's Family Seal",
+      "req": 21,
+      "source": "Baron Silverlaine"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +4",
+      "id": 6323,
+      "ilvl": 26,
+      "name": "Baron's Scepter",
+      "req": 21,
+      "source": "Baron Silverlaine"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6324,
+      "ilvl": 28,
+      "name": "Robes of Arugal",
+      "req": 23,
+      "source": "Archmage Arugal"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +2",
+      "id": 6340,
+      "ilvl": 27,
+      "name": "Fenrus' Hide",
+      "req": 22,
+      "source": "Fenrus the Devourer"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +3",
+      "id": 6341,
+      "ilvl": 21,
+      "name": "Eerie Stable Lantern",
+      "req": 19,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6392,
+      "ilvl": 28,
+      "name": "Belt of Arugal",
+      "req": 23,
+      "source": "Archmage Arugal"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +1",
+      "id": 6633,
+      "ilvl": 23,
+      "name": "Butcher's Slicer",
+      "req": 18,
+      "source": "Razorclaw the Butcher"
+    },
+    {
+      "change": "UpdatedStats changed, Damage changed +3",
+      "id": 6641,
+      "ilvl": 27,
+      "name": "Haunting Blade",
+      "req": 22,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "UpdatedStats changed, Level changed +1",
+      "id": 6642,
+      "ilvl": 27,
+      "name": "Phantom Armor",
+      "req": 22,
+      "source": "Zone Drop"
+    },
+    {
+      "change": "Unchanged",
+      "id": 23173,
+      "ilvl": 25,
+      "name": "Abomination Skin Leggings",
+      "req": 20,
+      "source": "Sever"
+    },
+    {
+      "change": "New",
+      "id": 273096,
+      "ilvl": 25,
+      "name": "Blueprint: Tanning Rack",
+      "req": null,
+      "source": "Razorclaw the Butcher"
+    },
+    {
+      "change": "New",
+      "id": 273105,
+      "ilvl": 25,
+      "name": "Blueprint: Toxin Study",
+      "req": null,
+      "source": "Commander Springvale"
+    },
+    {
+      "change": "New",
+      "id": 273456,
+      "ilvl": 22,
+      "name": "Cell Keeper's Claws",
+      "req": 17,
+      "source": "Rethilgore"
+    },
+    {
+      "change": "New",
+      "id": 273457,
+      "ilvl": 22,
+      "name": "Sorcerer Collar",
+      "req": 17,
+      "source": "Rethilgore"
+    },
+    {
+      "change": "New",
+      "id": 273637,
+      "ilvl": 26,
+      "name": "Blade of Silverlaine",
+      "req": 21,
+      "source": "Baron Silverlaine"
+    },
+    {
+      "change": "New",
+      "id": 273643,
+      "ilvl": 26,
+      "name": "Worgenbane Talisman",
+      "req": 21,
+      "source": "Commander Springvale"
+    },
+    {
+      "change": "New",
+      "id": 273645,
+      "ilvl": 26,
+      "name": "Blindwatcher's Sight",
+      "req": 21,
+      "source": "Odo the Blindwatcher"
+    },
+    {
+      "change": "New",
+      "id": 273646,
+      "ilvl": 27,
+      "name": "Half-Eaten Boots",
+      "req": 22,
+      "source": "Fenrus the Devourer"
+    },
+    {
+      "change": "New",
+      "id": 273647,
+      "ilvl": 26,
+      "name": "Worgpelt Leggings",
+      "req": 21,
+      "source": "Wolf Master Nandos"
+    }
+  ]
+}

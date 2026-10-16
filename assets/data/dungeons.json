@@ -691,16 +691,260 @@
       "id": "shadowfang_keep",
       "name": "Shadowfang Keep",
       "icon": "🐺",
-      "level_range": "18–25",
-      "min_level": 18,
-      "max_level": 25,
+      "level_range": "20–30",
+      "min_level": 20,
+      "max_level": 30,
       "estimated_time": "45–60",
       "bag_slots_required": 10,
-      "recommended_avg_level": null,
-      "mobs": [],
-      "watch_out": [],
-      "prep": null,
-      "loot": [],
+      "recommended_avg_level": {
+        "text": {
+          "text_en": "Average 23+ for a 5-man",
+          "text_ru": "Средний уровень 23+ для группы из 5",
+          "text_fi": "Keskiarvo taso 23+ viidelle"
+        },
+        "verified": false,
+        "source_id": "kb"
+      },
+      "mobs": [
+        {
+          "name": "Worgen wolves",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Bleak Worgs, Slavering Worgs and Lupine Horrors — summoned mid-fight by Wolf Master Nandos.",
+            "text_ru": "Мрачные и слюнявые ворги и лютые ужасы — призываются в бою Мастером волков Нандосом.",
+            "text_fi": "Bleak Worgit, Slavering Worgit ja Lupine Horrorsit — Nandosin kesken taistelun kutsumia."
+          }
+        },
+        {
+          "name": "Blood Seeker & Vile Bat",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Both join Odo's fight when it starts.",
+            "text_ru": "Оба присоединяются к бою с Одо.",
+            "text_fi": "Molemmat liittyvät Odon taisteluun."
+          }
+        },
+        {
+          "name": "Rethilgore",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 1 · Soul Drain immobilizes the tank ~every 25s — dispel the magic.",
+            "text_ru": "Босс 1 · Soul Drain обездвиживает танка каждые ~25 сек — снимайте магию.",
+            "text_fi": "Pomo 1 · Soul Drain liikuttaa tankkia ~25 s välein — puhdista taika."
+          }
+        },
+        {
+          "name": "Razorclaw the Butcher",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 2 · the butcher of the keep (Butcher Drain).",
+            "text_ru": "Босс 2 · мясник крепости (Butcher Drain).",
+            "text_fi": "Pomo 2 · linnan teurastaja (Butcher Drain)."
+          }
+        },
+        {
+          "name": "Baron Silverlaine",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 3 · Veil of Shadow: −75% healing on a target for 15s.",
+            "text_ru": "Босс 3 · Veil of Shadow: −75% лечения цели на 15 сек.",
+            "text_fi": "Pomo 3 · Veil of Shadow: −75 % parannus 15 s."
+          }
+        },
+        {
+          "name": "Commander Springvale",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 4 · Hammer of Justice stun (magic, dispel) · interrupt his Holy Light self-heal.",
+            "text_ru": "Босс 4 · оглушение Hammer of Justice (магия — снимайте) · прерывайте его Holy Light.",
+            "text_fi": "Pomo 4 · Hammer of Justice -tainnutus (taika, puhdista) · keskeytä Holy Light."
+          }
+        },
+        {
+          "name": "Odo the Blindwatcher",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 5 · howls and calls his pets — pick up the joins.",
+            "text_ru": "Босс 5 · воет и зовёт питомцев — подхватывайте подмогу.",
+            "text_fi": "Pomo 5 · ulvoo ja kutsuu lemmikkinsä — ota lisät kiinni."
+          }
+        },
+        {
+          "name": "Fenrus the Devourer",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 6 · Toxic Saliva poison on a random player ~every 36s — cleanse.",
+            "text_ru": "Босс 6 · яд Toxic Saliva на случайного игрока ~36 сек — снимайте.",
+            "text_fi": "Pomo 6 · Toxic Saliva -myrkky satunnaiseen pelaajaan ~36 s — puhdista."
+          }
+        },
+        {
+          "name": "Wolf Master Nandos",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 7 · summons a worg about every 40–70s — grab it before it eats the healer.",
+            "text_ru": "Босс 7 · призывает ворга каждые 40–70 сек — ловите его.",
+            "text_fi": "Pomo 7 · kutsuu worgin 40–70 s välein — ota se kiinni."
+          }
+        },
+        {
+          "name": "Archmage Arugal",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 8 · Void Bolt on the tank (~4s) · Thundershock (5 yd) · Arugal's Curse turns a player into a Glutton — CC them.",
+            "text_ru": "Босс 8 · Void Bolt в танка (~4 сек) · Thundershock (5 м) · проклятие Аругала превращает игрока в обжору —控制 его.",
+            "text_fi": "Pomo 8 · Void Bolt tankkiin (~4 s) · Thundershock (5 jaardia) · Arugalin kirous muuttaa pelaajan ahmiksi — hallitse häntä."
+          }
+        }
+      ],
+      "watch_out": [
+        {
+          "text": {
+            "text_en": "Forever dungeon XP: quest XP inside dungeons -50%, creature XP +20% (Oct 8 beta build).",
+            "text_ru": "Опыт в подземельях Forever: опыт за задания -50%, опыт за убийства +20% (бета-сборка 8 октября).",
+            "text_fi": "Foreverin luolasto-XP: tehtävä-XP -50 %, tappo-XP +20 % (8. lokakuun betaversio)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "The bracket moved: Forever lists Shadowfang Keep as 20–30 (classic was 18–25).",
+            "text_ru": "Диапазон изменился: в Forever Shadowfang Keep — 20–30 (в классике было 18–25).",
+            "text_fi": "Haarukka muuttui: Foreverissä SFK on 20–30 (classicissa 18–25)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Arugal's Curse turns a party member into a Shadowfang Glutton — crowd-control them, don't kill them.",
+            "text_ru": "Проклятие Аругала превращает члена группы в обжору —控制 его, не убивайте.",
+            "text_fi": "Arugalin kirous muuttaa ryhmäläisen ahmiksi — hallitse, älä tapa."
+          },
+          "verified": false
+        },
+        {
+          "text": {
+            "text_en": "Arugal is tied to the Tome of Dalaran chain that leads to a secret boss in the City of Dalaran (beta notes).",
+            "text_ru": "Аругал связан с цепочкой Tome of Dalaran, ведущей к секретному боссу в Городе Даларан (бета-заметки).",
+            "text_fi": "Arugal liittyy Tome of Dalaran -ketjuun, joka johtaa salaisen pomon Dalaraniin (betamuistiinpanot)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Forever reworked most of the keep's loot: 39 of 43 listed items changed, 9 brand new; some new items are client clues only (Graveweave Bindings, Spine of the Devourer).",
+            "text_ru": "Forever переработал почти всю добычу крепости: изменено 39 из 43 предметов, 9 новых; часть новых — лишь подсказки из клиента (Graveweave Bindings, Spine of the Devourer).",
+            "text_fi": "Forever muutti linnan saalista: 39/43 esinettä muutettu, 9 uutta; osa uusista on vain asiakasvihjeitä (Graveweave Bindings, Spine of the Devourer)."
+          },
+          "verified": true
+        }
+      ],
+      "prep": {
+        "potions": {
+          "text_en": "Carry health and mana potions; the worgen hit fast and hard.",
+          "text_ru": "Возьмите зелья здоровья и маны; воргены бьют быстро и больно.",
+          "text_fi": "Ota terveys- ja manapulloja; worgenit lyövät nopeasti ja kovaa."
+        },
+        "buffs": [
+          {
+            "text_en": "Profession campfire: health, mana and secondary stats.",
+            "text_ru": "Профессиональный костёр: здоровье, мана и вторичные характеристики.",
+            "text_fi": "Ammattikunnan nuotio: terveys, mana ja toissijaiset."
+          },
+          {
+            "text_en": "Cooked food: +5% XP in Forever (see Fishing & Cooking).",
+            "text_ru": "Приготовленная еда: +5% опыта в Forever (см. «Рыбалка и кулинария»).",
+            "text_fi": "Valmistettu ruoka: +5 % XP (katso Kalastus & kokkaus)."
+          },
+          {
+            "text_en": "Shadow protection, if you have it (Arugal's Void Bolt).",
+            "text_ru": "Защита от тени, если есть (Void Bolt Аругала).",
+            "text_fi": "Varjovartio, jos sinulla on (Arugalin Void Bolt)."
+          }
+        ]
+      },
+      "loot": [
+        {
+          "item_id": 273643,
+          "name": "Worgenbane Talisman",
+          "icon_id": "inv_jewelry_talisman_06",
+          "slot": "Neck",
+          "source": "Commander Springvale · 33%",
+          "verified": true
+        },
+        {
+          "item_id": 6392,
+          "name": "Belt of Arugal",
+          "icon_id": "inv_belt_10",
+          "slot": "Waist",
+          "source": "Archmage Arugal",
+          "verified": true
+        },
+        {
+          "item_id": 1935,
+          "name": "Assassin's Blade",
+          "icon_id": "inv_weapon_shortblade_24",
+          "slot": "Dagger",
+          "source": "Wolf Master Nandos",
+          "verified": true
+        },
+        {
+          "item_id": 6324,
+          "name": "Robes of Arugal",
+          "icon_id": "inv_chest_cloth_31",
+          "slot": "Chest",
+          "source": "Archmage Arugal",
+          "verified": true
+        },
+        {
+          "item_id": 6220,
+          "name": "Meteor Shard",
+          "icon_id": "inv_weapon_shortblade_25",
+          "slot": "Dagger",
+          "source": "Archmage Arugal",
+          "verified": true
+        }
+      ],
       "sources": {
         "kb": {
           "kind": "kb",
@@ -709,6 +953,10 @@
         "wowhead": {
           "kind": "wowhead",
           "path": "docs/wowhead-sources/dungeon-shadowfang-keep.json"
+        },
+        "foreverdb": {
+          "kind": "foreverdb",
+          "path": "docs/foreverdb-sources/dungeon-shadowfang-keep.md"
         }
       },
       "rules": [
