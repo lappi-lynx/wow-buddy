@@ -49,7 +49,7 @@ pub fn FactionPickerView(
                     "{i18n_svc.t(\"ui_faction_subtitle\", lang)}"
                 }
 
-                div { class: "grid grid-cols-1 md:grid-cols-2 gap-8 w-full justify-items-center mb-8",
+                div { class: "grid grid-cols-2 gap-4 w-full justify-items-center mb-8",
                     FactionShield {
                         meta: alliance_meta,
                         title: alliance_name,
