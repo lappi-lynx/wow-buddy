@@ -995,6 +995,126 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_weapon_shortblade_24, Assassin's Blade, Shadowfang Keep — Wolf Master Nandos) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_bat": {
+      "path": "assets/icons/spells/ability_hunter_pet_bat.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_bat, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_bear": {
+      "path": "assets/icons/spells/ability_hunter_pet_bear.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_bear, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_boar": {
+      "path": "assets/icons/spells/ability_hunter_pet_boar.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_boar, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_cat": {
+      "path": "assets/icons/spells/ability_hunter_pet_cat.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_cat, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_crab": {
+      "path": "assets/icons/spells/ability_hunter_pet_crab.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_crab, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_crocolisk": {
+      "path": "assets/icons/spells/ability_hunter_pet_crocolisk.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_crocolisk, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_gorilla": {
+      "path": "assets/icons/spells/ability_hunter_pet_gorilla.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_gorilla, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_hyena": {
+      "path": "assets/icons/spells/ability_hunter_pet_hyena.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_hyena, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_owl": {
+      "path": "assets/icons/spells/ability_hunter_pet_owl.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_owl, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_raptor": {
+      "path": "assets/icons/spells/ability_hunter_pet_raptor.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_raptor, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_scorpid": {
+      "path": "assets/icons/spells/ability_hunter_pet_scorpid.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_scorpid, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_spider": {
+      "path": "assets/icons/spells/ability_hunter_pet_spider.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_spider, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_tallstrider": {
+      "path": "assets/icons/spells/ability_hunter_pet_tallstrider.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_tallstrider, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_turtle": {
+      "path": "assets/icons/spells/ability_hunter_pet_turtle.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_turtle, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_vulture": {
+      "path": "assets/icons/spells/ability_hunter_pet_vulture.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_vulture, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_windserpent": {
+      "path": "assets/icons/spells/ability_hunter_pet_windserpent.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_windserpent, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "ability_hunter_pet_wolf": {
+      "path": "assets/icons/spells/ability_hunter_pet_wolf.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (ability_hunter_pet_wolf, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_summonfelhunter": {
+      "path": "assets/icons/spells/spell_shadow_summonfelhunter.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (spell_shadow_summonfelhunter, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_summonsuccubus": {
+      "path": "assets/icons/spells/spell_shadow_summonsuccubus.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (spell_shadow_summonsuccubus, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "spell_shadow_summonvoidwalker": {
+      "path": "assets/icons/spells/spell_shadow_summonvoidwalker.webp",
+      "kind": "spell_icon",
+      "source": "Blizzard spell icon (spell_shadow_summonvoidwalker, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

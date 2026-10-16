@@ -229,3 +229,30 @@ fn pets_card_only_shows_where_the_guide_has_content() {
         assert!(!shows_pets_card(pet_card_kind(class)), "{class} should hide the entry");
     }
 }
+
+#[test]
+fn every_family_and_minion_has_an_embedded_icon() {
+    use wow_buddy::assets::registry::{AssetRegistry, ICON_FALLBACK};
+    let reg = AssetRegistry::load_embedded();
+    let d = PetsData::load_embedded();
+    for f in d.families.iter() {
+        assert!(!f.icon_id.is_empty(), "{}: no icon id", f.id);
+        assert_ne!(
+            reg.item_icon(&f.icon_id),
+            ICON_FALLBACK,
+            "{}: {} has no embedded bytes",
+            f.id,
+            f.icon_id
+        );
+    }
+    for m in d.minions.iter() {
+        assert!(!m.icon_id.is_empty(), "{}: no icon id", m.id);
+        assert_ne!(
+            reg.item_icon(&m.icon_id),
+            ICON_FALLBACK,
+            "{}: {} has no embedded bytes",
+            m.id,
+            m.icon_id
+        );
+    }
+}

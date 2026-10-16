@@ -1,3 +1,4 @@
+use crate::assets::AssetRegistry;
 use crate::components::AppFooter;
 use crate::i18n::{I18nService, Language};
 use crate::models::pets::{pet_card_kind, pets_sections, PetCardKind, PetsData, PetsSection};
@@ -17,7 +18,7 @@ pub fn PetsView(
     let i18n_svc = i18n.read();
     let data = PetsData::load_embedded();
     let kind = pet_card_kind(&class.id);
-    let mut families_open = use_signal(|| false);
+    let registry = AssetRegistry::load_embedded();
 
     rsx! {
         div { class: "min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-4 sm:p-8",
@@ -48,42 +49,27 @@ pub fn PetsView(
                         PetsSection::Families => rsx! {
                             div { class: "bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col space-y-3",
                                 h2 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider", "{i18n_svc.t(\"ui_pets_first_pick\", lang)}" }
-                                div { class: "flex flex-wrap gap-2",
+                                div { class: "grid grid-cols-1 sm:grid-cols-3 gap-3",
                                     for pick in data.first_pick.iter() {
                                         if let Some(f) = data.families.iter().find(|f| &f.id == pick) {
-                                            span { key: "{f.id}", class: "text-xs px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200", "{f.name}" }
-                                        }
-                                    }
-                                }
-                                div { class: "flex items-center justify-between",
-                                    h2 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider", "{i18n_svc.t(\"ui_pets_families\", lang)}" }
-                                    button {
-                                        class: "text-xs text-amber-300 hover:text-amber-200 cursor-pointer",
-                                        onclick: move |_| {
-                                            let next = !families_open();
-                                            families_open.set(next);
-                                        },
-                                        if families_open() {
-                                            "{i18n_svc.t(\"ui_pets_hide_all\", lang)}"
-                                        } else {
-                                            "{i18n_svc.t(\"ui_pets_show_all\", lang)}"
-                                        }
-                                    }
-                                }
-                                if families_open() {
-                                    for f in data.families.iter() {
-                                        div { key: "{f.id}", class: "flex items-start justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
-                                            div { class: "flex flex-col",
+                                            div { key: "{f.id}", class: "p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col items-center text-center space-y-1",
+                                                img { class: "w-11 h-11 rounded-lg", src: "{registry.item_icon(&f.icon_id)}", alt: "{f.name}" }
                                                 span { class: "text-sm font-bold text-slate-200", "{f.name}" }
                                                 span { class: "text-xs text-slate-400", "{f.note.get(lang)}" }
                                             }
-                                            div { class: "flex flex-col items-end shrink-0 ml-3",
-                                                span { class: "text-[10px] uppercase tracking-wider text-slate-400",
-                                                    "{i18n_svc.t(\"ui_pets_type\", lang)}: {data.legends.types.get(f.pet_type.as_str()).map(|t| t.get(lang).to_string()).unwrap_or_default()}"
-                                                }
-                                                span { class: "text-[10px] text-slate-500",
-                                                    "{i18n_svc.t(\"ui_pets_diet\", lang)}: {f.diet.iter().map(|d| data.legends.diets.get(d.as_str()).map(|l| l.get(lang).to_string()).unwrap_or_default()).collect::<Vec<_>>().join(\" · \")}"
-                                                }
+                                        }
+                                    }
+                                }
+                            }
+                            div { class: "bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col space-y-3",
+                                h2 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider", "{i18n_svc.t(\"ui_pets_families\", lang)}" }
+                                div { class: "grid grid-cols-2 sm:grid-cols-4 gap-2",
+                                    for f in data.families.iter() {
+                                        div { key: "{f.id}", class: "p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col items-start space-y-1",
+                                            img { class: "w-8 h-8 rounded-md", src: "{registry.item_icon(&f.icon_id)}", alt: "{f.name}" }
+                                            span { class: "text-xs sm:text-sm font-bold text-slate-200", "{f.name}" }
+                                            span { class: "text-[10px] leading-tight text-slate-400",
+                                                "{data.legends.types.get(f.pet_type.as_str()).map(|t| t.get(lang).to_string()).unwrap_or_default()} · {f.diet.iter().map(|d| data.legends.diets.get(d.as_str()).map(|l| l.get(lang).to_string()).unwrap_or_default()).collect::<Vec<_>>().join(\" / \")}"
                                             }
                                         }
                                     }
@@ -94,14 +80,25 @@ pub fn PetsView(
                             div { class: "bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col space-y-3",
                                 h2 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider", "{i18n_svc.t(\"ui_pets_notable\", lang)}" }
                                 for p in data.notable.iter() {
-                                    div { key: "{p.id}", class: "flex items-start justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
-                                        div { class: "flex flex-col",
-                                            span { class: "text-sm font-bold text-slate-200", "{p.name}" }
-                                            span { class: "text-xs text-slate-400", "{p.where_hint.get(lang)}" }
-                                            span { class: "text-xs text-slate-400 mt-0.5", "{p.why.get(lang)}" }
-                                        }
-                                        span { class: "shrink-0 ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
-                                            "{i18n_svc.t_with(\"ui_pets_level\", lang, &[(\"level\", p.min_level.to_string())])}"
+                                    {
+                                        let icon_id = data
+                                            .families
+                                            .iter()
+                                            .find(|f| f.id == p.family_id)
+                                            .map(|f| f.icon_id.clone())
+                                            .unwrap_or_default();
+                                        rsx! {
+                                            div { key: "{p.id}", class: "flex items-start space-x-3 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
+                                                img { class: "w-11 h-11 rounded-lg shrink-0", src: "{registry.item_icon(&icon_id)}", alt: "{p.name}" }
+                                                div { class: "flex flex-col flex-1",
+                                                    span { class: "text-sm font-bold text-slate-200", "{p.name}" }
+                                                    span { class: "text-xs text-slate-400", "{p.where_hint.get(lang)}" }
+                                                    span { class: "text-xs text-slate-400 mt-0.5", "{p.why.get(lang)}" }
+                                                }
+                                                span { class: "shrink-0 ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400",
+                                                    "{i18n_svc.t_with(\"ui_pets_level\", lang, &[(\"level\", p.min_level.to_string())])}"
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -111,8 +108,9 @@ pub fn PetsView(
                             div { class: "bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col space-y-3",
                                 h2 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider", "{i18n_svc.t(\"ui_pets_minions\", lang)}" }
                                 for m in data.minions.iter() {
-                                    div { key: "{m.id}", class: "flex items-start justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
-                                        div { class: "flex flex-col",
+                                    div { key: "{m.id}", class: "flex items-start space-x-3 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
+                                        img { class: "w-11 h-11 rounded-lg shrink-0", src: "{registry.item_icon(&m.icon_id)}", alt: "{m.name}" }
+                                        div { class: "flex flex-col flex-1",
                                             span { class: "text-sm font-bold text-slate-200", "{m.name}" }
                                             span { class: "text-xs text-slate-400", "{m.role.get(lang)}" }
                                         }

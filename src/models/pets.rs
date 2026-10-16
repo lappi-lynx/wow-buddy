@@ -34,6 +34,10 @@ pub struct PetFamily {
     pub diet: Vec<String>,
     pub note: LocalizedText,
     pub source_id: String,
+    /// Embedded spell-icon id for the family tile (see
+    /// `docs/wowhead-sources/pets-family-icons.json`).
+    #[serde(default)]
+    pub icon_id: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -64,6 +68,9 @@ pub struct WarlockMinion {
     pub learned_at: u8,
     pub role: LocalizedText,
     pub source_id: String,
+    /// Embedded spell-icon id (the summon spell icon).
+    #[serde(default)]
+    pub icon_id: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

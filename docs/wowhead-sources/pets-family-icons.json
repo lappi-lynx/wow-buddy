@@ -1,0 +1,35 @@
+{
+  "source": "https://www.wowhead.com/forever (hunter pets family files verified on the wow.zamimg.com CDN) + client family-icon conventions",
+  "pulled": "2026-10-16",
+  "note": "Family -> icon mapping used by assets/data/pets.json. Every file returned HTTP 200 from the CDN and is embedded via assets/manifest.json (kind spell_icon). The Wowhead hunter-pets family page did not render its list (JS shell), so pinning used CDN existence checks plus the earlier mock verification.",
+  "family_icons": {
+    "cat": "ability_hunter_pet_cat",
+    "bear": "ability_hunter_pet_bear",
+    "carrion_bird": "ability_hunter_pet_vulture",
+    "wolf": "ability_hunter_pet_wolf",
+    "bird_of_prey": "ability_hunter_pet_owl",
+    "tallstrider": "ability_hunter_pet_tallstrider",
+    "raptor": "ability_hunter_pet_raptor",
+    "crocolisk": "ability_hunter_pet_crocolisk",
+    "boar": "ability_hunter_pet_boar",
+    "bat": "ability_hunter_pet_bat",
+    "spider": "ability_hunter_pet_spider",
+    "wind_serpent": "ability_hunter_pet_windserpent",
+    "turtle": "ability_hunter_pet_turtle",
+    "hyena": "ability_hunter_pet_hyena",
+    "gorilla": "ability_hunter_pet_gorilla",
+    "scorpid": "ability_hunter_pet_scorpid",
+    "crab": "ability_hunter_pet_crab"
+  },
+  "minion_icons": {
+    "imp": "spell_shadow_summonimp",
+    "voidwalker": "spell_shadow_summonvoidwalker",
+    "succubus": "spell_shadow_summonsuccubus",
+    "felhunter": "spell_shadow_summonfelhunter"
+  },
+  "rulings": [
+    "Carrion Bird: no ability_hunter_pet_carrionbird file exists; ability_hunter_pet_vulture (HTTP 200) is the family icon.",
+    "Bird of Prey: no distinct CDN file found among candidates (birdofprey/eagle/hawk/falcon/talon all 404); it shares ability_hunter_pet_owl with the Owl family (both birds of prey).",
+    "Minions use their summon-spell icons (spell_shadow_summon*)."
+  ]
+}
