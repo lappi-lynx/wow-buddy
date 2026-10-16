@@ -1,0 +1,19 @@
+{
+  "source": "https://www.wowhead.com/forever/zone=2437/ragefire-chasm",
+  "pulled": "2026-10-16",
+  "note": "Forever zone changelog table: one row per listed zone item (change status, name, ilvl, req level, source boss). Only changed/new items appear on this page; the full per-boss loot table (with drop rates) is in docs/foreverdb-sources/dungeon-ragefire-chasm.md.",
+  "items": [
+    { "id": 14145, "change": "UpdatedDamage changed, Quality changed", "name": "Cursed Felblade", "ilvl": 18, "req": 13, "source": "Taragaman the Hungerer" },
+    { "id": 14147, "change": "UpdatedStats changed, Quality changed", "name": "Cavedweller Bracers", "ilvl": 18, "req": 13, "source": "Jergosh the Invoker" },
+    { "id": 14148, "change": "UpdatedStats changed, Quality changed", "name": "Crystalline Cuffs", "ilvl": 18, "req": 13, "source": "Taragaman the Hungerer" },
+    { "id": 14149, "change": "UpdatedStats changed, Quality changed", "name": "Subterranean Cape", "ilvl": 18, "req": 13, "source": "Taragaman the Hungerer" },
+    { "id": 14150, "change": "UpdatedStats changed, Quality changed", "name": "Robe of Evocation", "ilvl": 18, "req": 13, "source": "Jergosh the Invoker" },
+    { "id": 14151, "change": "UpdatedStats changed, Damage changed +1", "name": "Chanting Blade", "ilvl": 18, "req": 13, "source": "Jergosh the Invoker" },
+    { "id": 272996, "change": "New", "name": "Trogg Scepter", "ilvl": 18, "req": 13, "source": "Oggleflint" },
+    { "id": 272998, "change": "New", "name": "Bone Knuckles", "ilvl": 18, "req": 13, "source": "Oggleflint" },
+    { "id": 272999, "change": "New", "name": "Barbaric Crossbow", "ilvl": 18, "req": 13, "source": "Oggleflint" },
+    { "id": 273003, "change": "New", "name": "Searing Dagger", "ilvl": 18, "req": 13, "source": "Bazzalan" },
+    { "id": 273005, "change": "New", "name": "Satyrskin Cloak", "ilvl": 18, "req": 13, "source": "Bazzalan" },
+    { "id": 273007, "change": "New", "name": "Chasm Walkers", "ilvl": 18, "req": 13, "source": "Bazzalan" }
+  ]
+}

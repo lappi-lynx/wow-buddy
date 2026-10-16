@@ -9,11 +9,198 @@
       "max_level": 18,
       "estimated_time": "35",
       "bag_slots_required": 10,
-      "recommended_avg_level": null,
-      "mobs": [],
-      "watch_out": [],
-      "prep": null,
-      "loot": [],
+      "recommended_avg_level": {
+        "text": {
+          "text_en": "Average 16+ for a 5-man",
+          "text_ru": "Средний уровень 16+ для группы из 5",
+          "text_fi": "Keskiarvo taso 16+ viidelle"
+        },
+        "verified": false,
+        "source_id": "kb"
+      },
+      "mobs": [
+        {
+          "name": "Ragefire Troggs & Shamans",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "The Searing Blade's garrison — a Trogg and a Shaman join Oggleflint's fight.",
+            "text_ru": "Гарнизон Пылающего Клинка — трогг и шаман присоединяются к бою с Огглефлинтом.",
+            "text_fi": "Searing Bladen varuskunta — troggi ja shamaani liittyvät Oggleflintin taisteluun."
+          }
+        },
+        {
+          "name": "Searing Blade Cultists",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Two join Jergosh when his fight starts.",
+            "text_ru": "Двое присоединяются к Джергошу в начале боя.",
+            "text_fi": "Kaksi liittyy Jergoshiin taistelun alkaessa."
+          }
+        },
+        {
+          "name": "Oggleflint",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 1 · Cleave 90° front cone ~9s — face him away; adds join.",
+            "text_ru": "Босс 1 · Cleave конусом ~9 сек — разворачивайте от группы; есть подмога.",
+            "text_fi": "Pomo 1 · Cleave 90° kaari ~9 s — käännä poispäin; lisät liittyvät."
+          }
+        },
+        {
+          "name": "Taragaman the Hungerer",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 2 · Uppercut knockback (~12s) — back to a wall · Fire Nova (10 yd, ~14s).",
+            "text_ru": "Босс 2 · Uppercut отбрасывает (~12 сек) — спиной к стене · Fire Nova (10 м, ~14 сек).",
+            "text_fi": "Pomo 2 · Uppercut työntää (~12 s) — selkä seinään · Fire Nova (10 jaardia, ~14 s)."
+          }
+        },
+        {
+          "name": "Jergosh the Invoker",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 3 · Immolate on the tank (~15s) · two Cultists join.",
+            "text_ru": "Босс 3 · Immolate в танка (~15 сек) · двое культистов.",
+            "text_fi": "Pomo 3 · Immolate tankkiin (~15 s) · kaksi kultistia."
+          }
+        },
+        {
+          "name": "Bazzalan",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 4 · Sinister Strike on the tank (~10s) — the last of the Searing Blade.",
+            "text_ru": "Босс 4 · Sinister Strike в танка (~10 сек) — последний из Пылающего Клинка.",
+            "text_fi": "Pomo 4 · Sinister Strike tankkiin (~10 s) — Searing Bladen viimeinen."
+          }
+        }
+      ],
+      "watch_out": [
+        {
+          "text": {
+            "text_en": "Forever dungeon XP: quest XP inside dungeons -50%, creature XP +20% (Oct 8 beta build).",
+            "text_ru": "Опыт в подземельях Forever: опыт за задания -50%, опыт за убийства +20% (бета-сборка 8 октября).",
+            "text_fi": "Foreverin luolasto-XP: tehtävä-XP -50 %, tappo-XP +20 % (8. lokakuun betaversio)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Every boss brings adds: Shaman + Trogg on Oggleflint, two Cultists on Jergosh — CC or burn them fast.",
+            "text_ru": "Каждый босс приводит подмогу: шаман и трогг у Огглефлинта, два культиста у Джергоша — control или убивайте быстро.",
+            "text_fi": "Jokainen pomo tuo lisät: shamaani + troggi Oggleflintilla, kaksi kultistia Jergoshilla — hallitse tai tapa nopeasti."
+          },
+          "verified": false
+        },
+        {
+          "text": {
+            "text_en": "Tank Taragaman with your back to a wall (Uppercut); ranged stand more than 10 yards off (Fire Nova).",
+            "text_ru": "Танкуйте Тарагамана спиной к стене (Uppercut); дальним стоять дальше 10 м (Fire Nova).",
+            "text_fi": "Tankkaa Taragaman selkä seinää vasten (Uppercut); kaukopelaajat yli 10 jaardin päässä (Fire Nova)."
+          },
+          "verified": false
+        },
+        {
+          "text": {
+            "text_en": "No summoning stone — walk to the Orgrimmar entrance; the group finder enters from level 10.",
+            "text_ru": "Камня встречи нет — идите ко входу в Оргриммаре; группоиск с 10 уровня.",
+            "text_fi": "Ei kokouskiveä — kävele Orgrimmarin sisäänkäynnille; ryhmähaku tasolta 10."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Forever reworked RFC loot: 6 items changed (two quality bumps) and 6 brand new.",
+            "text_ru": "Forever переработал добычу RFC: 6 предметов изменены (два повышения качества) и 6 новых.",
+            "text_fi": "Forever muutti RFC:n saaliin: 6 esinettä muutettu (kaksi laatuparannusta), 6 uutta."
+          },
+          "verified": true
+        }
+      ],
+      "prep": {
+        "potions": {
+          "text_en": "Carry health and mana potions; expect fire damage (Fire Nova, Immolate).",
+          "text_ru": "Возьмите зелья здоровья и маны; будет огонь (Fire Nova, Immolate).",
+          "text_fi": "Ota terveys- ja manapulloja; odotettavissa tulivahinkoa (Fire Nova, Immolate)."
+        },
+        "buffs": [
+          {
+            "text_en": "Profession campfire: health, mana and secondary stats.",
+            "text_ru": "Профессиональный костёр: здоровье, мана и вторичные характеристики.",
+            "text_fi": "Ammattikunnan nuotio: terveys, mana ja toissijaiset."
+          },
+          {
+            "text_en": "Cooked food: +5% XP in Forever (see Fishing & Cooking).",
+            "text_ru": "Приготовленная еда: +5% опыта в Forever (см. «Рыбалка и кулинария»).",
+            "text_fi": "Valmistettu ruoka: +5 % XP (katso Kalastus & kokkaus)."
+          }
+        ]
+      },
+      "loot": [
+        {
+          "item_id": 272998,
+          "name": "Bone Knuckles",
+          "icon_id": "ability_whirlwind",
+          "slot": "Fists",
+          "source": "Oggleflint · seen in WoW Forever",
+          "verified": true
+        },
+        {
+          "item_id": 14148,
+          "name": "Crystalline Cuffs",
+          "icon_id": "inv_bracer_13",
+          "slot": "Wrist",
+          "source": "Taragaman · seen in WoW Forever",
+          "verified": true
+        },
+        {
+          "item_id": 2073,
+          "name": "Dwarven Hatchet",
+          "icon_id": "inv_axe_04",
+          "slot": "One-Hand Axe",
+          "source": "Taragaman · seen in WoW Forever",
+          "verified": true
+        },
+        {
+          "item_id": 14150,
+          "name": "Robe of Evocation",
+          "icon_id": "inv_chest_cloth_24",
+          "slot": "Chest",
+          "source": "Jergosh · seen in WoW Forever",
+          "verified": true
+        },
+        {
+          "item_id": 14145,
+          "name": "Cursed Felblade",
+          "icon_id": "inv_weapon_shortblade_12",
+          "slot": "One-Hand Sword",
+          "source": "Taragaman · 20% (classic data)",
+          "verified": true
+        }
+      ],
       "sources": {
         "kb": {
           "kind": "kb",
@@ -22,6 +209,10 @@
         "wowhead": {
           "kind": "wowhead",
           "path": "docs/wowhead-sources/dungeon-ragefire-chasm.json"
+        },
+        "foreverdb": {
+          "kind": "foreverdb",
+          "path": "docs/foreverdb-sources/dungeon-ragefire-chasm.md"
         }
       },
       "rules": [
