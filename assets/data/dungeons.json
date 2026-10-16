@@ -15,8 +15,14 @@
       "prep": null,
       "loot": [],
       "sources": {
-        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-ragefire-chasm.md" },
-        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-ragefire-chasm.json" }
+        "kb": {
+          "kind": "kb",
+          "path": "docs/kb-sources/dungeon-ragefire-chasm.md"
+        },
+        "wowhead": {
+          "kind": "wowhead",
+          "path": "docs/wowhead-sources/dungeon-ragefire-chasm.json"
+        }
       },
       "rules": [
         {
@@ -60,8 +66,14 @@
       "prep": null,
       "loot": [],
       "sources": {
-        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-hall-of-thanes.md" },
-        "foreverdb": { "kind": "foreverdb", "path": "docs/foreverdb-sources/dungeon-hall-of-thanes.md" }
+        "kb": {
+          "kind": "kb",
+          "path": "docs/kb-sources/dungeon-hall-of-thanes.md"
+        },
+        "foreverdb": {
+          "kind": "foreverdb",
+          "path": "docs/foreverdb-sources/dungeon-hall-of-thanes.md"
+        }
       },
       "rules": [
         {
@@ -105,8 +117,14 @@
       "prep": null,
       "loot": [],
       "sources": {
-        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-wailing-caverns.md" },
-        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-wailing-caverns.json" }
+        "kb": {
+          "kind": "kb",
+          "path": "docs/kb-sources/dungeon-wailing-caverns.md"
+        },
+        "wowhead": {
+          "kind": "wowhead",
+          "path": "docs/wowhead-sources/dungeon-wailing-caverns.json"
+        }
       },
       "rules": [
         {
@@ -139,19 +157,260 @@
       "id": "deadmines",
       "name": "The Deadmines",
       "icon": "☠️",
-      "level_range": "17–21",
+      "level_range": "17–26",
       "min_level": 17,
-      "max_level": 21,
+      "max_level": 26,
       "estimated_time": "45",
       "bag_slots_required": 10,
-      "recommended_avg_level": null,
-      "mobs": [],
-      "watch_out": [],
-      "prep": null,
-      "loot": [],
+      "recommended_avg_level": {
+        "text": {
+          "text_en": "Average 19+ for a 5-man",
+          "text_ru": "Средний уровень 19+ для группы из 5",
+          "text_fi": "Keskiarvo taso 19+ viiden hengen ryhmälle"
+        },
+        "verified": false,
+        "source_id": "kb"
+      },
+      "mobs": [
+        {
+          "name": "Defias pirates & miners",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Watchmen, Miners, Blackguards, Strip Miners — most of the trash",
+            "text_ru": "Сторожевые, шахтёры, головорезы, рудокопы — основная масса мобов",
+            "text_fi": "Vartijat, kaivostyöläiset, roistot — suurin osa roskaväestä"
+          }
+        },
+        {
+          "name": "Sneed's Shredder",
+          "kind": {
+            "text_en": "Mechanical",
+            "text_ru": "Механизм",
+            "text_fi": "Mekaaninen"
+          },
+          "note": {
+            "text_en": "Level 20 elite — Buzzer Blade's source",
+            "text_ru": "Элита 20 уровня — источник Buzzer Blade",
+            "text_fi": "Tason 20 eliitti — Buzzer Bladen lähde"
+          }
+        },
+        {
+          "name": "Rhahk'Zor",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 1 of 8 · level 19 elite",
+            "text_ru": "Босс 1 из 8 · элита 19 уровня",
+            "text_fi": "Pomo 1/8 · tason 19 eliitti"
+          }
+        },
+        {
+          "name": "Sneed",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 2 of 8 · level 20 elite",
+            "text_ru": "Босс 2 из 8 · элита 20 уровня",
+            "text_fi": "Pomo 2/8 · tason 20 eliitti"
+          }
+        },
+        {
+          "name": "Miner Johnson",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 3 of 8 · level 19 elite",
+            "text_ru": "Босс 3 из 8 · элита 19 уровня",
+            "text_fi": "Pomo 3/8 · tason 19 eliitti"
+          }
+        },
+        {
+          "name": "Gilnid",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 4 of 8 · level 20 elite",
+            "text_ru": "Босс 4 из 8 · элита 20 уровня",
+            "text_fi": "Pomo 4/8 · tason 20 eliitti"
+          }
+        },
+        {
+          "name": "Captain Greenskin",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 5 of 8 · level 20 elite",
+            "text_ru": "Босс 5 из 8 · элита 20 уровня",
+            "text_fi": "Pomo 5/8 · tason 20 eliitti"
+          }
+        },
+        {
+          "name": "Mr. Smite",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 6 of 8 · level 20 elite",
+            "text_ru": "Босс 6 из 8 · элита 20 уровня",
+            "text_fi": "Pomo 6/8 · tason 20 eliitti"
+          }
+        },
+        {
+          "name": "Cookie",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 7 of 8 · level 20 elite",
+            "text_ru": "Босс 7 из 8 · элита 20 уровня",
+            "text_fi": "Pomo 7/8 · tason 20 eliitti"
+          }
+        },
+        {
+          "name": "Edwin VanCleef",
+          "kind": {
+            "text_en": "Humanoid",
+            "text_ru": "Гуманоид",
+            "text_fi": "Humanoidi"
+          },
+          "note": {
+            "text_en": "Boss 8 of 8 · level 21 elite",
+            "text_ru": "Босс 8 из 8 · элита 21 уровня",
+            "text_fi": "Pomo 8/8 · tason 21 eliitti"
+          }
+        }
+      ],
+      "watch_out": [
+        {
+          "text": {
+            "text_en": "Forever changed this dungeon's loot — stats, item levels and even qualities differ from Classic Era (e.g. Gold-flecked Gloves). Old classic guides can be wrong here.",
+            "text_ru": "Forever изменил добычу подземелья — характеристики, уровни предметов и даже качество отличаются от классики (например, Gold-flecked Gloves). Старые классические гайды тут могут ошибаться.",
+            "text_fi": "Forever muutti tämän luolaston saalista — ominaisuudet, esineiden tasot ja jopa laatu eroavat Classic Eran vastaavista (esim. Gold-flecked Gloves). Vanhat classic-oppaat voivat olla väärässä."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "No summoning stone — the group walks through Westfall to the entrance (nearest flight point: Sentinel Hill).",
+            "text_ru": "Камня встречи нет — группа идёт через Западный край ко входу (ближайшая точка полёта: Сентябрьский холм).",
+            "text_fi": "Kokouskiveä ei ole — ryhmä kävelee Westfallin kautta sisäänkäynnille (lähin lentopiste: Sentinel Hill)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "A mixed-level group loses XP fast: a level 25 with level 20s earns very little per kill (dev podcast) — run with a tight level band.",
+            "text_ru": "Смешанная по уровням группа быстро теряет опыт: 25-й уровень с двадцатыми получает очень мало за убийство (подкаст разработчиков) — идите плотным диапазоном уровней.",
+            "text_fi": "Sekatasoryhmä menettää XP:tä nopeasti: tason 25 hahmo tasojen 20 seurassa saa hyvin vähän per tappo (kehittäjäpodcast) — pelatkaa tiiviillä tasovälillä."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "New Deadmines items exist in the client but aren't player-confirmed yet (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — their drops may change.",
+            "text_ru": "Новые предметы Deadmines есть в клиенте, но ещё не подтверждены игроками (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — их дроп может измениться.",
+            "text_fi": "Uudet Deadmines-esineet ovat asiakkaassa, mutta pelaajat eivät ole vahvistaneet niitä (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — niiden pudotukset voivat muuttua."
+          },
+          "verified": true
+        }
+      ],
+      "prep": {
+        "potions": {
+          "text_en": "Carry a stack of health and mana potions.",
+          "text_ru": "Возьмите запас зелий здоровья и маны.",
+          "text_fi": "Ota mukaan nippu terveys- ja manapulloja."
+        },
+        "buffs": [
+          {
+            "text_en": "Profession campfire: health, mana and secondary stats.",
+            "text_ru": "Профессиональный костёр: здоровье, мана и вторичные характеристики.",
+            "text_fi": "Ammattikunnan nuotio: terveys, mana ja toissijaiset ominaisuudet."
+          },
+          {
+            "text_en": "Cooked food: +5% XP in Forever (see Fishing & Cooking).",
+            "text_ru": "Приготовленная еда: +5% опыта в Forever (см. «Рыбалка и кулинария»).",
+            "text_fi": "Valmistettu ruoka: +5 % XP Foreverissä (katso Kalastus & kokkaus)."
+          }
+        ]
+      },
+      "loot": [
+        {
+          "item_id": 5191,
+          "icon_id": "inv_sword_24",
+          "slot": "One-Handed Sword",
+          "source": "Edwin VanCleef · 20%",
+          "verified": true,
+          "name": "Cruel Barb"
+        },
+        {
+          "item_id": 5193,
+          "icon_id": "inv_misc_cape_08",
+          "slot": "Cloak",
+          "source": "Edwin VanCleef · 30%",
+          "verified": true,
+          "name": "Cape of the Brotherhood"
+        },
+        {
+          "item_id": 10403,
+          "icon_id": "inv_belt_26",
+          "slot": "Waist",
+          "source": "Captain Greenskin · 30%",
+          "verified": true,
+          "name": "Blackened Defias Belt"
+        },
+        {
+          "item_id": 1156,
+          "icon_id": "inv_jewelry_ring_09",
+          "slot": "Ring",
+          "source": "Gilnid · 45%",
+          "verified": true,
+          "name": "Lavishly Jeweled Ring"
+        },
+        {
+          "item_id": 7230,
+          "icon_id": "inv_hammer_09",
+          "slot": "Two-Handed Mace",
+          "source": "Mr. Smite",
+          "verified": true,
+          "name": "Smite's Mighty Hammer"
+        }
+      ],
       "sources": {
-        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-deadmines.md" },
-        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-deadmines.json" }
+        "kb": {
+          "kind": "kb",
+          "path": "docs/kb-sources/dungeon-deadmines.md"
+        },
+        "wowhead": {
+          "kind": "wowhead",
+          "path": "docs/wowhead-sources/dungeon-deadmines.json"
+        },
+        "foreverdb": {
+          "kind": "foreverdb",
+          "path": "docs/foreverdb-sources/dungeon-deadmines.md"
+        }
       },
       "rules": [
         {
@@ -195,8 +454,14 @@
       "prep": null,
       "loot": [],
       "sources": {
-        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-shadowfang-keep.md" },
-        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-shadowfang-keep.json" }
+        "kb": {
+          "kind": "kb",
+          "path": "docs/kb-sources/dungeon-shadowfang-keep.md"
+        },
+        "wowhead": {
+          "kind": "wowhead",
+          "path": "docs/wowhead-sources/dungeon-shadowfang-keep.json"
+        }
       },
       "rules": [
         {

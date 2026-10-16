@@ -52,10 +52,11 @@ pub struct PrepInfo {
     pub buffs: Vec<LocalizedText>,
 }
 
-/// One blue drop: item id + icon (both verified) and where it comes from.
+/// One blue drop: item id + name + icon (all verified) and where it comes from.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct LootEntry {
     pub item_id: u32,
+    pub name: String,
     pub icon_id: String,
     pub slot: String,
     pub source: String,

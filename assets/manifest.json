@@ -941,6 +941,12 @@
       "kind": "item_icon",
       "source": "Blizzard item icon (inv_bracer_13, Crystalline Cuffs) via wow.zamimg.com CDN, imported 2026-10-15 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_jewelry_ring_09": {
+      "path": "assets/icons/items/inv_jewelry_ring_09.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_jewelry_ring_09, Lavishly Jeweled Ring, Deadmines — Gilnid) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

@@ -48,6 +48,7 @@ fn every_loot_row_is_complete_and_its_icon_resolves() {
     for d in data.dungeons.iter() {
         for loot in d.loot.iter() {
             assert_ne!(loot.item_id, 0, "{}: loot row without an item id", d.id);
+            assert!(!loot.name.is_empty(), "{}: loot row without a name", d.id);
             assert!(!loot.icon_id.is_empty(), "{}: loot row without an icon", d.id);
             assert_ne!(
                 reg.item_icon(&loot.icon_id),
@@ -58,4 +59,26 @@ fn every_loot_row_is_complete_and_its_icon_resolves() {
             );
         }
     }
+}
+
+#[test]
+fn deadmines_pilot_content_is_complete() {
+    let data = DungeonsData::load_embedded();
+    let dm = data
+        .dungeons
+        .iter()
+        .find(|d| d.id == "deadmines")
+        .expect("deadmines entry");
+    assert!(
+        dm.recommended_avg_level.is_some(),
+        "deadmines: no recommended level"
+    );
+    assert!(dm.mobs.len() >= 5, "deadmines: mobs {}", dm.mobs.len());
+    assert!(
+        dm.watch_out.len() >= 3,
+        "deadmines: watch_out {}",
+        dm.watch_out.len()
+    );
+    assert!(dm.loot.len() >= 3, "deadmines: loot {}", dm.loot.len());
+    assert!(dm.prep.is_some(), "deadmines: no prep");
 }
