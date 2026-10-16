@@ -19,7 +19,7 @@ pub mod zone;
 pub use class::{ClassInfo, CoreSpell};
 pub use class_tips::{ClassTips, ClassTipsData, LocalizedText, SpecTips};
 pub use comfort_tips::{ComfortTip, ComfortTipsData};
-pub use dungeon::{get_dungeon_codex, DungeonCodexInfo, DungeonRule};
+pub use dungeon::{dungeons_for_level, get_dungeon_codex, DungeonCodexInfo, DungeonRule, DungeonsData};
 pub use faction::{get_faction_meta, Faction, FactionMeta};
 pub use fishing::{FishingData, FishingStep};
 pub use gear::{get_tier_for_level, GearTier};

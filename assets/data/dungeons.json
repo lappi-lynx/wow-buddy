@@ -1,0 +1,229 @@
+{
+  "dungeons": [
+    {
+      "id": "ragefire_chasm",
+      "name": "Ragefire Chasm",
+      "icon": "🔥",
+      "level_range": "13–18",
+      "min_level": 13,
+      "max_level": 18,
+      "estimated_time": "35",
+      "bag_slots_required": 10,
+      "recommended_avg_level": null,
+      "mobs": [],
+      "watch_out": [],
+      "prep": null,
+      "loot": [],
+      "sources": {
+        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-ragefire-chasm.md" },
+        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-ragefire-chasm.json" }
+      },
+      "rules": [
+        {
+          "id": "only_tank_pulls",
+          "title": "Only Tank Pulls",
+          "description": "Wait for tank to establish aggro on pack before attacking.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "healer_mana",
+          "title": "Watch Healer Mana",
+          "description": "Wait for healer to drink if mana falls below 30%.",
+          "icon": "💧"
+        },
+        {
+          "id": "loot_need_vs_greed",
+          "title": "Loot Etiquette: Need vs Greed",
+          "description": "Greed by default; Need only if class appropriate and equipping immediately.",
+          "icon": "🎲"
+        },
+        {
+          "id": "clear_bags",
+          "title": "Clear 10 Bag Slots",
+          "description": "Free at least 10 bag slots before entering; no vendors inside.",
+          "icon": "🎒"
+        }
+      ]
+    },
+    {
+      "id": "hall_of_thanes",
+      "name": "The Hall of Thanes",
+      "icon": "⚒️",
+      "level_range": "13–20",
+      "min_level": 13,
+      "max_level": 20,
+      "estimated_time": "30–45",
+      "bag_slots_required": 10,
+      "recommended_avg_level": null,
+      "mobs": [],
+      "watch_out": [],
+      "prep": null,
+      "loot": [],
+      "sources": {
+        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-hall-of-thanes.md" },
+        "foreverdb": { "kind": "foreverdb", "path": "docs/foreverdb-sources/dungeon-hall-of-thanes.md" }
+      },
+      "rules": [
+        {
+          "id": "watch_patrols",
+          "title": "Watch the Dark Iron Patrols",
+          "description": "Corridors are tight and patrolled — pull groups back into cleared rooms so adds don't chain.",
+          "icon": "👁️"
+        },
+        {
+          "id": "tank_threat_first",
+          "title": "Let the Tank Build Threat",
+          "description": "Fire elementals and golems hit hard with AoE; wait for threat from Demoralizing Shout or Thunder Clap before bursting.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "fire_mitigation",
+          "title": "Pack Fire Mitigation",
+          "description": "Health potions and fire protection or dispels for elemental burn debuffs.",
+          "icon": "🔥"
+        },
+        {
+          "id": "share_early_upgrades",
+          "title": "Share Early Upgrades",
+          "description": "One of the earliest dungeons — check before needing loot that is a primary upgrade for someone else.",
+          "icon": "🎒"
+        }
+      ]
+    },
+    {
+      "id": "wailing_caverns",
+      "name": "Wailing Caverns",
+      "icon": "🐍",
+      "level_range": "15–22",
+      "min_level": 15,
+      "max_level": 22,
+      "estimated_time": "60–90",
+      "bag_slots_required": 10,
+      "recommended_avg_level": null,
+      "mobs": [],
+      "watch_out": [],
+      "prep": null,
+      "loot": [],
+      "sources": {
+        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-wailing-caverns.md" },
+        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-wailing-caverns.json" }
+      },
+      "rules": [
+        {
+          "id": "pull_back_to_cleared",
+          "title": "Fight Runners in Cleared Ground",
+          "description": "Pull raptors and humanoids back: they flee at low health and can drag sleeping or patrolling packs onto the group.",
+          "icon": "↩️"
+        },
+        {
+          "id": "interrupt_druids",
+          "title": "Interrupt the Druids of the Fang",
+          "description": "Priority-kick Sleep and Healing Touch, and bring poison cleansing for heavy nature DoTs.",
+          "icon": "🛑"
+        },
+        {
+          "id": "stack_on_escort",
+          "title": "Stack for the Disciple Escort",
+          "description": "During the final ritual escort, stay close to the Disciple and let the tank grab the ambush waves before AoE.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "share_hybrid_drops",
+          "title": "Discuss Hybrid Drops First",
+          "description": "Agility leather, caster staves and shield drops are usable by many classes here — talk before rolling Need.",
+          "icon": "🎲"
+        }
+      ]
+    },
+    {
+      "id": "deadmines",
+      "name": "The Deadmines",
+      "icon": "☠️",
+      "level_range": "17–21",
+      "min_level": 17,
+      "max_level": 21,
+      "estimated_time": "45",
+      "bag_slots_required": 10,
+      "recommended_avg_level": null,
+      "mobs": [],
+      "watch_out": [],
+      "prep": null,
+      "loot": [],
+      "sources": {
+        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-deadmines.md" },
+        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-deadmines.json" }
+      },
+      "rules": [
+        {
+          "id": "only_tank_pulls",
+          "title": "Only Tank Pulls",
+          "description": "Wait for tank to establish aggro on pack before attacking.",
+          "icon": "🛡️"
+        },
+        {
+          "id": "healer_mana",
+          "title": "Watch Healer Mana",
+          "description": "Wait for healer to drink if mana falls below 30%.",
+          "icon": "💧"
+        },
+        {
+          "id": "loot_need_vs_greed",
+          "title": "Loot Etiquette: Need vs Greed",
+          "description": "Greed by default; Need only if class appropriate and equipping immediately.",
+          "icon": "🎲"
+        },
+        {
+          "id": "clear_bags",
+          "title": "Clear 10 Bag Slots",
+          "description": "Free at least 10 bag slots before entering; no vendors inside.",
+          "icon": "🎒"
+        }
+      ]
+    },
+    {
+      "id": "shadowfang_keep",
+      "name": "Shadowfang Keep",
+      "icon": "🐺",
+      "level_range": "18–25",
+      "min_level": 18,
+      "max_level": 25,
+      "estimated_time": "45–60",
+      "bag_slots_required": 10,
+      "recommended_avg_level": null,
+      "mobs": [],
+      "watch_out": [],
+      "prep": null,
+      "loot": [],
+      "sources": {
+        "kb": { "kind": "kb", "path": "docs/kb-sources/dungeon-shadowfang-keep.md" },
+        "wowhead": { "kind": "wowhead", "path": "docs/wowhead-sources/dungeon-shadowfang-keep.json" }
+      },
+      "rules": [
+        {
+          "id": "los_pulls_stairs",
+          "title": "Line-of-Sight Pulls on Stairs",
+          "description": "Break line of sight around doorways and stairwells so ranged guards and fleeing worgen don't pull packs from above.",
+          "icon": "🧱"
+        },
+        {
+          "id": "interrupts_for_arugal",
+          "title": "Save Interrupts for Arugal",
+          "description": "Keep kicks and silences for Archmage Arugal's Voidbolt, and be ready when he mind-controls a party member.",
+          "icon": "🛑"
+        },
+        {
+          "id": "shadow_curse_cleanses",
+          "title": "Bring Shadow and Curse Cleanses",
+          "description": "Shadow protection potions plus curse and disease removal for worgen debuffs and boss curses.",
+          "icon": "🧪"
+        },
+        {
+          "id": "talk_drops_before_need",
+          "title": "Talk Drops Before Rolling",
+          "description": "Quest items (the Tome chain) and caster pieces like Meteor Shard or Robes of Arugal are in high demand — agree before Need.",
+          "icon": "🎲"
+        }
+      ]
+    }
+  ]
+}
