@@ -29,19 +29,19 @@
           "weapons": [
             {
               "name": "Heavy Copper Maul",
-              "level": 12,
+              "level": 11,
               "item_id": 6214,
               "icon_id": "inv_hammer_18",
               "source": "Crafted (Blacksmithing) or early zones",
-              "provenance": "kb:leveling-weapons@2026-09-26"
+              "provenance": "foreverdb:item-6214@2026-10-16"
             },
             {
               "name": "Ironforge Greathammer",
-              "level": 14,
+              "level": 1,
               "item_id": 279895,
               "icon_id": "inv_hammer_21",
               "source": "Dun Morogh / Ironforge",
-              "provenance": "kb:leveling-weapons@2026-09-26"
+              "provenance": "foreverdb:item-279895@2026-10-16"
             },
             {
               "name": "Rhahk'Zor's Hammer",
@@ -124,11 +124,11 @@
           "weapons": [
             {
               "name": "Smite's Mighty Hammer",
-              "level": 20,
+              "level": 18,
               "item_id": 7230,
               "icon_id": "inv_hammer_01",
               "source": "Mr. Smite, The Deadmines (Westfall)",
-              "provenance": "kb:leveling-weapons@2026-09-26"
+              "provenance": "foreverdb:item-7230@2026-10-16"
             },
             {
               "name": "Cruel Barb",

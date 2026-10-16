@@ -32,3 +32,15 @@
 
 - Mail/plate(40) like the paladin, so the **paladin's verified Blacksmithing set is reused wholesale** with the warrior insignias (Alliance 18854, Horde 18834 — verified) at 24–30.
 - Availability: A 7/11/11 · H 7/11/11.
+
+
+## Alignment fix (2026-10-16)
+
+Three pre-Track-C weapon levels were realigned to ForeverDB's client data
+(`/item/<id>`, verified 2026-10-16):
+
+- Heavy Copper Maul (6214): level 12 → **11** (requires level 11, per ForeverDB).
+- Smite's Mighty Hammer (7230): level 20 → **18** (requires level 18; also the
+  Deadmines codex loot row, cross-consistent).
+- Ironforge Greathammer (279895): level 14 → **1** (ForeverDB lists no level
+  requirement — new in Forever, usable from level 1).

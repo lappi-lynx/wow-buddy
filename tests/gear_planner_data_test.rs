@@ -28,9 +28,21 @@ fn test_unknown_class_is_empty_not_panic() {
 fn test_warrior_weapon_path_from_kb() {
     let data = GearPlannerData::load_embedded();
     let band = data.band_for_level("warrior", Faction::Alliance, 20).unwrap();
-    let weapon = band.weapons.iter().find(|w| w.level == 20).unwrap();
+    let weapon = band.weapons.iter().find(|w| w.item_id == Some(7230)).unwrap();
     assert_eq!(weapon.name, "Smite's Mighty Hammer");
-    assert_eq!(weapon.item_id, Some(7230));
+    // ForeverDB (client data): requires level 18 — aligned 2026-10-16
+    assert_eq!(weapon.level, 18);
+
+    // The two 12–16 weapons realigned in the same pass:
+    let early = data.band_for_level("warrior", Faction::Alliance, 14).unwrap();
+    let maul = early.weapons.iter().find(|w| w.item_id == Some(6214)).unwrap();
+    assert_eq!(maul.level, 11); // Heavy Copper Maul — requires level 11
+    let greathammer = early
+        .weapons
+        .iter()
+        .find(|w| w.item_id == Some(279895))
+        .unwrap();
+    assert_eq!(greathammer.level, 1); // Ironforge Greathammer — no level requirement
 }
 
 #[test]

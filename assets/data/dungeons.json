@@ -55,7 +55,7 @@
           "note": {
             "text_en": "Boss 1 · Cleave 90° front cone ~9s — face him away; adds join.",
             "text_ru": "Босс 1 · Cleave конусом ~9 сек — разворачивайте от группы; есть подмога.",
-            "text_fi": "Pomo 1 · Cleave 90° kaari ~9 s — käännä poispäin; lisät liittyvät."
+            "text_fi": "Pomo 1 · Cleave 90° kaari ~9 s — käännä se poispäin ryhmästä; ota lisät kiinni."
           }
         },
         {
@@ -310,7 +310,7 @@
           "note": {
             "text_en": "Boss 2 · no ability data in the client yet (Beta, may change).",
             "text_ru": "Босс 2 · данных о способностях в клиенте пока нет (бета, может измениться).",
-            "text_fi": "Pomo 2 · ei kykyjen tietoja asiakkaassa vielä (beta, voi muuttua)."
+            "text_fi": "Pomo 2 · asiakkaassa ei ole vielä kykyjen tietoja (beta, voi muuttua)."
           }
         },
         {
@@ -493,7 +493,7 @@
           "note": {
             "text_en": "Ravagers, Vipers, Shamblers, Dreadfangs — a corrupted dream (quest: Deviate Eradication).",
             "text_ru": "Разорители, гадюки, шаркуны, ужасоклыки — искажённый сон (задание «Deviate Eradication»).",
-            "text_fi": "Raiderit, kyyt, kaivajat — turmeltunut uni (tehtävä Deviate Eradication)."
+            "text_fi": "raiderit, kyyt, laahustajat ja kauhuhampaat — turmeltunut uni (tehtävä Deviate Eradication)."
           }
         },
         {
@@ -571,7 +571,7 @@
           "note": {
             "text_en": "Boss 5 · Chained Bolt arcs to up to 3 targets — interrupt it.",
             "text_ru": "Босс 5 · Chained Bolt отскакивает до 3 целей — прерывайте.",
-            "text_fi": "Pomo 5 · Chained Bolt kimmokkeena 3 kohteeseen — keskeytä."
+            "text_fi": "Pomo 5 · Chained Bolt kimpoaa kolmeen kohteeseen — keskeytä."
           }
         },
         {
@@ -597,7 +597,7 @@
           "note": {
             "text_en": "Boss 7 · Grasping Vines: knock-down + immobilize (ranged stay >10 yd).",
             "text_ru": "Босс 7 · Grasping Vines: сбивает с ног и обездвиживает (дальним >10 м).",
-            "text_fi": "Pomo 7 · Grasping Vines: kaato ja liikkumattomuus (kauko >10 jaardia)."
+            "text_fi": "Pomo 7 · Grasping Vines: kaataa maahan ja estää liikkumisen (kauko >10 jaardia)."
           }
         },
         {
@@ -776,7 +776,7 @@
         "text": {
           "text_en": "Average 19+ for a 5-man",
           "text_ru": "Средний уровень 19+ для группы из 5",
-          "text_fi": "Keskiarvo taso 19+ viiden hengen ryhmälle"
+          "text_fi": "Keskiarvo taso 19+ viidelle"
         },
         "verified": false,
         "source_id": "kb"
@@ -925,7 +925,7 @@
         {
           "text": {
             "text_en": "No summoning stone — the group walks through Westfall to the entrance (nearest flight point: Sentinel Hill).",
-            "text_ru": "Камня встречи нет — группа идёт через Западный край ко входу (ближайшая точка полёта: Сентябрьский холм).",
+            "text_ru": "Камня встречи нет — группа идёт через Западный край ко входу (ближайшая точка полёта: Сторожевой холм).",
             "text_fi": "Kokouskiveä ei ole — ryhmä kävelee Westfallin kautta sisäänkäynnille (lähin lentopiste: Sentinel Hill)."
           },
           "verified": true
@@ -933,7 +933,7 @@
         {
           "text": {
             "text_en": "A mixed-level group loses XP fast: a level 25 with level 20s earns very little per kill (dev podcast) — run with a tight level band.",
-            "text_ru": "Смешанная по уровням группа быстро теряет опыт: 25-й уровень с двадцатыми получает очень мало за убийство (подкаст разработчиков) — идите плотным диапазоном уровней.",
+            "text_ru": "Смешанная по уровням группа теряет опыт: если в группе есть 25-й уровень вместе с 20-ми, младшие получают за убийство совсем мало (подкаст разработчиков) — идите плотным диапазоном уровней.",
             "text_fi": "Sekatasoryhmä menettää XP:tä nopeasti: tason 25 hahmo tasojen 20 seurassa saa hyvin vähän per tappo (kehittäjäpodcast) — pelatkaa tiiviillä tasovälillä."
           },
           "verified": true
@@ -941,7 +941,7 @@
         {
           "text": {
             "text_en": "New Deadmines items exist in the client but aren't player-confirmed yet (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — their drops may change.",
-            "text_ru": "Новые предметы Deadmines есть в клиенте, но ещё не подтверждены игроками (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — их дроп может измениться.",
+            "text_ru": "В клиенте уже есть новые предметы Deadmines, но игроки их ещё не подтвердили (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — их дроп может измениться.",
             "text_fi": "Uudet Deadmines-esineet ovat asiakkaassa, mutta pelaajat eivät ole vahvistaneet niitä (Ogre Loincloth, Bandsaw Wristbands, Goblin Hammer) — niiden pudotukset voivat muuttua."
           },
           "verified": true
@@ -1086,7 +1086,7 @@
           "note": {
             "text_en": "Bleak Worgs, Slavering Worgs and Lupine Horrors — summoned mid-fight by Wolf Master Nandos.",
             "text_ru": "Мрачные и слюнявые ворги и лютые ужасы — призываются в бою Мастером волков Нандосом.",
-            "text_fi": "Bleak Worgit, Slavering Worgit ja Lupine Horrorsit — Nandosin kesken taistelun kutsumia."
+            "text_fi": "Bleak Worgit, Slavering Worgit ja Lupine Horrorsit — Nandos kutsuu niitä kesken taistelun."
           }
         },
         {
@@ -1112,7 +1112,7 @@
           "note": {
             "text_en": "Boss 1 · Soul Drain immobilizes the tank ~every 25s — dispel the magic.",
             "text_ru": "Босс 1 · Soul Drain обездвиживает танка каждые ~25 сек — снимайте магию.",
-            "text_fi": "Pomo 1 · Soul Drain liikuttaa tankkia ~25 s välein — puhdista taika."
+            "text_fi": "Pomo 1 · Soul Drain juurruttaa tankin paikoilleen ~25 s välein — puhdista taika."
           }
         },
         {
@@ -1203,7 +1203,7 @@
           "note": {
             "text_en": "Boss 8 · Void Bolt on the tank (~4s) · Thundershock (5 yd) · Arugal's Curse turns a player into a Glutton — CC them.",
             "text_ru": "Босс 8 · Void Bolt в танка (~4 сек) · Thundershock (5 м) · проклятие Аругала превращает игрока в обжору — держите его под контролем.",
-            "text_fi": "Pomo 8 · Void Bolt tankkiin (~4 s) · Thundershock (5 jaardia) · Arugalin kirous muuttaa pelaajan ahmiksi — hallitse häntä."
+            "text_fi": "Pomo 8 · Void Bolt tankkiin (~4 s) · Thundershock (5 jaardia) · Arugalin kirous muuttaa pelaajan ahmatiksi — hallitse häntä."
           }
         }
       ],
@@ -1220,7 +1220,7 @@
           "text": {
             "text_en": "The bracket moved: Forever lists Shadowfang Keep as 20–30 (classic was 18–25).",
             "text_ru": "Диапазон изменился: в Forever Shadowfang Keep — 20–30 (в классике было 18–25).",
-            "text_fi": "Haarukka muuttui: Foreverissä SFK on 20–30 (classicissa 18–25)."
+            "text_fi": "Tasohaarukka muuttui: Foreverissä SFK on 20–30 (classicissa 18–25)."
           },
           "verified": true
         },
@@ -1228,14 +1228,14 @@
           "text": {
             "text_en": "Arugal's Curse turns a party member into a Shadowfang Glutton — crowd-control them, don't kill them.",
             "text_ru": "Проклятие Аругала превращает члена группы в обжору — держите его под контролем, не убивайте.",
-            "text_fi": "Arugalin kirous muuttaa ryhmäläisen ahmiksi — hallitse, älä tapa."
+            "text_fi": "Arugalin kirous muuttaa ryhmäläisen ahmatiksi — hallitse, älä tapa."
           },
           "verified": false
         },
         {
           "text": {
             "text_en": "Arugal is tied to the Tome of Dalaran chain that leads to a secret boss in the City of Dalaran (beta notes).",
-            "text_ru": "Аругал связан с цепочкой Tome of Dalaran, ведущей к секретному боссу в Городе Даларан (бета-заметки).",
+            "text_ru": "Аругал связан с цепочкой Tome of Dalaran, ведущей к секретному боссу в городе Даларан (бета-заметки).",
             "text_fi": "Arugal liittyy Tome of Dalaran -ketjuun, joka johtaa salaisen pomon Dalaraniin (betamuistiinpanot)."
           },
           "verified": true

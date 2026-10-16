@@ -130,38 +130,6 @@ pub fn DungeonCodexView(
                     }
                 }
 
-                // Watch out — per-dungeon warnings
-                if !codex.watch_out.is_empty() {
-                    div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
-                        h3 { class: "text-xs font-bold uppercase tracking-wider text-amber-300",
-                            "{i18n_svc.t(\"ui_codex_watch_out\", lang)}"
-                        }
-                        for (i, w) in codex.watch_out.iter().enumerate() {
-                            p { key: "{i}", class: "text-xs sm:text-sm text-slate-300",
-                                "⚠️ {w.text.get(lang)}"
-                                if !w.verified {
-                                    span { class: "text-xs text-amber-400/80", " · {i18n_svc.t(\"ui_beta_may_change\", lang)}" }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Prep — potions, bag slots (stats row above) and buffs
-                if let Some(prep) = codex.prep.as_ref() {
-                    div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
-                        h3 { class: "text-xs font-bold uppercase tracking-wider text-amber-300",
-                            "{i18n_svc.t(\"ui_codex_prep\", lang)}"
-                        }
-                        if let Some(potions) = prep.potions.as_ref() {
-                            p { class: "text-xs sm:text-sm text-slate-300", "🧪 {potions.get(lang)}" }
-                        }
-                        for buff in prep.buffs.iter() {
-                            p { key: "{buff.text_en}", class: "text-xs sm:text-sm text-slate-300", "✨ {buff.get(lang)}" }
-                        }
-                    }
-                }
-
                 // Loot — top blue drops with icons; tap for the source popover
                 if !codex.loot.is_empty() {
                     div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
@@ -193,6 +161,38 @@ pub fn DungeonCodexView(
                                         }
                                         span { class: "text-[10px] font-bold uppercase tracking-wider text-amber-400/90 text-right", "{entry.source}" }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Prep — potions, bag slots (stats row above) and buffs
+                if let Some(prep) = codex.prep.as_ref() {
+                    div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
+                        h3 { class: "text-xs font-bold uppercase tracking-wider text-amber-300",
+                            "{i18n_svc.t(\"ui_codex_prep\", lang)}"
+                        }
+                        if let Some(potions) = prep.potions.as_ref() {
+                            p { class: "text-xs sm:text-sm text-slate-300", "🧪 {potions.get(lang)}" }
+                        }
+                        for buff in prep.buffs.iter() {
+                            p { key: "{buff.text_en}", class: "text-xs sm:text-sm text-slate-300", "✨ {buff.get(lang)}" }
+                        }
+                    }
+                }
+
+                // Watch out — per-dungeon warnings
+                if !codex.watch_out.is_empty() {
+                    div { class: "w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col space-y-2",
+                        h3 { class: "text-xs font-bold uppercase tracking-wider text-amber-300",
+                            "{i18n_svc.t(\"ui_codex_watch_out\", lang)}"
+                        }
+                        for (i, w) in codex.watch_out.iter().enumerate() {
+                            p { key: "{i}", class: "text-xs sm:text-sm text-slate-300",
+                                "⚠️ {w.text.get(lang)}"
+                                if !w.verified {
+                                    span { class: "text-xs text-amber-400/80", " · {i18n_svc.t(\"ui_beta_may_change\", lang)}" }
                                 }
                             }
                         }
