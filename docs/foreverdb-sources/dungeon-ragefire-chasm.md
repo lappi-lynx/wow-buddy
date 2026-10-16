@@ -14,3 +14,10 @@ Pull 2026-10-16 (curl, client-datamined).
 - Unconfirmed new items: Trogg Scepter, Barbaric Crossbow, Searing Dagger,
   Chasm Walkers (client clues; "worth it for" lists Trogg Scepter for Holy Priest).
 - Clear times: not enough completed runs recorded yet.
+
+## Review fix (2026-10-16)
+
+- **Dwarven Hatchet (2073) was swapped out of the loot cut**: ForeverDB returns it
+  as Uncommon (green), not Rare, so it missed the "top blue drops" criterion.
+  **Chanting Blade (14151)** replaces it — ForeverDB confirms Rare, One-Hand
+  Dagger, ilvl 18, req 13, 20% from Jergosh (client data).

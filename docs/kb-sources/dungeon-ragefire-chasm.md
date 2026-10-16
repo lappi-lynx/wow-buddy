@@ -13,3 +13,10 @@ KB session `a33f9deb` (2026-10-16, shared with The Hall of Thanes).
 - Boss order/abilities + loot rates: ForeverDB (Oggleflint, Taragaman, Jergosh, Bazzalan);
   6 changed + 6 new items per the Wowhead changelog.
 - Shipped loot rows are the WoW-Forever-confirmed drops from the per-boss tables.
+
+## Review fix (2026-10-16)
+
+- **Dwarven Hatchet (2073) was swapped out of the loot cut**: ForeverDB returns it
+  as Uncommon (green), not Rare, so it missed the "top blue drops" criterion.
+  **Chanting Blade (14151)** replaces it — ForeverDB confirms Rare, One-Hand
+  Dagger, ilvl 18, req 13, 20% from Jergosh (client data).

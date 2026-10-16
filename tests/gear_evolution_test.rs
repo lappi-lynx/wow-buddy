@@ -53,7 +53,7 @@ fn dots_merge_bands_and_anchors() {
         .filter(|d| d.kind == DotKind::SetChange)
         .map(|d| d.level)
         .collect();
-    assert_eq!(set, vec![12, 20, 24, 30, 40, 60]); // 20 dedups with the tier anchor
+    assert_eq!(set, vec![12, 20, 24, 30, 40, 60]); // band starts 12/20/24/30 plus the anchors 40/60
     let ms: Vec<u8> = dots
         .iter()
         .filter(|d| d.kind == DotKind::Milestone)

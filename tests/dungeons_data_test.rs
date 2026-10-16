@@ -1,6 +1,7 @@
 use std::collections::BTreeSet;
 
 use wow_buddy::assets::registry::{AssetRegistry, ICON_FALLBACK};
+use wow_buddy::models::class_tips::LocalizedText;
 use wow_buddy::models::dungeon::DungeonsData;
 
 #[test]
@@ -92,5 +93,56 @@ fn all_dungeons_content_complete() {
         assert!(d.watch_out.len() >= 3, "{}: watch_out {}", d.id, d.watch_out.len());
         assert!(d.prep.is_some(), "{}: no prep", d.id);
         assert!(d.loot.len() >= 3, "{}: loot {}", d.id, d.loot.len());
+    }
+}
+
+#[test]
+fn every_artifact_path_exists() {
+    let data = DungeonsData::load_embedded();
+    for d in data.dungeons.iter() {
+        for (key, src) in d.sources.iter() {
+            assert!(
+                std::path::Path::new(&src.path).exists(),
+                "{}: source {key} points at missing {}",
+                d.id,
+                src.path
+            );
+        }
+    }
+}
+
+fn assert_no_cjk(what: &str, t: &LocalizedText) {
+    if t.text_ru
+        .chars()
+        .any(|c| ('\u{4E00}'..='\u{9FFF}').contains(&c))
+    {
+        panic!("{what}: CJK leaked into the Russian text: {}", t.text_ru);
+    }
+}
+
+#[test]
+fn russian_text_contains_no_cjk() {
+    let data = DungeonsData::load_embedded();
+    for d in data.dungeons.iter() {
+        if let Some(rec) = d.recommended_avg_level.as_ref() {
+            assert_no_cjk(&d.id, &rec.text);
+        }
+        for m in d.mobs.iter() {
+            assert_no_cjk(&format!("{}/{}", d.id, m.name), &m.kind);
+            if let Some(note) = m.note.as_ref() {
+                assert_no_cjk(&format!("{}/{}", d.id, m.name), note);
+            }
+        }
+        for w in d.watch_out.iter() {
+            assert_no_cjk(&d.id, &w.text);
+        }
+        if let Some(p) = d.prep.as_ref() {
+            if let Some(potions) = p.potions.as_ref() {
+                assert_no_cjk(&d.id, potions);
+            }
+            for b in p.buffs.iter() {
+                assert_no_cjk(&d.id, b);
+            }
+        }
     }
 }

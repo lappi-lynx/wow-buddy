@@ -110,7 +110,7 @@
         {
           "text": {
             "text_en": "Every boss brings adds: Shaman + Trogg on Oggleflint, two Cultists on Jergosh — CC or burn them fast.",
-            "text_ru": "Каждый босс приводит подмогу: шаман и трогг у Огглефлинта, два культиста у Джергоша — control или убивайте быстро.",
+            "text_ru": "Каждый босс приводит подмогу: шаман и трогг у Огглефлинта, два культиста у Джергоша — держите под контролем или убивайте быстро.",
             "text_fi": "Jokainen pomo tuo lisät: shamaani + troggi Oggleflintilla, kaksi kultistia Jergoshilla — hallitse tai tapa nopeasti."
           },
           "verified": false
@@ -177,11 +177,11 @@
           "verified": true
         },
         {
-          "item_id": 2073,
-          "name": "Dwarven Hatchet",
-          "icon_id": "inv_axe_04",
-          "slot": "One-Hand Axe",
-          "source": "Taragaman · seen in WoW Forever",
+          "item_id": 14151,
+          "name": "Chanting Blade",
+          "icon_id": "inv_weapon_shortblade_25",
+          "slot": "One-Hand Dagger",
+          "source": "Jergosh · 20% (classic data)",
           "verified": true
         },
         {
@@ -609,7 +609,7 @@
           },
           "note": {
             "text_en": "Boss 8 · Thundercrack stun (20 yd) · Terrify ~21s · Naralex's Nightmare: CC the taken player, don't kill them.",
-            "text_ru": "Босс 8 · оглушение Thundercrack (20 м) · Terrify ~21 сек · Naralex's Nightmare:控制 схваченного игрока, не убивайте его.",
+            "text_ru": "Босс 8 · оглушение Thundercrack (20 м) · Terrify ~21 сек · Naralex's Nightmare: держите схваченного игрока под контролем, не убивайте его.",
             "text_fi": "Pomo 8 · Thundercrack-tainnutus (20 jaardia) · Terrify ~21 s · Naralex's Nightmare: hallitse vallattu pelaaja, älä tapa."
           }
         }
@@ -1202,7 +1202,7 @@
           },
           "note": {
             "text_en": "Boss 8 · Void Bolt on the tank (~4s) · Thundershock (5 yd) · Arugal's Curse turns a player into a Glutton — CC them.",
-            "text_ru": "Босс 8 · Void Bolt в танка (~4 сек) · Thundershock (5 м) · проклятие Аругала превращает игрока в обжору —控制 его.",
+            "text_ru": "Босс 8 · Void Bolt в танка (~4 сек) · Thundershock (5 м) · проклятие Аругала превращает игрока в обжору — держите его под контролем.",
             "text_fi": "Pomo 8 · Void Bolt tankkiin (~4 s) · Thundershock (5 jaardia) · Arugalin kirous muuttaa pelaajan ahmiksi — hallitse häntä."
           }
         }
@@ -1227,7 +1227,7 @@
         {
           "text": {
             "text_en": "Arugal's Curse turns a party member into a Shadowfang Glutton — crowd-control them, don't kill them.",
-            "text_ru": "Проклятие Аругала превращает члена группы в обжору —控制 его, не убивайте.",
+            "text_ru": "Проклятие Аругала превращает члена группы в обжору — держите его под контролем, не убивайте.",
             "text_fi": "Arugalin kirous muuttaa ryhmäläisen ahmiksi — hallitse, älä tapa."
           },
           "verified": false
