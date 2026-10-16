@@ -180,9 +180,15 @@ pub fn RaceSelectorView(
                                             button {
                                                 key: "{cls_id}",
                                                 class: "{badge_class}",
-                                                onclick: move |_| {
-                                                    if let Some(cls_obj) = game_data.read().get_class_by_id(&cls_id) {
-                                                        selected_class.set(Some(cls_obj.clone()));
+                                                onclick: {
+                                                    let race_for_nav = race_obj.clone();
+                                                    move |_| {
+                                                        if let Some(cls_obj) = game_data.read().get_class_by_id(&cls_id) {
+                                                            selected_class.set(Some(cls_obj.clone()));
+                                                        }
+                                                        // Clicking a class is the confirmation: race + class
+                                                        // are enough to move on (no extra Choose button).
+                                                        on_race_selected.call(race_for_nav.clone());
                                                     }
                                                 },
                                                 if art.starts_with("data:") {
@@ -195,14 +201,6 @@ pub fn RaceSelectorView(
                                         }
                                     }
                                 }
-                            }
-                        }
-
-                        div { class: "pt-4 flex justify-end",
-                            button {
-                                class: "px-6 py-2.5 rounded-xl font-bold text-sm uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-black shadow-lg transition-transform active:scale-95 cursor-pointer",
-                                onclick: move |_| on_race_selected.call(race_obj.clone()),
-                                "{i18n.read().t(\"btn_choose\", lang)} {active_name}"
                             }
                         }
                     }
