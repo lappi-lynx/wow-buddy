@@ -207,6 +207,13 @@ pub fn DressingRoomView(
                     }
                 }
 
+                // Entry point into the Gear Planner
+                button {
+                    class: "w-full max-w-lg py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
+                    onclick: move |_| on_open_gear_planner.call(()),
+                    "{i18n.read().t(\"ui_open_gear_planner\", lang)}"
+                }
+
                 // Novice Card (Difficulty & 3 Core Spells)
                 div { class: "w-full max-w-lg bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col space-y-4",
                     div { class: "flex justify-between items-center border-b border-slate-800 pb-3",
@@ -294,13 +301,6 @@ pub fn DressingRoomView(
                     class: class.clone(),
                     current_lang: current_lang,
                     i18n: i18n,
-                }
-
-                // Entry point into the Gear Planner
-                button {
-                    class: "w-full max-w-lg py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
-                    onclick: move |_| on_open_gear_planner.call(()),
-                    "{i18n.read().t(\"ui_open_gear_planner\", lang)}"
                 }
 
                 // New Player Tips for the selected class (all specs at once)
