@@ -1,0 +1,19 @@
+{
+  "source": "https://www.wowhead.com/forever/zone=16919/the-hall-of-thanes",
+  "pulled": "2026-10-16",
+  "note": "Forever zone changelog table for the custom dungeon: every listed item is new in Forever. The source column on this page shows the item type, not a boss — no player-confirmed drop mapping exists yet (ForeverDB lists the same items as client clues).",
+  "items": [
+    { "id": 270227, "change": "New", "name": "Ephemeral Choker", "ilvl": 13, "req": null, "source": "Amulet" },
+    { "id": 270228, "change": "New", "name": "Golemheart Stave", "ilvl": 13, "req": null, "source": "Staff" },
+    { "id": 270229, "change": "New", "name": "Treads of the Protector Golem", "ilvl": 13, "req": null, "source": "Mail Armor" },
+    { "id": 270230, "change": "New", "name": "Kindlegem Girdle", "ilvl": 13, "req": null, "source": "Mail Armor" },
+    { "id": 270231, "change": "New", "name": "Flamefist Grips", "ilvl": 13, "req": null, "source": "Leather Armor" },
+    { "id": 270256, "change": "New", "name": "Durgen's Crescent Axe", "ilvl": 13, "req": null, "source": "One-Handed Axe" },
+    { "id": 270260, "change": "New", "name": "Direhammer Leggings", "ilvl": 13, "req": null, "source": "Leather Armor" },
+    { "id": 270261, "change": "New", "name": "Robes of the Disgraced Thane", "ilvl": 13, "req": null, "source": "Cloth Armor" },
+    { "id": 271095, "change": "New", "name": "Fang of Magmatus", "ilvl": 13, "req": null, "source": "Dagger" },
+    { "id": 271096, "change": "New", "name": "Aetherwisp Bracers", "ilvl": 13, "req": null, "source": "Cloth Armor" },
+    { "id": 271097, "change": "New", "name": "Spiritwraith Drape", "ilvl": 13, "req": null, "source": "Cloak" },
+    { "id": 271098, "change": "New", "name": "Golemguard Chest", "ilvl": 13, "req": null, "source": "Mail Armor" }
+  ]
+}

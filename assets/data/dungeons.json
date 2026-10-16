@@ -251,11 +251,182 @@
       "max_level": 20,
       "estimated_time": "30–45",
       "bag_slots_required": 10,
-      "recommended_avg_level": null,
-      "mobs": [],
-      "watch_out": [],
-      "prep": null,
-      "loot": [],
+      "recommended_avg_level": {
+        "text": {
+          "text_en": "Average 18+ for a 5-man",
+          "text_ru": "Средний уровень 18+ для группы из 5",
+          "text_fi": "Keskiarvo taso 18+ viidelle"
+        },
+        "verified": false,
+        "source_id": "kb"
+      },
+      "mobs": [
+        {
+          "name": "Dark Iron dwarves",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "They broke into Ironforge to steal relics from the War of the Three Hammers (beta lore).",
+            "text_ru": "Они ворвались в Стальгорн за реликвиями Войны Трёх Молотов (бета-лор).",
+            "text_fi": "He murtautuivat Ironforgeen varastamaan reliikkejä Kolmen vasaran sodasta (betalore)."
+          }
+        },
+        {
+          "name": "Golems & fire elementals",
+          "kind": {
+            "text_en": "Mob",
+            "text_ru": "Мобы",
+            "text_fi": "Mobit"
+          },
+          "note": {
+            "text_en": "Stone golems and fire elementals guard the halls (beta reports).",
+            "text_ru": "Каменные големы и элементали огня охраняют залы (бета-отчёты).",
+            "text_fi": "Kivigolemit ja tulielementaalit vartioivat saleja (betaraportit)."
+          }
+        },
+        {
+          "name": "Faldrim Anvilmar",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 1 · Anvilmar's Curse: −20% attack/cast speed, poison/bleed immunity (likely, by name only).",
+            "text_ru": "Босс 1 · Anvilmar's Curse: −20% скорости атаки/каста, иммунитет к яду/кровотечению («вероятно» по имени).",
+            "text_fi": "Pomo 1 · Anvilmar's Curse: −20 % hyökkäys-/loitsunopeus, myrkky-/verenvuotoimmuniteetti (todennäköinen)."
+          }
+        },
+        {
+          "name": "Infurnus",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 2 · no ability data in the client yet (Beta, may change).",
+            "text_ru": "Босс 2 · данных о способностях в клиенте пока нет (бета, может измениться).",
+            "text_fi": "Pomo 2 · ei kykyjen tietoja asiakkaassa vielä (beta, voi muuttua)."
+          }
+        },
+        {
+          "name": "Plunder",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 3 · no ability data in the client yet (Beta, may change).",
+            "text_ru": "Босс 3 · данных о способностях в клиенте пока нет (бета, может измениться).",
+            "text_fi": "Pomo 3 · ei kykyjen tietoja vielä (beta, voi muuttua)."
+          }
+        },
+        {
+          "name": "Durgen Dirgehammer",
+          "kind": {
+            "text_en": "Boss",
+            "text_ru": "Босс",
+            "text_fi": "Pomo"
+          },
+          "note": {
+            "text_en": "Boss 4 · no ability data yet; his head is a quest item.",
+            "text_ru": "Босс 4 · данных пока нет; его голова — предмет задания.",
+            "text_fi": "Pomo 4 · ei tietoja vielä; hänen päänsä on tehtäväesine."
+          }
+        }
+      ],
+      "watch_out": [
+        {
+          "text": {
+            "text_en": "Forever dungeon XP: quest XP inside dungeons -50%, creature XP +20% (Oct 8 beta build).",
+            "text_ru": "Опыт в подземельях Forever: опыт за задания -50%, опыт за убийства +20% (бета-сборка 8 октября).",
+            "text_fi": "Foreverin luolasto-XP: tehtävä-XP -50 %, tappo-XP +20 % (8. lokakuun betaversio)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "New in Forever — no classic guide applies; everything is client data or player reports (Beta, may change).",
+            "text_ru": "Новое в Forever — классические гайды неприменимы; всё это данные клиента или отчёты игроков (бета).",
+            "text_fi": "Uusi Foreverissä — classic-oppaat eivät päde; kaikki on asiakasdataa tai pelaajaraportteja (beta)."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "All known loot is client clues, not player-confirmed yet.",
+            "text_ru": "Вся известная добыча — подсказки из клиента, игроками пока не подтверждена.",
+            "text_fi": "Kaikki tunnettu saalis on asiakasvihjeitä, ei vielä pelaajavahvistettuja."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Getting there: enter Ironforge, head for the throne room and take the passage on the left down into the old halls — some shortcut drops land in lava.",
+            "text_ru": "Как добраться: войдите в Стальгорн, идите к тронному залу и сверните в левый проход вниз, в старые залы — некоторые «срезки» приводят в лаву.",
+            "text_fi": "Perille: mene Ironforgeen, kohti valtaistuinsalia ja vasemmalta käytävästä alas vanhoihin saleihin — osa oikoreiteistä päättyy laavaan."
+          },
+          "verified": true
+        },
+        {
+          "text": {
+            "text_en": "Horde groups must cross into Alliance territory to reach the entrance.",
+            "text_ru": "Группам Орды придётся пройти по территории Альянса ко входу.",
+            "text_fi": "Horden ryhmien on ylitettävä Allianssin alue päästäkseen sisäänkäynnille."
+          },
+          "verified": true
+        }
+      ],
+      "prep": {
+        "potions": {
+          "text_en": "Carry health and mana potions.",
+          "text_ru": "Возьмите зелья здоровья и маны.",
+          "text_fi": "Ota terveys- ja manapulloja."
+        },
+        "buffs": [
+          {
+            "text_en": "Profession campfire: health, mana and secondary stats.",
+            "text_ru": "Профессиональный костёр: здоровье, мана и вторичные характеристики.",
+            "text_fi": "Ammattikunnan nuotio: terveys, mana ja toissijaiset."
+          },
+          {
+            "text_en": "Cooked food: +5% XP in Forever (see Fishing & Cooking).",
+            "text_ru": "Приготовленная еда: +5% опыта в Forever (см. «Рыбалка и кулинария»).",
+            "text_fi": "Valmistettu ruoka: +5 % XP (katso Kalastus & kokkaus)."
+          }
+        ]
+      },
+      "loot": [
+        {
+          "item_id": 270256,
+          "name": "Durgen's Crescent Axe",
+          "icon_id": "inv_axe_18",
+          "slot": "One-Hand Axe",
+          "source": "client clue — unconfirmed",
+          "verified": false
+        },
+        {
+          "item_id": 270260,
+          "name": "Direhammer Leggings",
+          "icon_id": "inv_pants_06",
+          "slot": "Legs",
+          "source": "client clue — unconfirmed",
+          "verified": false
+        },
+        {
+          "item_id": 270261,
+          "name": "Robes of the Disgraced Thane",
+          "icon_id": "inv_chest_cloth_09",
+          "slot": "Chest",
+          "source": "client clue — unconfirmed",
+          "verified": false
+        }
+      ],
       "sources": {
         "kb": {
           "kind": "kb",
