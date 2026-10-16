@@ -205,3 +205,34 @@ When testing manually, verify the following core features:
   per-band floor (6/10/10), every present slot carries id+icon+provenance, and
   every slot icon resolves to embedded bytes. Per-class artifacts:
   `docs/kb-sources/gear-<class>.md`.
+
+### 12. Codex content, slider dots, readiness & pets (cycle 2)
+- Slider: the card reads **"Gear at level N"** and the 1–60 track carries
+  progress dots — amber where the recommended set changes (band starts plus
+  40/60), blue at the leveling milestones (≥10); filled once behind the level,
+  hollow ahead, with a legend row. Both the dressing room and the gear planner
+  use the shared `LevelSlider`; dragging never triggers the back swipe.
+- Readiness card: compact pills — the whole pill toggles, checked fills green,
+  no checkbox glyphs; meter + 3/8 badge, level input, in-range dungeons and the
+  expanding "How do I find a group?" text.
+- Dungeon codex: every dungeon (Ragefire Chasm, Hall of Thanes, Wailing
+  Caverns, Deadmines, Shadowfang Keep) carries a **Recommended group** chip
+  (Beta), **What's inside** (bosses with verified order/levels and their key
+  abilities), **Watch out** (sourced hazards; Forever dungeon XP rules in all
+  five), **Prep** and the **top loot rows** (icons, boss + rate; tap for the
+  source popover). Ranges follow ForeverDB (e.g. Deadmines 17–26, Shadowfang
+  Keep 20–30).
+- Dressing room: the **Open Gear Planner** button sits above the "{Class}
+  Starter Guide" card; the pets card now shows **only for hunter and warlock**
+  (other classes no longer see an empty-feeling pets entry).
+- Pets page: three big first-pick cards, an always-visible 4-column family grid
+  (2 on phones) with type/diet lines, notable-pet and minion rows with icons —
+  21 embedded Blizzard family/summon icons.
+- Gates: `tests/dungeons_data_test.rs` (schema, loot icons, all-five-complete),
+  `tests/pets_test.rs` (every family/minion icon resolves),
+  `tests/asset_urls_test.rs` (no wowhead/zamimg URLs in `src/`), plus the
+  extended `tests/gear_evolution_test.rs` dot cases.
+- Content sources: `docs/kb-sources/dungeon-<id>.md`,
+  `docs/wowhead-sources/dungeon-<id>.json`,
+  `docs/foreverdb-sources/dungeon-<id>.md`, and
+  `docs/wowhead-sources/pets-family-icons.json`.

@@ -10,7 +10,7 @@ pub const REQUIRED_DISCLAIMER_LINE: &str = "World of Warcraft® and Blizzard Ent
 /// English: they are the license statements themselves).
 const SOURCE_LINES: &[&str] = &[
     "World of Warcraft Fan Site Kit and community re-hosts — race, class and faction artwork; © Blizzard Entertainment, free non-commercial fan use.",
-    "Blizzard item icons, spell icons, race and class portraits via the wow.zamimg.com CDN; © Blizzard Entertainment.",
+    "Blizzard item icons, spell icons, race and class portraits via the Blizzard fan-art CDN (full hosts in assets/ATTRIBUTION.md); © Blizzard Entertainment.",
     "Game content verified against the project knowledge base; sources are recorded under docs/kb-sources/ and docs/wowhead-sources/.",
 ];
 
