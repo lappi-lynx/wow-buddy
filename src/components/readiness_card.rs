@@ -6,7 +6,8 @@ use crate::models::readiness::{readiness_level, ReadinessData, ReadinessLevel};
 use dioxus::prelude::*;
 
 /// Pre-dungeon checklist with a Not-ready/Almost/Ready meter, a level-aware
-/// dungeon list, and the (KB-verified) how-to-find-a-group card.
+/// dungeon list, and the (KB-verified) how-to-find-a-group card — compact:
+/// dense pills, the whole pill toggles, no checkbox glyphs.
 #[component]
 pub fn ReadinessCard(current_lang: Signal<Language>, i18n: Signal<I18nService>) -> Element {
     let lang = *current_lang.read();
@@ -14,6 +15,7 @@ pub fn ReadinessCard(current_lang: Signal<Language>, i18n: Signal<I18nService>) 
     let data = ReadinessData::load_embedded();
     let mut checked = use_signal(HashSet::<String>::new);
     let mut level = use_signal(|| 15u8);
+    let mut group_open = use_signal(|| false);
 
     let total = data.items.len() as u8;
     let checked_count = checked.read().len() as u8;
@@ -32,33 +34,45 @@ pub fn ReadinessCard(current_lang: Signal<Language>, i18n: Signal<I18nService>) 
             "bg-emerald-500/15 border-emerald-500/40 text-emerald-300",
         ),
     };
+    let meter_pct = if total == 0 {
+        0.0
+    } else {
+        checked_count as f32 / total as f32 * 100.0
+    };
     let level_now = *level.read();
     let in_range = dungeons_for_level(level_now);
 
     rsx! {
-        div { class: "w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col space-y-4",
-            div { class: "flex justify-between items-center border-b border-slate-800 pb-3",
+        div { class: "w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl flex flex-col space-y-3",
+            div { class: "flex justify-between items-center",
                 h3 { class: "text-base sm:text-lg font-bold text-amber-300",
-                    "{i18n_svc.t(\"ui_readiness_title\", lang)}"
+                    "✦ {i18n_svc.t(\"ui_readiness_title\", lang)}"
                 }
                 span { class: "text-xs px-2.5 py-1 rounded-full border font-bold {state_class}",
                     "{checked_count} / {total} · {i18n_svc.t(state_key, lang)}"
                 }
             }
 
-            div { class: "grid grid-cols-1 sm:grid-cols-2 gap-2",
+            div {
+                style: "height: 4px; background: #1e293b; border-radius: 9999px; overflow: hidden;",
+                div {
+                    style: "height: 4px; width: {meter_pct:.0}%; background: #f59e0b; border-radius: 9999px;",
+                }
+            }
+
+            div { class: "flex flex-wrap gap-1.5",
                 for item in data.items.iter() {
                     {
                         let is_checked = checked.read().contains(&item.id);
-                        let row_class = if is_checked {
-                            "flex items-center space-x-2 px-3 py-2 rounded-xl border text-xs font-semibold bg-emerald-950/40 border-emerald-800/60 text-slate-200 cursor-pointer"
+                        let pill_class = if is_checked {
+                            "px-3 py-1.5 rounded-full border text-xs font-semibold bg-emerald-950/40 border-emerald-800/60 text-slate-200 cursor-pointer"
                         } else {
-                            "flex items-center space-x-2 px-3 py-2 rounded-xl border text-xs font-semibold bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200 cursor-pointer"
+                            "px-3 py-1.5 rounded-full border text-xs font-semibold bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200 cursor-pointer"
                         };
                         rsx! {
                             button {
                                 key: "{item.id}",
-                                class: "{row_class}",
+                                class: "{pill_class}",
                                 onclick: {
                                     let id = item.id.clone();
                                     move |_| {
@@ -70,15 +84,14 @@ pub fn ReadinessCard(current_lang: Signal<Language>, i18n: Signal<I18nService>) 
                                         }
                                     }
                                 },
-                                span { if is_checked { "☑" } else { "☐" } }
-                                span { "{item.text.get(lang)}" }
+                                "{item.text.get(lang)}"
                             }
                         }
                     }
                 }
             }
 
-            div { class: "flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-1",
+            div { class: "flex flex-col sm:flex-row sm:items-center gap-2 pt-1",
                 label { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider",
                     "{i18n_svc.t(\"ui_level_range\", lang)}"
                 }
@@ -94,23 +107,33 @@ pub fn ReadinessCard(current_lang: Signal<Language>, i18n: Signal<I18nService>) 
                         }
                     },
                 }
-                div { class: "flex flex-wrap gap-2",
+                div { class: "flex flex-wrap items-center gap-2",
                     for dungeon in in_range.iter() {
                         span { key: "{dungeon.id}", class: "text-xs px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200",
                             "{dungeon.icon} {dungeon.name} ({dungeon.level_range})"
                         }
                     }
+                    button {
+                        class: "text-xs font-semibold text-blue-300 hover:text-blue-200 cursor-pointer",
+                        onclick: move |_| {
+                            let open = *group_open.read();
+                            group_open.set(!open);
+                        },
+                        "❔ {i18n_svc.t(\"ui_find_group\", lang)}"
+                    }
                 }
             }
 
-            div { class: "p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex flex-col space-y-1",
-                span { class: "text-xs font-bold text-amber-300",
-                    "{i18n_svc.t(\"ui_find_group\", lang)}"
-                }
-                p { class: "text-xs text-slate-300", "{data.group_finding.text.get(lang)}" }
-                if !data.group_finding.verified {
-                    span { class: "text-[10px] font-bold uppercase tracking-wider text-amber-400/80",
-                        "{i18n_svc.t(\"ui_beta_may_change\", lang)}"
+            if *group_open.read() {
+                div { class: "p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex flex-col space-y-1",
+                    span { class: "text-xs font-bold text-amber-300",
+                        "{i18n_svc.t(\"ui_find_group\", lang)}"
+                    }
+                    p { class: "text-xs text-slate-300", "{data.group_finding.text.get(lang)}" }
+                    if !data.group_finding.verified {
+                        span { class: "text-[10px] font-bold uppercase tracking-wider text-amber-400/80",
+                            "{i18n_svc.t(\"ui_beta_may_change\", lang)}"
+                        }
                     }
                 }
             }
