@@ -219,3 +219,13 @@ fn card_kind_and_sections_cover_the_real_classes() {
     assert_eq!(pets_sections(PetCardKind::Warlock), &[PetsSection::Minions, PetsSection::Companion]);
     assert_eq!(pets_sections(PetCardKind::Companion), &[PetsSection::Companion]);
 }
+
+#[test]
+fn pets_card_only_shows_where_the_guide_has_content() {
+    use wow_buddy::models::pets::shows_pets_card;
+    assert!(shows_pets_card(pet_card_kind("hunter")));
+    assert!(shows_pets_card(pet_card_kind("warlock")));
+    for class in ["warrior", "priest", "shaman", "mage", "rogue", "druid", "paladin"] {
+        assert!(!shows_pets_card(pet_card_kind(class)), "{class} should hide the entry");
+    }
+}

@@ -117,6 +117,12 @@ pub fn pet_card_kind(class_id: &str) -> PetCardKind {
     }
 }
 
+/// Whether the dressing-room pets card should render at all: hidden where the
+/// guide would only be the companion teaser (the `/pets` deep link still works).
+pub fn shows_pets_card(kind: PetCardKind) -> bool {
+    kind != PetCardKind::Companion
+}
+
 /// The sections the `/pets` view renders, in order, for a card kind.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum PetsSection {
