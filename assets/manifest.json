@@ -1115,6 +1115,60 @@
       "kind": "spell_icon",
       "source": "Blizzard spell icon (spell_shadow_summonvoidwalker, hunter pet family / warlock summon) via wow.zamimg.com CDN, imported 2026-10-16 — © Blizzard Entertainment",
       "license": "blizzard-fan-use"
+    },
+    "inv_fishingpole_02": {
+      "path": "assets/icons/items/inv_fishingpole_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_fishingpole_02, Fishing Pole (item 6256)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_orb_03": {
+      "path": "assets/icons/items/inv_misc_orb_03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_orb_03, Shiny Bauble (item 6529)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_monstertail_03": {
+      "path": "assets/icons/items/inv_misc_monstertail_03.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_monstertail_03, Nightcrawlers (item 6530)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_gem_variety_02": {
+      "path": "assets/icons/items/inv_misc_gem_variety_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_gem_variety_02, Bright Baubles (item 6532)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_book_08": {
+      "path": "assets/icons/items/inv_misc_book_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_book_08, Expert Fishing - The Bass and You (item 16083)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_monsterhead_02": {
+      "path": "assets/icons/items/inv_misc_monsterhead_02.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_monsterhead_02, Feralas Ahi (item 16967)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_fish_32": {
+      "path": "assets/icons/items/inv_misc_fish_32.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_fish_32, Sar'theris Striker (item 16968)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_fish_08": {
+      "path": "assets/icons/items/inv_misc_fish_08.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_fish_08, Savage Coast Blue Sailfin (item 16969)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
+    },
+    "inv_misc_fish_21": {
+      "path": "assets/icons/items/inv_misc_fish_21.webp",
+      "kind": "item_icon",
+      "source": "Blizzard item icon (inv_misc_fish_21, Misty Reed Mahi Mahi (item 16970)) via wow.zamimg.com CDN, imported 2026-10-19 — © Blizzard Entertainment",
+      "license": "blizzard-fan-use"
     }
   }
 }

@@ -65,5 +65,5 @@ Starting zones:
 | Expert Fishing – The Bass and You | 16083 | inv_misc_book_08 |
 | Feralas Ahi | 16967 | inv_misc_monsterhead_02 |
 | Sar'theris Striker | 16968 | inv_misc_fish_32 |
-| Savage Coast Blue Sailfin | 16969 | (confirmed on the Wowhead item page, see below) |
+| Savage Coast Blue Sailfin | 16969 | inv_misc_fish_08 (Wowhead item page/search row) |
 | Misty Reed Mahi Mahi | 16970 | inv_misc_fish_21 |
