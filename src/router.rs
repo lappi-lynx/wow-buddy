@@ -80,6 +80,7 @@ pub fn App() -> Element {
             NavTab::DressingRoom => current_route.set(Route::DressingRoom {}),
             NavTab::Progression => current_route.set(Route::ProgressionGuide {}),
             NavTab::Dungeons => current_route.set(Route::DungeonCodex {}),
+            NavTab::Fishing => current_route.set(Route::Fishing {}),
         }
     };
 
@@ -87,6 +88,7 @@ pub fn App() -> Element {
         Route::DressingRoom {} => Some(NavTab::DressingRoom),
         Route::ProgressionGuide {} => Some(NavTab::Progression),
         Route::DungeonCodex {} => Some(NavTab::Dungeons),
+        Route::Fishing {} => Some(NavTab::Fishing),
         _ => None,
     };
 

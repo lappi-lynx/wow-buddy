@@ -184,7 +184,7 @@ When testing manually, verify the following core features:
 
 ### 10. Guides (Track E)
 - Progression guide: the Legacy preset picker (Balanced / Explorer / Coin Saver tabs; "Copy allocation"
-  copies the summary — the app never changes your in-game build), the Fishing & Cooking card
+  copies the summary — the app never changes your in-game build), the Fishing guide card
   (3 KB-verified steps + the Forever-only +5% XP from cooked food), and the Comfort tips card
   (one random tip of the ten per visit — no arrows, no counter).
 - Dungeon codex: the readiness card — tick the 8 checklist items to move the
@@ -238,7 +238,7 @@ When testing manually, verify the following core features:
   `docs/wowhead-sources/pets-family-icons.json`.
 
 ### 13. Beginner's fishing guide (`/fishing`)
-- Progression screen → the Fishing & Cooking card → "Read the full 1–300 guide →".
+- Progression screen → the Fishing guide card → "Read the full 1–300 guide →".
 - How to fish: seven steps including the hammer-button gotcha (professions window, not the
   Fishing tab); the shop strip shows the pole and lures with icons.
 - Trainers: capital cities grouped by faction; starting zones include the Skyborne pair on

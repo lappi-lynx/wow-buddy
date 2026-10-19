@@ -181,7 +181,7 @@ pub fn ProgressionGuideView(
                     i18n: i18n,
                 }
 
-                // Fishing & Cooking (Track E)
+                // Fishing guide (Track E)
                 {
                     let fishing = crate::models::fishing::FishingData::load_embedded();
                     rsx! {

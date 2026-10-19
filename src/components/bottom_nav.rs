@@ -6,6 +6,7 @@ pub enum NavTab {
     DressingRoom,
     Progression,
     Dungeons,
+    Fishing,
 }
 
 #[component]
@@ -26,6 +27,7 @@ pub fn BottomNav(
         ),
         (NavTab::Progression, "🧭", i18n_svc.t("nav_progression", lang)),
         (NavTab::Dungeons, "🏰", i18n_svc.t("nav_dungeons", lang)),
+        (NavTab::Fishing, "🎣", i18n_svc.t("nav_fishing", lang)),
     ];
 
     rsx! {
