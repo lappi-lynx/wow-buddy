@@ -36,5 +36,14 @@
     "fi": "Valmista saaliisi ruoanlaitolla — ruoka palauttaa terveyttä ja manaa taisteluiden välissä, ja Foreverissä valmistettu ruoka antaa +5% kokemusta."
   },
   "verified": true,
-  "provenance": "kb:e136eda7@2026-10-15"
+  "provenance": "kb:e136eda7@2026-10-15",
+  "sources": {},
+  "shop": [],
+  "basics": [],
+  "trainers": {
+    "capitals": [],
+    "starting_zones": []
+  },
+  "tiers": [],
+  "artisan_quest": null
 }
