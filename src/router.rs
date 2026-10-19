@@ -4,8 +4,8 @@ use crate::models::{Faction, GameData, RaceInfo};
 use crate::selection::{effective_class_id, SelectionState};
 use crate::styles::APP_CSS;
 use crate::views::{
-    AboutView, DressingRoomView, DungeonCodexView, FactionPickerView, GearPlannerView, PetsView,
-    ProgressionGuideView, RaceSelectorView,
+    AboutView, DressingRoomView, DungeonCodexView, FactionPickerView, FishingGuideView,
+    GearPlannerView, PetsView, ProgressionGuideView, RaceSelectorView,
 };
 use dioxus::prelude::*;
 use dioxus::document as document;
@@ -26,6 +26,8 @@ pub enum Route {
     GearPlanner {},
     #[route("/pets")]
     Pets {},
+    #[route("/fishing")]
+    Fishing {},
     #[route("/about")]
     About {},
 }
@@ -41,6 +43,7 @@ fn back_route(route: &Route) -> Option<Route> {
         Route::DungeonCodex {} => Some(Route::ProgressionGuide {}),
         Route::GearPlanner {} => Some(Route::DressingRoom {}),
         Route::Pets {} => Some(Route::DressingRoom {}),
+        Route::Fishing {} => Some(Route::ProgressionGuide {}),
         Route::About {} => Some(Route::FactionPicker {}),
     }
 }
@@ -221,6 +224,7 @@ pub fn App() -> Element {
                         race: race_obj.clone(),
                         faction: *selected_faction.read(),
                         on_continue_to_dungeons: move |_| current_route.set(Route::DungeonCodex {}),
+                        on_open_fishing: move |_| current_route.set(Route::Fishing {}),
                     }
                 },
                 Route::DungeonCodex {} => rsx! {
@@ -242,6 +246,12 @@ pub fn App() -> Element {
                         current_lang: current_lang,
                         i18n: i18n,
                         class: class_obj.clone(),
+                    }
+                },
+                Route::Fishing {} => rsx! {
+                    FishingGuideView {
+                        current_lang: current_lang,
+                        i18n: i18n,
                     }
                 },
                 Route::About {} => rsx! {
@@ -297,6 +307,11 @@ fn GearPlanner() -> Element {
 
 #[component]
 fn Pets() -> Element {
+    rsx! { div {} }
+}
+
+#[component]
+fn Fishing() -> Element {
     rsx! { div {} }
 }
 

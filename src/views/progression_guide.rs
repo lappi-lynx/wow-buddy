@@ -27,6 +27,7 @@ pub fn ProgressionGuideView(
     race: RaceInfo,
     faction: Faction,
     on_continue_to_dungeons: EventHandler<()>,
+    on_open_fishing: EventHandler<()>,
 ) -> Element {
     let lang = *current_lang.read();
     let i18n_svc = i18n.read();
@@ -196,6 +197,11 @@ pub fn ProgressionGuideView(
                                 }
                             }
                             p { class: "text-xs text-slate-400", "{fishing.tie_in.get(lang)}" }
+                            button {
+                                class: "w-full py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-amber-200 border border-amber-500/30 shadow-lg transition-transform active:scale-95 cursor-pointer",
+                                onclick: move |_| on_open_fishing.call(()),
+                                "{i18n_svc.t(\"ui_fishing_open_guide\", lang)}"
+                            }
                         }
                     }
                 }

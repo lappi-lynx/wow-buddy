@@ -42,7 +42,7 @@ pub fn GearPlannerView(
     faction: Faction,
     class_id: String,
 ) -> Element {
-    let mut level = use_signal(|| 20u8);
+    let level = use_signal(|| 20u8);
     let mut view_faction = use_signal(|| faction);
     let mut popover = use_signal(|| None::<PopoverData>);
 
