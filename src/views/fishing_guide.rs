@@ -32,6 +32,11 @@ pub fn FishingGuideView(current_lang: Signal<Language>, i18n: Signal<I18nService
                         h3 { class: "text-xs font-semibold text-slate-400 uppercase tracking-wider",
                             "{i18n_svc.t(\"ui_fishing_basics\", lang)}"
                         }
+                        if data.basics.iter().any(|s| !s.verified) {
+                            span { class: "text-[10px] font-bold uppercase tracking-wider text-amber-400/80",
+                                "{i18n_svc.t(\"ui_beta_may_change\", lang)}"
+                            }
+                        }
                         for (i, step) in data.basics.iter().enumerate() {
                             div { key: "{step.id}", class: "flex items-start space-x-3 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80",
                                 span { class: "shrink-0 w-6 h-6 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold flex items-center justify-center",
@@ -92,7 +97,19 @@ pub fn FishingGuideView(current_lang: Signal<Language>, i18n: Signal<I18nService
                                         span { class: "text-xs font-bold text-slate-200", "{zone.trainer} · {zone.zone}" }
                                         span { class: "text-[10px] text-slate-400", "{zone.where_hint}" }
                                     }
-                                    span { class: "text-[10px] font-bold uppercase tracking-wider text-slate-400", "{zone.races}" }
+                                    div { class: "flex items-center gap-2",
+                                        if zone.faction.as_deref() == Some("horde") {
+                                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300",
+                                                "{i18n_svc.t(\"horde_name\", lang)}"
+                                            }
+                                        }
+                                        if zone.faction.as_deref() == Some("alliance") {
+                                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300",
+                                                "{i18n_svc.t(\"alliance_name\", lang)}"
+                                            }
+                                        }
+                                        span { class: "text-[10px] font-bold uppercase tracking-wider text-slate-400", "{zone.races}" }
+                                    }
                                 }
                             }
                         }
@@ -111,7 +128,14 @@ pub fn FishingGuideView(current_lang: Signal<Language>, i18n: Signal<I18nService
                                     span { class: "text-sm sm:text-base font-extrabold text-amber-300",
                                         "{i18n_svc.t_with(\"ui_fishing_skill\", lang, &[(\"min\", tier.min.to_string()), (\"max\", tier.max.to_string())])}"
                                     }
-                                    span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "{tier.id}" }
+                                    div { class: "flex items-center gap-2",
+                                        span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "{tier.id}" }
+                                        if !tier.verified {
+                                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300",
+                                                "{i18n_svc.t(\"ui_beta_may_change\", lang)}"
+                                            }
+                                        }
+                                    }
                                 }
                                 p { class: "text-xs sm:text-sm text-slate-300", "{tier.learn.get(lang)}" }
                                 if !tier.zones.is_empty() {
@@ -155,9 +179,9 @@ pub fn FishingGuideView(current_lang: Signal<Language>, i18n: Signal<I18nService
                         }
                         div { class: "flex flex-wrap items-center gap-2",
                             span { class: "text-sm font-bold text-amber-300", "{q.npc}" }
-                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "Quest {q.quest_id}" }
-                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "Lvl {q.min_level}" }
-                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "Fishing {q.min_skill}" }
+                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "{i18n_svc.t(\"ui_fishing_quest_label\", lang)} {q.quest_id}" }
+                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "{i18n_svc.t(\"ui_fishing_level_short\", lang)} {q.min_level}" }
+                            span { class: "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400", "{i18n_svc.t(\"ui_fishing_skill_short\", lang)} {q.min_skill}" }
                         }
                         p { class: "text-xs sm:text-sm text-slate-300", "{q.text.get(lang)}" }
                         span { class: "text-[10px] font-bold uppercase tracking-wider text-slate-500",

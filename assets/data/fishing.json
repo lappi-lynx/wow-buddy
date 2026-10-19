@@ -56,11 +56,31 @@
     }
   },
   "shop": [
-    { "name": "Fishing Pole", "item_id": 6256, "icon_id": "inv_fishingpole_02" },
-    { "name": "Shiny Bauble", "item_id": 6529, "icon_id": "inv_misc_orb_03" },
-    { "name": "Nightcrawlers", "item_id": 6530, "icon_id": "inv_misc_monstertail_03" },
-    { "name": "Bright Baubles", "item_id": 6532, "icon_id": "inv_misc_gem_variety_02" },
-    { "name": "Expert Fishing - The Bass and You", "item_id": 16083, "icon_id": "inv_misc_book_08" }
+    {
+      "name": "Fishing Pole",
+      "item_id": 6256,
+      "icon_id": "inv_fishingpole_02"
+    },
+    {
+      "name": "Shiny Bauble",
+      "item_id": 6529,
+      "icon_id": "inv_misc_orb_03"
+    },
+    {
+      "name": "Nightcrawlers",
+      "item_id": 6530,
+      "icon_id": "inv_misc_monstertail_03"
+    },
+    {
+      "name": "Bright Baubles",
+      "item_id": 6532,
+      "icon_id": "inv_misc_gem_variety_02"
+    },
+    {
+      "name": "Expert Fishing - The Bass and You",
+      "item_id": 16083,
+      "icon_id": "inv_misc_book_08"
+    }
   ],
   "basics": [
     {
@@ -70,7 +90,7 @@
         "ru": "Откройте окно профессий и нажмите кнопку-молоток справа — не вкладку «Рыбалка» (она лишь показывает навык).",
         "fi": "Avaa ammattien ikkuna ja napsauta oikealla olevaa vasara-painiketta — älä Kalastus-välilehteä (se vain näyttää taidon)."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -80,7 +100,7 @@
         "ru": "Перетащите кнопку «Рыбалка» из блока рыбалки на панель действий.",
         "fi": "Vedä Kalastus-painike kalastuslaatikosta toimintopalkkiisi."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -90,7 +110,7 @@
         "ru": "Возьмите удочку в правую руку и нанесите приманку — для начала Shiny Bauble.",
         "fi": "Varusta onki pääkäteen ja lisää viehe — aluksi Shiny Bauble."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -100,7 +120,7 @@
         "ru": "Встаньте перед водой в любой стартовой зоне и нажмите кнопку рыбалки.",
         "fi": "Seiso kalastettavan veden edessä missä tahansa aloitusalueella ja paina kalastuspainiketta."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -110,7 +130,7 @@
         "ru": "Наведите курсор на поплавок; когда он всплеснёт, кликните правой кнопкой, чтобы вытащить улов.",
         "fi": "Vie hiiri kohon päälle; kun se pulahtaa, napsauta sitä oikealla painikkeella."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -120,7 +140,7 @@
         "ru": "Рыбачьте, пока навык не достигнет 75.",
         "fi": "Kalasta, kunnes taitosi on 75."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -130,27 +150,118 @@
         "ru": "Стартовые зоны — не столицы: начинать лучше в открытом мире.",
         "fi": "Aloitusalueet eivät ole pääkaupunkeja — aloita avoimessa maailmassa."
       },
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     }
   ],
   "trainers": {
     "capitals": [
-      { "faction": "horde", "city": "Orgrimmar", "trainer": "Lumak", "verified": true, "source_id": "wowhead" },
-      { "faction": "horde", "city": "Undercity", "trainer": "Armand Cromwell", "verified": true, "source_id": "wowhead" },
-      { "faction": "horde", "city": "Thunder Bluff", "trainer": "Kah Mistrunner", "verified": true, "source_id": "wowhead" },
-      { "faction": "alliance", "city": "Stormwind", "trainer": "Arnold Leland", "verified": true, "source_id": "wowhead" },
-      { "faction": "alliance", "city": "Ironforge", "trainer": "Grimnur Stonebrand", "verified": true, "source_id": "wowhead" },
-      { "faction": "alliance", "city": "Darnassus", "trainer": "Astaia", "verified": true, "source_id": "wowhead" }
+      {
+        "faction": "horde",
+        "city": "Orgrimmar",
+        "trainer": "Lumak",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "faction": "horde",
+        "city": "Undercity",
+        "trainer": "Armand Cromwell",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "faction": "horde",
+        "city": "Thunder Bluff",
+        "trainer": "Kah Mistrunner",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "faction": "alliance",
+        "city": "Stormwind",
+        "trainer": "Arnold Leland",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "faction": "alliance",
+        "city": "Ironforge",
+        "trainer": "Grimnur Stonebrand",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "faction": "alliance",
+        "city": "Darnassus",
+        "trainer": "Astaia",
+        "verified": true,
+        "source_id": "wowhead"
+      }
     ],
     "starting_zones": [
-      { "races": "Orc, Troll", "zone": "Durotar", "trainer": "Lau'Tiki", "where_hint": "coast at Sen'jin Village", "faction": "horde", "verified": true, "source_id": "wowhead" },
-      { "races": "Tauren", "zone": "Mulgore", "trainer": "Uthan Stillwater", "where_hint": "Stonebull Lake, by Bloodhoof Village", "faction": "horde", "verified": true, "source_id": "wowhead" },
-      { "races": "Undead", "zone": "Tirisfal Glades", "trainer": "Clyde Kellen", "where_hint": "Brightwater Lake, east of Brill", "faction": "horde", "verified": true, "source_id": "wowhead" },
-      { "races": "Human", "zone": "Elwynn Forest", "trainer": "Lee Brown", "where_hint": "Crystal Lake, east of Goldshire", "faction": "alliance", "verified": true, "source_id": "wowhead" },
-      { "races": "Dwarf, Gnome", "zone": "Dun Morogh", "trainer": "Paxton Ganter", "where_hint": "Iceflow Lake, toward Gnomeregan", "faction": "alliance", "verified": true, "source_id": "wowhead" },
-      { "races": "Night Elf", "zone": "Teldrassil", "trainer": "Androl Oakhand", "where_hint": "Rut'theran Village shore, by the dock", "faction": "alliance", "verified": true, "source_id": "wowhead" },
-      { "races": "Skyborne", "zone": "Zephras Isle", "trainer": "Baelann Swiftcurrent / Fenn Fairweather", "where_hint": "Valanaar / Shen'dar Village", "verified": true, "source_id": "wowhead" }
+      {
+        "races": "Orc, Troll",
+        "zone": "Durotar",
+        "trainer": "Lau'Tiki",
+        "where_hint": "coast at Sen'jin Village",
+        "faction": "horde",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Tauren",
+        "zone": "Mulgore",
+        "trainer": "Uthan Stillwater",
+        "where_hint": "Stonebull Lake, by Bloodhoof Village",
+        "faction": "horde",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Undead",
+        "zone": "Tirisfal Glades",
+        "trainer": "Clyde Kellen",
+        "where_hint": "Brightwater Lake, east of Brill",
+        "faction": "horde",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Human",
+        "zone": "Elwynn Forest",
+        "trainer": "Lee Brown",
+        "where_hint": "Crystal Lake, east of Goldshire",
+        "faction": "alliance",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Dwarf, Gnome",
+        "zone": "Dun Morogh",
+        "trainer": "Paxton Ganter",
+        "where_hint": "Iceflow Lake, toward Gnomeregan",
+        "faction": "alliance",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Night Elf",
+        "zone": "Teldrassil",
+        "trainer": "Androl Oakhand",
+        "where_hint": "Rut'theran Village shore, by the dock",
+        "faction": "alliance",
+        "verified": true,
+        "source_id": "wowhead"
+      },
+      {
+        "races": "Skyborne",
+        "zone": "Zephras Isle",
+        "trainer": "Baelann Swiftcurrent / Fenn Fairweather",
+        "where_hint": "Valanaar / Shen'dar Village",
+        "verified": true,
+        "source_id": "wowhead"
+      }
     ]
   },
   "tiers": [
@@ -163,16 +274,28 @@
         "ru": "Выучите ученическую рыбалку у любого тренера — в текущей бете нет требования по уровню.",
         "fi": "Opi oppilaskalastus miltä tahansa kouluttajalta — nykyisessä betassa ei ole tasovaatimusta."
       },
-      "zones": ["Dun Morogh", "Durotar", "Elwynn Forest", "Mulgore", "Teldrassil", "Tirisfal Glades", "Zephras Isle"],
+      "zones": [
+        "Dun Morogh",
+        "Durotar",
+        "Elwynn Forest",
+        "Mulgore",
+        "Teldrassil",
+        "Tirisfal Glades",
+        "Zephras Isle"
+      ],
       "tips": {
         "en": "Buy the pole and lures from a Fishing or Trade Supply vendor before you start.",
         "ru": "Купите удочку и приманки у торговца рыболовными или хозяйственными товарами заранее.",
         "fi": "Osta onki ja vieheet kalastus- tai kauppatavaroiden myyjältä ennen aloitusta."
       },
       "lures": [
-        { "name": "Shiny Bauble", "item_id": 6529, "icon_id": "inv_misc_orb_03" }
+        {
+          "name": "Shiny Bauble",
+          "item_id": 6529,
+          "icon_id": "inv_misc_orb_03"
+        }
       ],
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -184,16 +307,32 @@
         "ru": "Выучите рыбалку подмастерья у любого тренера (навык 50, 10-й уровень).",
         "fi": "Opi kisällikalastus miltä tahansa kouluttajalta (taito 50, taso 10)."
       },
-      "zones": ["Darnassus", "Stormwind", "Orgrimmar", "Undercity", "Thunder Bluff", "The Barrens", "Darkshore", "Ironforge", "Loch Modan", "Silverpine Forest", "Westfall"],
+      "zones": [
+        "Darnassus",
+        "Stormwind",
+        "Orgrimmar",
+        "Undercity",
+        "Thunder Bluff",
+        "The Barrens",
+        "Darkshore",
+        "Ironforge",
+        "Loch Modan",
+        "Silverpine Forest",
+        "Westfall"
+      ],
       "tips": {
         "en": "Use Nightcrawlers when fish start getting away — they need Fishing 50.",
         "ru": "Используйте Nightcrawlers, когда рыба начинает срываться — нужен навык 50.",
         "fi": "Käytä Nightcrawlersia, kun kalat alkavat karata — vaatii taidon 50."
       },
       "lures": [
-        { "name": "Nightcrawlers", "item_id": 6530, "icon_id": "inv_misc_monstertail_03" }
+        {
+          "name": "Nightcrawlers",
+          "item_id": 6530,
+          "icon_id": "inv_misc_monstertail_03"
+        }
       ],
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -205,16 +344,28 @@
         "ru": "Выучите экспертную рыбалку по книге «Expert Fishing - The Bass and You» (20-й уровень, навык 125) — у Old Man Heming в Бутби-Бэй или на аукционе.",
         "fi": "Opi asiantuntijakalastus kirjasta \"Expert Fishing - The Bass and You\" (taso 20, taito 125) — Old Man Heming Booty Bayssä tai huutokaupasta."
       },
-      "zones": ["Dustwallow Marsh", "Alterac Mountains", "Arathi Highlands", "Desolace", "Stranglethorn Vale", "Swamp of Sorrows", "Thousand Needles"],
+      "zones": [
+        "Dustwallow Marsh",
+        "Alterac Mountains",
+        "Arathi Highlands",
+        "Desolace",
+        "Stranglethorn Vale",
+        "Swamp of Sorrows",
+        "Thousand Needles"
+      ],
       "tips": {
         "en": "Fish Dustwallow Marsh — the Artisan quest starts there.",
         "ru": "Рыбачьте в Dustwallow Marsh — там начинается задание на искусного рыболова.",
         "fi": "Kalasta Dustwallow Marshissa — mestarikalastuksen tehtävä alkaa siellä."
       },
       "lures": [
-        { "name": "Bright Baubles", "item_id": 6532, "icon_id": "inv_misc_gem_variety_02" }
+        {
+          "name": "Bright Baubles",
+          "item_id": 6532,
+          "icon_id": "inv_misc_gem_variety_02"
+        }
       ],
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     },
     {
@@ -226,16 +377,27 @@
         "ru": "Пройдите задание искусного рыболова у Nat Pagle в Dustwallow Marsh (35-й уровень, навык 225).",
         "fi": "Suorita mestarikalastuksen tehtävä Nat Paglelta Dustwallow Marshissa (taso 35, taito 225)."
       },
-      "zones": ["Felwood", "Feralas", "The Hinterlands", "Tanaris", "Un'Goro Crater", "Western Plaguelands"],
+      "zones": [
+        "Felwood",
+        "Feralas",
+        "The Hinterlands",
+        "Tanaris",
+        "Un'Goro Crater",
+        "Western Plaguelands"
+      ],
       "tips": {
         "en": "Bright Baubles are required here — without a lure the fish escape.",
         "ru": "Здесь Bright Baubles обязательны — без приманки рыба срывается.",
         "fi": "Bright Baubles on täällä pakollinen — ilman viehettä kalat karkaavat."
       },
       "lures": [
-        { "name": "Bright Baubles", "item_id": 6532, "icon_id": "inv_misc_gem_variety_02" }
+        {
+          "name": "Bright Baubles",
+          "item_id": 6532,
+          "icon_id": "inv_misc_gem_variety_02"
+        }
       ],
-      "verified": true,
+      "verified": false,
       "source_id": "wow_professions"
     }
   ],
@@ -250,10 +412,26 @@
       "fi": "Pyydä neljä tehtäväkalaa neljältä alueelta: Feralas, Swamp of Sorrows, Desolace ja Stranglethorn Vale."
     },
     "fish": [
-      { "name": "Feralas Ahi", "item_id": 16967, "icon_id": "inv_misc_monsterhead_02" },
-      { "name": "Misty Reed Mahi Mahi", "item_id": 16970, "icon_id": "inv_misc_fish_21" },
-      { "name": "Sar'theris Striker", "item_id": 16968, "icon_id": "inv_misc_fish_32" },
-      { "name": "Savage Coast Blue Sailfin", "item_id": 16969, "icon_id": "inv_misc_fish_08" }
+      {
+        "name": "Feralas Ahi",
+        "item_id": 16967,
+        "icon_id": "inv_misc_monsterhead_02"
+      },
+      {
+        "name": "Misty Reed Mahi Mahi",
+        "item_id": 16970,
+        "icon_id": "inv_misc_fish_21"
+      },
+      {
+        "name": "Sar'theris Striker",
+        "item_id": 16968,
+        "icon_id": "inv_misc_fish_32"
+      },
+      {
+        "name": "Savage Coast Blue Sailfin",
+        "item_id": 16969,
+        "icon_id": "inv_misc_fish_08"
+      }
     ],
     "verified": true,
     "source_id": "wow_professions"

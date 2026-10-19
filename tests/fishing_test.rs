@@ -154,3 +154,17 @@ fn the_guide_keeps_the_two_key_facts() {
         "the hammer-button gotcha must ship"
     );
 }
+
+#[test]
+fn single_source_sections_are_beta_flagged() {
+    let d = FishingData::load_embedded();
+    // The basics (incl. the hammer gotcha) and the tier route (zones/lures/tips)
+    // come only from the third-party beta guide → they must ship Beta-flagged.
+    assert!(d.basics.iter().all(|b| !b.verified), "basics must be Beta-flagged");
+    assert!(d.tiers.iter().all(|t| !t.verified), "tiers must be Beta-flagged");
+    // The artisan quest is second-sourced (Wowhead + KB); trainers are Wowhead-verified.
+    assert!(d.artisan_quest.as_ref().map(|q| q.verified).unwrap_or(false));
+    let t = d.trainers.as_ref().expect("trainers");
+    assert!(t.capitals.iter().all(|c| c.verified));
+    assert!(t.starting_zones.iter().all(|s| s.verified));
+}
