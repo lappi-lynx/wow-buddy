@@ -236,3 +236,18 @@ When testing manually, verify the following core features:
   `docs/wowhead-sources/dungeon-<id>.json`,
   `docs/foreverdb-sources/dungeon-<id>.md`, and
   `docs/wowhead-sources/pets-family-icons.json`.
+
+### 13. Beginner's fishing guide (`/fishing`)
+- Progression screen → the Fishing & Cooking card → "Read the full 1–300 guide →".
+- How to fish: seven steps including the hammer-button gotcha (professions window, not the
+  Fishing tab); the shop strip shows the pole and lures with icons.
+- Trainers: capital cities grouped by faction; starting zones include the Skyborne pair on
+  Zephras Isle.
+- Route: four tier cards (1–75 / 75–150 / 150–225 / 225–300) with zones, lure rows and tips;
+  the artisan card shows Nat Pagle, quest 6607 and the four quest fish.
+- The guide carries the Beta marker; back returns to the progression screen via the floating ←.
+- Gates: `tests/fishing_test.rs` (sections, tier chain, sources + paths, item icons,
+  trilingual purity, the hammer fact); sources in `docs/wow-professions-sources/fishing.md`,
+  `docs/foreverdb-sources/fishing.md`, `docs/wowhead-sources/fishing.md`.
+- Narrow-screen check: tier cards and trainer rows reflow without clipping.
+
