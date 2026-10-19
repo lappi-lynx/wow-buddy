@@ -20,3 +20,15 @@
 - The card's three steps: learn at level 5 from a capital/starting-town trainer; main-hand pole with optional bait/lures; cast, watch the bobber, right-click.
 - The tie-in line: cooked food restores health/mana between fights **and grants +5% experience** (the Forever-specific fact — the reason this artifact exists).
 - Not shipped (kept in this artifact): the level-tier skill caps, the Booty Bay book, the Nat Pagle quest, and the cooking-synergy detail — the card stays three steps plus one line.
+
+## Reconciliation with the wow-professions beta guide (2026-10-19)
+
+The Forever-specific wow-professions fishing guide (captured in
+`docs/wow-professions-sources/fishing.md`) now reports that **Apprentice Fishing has no
+level requirement in the current beta** ("so you can learn it on a fresh character") — this
+contradicts the KB's "level 5" claim above. Ruling for the app: ship the beta-current claim
+("no level requirement in the current beta — Beta, may change") in the new guide **and** in
+the existing card's first step, recording both sources. The rest of the KB answer is
+confirmed by the new source (Journeyman at Fishing 50 + level 10, the booty Bay book at
+level 20 + skill 125, the Nat Pagle quest at level 35 + skill 225).
+
