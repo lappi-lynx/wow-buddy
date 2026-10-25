@@ -54,13 +54,14 @@ fn test_skyborne_faction_exclusive_classes() {
 
 #[test]
 fn test_verified_racial_abilities() {
+    // Source: docs/wowhead-sources/racial-updates-2026-10-16.md
     let data = GameData::load_embedded();
     let skyborne = data.get_race_by_id("skyborne").unwrap();
     assert_eq!(skyborne.racial_ability_name, "Walk on Air");
-    assert!(skyborne.racial_ability_desc.contains("2-minute cooldown"));
+    assert!(skyborne.racial_ability_desc.contains("90-second cooldown"));
     let orc = data.get_race_by_id("orc").unwrap();
-    assert_eq!(orc.racial_ability_name, "Axe Specialization");
-    assert!(orc.racial_ability_desc.contains("+1% critical strike"));
+    assert_eq!(orc.racial_ability_name, "Savage");
+    assert!(orc.racial_ability_desc.contains("1% increased critical strike chance"));
     let gnome = data.get_race_by_id("gnome").unwrap();
     assert_eq!(gnome.racial_ability_name, "Expansive Mind");
     assert!(gnome.racial_ability_desc.contains("+5% to primary class resource"));

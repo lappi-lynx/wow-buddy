@@ -21,7 +21,7 @@ cargo run
 cargo test
 ```
 
-The suite currently reports **46 green test binaries** (185 test functions). It covers content
+The suite currently reports **46 green test binaries** (186 test functions). It covers content
 schemas, provenance artifacts, gear coverage, i18n, asset embedding, routing, and navigation. The
 tests do not require a network connection.
 

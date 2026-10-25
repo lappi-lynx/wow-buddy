@@ -183,3 +183,39 @@ fn test_every_class_has_a_kb_source_artifact() {
         );
     }
 }
+
+/// The October 2026 racial update replaced the weapon-specific Human/Orc/Dwarf
+/// crits with flat passives. No tip may keep sending players to swords/axes/maces
+/// for a crit bonus that no longer exists.
+/// Source: docs/wowhead-sources/racial-updates-2026-10-16.md
+#[test]
+fn test_class_tips_do_not_reference_replaced_weapon_specializations() {
+    let t = ClassTipsData::load_embedded();
+    let stale = [
+        "→ swords",
+        "→ axes",
+        "→ maces",
+        "→ мечи",
+        "→ топоры",
+        "→ дробящее",
+        "→ miekat",
+        "→ kirveet",
+        "→ nuijat",
+    ];
+    for (class_id, class) in t.classes.iter() {
+        for spec in class.specs.iter() {
+            for tip in spec.tips.iter() {
+                for lang in [Language::En, Language::Ru, Language::Fi] {
+                    let text = tip.get(lang);
+                    for marker in stale {
+                        assert!(
+                            !text.contains(marker),
+                            "{class_id}/{} keeps stale weapon-racial advice: {marker:?}",
+                            spec.id
+                        );
+                    }
+                }
+            }
+        }
+    }
+}

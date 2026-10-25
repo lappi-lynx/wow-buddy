@@ -81,7 +81,7 @@
         {
           "id": "arms",
           "name_en": "Arms",
-          "provenance": "kb:warrior-arms@2026-10-13 (ForeverDB beta notes, leveling-weapons, racials)",
+          "provenance": "kb:warrior-arms@2026-10-13 (ForeverDB beta notes, leveling-weapons, racials); wowhead:racial-updates@2026-10-16",
           "tips": [
             {
               "text_en": "Rage comes from slow two-handed swings and crits; don't spam Heroic Strike at low Rage — it replaces your next auto-attack and pauses passive Rage generation.",
@@ -94,16 +94,16 @@
               "text_fi": "Vedä 1–2 mobia; Sweeping Strikes ja Cleave hoitavat kaksi, mutta 3+ ennen raskasta platea valuttaa sinut nopeammin kuin keräät Ragea."
             },
             {
-              "text_en": "Take Mining + Blacksmithing for Mail/Plate and sharpening stones, and upgrade slow two-handers (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Two-handers get even better if your race's weapon crit applies (Human → swords, Orc → axes).",
-              "text_ru": "Возьмите Горное дело + Кузнечное дело ради Mail/Plate и точильных камней и обновляйте медленное двуручное (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Двуручное станет ещё лучше, если у вашей расы есть расовый крит на оружие (люди → мечи, орки → топоры).",
-              "text_fi": "Ota Kaivostoiminta + Sepäntyö Mail/Plate-panssariin ja hiomakiviin sekä päivitä hidas 2H-ase (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). 2H-aseet paranevat entisestään, jos rotusi asekriitti osuu (ihminen → miekat, örkki → kirveet)."
+              "text_en": "Take Mining + Blacksmithing for Mail/Plate and sharpening stones, and upgrade slow two-handers (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Two-handers get even better with the new race crit bonuses (Human Ruthless +2% critical strike chance, Orc Savage +1% critical strike chance, Dwarf Earth Fury +2% critical damage and healing).",
+              "text_ru": "Возьмите Горное дело + Кузнечное дело ради Mail/Plate и точильных камней и обновляйте медленное двуручное (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). Двуручное станет ещё лучше с новыми расовыми бонусами к криту (Human Ruthless +2% к шансу критического удара, Orc Savage +1% к шансу критического удара, Dwarf Earth Fury +2% к критическому урону и исцелению).",
+              "text_fi": "Ota Kaivostoiminta + Sepäntyö Mail/Plate-panssariin ja hiomakiviin sekä päivitä hidas 2H-ase (Heavy Copper Maul ~12, Rhahk'Zor's Hammer ~16, Smite's Mighty Hammer ~20). 2H-aseet paranevat entisestään uusilla rotukriiteillä (Human Ruthless +2% kriittisen osuman mahdollisuus, Orc Savage +1% kriittisen osuman mahdollisuus, Dwarf Earth Fury +2% kriittiseen vahinkoon ja parannukseen)."
             }
           ]
         },
         {
           "id": "fury",
           "name_en": "Fury",
-          "provenance": "kb:warrior-fury@2026-10-13 (ForeverDB beta notes, racials)",
+          "provenance": "kb:warrior-fury@2026-10-13 (ForeverDB beta notes, racials); wowhead:racial-updates@2026-10-16",
           "tips": [
             {
               "text_en": "Dual-wielding generates a steady stream of Rage from off-hand hits and crits, and Whirlwind now strikes with both weapons — but the dual-wield miss penalty can leave you Rage-starved.",
@@ -116,9 +116,9 @@
               "text_fi": "Vedä yksi mob kerrallaan: Furyn yhden kohteen damage on erinomainen, mutta usean mobin osumat ilman kilpeä pakottavat syömään."
             },
             {
-              "text_en": "Take Engineering + Mining for dynamite and utility grenades, and equip two high-DPS one-handers — weapon crit racials are flat +% now (Orc → axes, Human → swords, Dwarf → maces).",
-              "text_ru": "Возьмите Инженерное дело + Горное дело ради динамита и гранат и берите два одноручных с высоким DPS — расовые криты на оружие теперь плоские +% (орки → топоры, люди → мечи, дворфы → дробящее).",
-              "text_fi": "Ota Insinöörityö + Kaivostoiminta dynamiittia ja kranaatteja varten sekä kaksi korkean DPS:n yksikätistä — rotujen asekriitit ovat nyt tasaisia +% (örkki → kirveet, ihminen → miekat, kääpiö → nuijat)."
+              "text_en": "Take Engineering + Mining for dynamite and utility grenades, and equip two high-DPS one-handers — crit racials no longer depend on weapon type (Human Ruthless +2% critical strike chance, Orc Savage +1% critical strike chance, Dwarf Earth Fury +2% critical damage and healing).",
+              "text_ru": "Возьмите Инженерное дело + Горное дело ради динамита и гранат и берите два одноручных с высоким DPS — расовые бонусы к криту больше не зависят от оружия (Human Ruthless +2% к шансу критического удара, Orc Savage +1% к шансу критического удара, Dwarf Earth Fury +2% к критическому урону и исцелению).",
+              "text_fi": "Ota Insinöörityö + Kaivostoiminta dynamiittia ja kranaatteja varten sekä kaksi korkean DPS:n yksikätistä — rotukriitit eivät enää riipu aseesta (Human Ruthless +2% kriittisen osuman mahdollisuus, Orc Savage +1% kriittisen osuman mahdollisuus, Dwarf Earth Fury +2% kriittiseen vahinkoon ja parannukseen)."
             }
           ]
         },
@@ -195,7 +195,7 @@
         {
           "id": "retribution",
           "name_en": "Retribution",
-          "provenance": "kb:paladin-retribution@2026-10-13 (ForeverDB hybrid-tax, leveling-weapons, racials)",
+          "provenance": "kb:paladin-retribution@2026-10-13 (ForeverDB hybrid-tax, leveling-weapons, racials); wowhead:racial-updates@2026-10-16",
           "tips": [
             {
               "text_en": "Retribution no longer suffers the old hybrid tax — its damage sits within about 5% of pure damage classes — but casting Judgement and Consecration on cooldown drains mana, so keep your Seal up and auto-attack.",
@@ -208,9 +208,9 @@
               "text_fi": "Pysy 1–2 mobissa: Retributionilla on erinomainen yhden kohteen burst, mutta kolme tai useampi vihollinen pakottaa käyttämään GCD:t ja manan itsehoitoon."
             },
             {
-              "text_en": "Mining + Blacksmithing for two-handers, sharpening stones and Mail/Plate; prioritise slow high-damage two-handers (Giant Mace ~10, Verigan's Fist or Smite's Mighty Hammer ~20, Corpsemaker ~30). These get even better with a race weapon crit (Human → swords, Dwarf → maces).",
-              "text_ru": "Горное дело + Кузнечное дело для двуручного, точильных камней и Mail/Plate; берите медленное двуручное с высоким уроном (Giant Mace ~10, Verigan's Fist или Smite's Mighty Hammer ~20, Corpsemaker ~30). Они станут ещё лучше с расовым критом на оружие (люди → мечи, дворфы → дробящее).",
-              "text_fi": "Kaivostoiminta + Sepäntyö 2H-aseisiin, hiomakiviin ja Mail/Plateen; valitse hidas, korkean damagen 2H (Giant Mace ~10, Verigan's Fist tai Smite's Mighty Hammer ~20, Corpsemaker ~30). Ne paranevat entisestään rotujen asekriitillä (ihminen → miekat, kääpiö → nuijat)."
+              "text_en": "Mining + Blacksmithing for two-handers, sharpening stones and Mail/Plate; prioritise slow high-damage two-handers (Giant Mace ~10, Verigan's Fist or Smite's Mighty Hammer ~20, Corpsemaker ~30). These get even better with the new race crit bonuses (Human Ruthless +2% critical strike chance, Dwarf Earth Fury +2% critical damage and healing).",
+              "text_ru": "Горное дело + Кузнечное дело для двуручного, точильных камней и Mail/Plate; берите медленное двуручное с высоким уроном (Giant Mace ~10, Verigan's Fist или Smite's Mighty Hammer ~20, Corpsemaker ~30). Они станут ещё лучше с новыми расовыми бонусами к криту (Human Ruthless +2% к шансу критического удара, Dwarf Earth Fury +2% к критическому урону и исцелению).",
+              "text_fi": "Kaivostoiminta + Sepäntyö 2H-aseisiin, hiomakiviin ja Mail/Plateen; valitse hidas, korkean damagen 2H (Giant Mace ~10, Verigan's Fist tai Smite's Mighty Hammer ~20, Corpsemaker ~30). Ne paranevat entisestään uusilla rotukriiteillä (Human Ruthless +2% kriittisen osuman mahdollisuus, Dwarf Earth Fury +2% kriittiseen vahinkoon ja parannukseen)."
             }
           ]
         }
@@ -453,7 +453,7 @@
         {
           "id": "enhancement",
           "name_en": "Enhancement",
-          "provenance": "kb:shaman-enhancement@2026-10-13 (racial overview, leveling-weapons)",
+          "provenance": "kb:shaman-enhancement@2026-10-13 (racial overview, leveling-weapons); wowhead:racial-updates@2026-10-16",
           "tips": [
             {
               "text_en": "Mana pays for your imbues (Rockbiter, Flametongue, Windfury Weapon), totems and shocks; don't shock on every cooldown — let auto-attacks and imbue procs carry the damage. The old hybrid tax is gone: Forever hybrid melee lands within ~5% of pure damage specs.",
@@ -466,9 +466,9 @@
               "text_fi": "Enhancement hoitaa mukavasti 1–2 mobia ja voi halkaista kaksi Fire Nova Totemilla tai Magma Totemilla, mutta 3+ pakottaa hätäisiin Healing Waveihin, jotka valuttavat manan heti."
             },
             {
-              "text_en": "Take Mining + Engineering for grenades and dynamite, or Skinning + Leatherworking; use a slow high-damage two-hander (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) or dual-wield 1H axes/maces — a race weapon crit sweetens it (Orc → axes, Dwarf → maces).",
-              "text_ru": "Возьмите Горное дело + Инженерное дело ради гранат и динамита либо Снятие шкур + Кожевничество; носите медленное двуручное с высоким уроном (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) или два одноручных топора/дробящих — расовый крит на оружие добавит им ценности (орки → топоры, дворфы → дробящее).",
-              "text_fi": "Ota Kaivostoiminta + Insinöörityö kranaatteja ja dynamiittia varten tai Nahkominen + Nahkatyö; käytä hidasta, korkean damagen 2H-asetta (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) tai kahta yksikätistä kirvestä/nuijaa — rotujen asekriitti parantaa niitä (örkki → kirveet, kääpiö → nuijat)."
+              "text_en": "Take Mining + Engineering for grenades and dynamite, or Skinning + Leatherworking; use a slow high-damage two-hander (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) or dual-wield 1H axes/maces — the new race crit bonuses sweeten it (Orc Savage +1% critical strike chance, Dwarf Earth Fury +2% critical damage and healing).",
+              "text_ru": "Возьмите Горное дело + Инженерное дело ради гранат и динамита либо Снятие шкур + Кожевничество; носите медленное двуручное с высоким уроном (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) или два одноручных топора/дробящих — расовые бонусы к криту добавят им ценности (Orc Savage +1% к шансу критического удара, Dwarf Earth Fury +2% к критическому урону и исцелению).",
+              "text_fi": "Ota Kaivostoiminta + Insinöörityö kranaatteja ja dynamiittia varten tai Nahkominen + Nahkatyö; käytä hidasta, korkean damagen 2H-asetta (Heavy Copper Maul ~12, Smite's Mighty Hammer ~20, Corpsemaker ~30) tai kahta yksikätistä kirvestä/nuijaa — rotukriitit parantavat niitä (Orc Savage +1% kriittisen osuman mahdollisuus, Dwarf Earth Fury +2% kriittiseen vahinkoon ja parannukseen)."
             }
           ]
         },
@@ -523,7 +523,7 @@
         {
           "id": "fire",
           "name_en": "Fire",
-          "provenance": "kb:mage-fire@2026-10-13 (beta notes, racial overview)",
+          "provenance": "kb:mage-fire@2026-10-13 (beta notes, racial overview); wowhead:racial-updates@2026-10-16",
           "tips": [
             {
               "text_en": "Fireball, Pyroblast and Scorch drain mana fast; Fireball rank growth was adjusted so every new rank is a strict upgrade, and Impact no longer procs from Flamestrike's periodic ticks — open with Fireball, finish with Fire Blast or wand, and drink conjured water between pulls.",
@@ -536,9 +536,9 @@
               "text_fi": "Pysy 1–2 mobissa: Fire kerää paljon threatia eikä sillä ole Frostin passiivisia hidastuksia, joten eristä kohteesi Polymorphilla; 3+ ilman ryhmän joukkokontrollia pakottaa pakenemaan Blinkillä ja Frost Novalla."
             },
             {
-              "text_en": "Choose Tailoring + Enchanting for spell-damage gear like Robes of Arcana, or Mining + Engineering for dynamite and grenades; prioritise Fire Spell Power, Intellect and crit — a race weapon crit helps too (Human → swords, Orc → axes).",
-              "text_ru": "Выберите Портняжное дело + Наложение чар ради вещей на урон заклинаний вроде Robes of Arcana либо Горное дело + Инженерное дело ради динамита и гранат; в приоритете сила заклинаний огня, интеллект и крит — расовый крит на оружие тоже поможет (люди → мечи, орки → топоры).",
-              "text_fi": "Valitse Ompelutyö + Lumous loitsudamage-varusteisiin kuten Robes of Arcana tai Kaivostoiminta + Insinöörityö dynamiittiin ja kranaatteihin; suosi Fire-loitsutehoa, Älykkyyttä ja kriittiä — rotujen asekriitti auttaa myös (ihminen → miekat, örkki → kirveet)."
+              "text_en": "Choose Tailoring + Enchanting for spell-damage gear like Robes of Arcana, or Mining + Engineering for dynamite and grenades; prioritise Fire Spell Power, Intellect and crit — the new race crit bonuses help too (Human Ruthless +2% critical strike chance, Orc Savage +1% critical strike chance).",
+              "text_ru": "Выберите Портняжное дело + Наложение чар ради вещей на урон заклинаний вроде Robes of Arcana либо Горное дело + Инженерное дело ради динамита и гранат; в приоритете сила заклинаний огня, интеллект и крит — расовые бонусы к криту тоже помогут (Human Ruthless +2% к шансу критического удара, Orc Savage +1% к шансу критического удара).",
+              "text_fi": "Valitse Ompelutyö + Lumous loitsudamage-varusteisiin kuten Robes of Arcana tai Kaivostoiminta + Insinöörityö dynamiittiin ja kranaatteihin; suosi Fire-loitsutehoa, Älykkyyttä ja kriittiä — uudet rotukriitit auttavat myös (Human Ruthless +2% kriittisen osuman mahdollisuus, Orc Savage +1% kriittisen osuman mahdollisuus)."
             }
           ]
         },
