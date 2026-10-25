@@ -1,4 +1,11 @@
-# WoW Buddy MVP: Manual Testing & Verification Guide
+# WoW Buddy MVP: Manual Testing & Verification Guide (historical)
+
+> **Archived / superseded.** This document records the original MVP verification pass: 22 tests,
+> two dungeons, the old 3D-placeholder dressing room, and a three-tab bottom bar. The app has since
+> grown to 46 test binaries, five dungeons, a gear planner, fishing and pets guides, and a four-tab
+> bottom navigation. For the current manual checklist, use
+> [`DEV_GUIDE.md` §4](DEV_GUIDE.md#4-manual-verification--feature-walkthrough). The rest of this file
+> is kept only as a historical record.
 
 This document captures the verification results and manual testing walkthrough for the WoW Buddy MVP merged into `main`.
 

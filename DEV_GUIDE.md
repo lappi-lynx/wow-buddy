@@ -1,253 +1,385 @@
 # WoW Buddy: Developer & Testing Guide
 
-This guide describes how to run and manually test **WoW Buddy** across desktop, web, and mobile environments.
+This is the maintained guide to running, testing, and extending **WoW Buddy** (version `0.1.0`).
+The app targets **World of Warcraft: Forever 1.60.1** and runs on desktop and the web; the Dioxus
+project also supports iOS and Android targets.
+
+For the product overview, screenshots, and the data-provenance rules, see
+[`README.md`](README.md).
 
 ---
 
-## 1. Quickstart (Immediate Desktop Execution)
+## 1. Quickstart
 
-WoW Buddy is written in Rust using **Dioxus 0.7**. You can build and run it directly with standard Cargo:
+WoW Buddy is a Rust 2021 application using **Dioxus 0.7**.
 
 ```bash
+# Native desktop window
 cargo run
-```
 
-### Running All Automated Tests
-```bash
+# Full automated suite
 cargo test
 ```
-All 20 unit and integration tests will run and pass, verifying data integrity, 16-point Legacy calculations, dungeon survival rules, and multilingual i18n resolution.
+
+The suite currently reports **46 green test binaries** (185 test functions). It covers content
+schemas, provenance artifacts, gear coverage, i18n, asset embedding, routing, and navigation. The
+tests do not require a network connection.
+
+No environment variables are needed for a normal local run.
 
 ---
 
-## 2. Using Dioxus CLI (`dx`) for Multiplatform & Hot-Reload
+## 2. Using the Dioxus CLI (`dx`)
 
-For hot reloading, mobile emulators, and full cross-platform builds, install the Dioxus CLI:
+Install the CLI once for hot reload and cross-platform builds:
 
 ```bash
 cargo install dioxus-cli --locked
-```
-
-Verify installation:
-```bash
 dx --version
 ```
 
 ---
 
-## 3. Platform-by-Platform Instructions
+## 3. Platform-by-platform
 
 ### A. Desktop (macOS / Windows / Linux)
 
-Desktop is the primary target with native WebGL WebView support.
+Desktop is the primary target, using the platform WebView.
 
 ```bash
-# Run with hot reloading enabled
+# Hot reload
 dx serve --platform desktop
 
-# Or standard release build
+# Or a plain release build
 cargo build --release
 ```
 
-- **macOS:** Uses native WebKit WKWebView.
-- **Windows:** Uses WebView2 (Edge Chromium).
-- **Linux:** Requires WebKit2GTK (`sudo apt install libwebkit2gtk-4.1-dev libgtk-3-dev` on Ubuntu/Debian).
+- **macOS:** native WKWebView.
+- **Windows:** WebView2 (Edge Chromium).
+- **Linux:** requires WebKit2GTK (`sudo apt install libwebkit2gtk-4.1-dev libgtk-3-dev` on
+  Ubuntu/Debian).
 
----
-
-### B. Web / Local Browser Preview
-
-You can quickly test the entire UI in your web browser:
+### B. Web / local browser preview
 
 ```bash
-# Serves at http://localhost:8080 with auto-reload
+# Dev server with auto-reload, usually http://localhost:8080
 dx serve --platform web
-```
 
-To build the site (artifacts under `target/dx/wow-buddy/release/web/public`):
-```bash
+# Release build
 dx build --platform web --release
 ```
-> Serve the **release** build for manual passes. A *debug* static build
-> (`dx build --platform web` without `--release`) embeds the dev-server
-> toast/hot-reload client and shows "Your app is being rebuilt" when served
-> by a static file server; it is only usable under `dx serve`.
+
+The release artifacts are written to `target/dx/wow-buddy/release/web/public`. For a manual pass,
+serve that directory with any static server, for example:
+
+```bash
+cd target/dx/wow-buddy/release/web/public
+python3 -m http.server 8092
+```
+
+> **Always test the release build.** A debug static build (`dx build --platform web` without
+> `--release`) embeds the dev-server toast/hot-reload client and shows “Your app is being rebuilt”
+> when served by a plain static server. It is only usable under `dx serve`.
 
 To produce a shippable web bundle:
+
 ```bash
 dx bundle --platform web --release
 ```
-The bundle will be generated in `dist/` (`dist/public` for the web platform).
 
----
+The bundle is generated under `dist/` (`dist/public` for web).
 
-### C. Mobile: iOS (Simulator & Physical Device)
+### C. iOS
 
-**Prerequisites:** macOS with Xcode and iOS Simulator installed.
+**Prerequisites:** macOS with Xcode and an iOS Simulator.
 
 ```bash
-# Add iOS Rust targets
 rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
-
-# Serve to active iOS Simulator
 dx serve --platform ios
 ```
 
----
+### D. Android
 
-### D. Mobile: Android (Emulator & Physical Device)
-
-**Prerequisites:** Android Studio with Android SDK and NDK installed, plus `ANDROID_HOME` configured in environment.
+**Prerequisites:** Android Studio with the SDK and NDK, plus `ANDROID_HOME`.
 
 ```bash
-# Add Android Rust targets
 rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android
-
-# Serve to running Android Emulator or connected device via ADB
 dx serve --platform android
 ```
 
+Mobile targets have not yet been packaged for release; treat them as development targets until a
+build is verified.
+
 ---
 
-## 4. Manual Verification & Feature Walkthrough Checklist
+## 4. Manual verification & feature walkthrough
 
-When testing manually, verify the following core features:
+Use a fresh profile (or clear the language preference) for the first pass. The screenshots in
+`docs/screenshots/` show the expected current state.
 
-### 1. Language Dropdown & Local Storage Cache
-- In the top right header, switch between **English**, **Русский**, and **Suomi**.
-- Verify all labels, mottos, and buttons update instantly without resetting state.
-- Check that preference is persisted to `~/.cache/wow-buddy/language_preference.json` (or browser `localStorage`).
+### 4.1 Language selector, footer, and persistence
 
-### 2. Screen 1: Two Shields (Alliance vs Horde)
-- Click the **Alliance** shield (lion crest art) with royal blue aura or **Horde** shield (red emblem art) with crimson aura.
-- Notice the special banner explaining that the new **Skyborne** race is playable in both factions.
+- Every screen ends with a **one-line footer**: the guide name on the left and the compact
+  **EN / FI / RU** selector on the right. There is no language dropdown in the header.
+- Switch the language and verify that labels, lore, button text, and prose update immediately without
+  resetting the selected hero, race, or class.
+- Check the choice survives a reload:
+  - desktop: `~/.cache/wow-buddy/language_preference.json`;
+  - web: browser `localStorage`.
 
-### 3. Screen 2: Race Selector & Lore
-- Verify exactly 5 races are present for the chosen faction.
-- Check that Skyborne is displayed as **High Order Skyborne** (Alliance) or **Windshaper Skyborne** (Horde).
-- Review the Lore Philosophy card, racial ability (`Every Man for Himself`, `Shadowmeld`, `Stoneform`, `Walk on Air`, etc.), and class badges.
+### 4.2 Faction picker
 
-### 4. Screen 3: Dressing Room & Gear Evolution
-- Test the 4 animation buttons: `[🛡️ Stand]`, `[⚔️ Attack]`, `[✨ Cast]`, `[🕺 Dance]`.
-- The viewer badge must tell the truth: **Preview** (paper-doll art) today — never "3D" until a real model exists. "Drag to rotate" only shows in 3D mode.
-- Move the gear slider between 1, 20, 40, and 60 levels:
-  - **Lvl 1:** Starter traveler's cloth & club.
-  - **Lvl 20:** Early dungeon set.
-  - **Lvl 40:** Heavy plate & elite armor.
-  - **Lvl 60:** Top-level raid armor.
-- Off-anchor levels (e.g. 38) show a snap label — "Level 38 (Level 40: Heavy Plate)" — and the viewer caption uses the same anchors (ties snap upward). The slider also exposes the same text as `aria-valuetext`.
-- **What unlocks around here:** milestone chips within ±5 levels (first dungeon, talents, Legacy at 25...) plus a "Next unlock" line; rows past 30 carry the "Beta, may change" tag.
-- **Novice Card:** exactly 3 signature class spells. Spells above the selected level show an "Unlocks at level N" chip — a level-1 warrior has only Heroic Strike.
-- **Terminology:** tap any jargon chip (Tank, Aggro, Respec, Need / Greed...) to open the explanation popover; check it in EN, RU, and FI.
+- The first screen offers **Alliance** (lion crest) and **Horde** (red emblem) as two large shields.
+- Confirm the Skyborne notice: the race is available to both factions — **High Order Skyborne**
+  (Alliance) and **Windshaper Skyborne** (Horde).
+- Open **About & Legal** from the top right and check the version, asset-source summary, offline
+  statement, and the verbatim Blizzard disclaimer.
 
-### 5. Screen 4: Progression Guide & 16 Legacy Points
-- Check the 1–6 level checklist for your race's starter zone (e.g. Northshire Valley, Valley of Trials, Zephras Isle).
-- Check the 6–12 level compass direction.
-- Click **"Apply 16-Point Preset Now"** to allocate the starter Legacy points:
-  - 5 pts: Well Rested (rested XP accumulates faster)
-  - 5 pts: Thrill of Adventure (killing blows restore Health/Mana)
-  - 5 pts: Talented (talents from level 5 instead of 10)
-  - 1 pt: Field Guide (camp feature cooldown)
+### 4.3 Race selector and class choice
 
-### 6. Screen 5: Dungeon Survival Codex
-- Toggle between **The Deadmines (17–21)** and **Ragefire Chasm (13–18)**.
-- Review estimated duration (~35–45 min) and the reminder to clear 10 bag slots.
-- Test the interactive **Need vs Greed** loot test:
-  - Choosing **Greed (Dice)** confirms safe etiquette.
-  - Choosing **Need (Swords)** alerts about ninja-looting risks in group play.
+- Each faction lists **exactly five races**.
+- Selecting a race updates the lore panel, racial ability, effect line, and the available classes.
+- **Clicking a class confirms the choice and navigates to the dressing room.** The old “Choose
+  <Race>” button is retired.
+- Check the class row on a narrow viewport: it is centred and wraps without clipping.
+- Race and class names remain English in every locale; only the prose around them is translated.
 
-### 7. Persistent Bottom Navigation Bar
-- Tap `[🛡️ Gear]`, `[🧭 Progression]`, `[🏰 Dungeons]` on the bottom bar at any time.
-- Verify your selected hero, race, and faction context are preserved when switching tabs.
-- Verify UI does not horizontally scroll or clip on narrow screen viewports (< 400px width).
+### 4.4 Dressing room
 
-### 8. Reference Popovers & About/Legal
-- On the Progression screen, tap the first-quest NPC name (e.g. **Marshal McBride**) — a panel opens with the KB-verified zone/subzone; the NPC name stays English in all locales (only the sentence around it is translated).
-- In the Gear Planner, tap a weapon name — the panel shows its icon (when one exists) and the source line; generic items like "starter club" open without a picture.
-- Gear coverage: all **9 classes × both factions** ship level bands **1–6 / 12–16 / 20–24 / 24–30** (Track C). 30–60 arrives with the post-Nov-4 sync. Coverage is enforced by `tests/gear_coverage_test.rs` (`all_classes_complete`, `every_gear_icon_resolves_to_embedded_bytes`); per-class provenance lives in `docs/kb-sources/gear-<class>.md`.
-- Close popovers via the ✕ or by tapping the backdrop.
-- Open **About** from the top-right of the first screen — app version, asset sources, and the verbatim Blizzard disclaimer (mirrors `assets/ATTRIBUTION.md`).
-- Every footer is one line: the guide name on the left and the compact **EN/FI/RU** language selector on the right.
-- Sub-screens have no header bar: go back with the floating **←** button (desktop) or a horizontal swipe (mobile / trackpad).
+- Check the viewer badge: it must read **Preview**, never “3D”, until a real model ships. The central
+  art is the class icon (paper-doll mode), and “Drag to rotate” must not appear.
+- The four animation buttons (**Stand / Attack / Cast / Dance**) currently only change the
+  `ANIMATION: …` label; there is no 3D playback in this build. Do not describe them as rendered
+  animations in release notes.
+- The gear card reads **“Gear at level N”**. Drag the slider:
+  - set-change dots are amber; leveling-milestone dots are blue;
+  - off-anchor levels show a snap label such as “Level 38 (Level 40: …)”;
+  - “What unlocks around here” shows milestone chips within ±5 levels and the next unlock;
+  - rows past the verified range carry **Beta, may change**.
+- Confirm the starter-spell card shows exactly three core spells; spells above the selected level
+  carry an **Unlocks at level N** chip.
+- Open a terminology chip (Tank, Aggro, Need / Greed, …) and verify the popover in all three
+  locales; close it with ✕ or the backdrop.
+- **Copy my character plan** should copy the shareable build summary to the clipboard.
+- The **Open Gear Planner** button opens the inventory sheet. The pets card appears **only for
+  hunters and warlocks**.
 
-### 9. Pets (`/pets`)
-- Hunter: dressing room → "Hunter pets" card → guide opens with "Tame basics" first
-  (Tame Beast at level 10, Mend Pet at level 12), an "Unlocks at level 10" chip on the
-  card while under level 10, "Safe first picks" (Cat / Bear / Boar), the full family
-  list behind "Show all 17 families", and "Notable pets" 10–30 with level chips.
-- Warlock: "Warlock minions" card → four demons with level chips and roles, plus the
-  companion section.
-- Other classes: companion-only view (no hunter or warlock claims).
-- Deep link /pets without a hero shows the companion view.
-- Sources: `docs/wowhead-sources/pets-families.json` (raw table + conflicts) and
-  `docs/kb-sources/pets.md` (KB answers + confirmations).
+### 4.5 Gear planner
 
-### 10. Guides (Track E)
-- Progression guide: the Legacy preset picker (Balanced / Explorer / Coin Saver tabs; "Copy allocation"
-  copies the summary — the app never changes your in-game build), the Fishing guide card
-  (3 KB-verified steps + the Forever-only +5% XP from cooked food), and the Comfort tips card
-  (one random tip of the ten per visit — no arrows, no counter).
-- Dungeon codex: the readiness card — tick the 8 checklist items to move the
-  Not ready / Almost ready / Ready meter (5/8 threshold), set your level to see the dungeons in
-  range, and read the KB-verified "How do I find a group?" card (premade Group Finder).
-- Sources: `docs/foreverdb-sources/legacy-system-explained.md` (21 perks), KB sessions `542bc6e7`
-  (grouping) and `e136eda7` (fishing).
+- Toggle **Alliance / Horde** and move the level slider through the bands: **1–6, 12–16, 20–24,
+  24–30**.
+- The sheet shows one weapon row plus armor slots for weapon/chest/feet, head/shoulders/legs,
+  back/hands/finger, and neck/waist/wrist, with the trinket and alternate weapons in the bottom row.
+- Empty slots are shown honestly as “—” (for example, trinkets are thin on the ground before the
+  late 20s).
+- Tap any item tile to open its source popover; the panel shows the icon when one exists and the
+  item's provenance line.
+- Coverage is enforced by `tests/gear_coverage_test.rs`: all 9 classes × both factions, every band
+  meets its floor, and every gear icon resolves to embedded bytes.
+- **Known limit:** coverage currently stops at 30. The 30–60 sync is planned and must not be
+  presented as shipped.
 
-### 11. Gear inventory sheet (Track "UI polish & armor")
-- All **9 classes × both factions** ship the paper-doll slot sheet: one weapon row
-  (primary + dashed alternates) and four slot columns (weapon/chest/feet ·
-  head/shoulders/legs · back/hands/finger · neck/waist/wrist) + a bottom row
-  with the trinket and the alternate weapon tiles. Dragging the slider swaps
-  the whole set per band; tapping any tile opens its source popover.
-- Slot availability is honest per band (empty "—" where the game has nothing:
-  no trinkets before ~28, no cloth wrist ≥20 ≤30, no Alliance shaman insignia).
-- Gate: `tests/gear_coverage_test.rs` — every class/faction band meets the
-  per-band floor (6/10/10), every present slot carries id+icon+provenance, and
-  every slot icon resolves to embedded bytes. Per-class artifacts:
-  `docs/kb-sources/gear-<class>.md`.
+### 4.6 Progression guide
 
-### 12. Codex content, slider dots, readiness & pets (cycle 2)
-- Slider: the card reads **"Gear at level N"** and the 1–60 track carries
-  progress dots — amber where the recommended set changes (band starts plus
-  40/60), blue at the leveling milestones (≥10); filled once behind the level,
-  hollow ahead, with a legend row. Both the dressing room and the gear planner
-  use the shared `LevelSlider`; dragging never triggers the back swipe.
-- Readiness card: compact pills — the whole pill toggles, checked fills green,
-  no checkbox glyphs; meter + 3/8 badge, level input, in-range dungeons and the
-  expanding "How do I find a group?" text.
-- Dungeon codex: every dungeon (Ragefire Chasm, Hall of Thanes, Wailing
-  Caverns, Deadmines, Shadowfang Keep) carries a **Recommended group** chip
-  (Beta), **What's inside** (bosses with verified order/levels and their key
-  abilities), **Watch out** (sourced hazards; Forever dungeon XP rules in all
-  five), **Prep** and the **top loot rows** (icons, boss + rate; tap for the
-  source popover). Ranges follow ForeverDB (e.g. Deadmines 17–26, Shadowfang
-  Keep 20–30).
-- Dressing room: the **Open Gear Planner** button sits above the "{Class}
-  Starter Guide" card; the pets card now shows **only for hunter and warlock**
-  (other classes no longer see an empty-feeling pets entry).
-- Pets page: three big first-pick cards, an always-visible 4-column family grid
-  (2 on phones) with type/diet lines, notable-pet and minion rows with icons —
-  21 embedded Blizzard family/summon icons.
-- Gates: `tests/dungeons_data_test.rs` (schema, loot icons, all-five-complete),
-  `tests/pets_test.rs` (every family/minion icon resolves),
-  `tests/asset_urls_test.rs` (no wowhead/zamimg URLs in `src/`), plus the
-  extended `tests/gear_evolution_test.rs` dot cases.
-- Content sources: `docs/kb-sources/dungeon-<id>.md`,
-  `docs/wowhead-sources/dungeon-<id>.json`,
-  `docs/foreverdb-sources/dungeon-<id>.md`, and
-  `docs/wowhead-sources/pets-family-icons.json`.
+- The title is race-specific. Verify the **Starter Glade Checklist (Lvl 1–6)** for the chosen race's
+  zone (Northshire, Coldridge, Shadowglen, Valley of Trials, Deathknell, Camp Narache, or Zephras
+  Isle).
+- Tap the first-quest NPC name (e.g. Marshal McBride) to open the KB-verified zone/subzone popover.
+- Check the **Next Horizon Direction (Levels 6–12)** compass banner.
+- **Legacy presets:** three tabs (Balanced / Explorer / Coin Saver), each a 16/16 build. **Copy
+  allocation** copies the summary; the app never changes the in-game build.
+- **Fishing guide card:** three steps plus the Forever-only +5% XP cooking tie-in, and
+  **Read the full 1–300 guide →**.
+- **Comfort tips:** one random tip from the deck per visit; no arrows and no counter.
+- **Open Dungeon Survival Codex →** moves to the dungeon screen (also available from the bottom
+  nav).
 
-### 13. Beginner's fishing guide (`/fishing`)
-- Progression screen → the Fishing guide card → "Read the full 1–300 guide →".
-- How to fish: seven steps including the hammer-button gotcha (professions window, not the
-  Fishing tab); the shop strip shows the pole and lures with icons.
-- Trainers: capital cities grouped by faction; starting zones include the Skyborne pair on
-  Zephras Isle.
-- Route: four tier cards (1–75 / 75–150 / 150–225 / 225–300) with zones, lure rows and tips;
-  the artisan card shows Nat Pagle, quest 6607 and the four quest fish.
-- The guide carries the Beta marker; back returns to the progression screen via the floating ←.
-- Gates: `tests/fishing_test.rs` (sections, tier chain, sources + paths, item icons,
-  trilingual purity, the hammer fact); sources in `docs/wow-professions-sources/fishing.md`,
-  `docs/foreverdb-sources/fishing.md`, `docs/wowhead-sources/fishing.md`.
+### 4.7 Dungeon codex
+
+- Five dungeon tabs: **Ragefire Chasm (13–18), Hall of Thanes (13–20), Wailing Caverns (15–24),
+  The Deadmines (17–26), Shadowfang Keep (20–30)**. Ranges follow ForeverDB, not Classic Era.
+- **Dungeon readiness:** tick the eight compact pills; the meter moves through Not ready / Almost
+  ready / Ready (5/8 threshold). Checked pills fill green and have no checkbox glyph.
+- Set the level input and confirm the “In your level range” chips update. Follow **How do I find a
+  group?** to verify the premade Group Finder guidance.
+- Confirm the info cards: estimated duration, bag preparation, and communication.
+- **Recommended group** always carries **Beta, may change**, even when it comes from the KB.
+- Read the sections in the intended order: **What's inside → Loot → Prep → Watch out**.
+  - **What's inside:** bosses in verified order with levels and abilities, plus notable trash.
+  - **Loot:** top blue items with boss and drop rate; tap a row for its source popover.
+  - **Prep:** potions, campfire, cooked food.
+  - **Watch out:** Forever-specific hazards and loot caveats (e.g. unconfirmed new Deadmines
+    items).
+- Test the interactive **Need vs Greed** scenario: Greed confirms safe etiquette; Need warns about
+  ninja-looting.
+- Repeat the pass in RU and FI; headings and body text must be translated while dungeon, boss, and
+  item names stay English.
+
+### 4.8 Fishing guide (`/fishing`)
+
+- Reachable from the progression card and from the fourth bottom-nav tab (**🎣 Fishing**).
+- The guide is marked **Beta, may change** at the page level and on sections that depend on the beta.
+- **How to fish:** seven steps, including the hammer-button gotcha (the Professions window, not the
+  Fishing tab).
+- **What to buy:** pole and lures with icons; the shop strip should render all five entries.
+- **Trainers:** capital cities grouped by faction, starting-zone trainers, and the two Skyborne
+  trainers on Zephras Isle.
+- **Leveling route:** four tier cards (1–75 / 75–150 / 150–225 / 225–300) with zones, lures, and
+  tips; the artisan card shows Nat Pagle, quest 6607, and four quest fish.
+- Back returns to progression via the floating ←, and the bottom nav remains usable.
 - Narrow-screen check: tier cards and trainer rows reflow without clipping.
+- Gates: `tests/fishing_test.rs` (sections, tier chain, source paths, item icons, trilingual purity,
+  the hammer fact).
 
+### 4.9 Pets & companions (`/pets`)
+
+- Only hunters and warlocks see the pets card in the dressing room.
+- **Hunter:** “Tame basics” first (Tame Beast at level 10, Mend Pet at level 12), an
+  **Unlocks at level 10** chip while below level 10, safe first picks (Cat / Bear / Boar), the full
+  **17-family grid** (4 columns on desktop, 2 on phones), and notable pets 10–30 with level chips.
+- **Warlock:** four minions with level chips and roles, plus the companion section.
+- Other classes and a direct `/pets` visit without a hero show the companion-only view.
+- Confirm every family and minion icon renders; this is gated by `tests/pets_test.rs`.
+- Sources: `docs/wowhead-sources/pets-families.json` and `docs/kb-sources/pets.md`.
+
+### 4.10 Navigation, popovers, and back behaviour
+
+- The bottom bar has four tabs: **🛡️ Gear · 🧭 Progression · 🏰 Dungeons · 🎣 Fishing**. The active
+  tab is highlighted, and hero/race/faction context is preserved when switching.
+- The bottom bar is hidden on the faction picker, race selector, gear planner, pets, and About
+  screens; those screens use the floating back button / swipe.
+- Sub-screens have no header bar. Go back with the floating **←** button, a horizontal swipe on
+  mobile, or a two-finger trackpad swipe on desktop.
+- Popovers close via ✕ or the backdrop. Slider dragging must never trigger the back swipe.
+- The footer language choice and bottom nav must both remain visible at the bottom of long pages
+  without overlapping content in a way that blocks interaction.
+
+### 4.11 Responsive and offline checks
+
+- Test at a narrow width (≤ 400 px): no horizontal scrolling, clipped cards, or hidden primary
+  buttons.
+- Confirm the four-tab bottom nav still fits and each target is comfortably tappable.
+- In DevTools, set the network to **Offline**, reload, and repeat a quick pass. The app should render
+  fully — content and images are embedded and no runtime requests are made.
+
+---
+
+## 5. Content sources and provenance
+
+Every shipped gameplay fact should be traceable. Source artifacts live outside the app so the bundle
+stays lean:
+
+| Folder | What it holds |
+| --- | --- |
+| `docs/kb-sources/` | Verbatim answers from the project NotebookLM KB, with date and question. Class tips, dungeons, gear, pets, fishing, milestones. |
+| `docs/wowhead-sources/` | Wowhead Forever checks (item/NPC/dungeon pages, family tables), including conflicts. |
+| `docs/foreverdb-sources/` | ForeverDB client-datamined pulls for items, dungeons, and NPCs. |
+| `docs/wow-professions-sources/` | Profession reference material (currently the fishing guide). |
+
+Rules:
+
+1. Never author a concrete gameplay claim from memory. Save the source first.
+2. Point the shipped JSON at the artifact (dungeons carry `kb`, `wowhead`, and `foreverdb` source
+   paths; fishing carries four).
+3. If sources conflict, record both and choose the more current client-verified value. ForeverDB
+   ranges override classic ones.
+4. If nothing confirms the claim, set `verified: false`; the UI must print **Beta, may change**.
+5. A test can enforce the presence of provenance, not its truth. Review the raw artifact when
+   changing text.
+
+Useful entry points:
+
+- `assets/data/dungeons.json` → `docs/kb-sources/dungeon-<id>.md`,
+  `docs/wowhead-sources/dungeon-<id>.json`, `docs/foreverdb-sources/dungeon-<id>.md`.
+- `assets/data/class_tips.json` → `docs/kb-sources/<class>.md` (presence enforced by
+  `tests/class_tips_data_test.rs`).
+- `assets/data/gear.json` → per-item provenance plus `docs/kb-sources/gear-<class>.md`.
+- `assets/data/fishing.json` → the three fishing artifacts plus
+  `docs/wow-professions-sources/fishing.md`.
+- `assets/data/pets.json` → `docs/wowhead-sources/pets-families.json`,
+  `docs/kb-sources/pets.md`.
+
+When adding content, update the JSON, the provenance artifact, and the relevant gate; then run
+`cargo test` and rebuild the release bundle.
+
+---
+
+## 6. Embedded asset pipeline
+
+All artwork is compiled into the app as `data:` URIs. There is no runtime file loader and no
+hotlinking.
+
+1. Add the image under `assets/` and register it in `assets/manifest.json` with `path`, `kind`,
+   `source`, and `license`.
+2. Run the generator from the repository root:
+
+   ```bash
+   node tools/assets/generate.mjs
+   ```
+
+   It writes `src/assets/generated.rs` (icons in `ICONS`, all other art in `ARTS`). Missing files are
+   reported; a declared entry with neither a source file nor previous bytes fails the run.
+3. Update `assets/ATTRIBUTION.md` if the asset introduces a new source or license.
+4. Run `cargo test`; `tests/asset_registry_test.rs`, `tests/asset_art_registry_test.rs`, and the
+   icon-resolution tests must stay green.
+5. `tests/asset_urls_test.rs` fails if `wowhead.com` or `zamimg.com` appears in `src/`.
+
+The current manifest holds **195 assets** (118 item icons, 47 spell icons, 18 race renders, 9 class
+renders, 2 faction crests, 1 zone painting).
+
+---
+
+## 7. Release checklist
+
+Before calling a cycle done:
+
+```bash
+cargo test
+dx build --platform web --release
+```
+
+Then:
+
+- serve `target/dx/wow-buddy/release/web/public` and complete the relevant section of the manual
+  checklist above (always test the release bundle, not a stale one);
+- if `assets/manifest.json` or any source image changed, run `node tools/assets/generate.mjs` before
+  the build;
+- update `DEV_GUIDE.md` and `README.md` when behaviour, routes, or content scope changes;
+- capture fresh screenshots for `docs/screenshots/` when the affected screen's layout changes;
+- commit only the intended paths and keep the work local unless a push/PR is explicitly requested.
+
+---
+
+## 8. Test map
+
+The suite is organised by concern rather than by module. The most useful gates:
+
+| Test | Guards |
+| --- | --- |
+| `data_integrity_test.rs`, `game_data_matrix_test.rs` | Core game data and faction/race/class matrix. |
+| `i18n_test.rs`, `ui_translation_test.rs` | Locale parity, nav labels, fallback behaviour, translation coverage. |
+| `asset_urls_test.rs`, `asset_registry_test.rs`, `asset_art_registry_test.rs` | Offline asset policy, registry integrity, icon bytes. |
+| `gear_coverage_test.rs`, `gear_planner_test.rs` | 9 classes × both factions, band floors, item provenance, planner logic. |
+| `dungeons_data_test.rs` | Five-dungeon schema, source citations, loot icons, section completeness. |
+| `fishing_test.rs` | Fishing sections, tier chain, artifact paths, trilingual purity. |
+| `pets_test.rs`, `class_tips_data_test.rs`, `class_tips_card_test.rs` | Pet art/sections, KB artifacts, class tip shape. |
+| `full_navigation_flow_test.rs`, `smoke_test.rs`, `about_view_test.rs` | Routes, navigation, and the About screen. |
+| `css_test.rs` | Precompiled Tailwind stylesheet is embedded. |
+| `render_art_test.rs`, `spell_icons_test.rs`, `npc_reference_test.rs` | Render/icon references and popovers. |
+
+`cargo test` is the gate; do not commit with a red suite.
+
+---
+
+## 9. Troubleshooting
+
+- **“Your app is being rebuilt” toast in a static preview:** you are serving a debug build. Use
+  `dx build --platform web --release`.
+- **The UI looks stale after data or source changes:** rebuild the release bundle; the static server
+  keeps serving the previous files.
+- **The preview server stopped:** restart `python3 -m http.server 8092` from
+  `target/dx/wow-buddy/release/web/public`.
+- **A generated asset ID is missing:** run `node tools/assets/generate.mjs` and check the manifest
+  entry; the generator reports entries with no source file and no previous embedded bytes.
+- **Language preference looks reset:** clear it deliberately via the footer, or remove the cache file
+  / `localStorage` key when testing a fresh profile.
