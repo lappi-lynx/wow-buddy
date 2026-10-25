@@ -2,21 +2,6 @@
 
 > A pocket companion for **World of Warcraft: Forever 1.60.1** — offline, source-traced, and trilingual.
 
-![WoW Buddy faction picker](docs/screenshots/faction-picker.png)
-
-**WoW Buddy** is a desktop and web guide for the first ten hours of WoW Forever. It answers the
-questions a new or returning player actually has — *which race and class? what should I wear at this
-level? where do I go next? what do I bring to my first dungeon? how do I train fishing? which pet
-should I tame?* — without sending you into a wiki rabbit hole mid-session.
-
-It ships as one self-contained app: all content and artwork are embedded, there is no account, no
-backend, and no runtime network access. It is also deliberately conservative about what it claims:
-WoW Forever is a moving beta, so the app distinguishes what is verified from what is still likely to
-change.
-
-> Unofficial fan project. Not affiliated with or endorsed by Blizzard Entertainment.
-> Game artwork © Blizzard Entertainment — see [`assets/ATTRIBUTION.md`](assets/ATTRIBUTION.md).
-
 ## A quick tour
 
 |  |  |
@@ -35,6 +20,19 @@ locale, and the language choice is remembered on the device.
 
 *Screenshots: release web build, English UI, Human Hunter, 900 px viewport.*
 
+**WoW Buddy** is a desktop and web guide for the first ten hours of WoW Forever. It answers the
+questions a new or returning player actually has — *which race and class? what should I wear at this
+level? where do I go next? what do I bring to my first dungeon? how do I train fishing? which pet
+should I tame?* — without sending you into a wiki rabbit hole mid-session.
+
+It ships as one self-contained app: all content and artwork are embedded, there is no account, no
+backend, and no runtime network access. It is also deliberately conservative about what it claims:
+WoW Forever's rules have shifted throughout the beta, so the app distinguishes what is verified from
+what may still change.
+
+> Unofficial fan project. Not affiliated with or endorsed by Blizzard Entertainment.
+> Game artwork © Blizzard Entertainment — see [`assets/ATTRIBUTION.md`](assets/ATTRIBUTION.md).
+
 ## Tech stack
 
 | Layer | What it uses |
@@ -46,7 +44,7 @@ locale, and the language choice is remembered on the device.
 | Assets | 195 Blizzard icons and art pieces embedded at compile time as `data:` URIs through `assets/manifest.json` and `tools/assets/generate.mjs` |
 | Platform glue | `arboard` (native clipboard), `web-sys` + `wasm-bindgen-futures` (browser) |
 | Build | Cargo, plus the Dioxus CLI (`dx`) for web/mobile bundles |
-| Tests | `cargo test` — 46 test binaries covering content, provenance, coverage, i18n, assets, and navigation |
+| Tests | `cargo test` — 46 test binaries (186 tests) covering content, provenance, coverage, i18n, assets, and navigation |
 
 Beyond these, there is no database, HTTP client, state library, or runtime asset loader.
 
@@ -79,12 +77,12 @@ the text it came from.
 **What this looks like in practice:**
 
 - Dungeon ranges follow ForeverDB, not Classic Era (e.g. Deadmines 17–26, Shadowfang Keep 20–30).
-- Beta-only calls are labelled even when they come from a source: the recommended average group
-  level is always shown with the Beta marker.
+- Calls that remain unconfirmed are labelled even when they come from a source: the recommended
+  average group level carries the app's **Beta, may change** marker.
 - Content that is still awaiting player confirmation — such as some new Deadmines items — is called
   out in the relevant “Watch out” section instead of being presented as settled.
-- The fishing guide notes that the current beta has no Apprentice-level requirement, while older
-  sources say level 5.
+- The fishing guide records a beta-era conflict: the build it was verified against has no
+  Apprentice-level requirement, while older sources say level 5.
 - The character viewer says `Preview` and shows class art. It will not say “3D” until a real,
   verified model ships.
 
@@ -154,7 +152,8 @@ checklist live in [`DEV_GUIDE.md`](DEV_GUIDE.md).
 
 ## Status
 
-Version `0.1.0` targets the current WoW Forever 1.60.1 beta.
+Version `0.1.0` was built against the October 2026 WoW Forever 1.60.1 beta. The beta has since
+closed; the app keeps its beta-era verification labels until the launch build is re-checked.
 
 - **Gear coverage:** 9 classes × both factions for the 1–6, 12–16, 20–24, and 24–30 bands. The
   30–60 sync is planned; until it lands, the app does not pretend to have it.
